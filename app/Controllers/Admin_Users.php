@@ -41,7 +41,6 @@ class Admin_Users extends BaseController
 
         $data['page'] = 'users-add_new';
         $data['logged_user'] = $this->ionAuth->user();
-        $data['groups'] = $this->ionAuth->groups()->result();
         $data['session'] = $session;
         
         echo view('admin/includes/header', $data);
@@ -62,10 +61,11 @@ class Admin_Users extends BaseController
         $userModel = model('App\Models\UserModel', false);
         $user = $userModel->get_by_id($user_id);
 
-
         if(!isset($user) || empty($user) || !$user) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
+
+        $user_groups = $this->ionAuth->getUsersGroups($user->id)->getResult();
 
         $header_dependencies = array(
             '<script src="https://kit.fontawesome.com/70f24af034.js" crossorigin="anonymous"></script>'
@@ -75,6 +75,7 @@ class Admin_Users extends BaseController
         $data['page'] = 'users-edit';
         $data['session'] = $session;
         $data['user'] = $user;
+        $data['user_groups'] = $user_groups;
         $data['logged_user'] = $this->ionAuth->user();
         
         echo view('admin/includes/header', $data);
@@ -118,7 +119,11 @@ class Admin_Users extends BaseController
             'password_confirm' => [
                 'label' => 'Confirmação de senha',
                 'rules' => 'required'
-            ]
+            ],
+            'group' => [
+                'label' => 'Grupo',
+                'rules' => 'required',
+            ],
         ];
 
         if (!$this->validate($validationRule)) {
@@ -130,6 +135,7 @@ class Admin_Users extends BaseController
             $last_name = $request->getPost('last_name');
             $email = $request->getPost('email');
             $password = $request->getPost('password');
+            $group = $request->getPost('group');
             $description = $request->getPost('description');
 
             $website = $request->getPost('website');
@@ -176,9 +182,9 @@ class Admin_Users extends BaseController
                 'github' => $github
             );
 
-            $group = array('1');
+            $groups = array($group);
 
-            $user_id = $this->ionAuth->register($email, $password, $email, $additionalData, $group);
+            $user_id = $this->ionAuth->register($email, $password, $email, $additionalData, $groups);
 
             if($user_id) {
                 $message = $this->ionAuth->messages();
@@ -194,6 +200,7 @@ class Admin_Users extends BaseController
             'last_name' => $request->getPost('last_name'),
             'email' => $request->getPost('email'),
             'description' => $request->getPost('description'),
+            'group' => $request->getPost('group'),
             'website' => $request->getPost('website'),
             'instagram' => $request->getPost('instagram'),
             'facebook' => $request->getPost('facebook'),
@@ -253,7 +260,11 @@ class Admin_Users extends BaseController
             'last_name' => [
                 'label' => 'Último nome',
                 'rules' => 'trim|required',
-            ]
+            ],
+            'group' => [
+                'label' => 'Grupo',
+                'rules' => 'required',
+            ],
         ];
 
         if (!$this->validate($validationRule)) {
@@ -264,6 +275,7 @@ class Admin_Users extends BaseController
             $first_name = $request->getPost('first_name');
             $last_name = $request->getPost('last_name');
             $description = $request->getPost('description');
+            $group = $request->getPost('group');
 
             $website = $request->getPost('website');
             $instagram = $request->getPost('instagram');
@@ -292,7 +304,32 @@ class Admin_Users extends BaseController
                 $picture_path = $user->picture;
             }
 
-            $userModel->update_user($user_id, $first_name, $last_name, $picture_path, $description, $website, $instagram, $facebook, $twitter, $youtube, $linkedin, $tiktok, $behance, $pinterest, $flickr, $github);
+            //$userModel->update_user($user_id, $first_name, $last_name, $picture_path, $description, $website, $instagram, $facebook, $twitter, $youtube, $linkedin, $tiktok, $behance, $pinterest, $flickr, $github);
+            
+            $this->ionAuth->update($user_id, 
+                array(
+                    'first_name' => $first_name,
+                    'last_name' => $last_name,
+                    'email' => $email,
+                    'picture_path' => $picture_path,
+                    'description' => $description,
+                    'website' => $website,
+                    'instagram' => $instagram,
+                    'facebook' => $facebook,
+                    'twitter' => $twitter,
+                    'youtube' => $youtube,
+                    'linkedin' => $linkedin,
+                    'tiktok' => $tiktok,
+                    'behance' => $behance,
+                    'pinterest' => $pinterest,
+                    'flickr' => $flickr,
+                    'github' => $github
+                )
+            );
+
+            $this->ionAuth->removeFromGroup(false, $user_id);
+            $this->ionAuth->addToGroup($group, $user_id);
+
             $message = "usuário atualizado com sucesso!";
             $success = true;
         } 

@@ -202,6 +202,30 @@
                                     </div>
                                 </div>
 
+                                <div class="row mb-3">
+                                    <?php echo form_label('Tipo<span class="required">*</span>', 'group', ['class' => 'col-md-4 col-lg-3 col-form-label']);?>
+                                    <div class="col-md-8 col-lg-9">
+                                        <pre>
+                                        </pre>
+                                        <?php 
+                                            $groups = array();
+
+                                            foreach($user_groups as $group) {
+                                                array_push($groups, $group->id);
+                                            }
+
+                                            $groups_options = array(
+                                                '1' => 'Administrativo',
+                                                '2' => 'Blog',
+                                                '3' => 'Comercial',
+                                                '4' => 'Recursos Humanos',
+                                            );
+                                        ?>
+                                        <?php echo form_dropdown('group', $groups_options, $groups[0], ['class' => 'form-control', 'required' => 'required', 'id' => 'group']);?>
+
+                                    </div>
+                                </div>
+
                                <!--  <div class="row mb-3">
                                     <?php echo form_label('Sobre:', 'description', ['class' => 'col-md-4 col-lg-3 col-form-label']);?>
                                     <div class="col-md-8 col-lg-9">

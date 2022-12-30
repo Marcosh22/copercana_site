@@ -1237,6 +1237,9 @@ ClassicEditor
         'blockQuote', '|',
         'undo', 'redo'
     ],
+    mediaEmbed: {
+        previewsInData: true
+    },
     link: {
         decorators: [
             {
