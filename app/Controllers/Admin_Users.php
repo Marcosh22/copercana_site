@@ -41,6 +41,7 @@ class Admin_Users extends BaseController
 
         $data['page'] = 'users-add_new';
         $data['logged_user'] = $this->ionAuth->user();
+        $data['groups'] = $this->ionAuth->groups()->result();
         $data['session'] = $session;
         
         echo view('admin/includes/header', $data);

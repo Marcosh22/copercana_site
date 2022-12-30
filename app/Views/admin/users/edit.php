@@ -19,7 +19,7 @@
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                         <img src="<?= isset($user->picture) && !empty($user->picture) ? base_url($user->picture) : base_url("_assets/images/no-picture.jpg") ?>" alt="Profile" class="rounded-circle">
                         <h2><?= $user->first_name ?>&nbsp;<?= $user->last_name ?></h2>
-                        <div class="social-links mt-2">
+                        <!-- <div class="social-links mt-2">
                             <?php if(isset($user->website) && !empty($user->website)) { ?>
                             <a href="<?= $user->website ?>" class="socials__item" target="_blank"
                                 rel="noopener noreferrer">
@@ -86,7 +86,7 @@
                                 <i class="fa-brands fa-github"></i>
                             </a>
                             <?php } ?>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -121,8 +121,8 @@
                         <div class="tab-content pt-2">
 
                             <div class="tab-pane <?= !isset($_GET['tab']) || ($_GET['tab'] !== 'edit' && $_GET['tab'] !== 'change-password') ? 'show active' : '' ?> profile-overview" id="profile-overview">
-                                <h5 class="card-title">Sobre</h5>
-                                <p class="small fst-italic"><?= $user->description ?></p>
+                                <!-- <h5 class="card-title">Sobre</h5>
+                                <p class="small fst-italic"><?= $user->description ?></p> -->
 
                                 <h5 class="card-title">Detalhes do perfil</h5>
 
@@ -202,7 +202,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row mb-3">
+                               <!--  <div class="row mb-3">
                                     <?php echo form_label('Sobre:', 'description', ['class' => 'col-md-4 col-lg-3 col-form-label']);?>
                                     <div class="col-md-8 col-lg-9">
                                         <?php echo form_textarea([
@@ -330,7 +330,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="row mb-3">
                                     <div class="col-12">

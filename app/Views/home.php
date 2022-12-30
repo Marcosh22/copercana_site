@@ -482,7 +482,7 @@
                                                     } else if((!isset($starts_at) || $starts_at === null) && (isset($ends_at) && $ends_at !== null)) {
                                                         echo "válido até ".$ends_at;
                                                     } else {
-                                                        echo "de ".$starts_at." à ".$ends_at;
+                                                        echo "de ".$starts_at." a ".$ends_at;
                                                     }
                                                 ?>
                                             </span>

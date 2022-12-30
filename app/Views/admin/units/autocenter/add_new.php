@@ -57,7 +57,7 @@
 
                         <?php echo form_open_multipart('admin/units/add_unit', ['class' => 'my-5'], ['type' => 'autocenter']);?>
                             <div class="row mb-3">
-                                <?php echo form_label('Foto<span class="required">*</span></br><small>(Recomendado: 415x230)</small>', 'cover', ['class' => 'col-sm-2 col-form-label']);?>
+                                <?php echo form_label('Foto<span class="required">*</span></br><small>(Recomendado: 450×330)</small>', 'cover', ['class' => 'col-sm-2 col-form-label']);?>
                                 <div class="col-sm-10">
                                     <?php echo form_upload([
                                             'name' => 'picture',

@@ -122,6 +122,21 @@
                         </div>
 
                         <div class="row mb-3">
+                                <?php echo form_label('Tipo<span class="required">*</span>', 'group_id', ['class' => 'col-sm-2 col-form-label']);?>
+                                <div class="col-sm-10">
+                                    <?php 
+                                        $group_options = array();
+
+                                        foreach($groups as $group) {
+                                            $group_options[(string)$group->id] = $group->description;
+                                        }
+                                    ?>
+                                    <?php echo form_dropdown('group_id', $group_options, $form_data && $form_data['group_id'] ? $form_data['group_id'] : '', ['class' => 'form-control', 'required' => 'required', 'id' => 'group_id']);?>
+
+                                </div>
+                            </div>
+
+                       <!--  <div class="row mb-3">
                             <?php echo form_label('Sobre você:', 'description', ['class' => 'col-sm-2 col-form-label']);?>
                             <div class="col-sm-10">
                                 <?php echo form_textarea([
@@ -237,7 +252,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="row mb-3">
                             <div class="col-12">

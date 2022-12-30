@@ -94,7 +94,7 @@
                     <p class="text-white mb-0"
                         style="font-size: 1.2em; position: relative; top: 5px;">
                         <?php if(isset($page_data->contact_section_phone) && !empty($page_data->contact_section_phone)) { ?>
-                        <a href="http://" target="_blank" rel="noopener noreferrer" >
+                        <a href="tel:<?= $page_data->contact_section_phone ?>" target="_blank" rel="noopener noreferrer" >
                             Tel.: <?= $page_data->contact_section_phone ?>
                             <?php } ?>
 
@@ -104,7 +104,7 @@
                             <?php } ?>
 
                             <?php if(isset($page_data->contact_section_whatsapp) && !empty($page_data->contact_section_whatsapp)) { ?>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://api.whatsapp.com/send?phone=55<?= preg_replace("/[^0-9]/", "", $page_data->contact_section_whatsapp); ?>" target="_blank" rel="noopener noreferrer">
                                 WhatsApp <?= $page_data->contact_section_whatsapp ?>&nbsp;
                                 
                             </a>

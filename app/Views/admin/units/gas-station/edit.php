@@ -59,7 +59,7 @@
 
                         <?php echo form_open_multipart('admin/units/update_unit/'.$unit->id, ['class' => 'my-5'], ['type' => 'gas-station']);?>
                         <div class="row mb-3">
-                        <?php echo form_label('Foto<span class="required">*</span></br><small>(Recomendado: 415x230)</small>', 'cover', ['class' => 'col-sm-2 col-form-label']);?>
+                        <?php echo form_label('Foto<span class="required">*</span></br><small>(Recomendado: 450×330)</small>', 'cover', ['class' => 'col-sm-2 col-form-label']);?>
                             <div class="col-sm-10">
                                 <?php if(isset($unit) && isset($unit->picture) && !empty($unit->picture)) { ?>
                                 <div class="banner-preview">
