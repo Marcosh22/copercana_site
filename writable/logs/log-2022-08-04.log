@@ -1,0 +1,283 @@
+CRITICAL - 2022-08-04 09:06:54 --> Undefined variable: magazine
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\magazines\edit.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 53, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/magazines...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Magazines.php(75): view('admin/magazines...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_MAgazines->edit('1')
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_MAgazines))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 09:11:09 --> Undefined variable: request
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Magazines.php(183): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 183, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_MAgazines->update_magazine('1')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_MAgazines))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-08-04 09:16:39 --> Class 'App\Controllers\DateTime' not found
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_MAgazines->update_magazine('1')
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_MAgazines))
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-08-04 09:19:39 --> Arquivo inválido: admin/pages/revista-canavieiros.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/rev...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/pages/rev...', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Pages.php(518): view('admin/pages/rev...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Pages->revista_canavieiros()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Pages))
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-08-04 09:43:55 --> Class '200' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-08-04 10:35:42 --> Undefined property: stdClass::$instagram_autocenter
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\general\index.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 164, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/general/i...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_General.php(35): view('admin/general/i...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 10:56:46 --> Undefined property: stdClass::$socials
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\general\index.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 2, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/general/i...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_General.php(35): view('admin/general/i...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 10:56:54 --> Undefined property: stdClass::$socials
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\general\index.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 2, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/general/i...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_General.php(35): view('admin/general/i...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 11:39:18 --> Undefined property: stdClass::$socials_section_title
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\redes-sociais.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 53, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('redes-sociais', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1037): view('redes-sociais', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->redes_sociais()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+ERROR - 2022-08-04 12:39:53 --> Table 'copercana.indications' doesn't exist
+ERROR - 2022-08-04 12:40:02 --> Table 'copercana.indications' doesn't exist
+CRITICAL - 2022-08-04 14:01:09 --> finfo_file(C:\xampp\tmp\phpD621.tmp): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\Usuarios\\Doc...', 109, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Files\File.php(109): finfo_file(Resource id #181, 'C:\\xampp\\tmp\\ph...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Files\File.php(121): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Indications.php(153): CodeIgniter\Files\File->getRandomName()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Indications->add_indication()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Indications))
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#11 {main}
+CRITICAL - 2022-08-04 14:01:44 --> finfo_file(C:\xampp\tmp\php5FB6.tmp): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\Usuarios\\Doc...', 109, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Files\File.php(109): finfo_file(Resource id #181, 'C:\\xampp\\tmp\\ph...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Files\File.php(121): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Indications.php(153): CodeIgniter\Files\File->getRandomName()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Indications->add_indication()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Indications))
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#11 {main}
+CRITICAL - 2022-08-04 14:02:27 --> Undefined variable: post
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\indications\edit.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 107, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/indicatio...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Indications.php(86): view('admin/indicatio...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Indications->edit('1')
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Indications))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 14:05:52 --> Undefined variable: cover_date
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Indications.php(275): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 275, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Indications->update_indication('1')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Indications))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-08-04 14:06:21 --> The uploaded file has already been moved.
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\HTTP\Files\UploadedFile.php(133): CodeIgniter\HTTP\Exceptions\HTTPException::forAlreadyMoved()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Indications.php(281): CodeIgniter\HTTP\Files\UploadedFile->move('uploads/indicat...', '1659632781_4469...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Indications->update_indication('1')
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Indications))
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-08-04 14:06:47 --> The uploaded file has already been moved.
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\HTTP\Files\UploadedFile.php(133): CodeIgniter\HTTP\Exceptions\HTTPException::forAlreadyMoved()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Indications.php(281): CodeIgniter\HTTP\Files\UploadedFile->move('uploads/indicat...', '1659632807_80a9...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Indications->update_indication('1')
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Indications))
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-08-04 14:07:17 --> Arquivo inválido: admin/pages/indicacoes.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/ind...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/pages/ind...', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Pages.php(620): view('admin/pages/ind...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Pages->indicacoes()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Pages))
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-08-04 14:20:36 --> Undefined property: stdClass::$units_section_title
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\indicacoes.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 45, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('indicacoes', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1083): view('indicacoes', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->indicacoes()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 15:43:33 --> Arquivo inválido: admin/jobs/roles-index.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/jobs/role...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/jobs/role...', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Jobs.php(313): view('admin/jobs/role...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Jobs->roles()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Jobs))
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-08-04 15:43:56 --> Too few arguments to function App\Controllers\Api_Datatables::jobs_roles(), 0 passed in D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Api_Datatables->jobs_roles()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api_Datatables))
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-08-04 15:44:07 --> Too few arguments to function App\Controllers\Api_Datatables::jobs_roles(), 0 passed in D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Api_Datatables->jobs_roles()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api_Datatables))
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+ERROR - 2022-08-04 16:22:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `role` LIKE '%%' ESCAPE '!'
+OR  `jobs`.`quantity` LIKE '%%' ESCAPE '!'
+OR ...' at line 7
+ERROR - 2022-08-04 16:22:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `role` LIKE '%%' ESCAPE '!'
+OR  `jobs`.`quantity` LIKE '%%' ESCAPE '!'
+OR ...' at line 7
+ERROR - 2022-08-04 16:23:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `role` LIKE '%%' ESCAPE '!'
+OR  `jobs`.`quantity` LIKE '%%' ESCAPE '!'
+OR ...' at line 7
+ERROR - 2022-08-04 16:25:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `role` LIKE '%%' ESCAPE '!'
+OR  `jobs`.`quantity` LIKE '%%' ESCAPE '!'
+OR ...' at line 7
+ERROR - 2022-08-04 16:26:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `role` LIKE '%%' ESCAPE '!'
+OR  `jobs`.`quantity` LIKE '%%' ESCAPE '!'
+OR ...' at line 7
+CRITICAL - 2022-08-04 17:04:28 --> Undefined property: stdClass::$related_role_01_id
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\jobs\edit.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 70, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/jobs/edit', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Jobs.php(117): view('admin/jobs/edit', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Jobs->edit('1')
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Jobs))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 17:52:12 --> Undefined property: stdClass::$page_title
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\noticias.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 8, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('noticias', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1284): view('noticias', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->noticias()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 17:53:28 --> Undefined property: stdClass::$page_title
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\pages\noticias.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 61, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/pages/not...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Pages.php(824): view('admin/pages/not...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Pages->noticias()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Pages))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 17:54:44 --> Undefined property: stdClass::$page_title
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\pages\noticias.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 61, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/pages/not...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Pages.php(824): view('admin/pages/not...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Pages->noticias()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Pages))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 17:55:33 --> Undefined property: stdClass::$page_title
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\noticias.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 8, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('noticias', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1281): view('noticias', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->noticias()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-04 18:01:54 --> Undefined variable: pageModel
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1291): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 1291, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->noticia('ultimo-dia-de-p...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}

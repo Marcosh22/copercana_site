@@ -1,0 +1,62 @@
+ERROR - 2022-06-02 08:10:52 --> Unknown column 'company' in 'field list'
+CRITICAL - 2022-06-02 17:57:10 --> Too few arguments to function App\Controllers\Admin_General::index(), 0 passed in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-06-02 17:57:38 --> Arquivo inválido: admin/general/edit.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/general/e...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('admin/general/e...', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_General.php(35): view('admin/general/e...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-06-02 17:58:26 --> Arquivo inválido: admin/general/edit.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/general/e...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('admin/general/e...', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_General.php(35): view('admin/general/e...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-06-02 17:58:49 --> Arquivo inválido: admin/general/edit.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/general/e...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('admin/general/e...', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_General.php(35): view('admin/general/e...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-06-02 17:59:24 --> Argument 2 passed to form_input() must be of the type string, null given, called in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Views\admin\general\index.php on line 137
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Views\admin\general\index.php(137): form_input(Array, NULL, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('admin/general/i...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_General.php(35): view('admin/general/i...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-06-02 17:59:38 --> Argument 2 passed to form_input() must be of the type string, null given, called in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Views\admin\general\index.php on line 137
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Views\admin\general\index.php(137): form_input(Array, NULL, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('admin/general/i...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_General.php(35): view('admin/general/i...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_General->index()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_General))
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}

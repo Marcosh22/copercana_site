@@ -1,0 +1,152 @@
+CRITICAL - 2022-08-05 08:55:07 --> Undefined variable: job
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1246): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 1246, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->vaga('1')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+ERROR - 2022-08-05 08:59:50 --> Unknown column 'branches.city' in 'field list'
+CRITICAL - 2022-08-05 08:59:50 --> Unknown column 'branches.city' in 'field list'
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `jobs`.*...', 0)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jobs`.*...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jobs`.*...')
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `jobs`.*...', Array, false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Models\JobModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1246): App\Models\JobModel->get_active_by_id('1')
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->vaga('1')
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#11 {main}
+ERROR - 2022-08-05 09:03:22 --> Unknown column 'jobs.related_role_01' in 'on clause'
+CRITICAL - 2022-08-05 09:03:22 --> Unknown column 'jobs.related_role_01' in 'on clause'
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `jobs`.*...', 0)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jobs`.*...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jobs`.*...')
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `jobs`.*...', Array, false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Models\JobModel.php(117): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1246): App\Models\JobModel->get_active_by_id('1')
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->vaga('1')
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#11 {main}
+CRITICAL - 2022-08-05 10:32:46 --> Undefined property: stdClass::$author
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\noticia.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 19, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('noticia', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1375): view('noticia', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->noticia('serquimica-lota...')
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-05 10:39:03 --> Undefined property: stdClass::$news_section_show
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\noticia.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 38, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('noticia', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1385): view('noticia', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->noticia('serquimica-lota...')
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-05 10:48:22 --> Undefined property: stdClass::$page_title
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Views\admin\pages\contato.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Usuarios\\Doc...', 121, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/pages/con...', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Pages.php(858): view('admin/pages/con...', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Pages->contato()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Pages))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+CRITICAL - 2022-08-05 11:14:55 --> Undefined variable: response
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Registration.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 23, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Registration->contact()
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registration))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-08-05 11:15:19 --> Trying to get property 'success' of non-object
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Registration.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\Usuarios\\Doc...', 25, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Registration->contact()
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registration))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-08-05 11:17:23 --> Trying to get property 'success' of non-object
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Registration.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\Usuarios\\Doc...', 30, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Registration->contact()
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registration))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+ERROR - 2022-08-05 11:18:22 --> Email: sendWithMail throwed mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+CRITICAL - 2022-08-05 11:45:26 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-08-05 11:45:26 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-08-05 12:18:09 --> Undefined variable: units
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(381): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 381, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->centro_eventos()
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-08-05 14:38:20 --> Arquivo inválido: admin/pages/tecnologia-bioas.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/tec...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('admin/pages/tec...', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Pages.php(824): view('admin/pages/tec...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Pages->tecnologia_bioas()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Pages))
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-08-05 15:26:42 --> syntax error, unexpected '}', expecting end of file
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('includes/footer', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(877): view('includes/footer', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->tecnologia_bioas()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}

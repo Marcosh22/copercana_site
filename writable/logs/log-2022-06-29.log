@@ -1,0 +1,35 @@
+CRITICAL - 2022-06-29 08:12:51 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-29 08:25:39 --> Arquivo não encontrado: /tmp/phpAr7mXb
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Files/File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/BaseHandler.php(148): CodeIgniter\Files\File->__construct()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\BaseHandler->withFile()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-29 08:26:27 --> Arquivo não encontrado: /tmp/phpeCSvwC
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Files/File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/BaseHandler.php(148): CodeIgniter\Files\File->__construct()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\BaseHandler->withFile()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-29 08:26:31 --> Arquivo não encontrado: /tmp/phpdIeVpR
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Files/File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/BaseHandler.php(148): CodeIgniter\Files\File->__construct()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\BaseHandler->withFile()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

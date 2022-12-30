@@ -1,0 +1,311 @@
+ERROR - 2022-06-01 08:42:19 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+CRITICAL - 2022-06-01 08:42:19 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Models\BannerModel.php(59): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(46): App\Models\BannerModel->get_all_active()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#9 {main}
+ERROR - 2022-06-01 08:42:23 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+CRITICAL - 2022-06-01 08:42:23 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Models\BannerModel.php(59): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(46): App\Models\BannerModel->get_all_active()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#9 {main}
+CRITICAL - 2022-06-01 08:55:48 --> Call to undefined method App\Models\PostModel::get_all_active
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(52): CodeIgniter\Model->__call('get_all_active', Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-06-01 08:57:51 --> Call to undefined method App\Models\PostModel::get_all_active
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(52): CodeIgniter\Model->__call('get_all_active', Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-06-01 08:58:25 --> Undefined variable: limit
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 49, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-06-01 08:58:47 --> Call to undefined method App\Models\PostModel::get_all_active
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(52): CodeIgniter\Model->__call('get_all_active', Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-06-01 08:59:04 --> Call to undefined method App\Models\PostModel::get_all_active
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(52): CodeIgniter\Model->__call('get_all_active', Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-06-01 09:09:05 --> You must set the database table to be used with your query.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(490): CodeIgniter\Model->__call('get_total_publi...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->agenda()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-06-01 09:09:14 --> You must set the database table to be used with your query.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(490): CodeIgniter\Model->__call('get_total_publi...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->agenda()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-06-01 09:09:39 --> You must set the database table to be used with your query.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(490): CodeIgniter\Model->__call('get_total_activ...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->agenda()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-06-01 09:09:45 --> You must set the database table to be used with your query.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(490): CodeIgniter\Model->__call('get_total_activ...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->agenda()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-06-01 09:11:10 --> Undefined variable: event
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Views\agenda.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 14, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('agenda', Array, true)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(502): view('agenda', Array)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->agenda()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#10 {main}
+ERROR - 2022-06-01 11:07:24 --> Unknown column 'exhibitors.category_id' in 'on clause'
+CRITICAL - 2022-06-01 11:07:24 --> Call to a member function getResult() on bool
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Api_Datatables.php(301): App\Models\DtModel->make_datatables('exhibitors', Array, Array, Array, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Api_Datatables->exhibitors()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api_Datatables))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+ERROR - 2022-06-01 11:08:33 --> Unknown column 'exhibitors.category_id' in 'on clause'
+CRITICAL - 2022-06-01 11:08:33 --> Call to a member function getResult() on bool
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Api_Datatables.php(301): App\Models\DtModel->make_datatables('exhibitors', Array, Array, Array, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Api_Datatables->exhibitors()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api_Datatables))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-06-01 11:14:58 --> Call to a member function move() on null
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->add_sector()
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Exhibitors))
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-06-01 11:15:10 --> Undefined variable: logo
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Exhibitors.php(423): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 423, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->add_sector()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Exhibitors))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-06-01 11:16:01 --> Undefined index: file
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Usuarios\\Doc...', 142, Array)
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}(Array)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\Database.php(166): array_map(Object(Closure), Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1654092961.3373, 0.0826, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('admin/exhibitor...', 'after')
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#12 {main}
+CRITICAL - 2022-06-01 11:17:38 --> Class 'App\Controllers\Imagick' not found
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover('uploads', 'sectors', '20220601', '1654092941_f21b...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Exhibitors))
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-06-01 11:18:49 --> Class 'App\Controllers\Imagick' not found
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover('uploads', 'sectors', '20220601', '1654092941_f21b...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Exhibitors))
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-06-01 11:18:55 --> Class 'App\Controllers\Imagick' not found
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover('uploads', 'sectors', '20220601', '1654092941_f21b...')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Exhibitors))
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-06-01 11:26:49 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Images\Handlers\GDHandler.php(255): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Exhibitors.php(142): CodeIgniter\Images\Handlers\GDHandler->save('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->add_exhibitor()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Exhibitors))
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-06-01 11:26:56 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Images\Handlers\GDHandler.php(255): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Exhibitors.php(142): CodeIgniter\Images\Handlers\GDHandler->save('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->add_exhibitor()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Exhibitors))
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-06-01 11:27:36 --> Undefined index: file
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Usuarios\\Doc...', 142, Array)
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}(Array)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\Database.php(166): array_map(Object(Closure), Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1654093656.2315, 0.0958, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('admin/exhibitor...', 'after')
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#12 {main}
+CRITICAL - 2022-06-01 12:39:01 --> You must set the database table to be used with your query.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(43): CodeIgniter\Model->__call('get_next_order', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Galleries->add_new()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-06-01 12:39:52 --> filemtime(): stat failed for admin/_assets/js/galleries.js
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'filemtime(): st...', 'D:\\Usuarios\\Doc...', 51, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(51): filemtime('admin/_assets/j...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Galleries->add_new()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-06-01 12:40:04 --> filemtime(): stat failed for admin/_assets/js/galleries.js
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'filemtime(): st...', 'D:\\Usuarios\\Doc...', 51, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(51): filemtime('admin/_assets/j...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Galleries->add_new()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-06-01 16:00:17 --> finfo_file(C:\xampp\tmp\php6A25.tmp): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\Usuarios\\Doc...', 109, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Files\File.php(109): finfo_file(Resource id #171, 'C:\\xampp\\tmp\\ph...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Files\File.php(121): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(165): CodeIgniter\Files\File->getRandomName()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Galleries->add_gallery()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#11 {main}
+CRITICAL - 2022-06-01 16:00:31 --> finfo_file(C:\xampp\tmp\phpA201.tmp): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\x...', 'D:\\Usuarios\\Doc...', 109, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Files\File.php(109): finfo_file(Resource id #180, 'C:\\xampp\\tmp\\ph...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\HTTP\Files\UploadedFile.php(302): CodeIgniter\Files\File->getMimeType()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\HTTP\Files\UploadedFile.php(291): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Files\File.php(121): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(165): CodeIgniter\Files\File->getRandomName()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Galleries->add_gallery()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#11 {main}
+CRITICAL - 2022-06-01 16:01:10 --> Undefined variable: thumbnail
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(178): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 178, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Galleries->add_gallery()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-06-01 16:01:53 --> Undefined index: file
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Usuarios\\Doc...', 142, Array)
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}(Array)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\Database.php(166): array_map(Object(Closure), Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1654110113.1353, 0.0946, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('admin/galleries...', 'after')
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#12 {main}
+CRITICAL - 2022-06-01 17:16:53 --> Call to a member function getFlashdata() on null
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(210): include()
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('cadastro', Array, true)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(433): view('cadastro', Array)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->cadastro()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#9 {main}
+ERROR - 2022-06-01 17:58:48 --> Unknown column 'company' in 'field list'
+ERROR - 2022-06-01 17:58:55 --> Unknown column 'company' in 'field list'

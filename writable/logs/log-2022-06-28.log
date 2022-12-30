@@ -1,0 +1,88 @@
+CRITICAL - 2022-06-28 21:19:37 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:20:32 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:21:13 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:21:42 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:31:38 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:31:59 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:33:50 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:35:40 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:38:21 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 21:45:08 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-28 22:06:08 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Post.php(98): CodeIgniter\Images\Handlers\GDHandler->save()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_post()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

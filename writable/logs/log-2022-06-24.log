@@ -1,0 +1,68 @@
+CRITICAL - 2022-06-24 10:17:06 --> The original file is not a valid file.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/HTTP/Files/UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Users.php(149): CodeIgniter\HTTP\Files\UploadedFile->move()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Users->add_user()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-24 10:17:30 --> The original file is not a valid file.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/HTTP/Files/UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Users.php(149): CodeIgniter\HTTP\Files\UploadedFile->move()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Users->add_user()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-24 10:39:08 --> The original file is not a valid file.
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/HTTP/Files/UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Users.php(149): CodeIgniter\HTTP\Files\UploadedFile->move()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Users->add_user()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-24 10:40:07 --> Undefined variable: is_past_events_page
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Views/agenda.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(210): include('/home/agronegoc...')
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(761): view()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->agenda()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-24 10:41:49 --> Undefined variable: is_past_events_page
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Views/agenda.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(210): include('/home/agronegoc...')
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(761): view()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->agenda()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-24 10:43:03 --> Undefined variable: is_past_events_page
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Views/agenda.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(210): include('/home/agronegoc...')
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(761): view()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->agenda()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-24 10:43:15 --> Undefined index: tab
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Views/admin/users/edit.php(144): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(210): include('/home/agronegoc...')
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Admin_Users.php(80): view()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Users->edit()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

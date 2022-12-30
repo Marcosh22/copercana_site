@@ -1,0 +1,37 @@
+CRITICAL - 2022-07-27 13:43:35 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public_html\index.php(28): require('D:\\Usuarios\\Doc...')
+#2 {main}
+CRITICAL - 2022-07-27 13:47:18 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public_html\index.php(28): require('D:\\Usuarios\\Doc...')
+#2 {main}
+CRITICAL - 2022-07-27 13:48:03 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\spark(45): require('D:\\Usuarios\\Doc...')
+#2 {main}
+CRITICAL - 2022-07-27 13:48:32 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\spark(45): require('D:\\Usuarios\\Doc...')
+#2 {main}
+CRITICAL - 2022-07-27 09:01:07 --> Undefined index: file
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Debug\Toolbar\Collectors\Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Usuarios\\Doc...', 142, Array)
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}(Array)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Debug\Toolbar\Collectors\Database.php(166): array_map(Object(Closure), Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Debug\Toolbar\Collectors\BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Debug\Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Debug\Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1658923267.0702, 0.5788, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), NULL)
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('/', 'after')
+#9 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#12 {main}
+CRITICAL - 2022-07-27 18:01:10 --> Class 'App\Controllers\DOMDocument' not found
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->cotacoes()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}

@@ -1,0 +1,16 @@
+CRITICAL - 2022-08-10 14:31:13 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/copercana/copercana.com.br/app/Controllers/Admin_Pages.php(965): mkdir()
+#2 /home/copercana/copercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Pages->update_page()
+#3 /home/copercana/copercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/copercana/copercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/copercana/copercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-08-10 14:32:00 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/copercana/copercana.com.br/app/Controllers/Admin_Pages.php(965): mkdir()
+#2 /home/copercana/copercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Pages->update_page()
+#3 /home/copercana/copercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/copercana/copercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/copercana/copercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

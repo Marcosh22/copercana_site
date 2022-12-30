@@ -1,0 +1,48 @@
+CRITICAL - 2022-05-30 14:36:53 --> Invalid file: galerias.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('galerias.php')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('galerias', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(276): view('galerias', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->galeria_de_fotos()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-05-30 14:37:14 --> Invalid file: galerias.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('galerias.php')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('galerias', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(276): view('galerias', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->galeria_de_fotos()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-05-30 14:37:45 --> Invalid file: galerias.php
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('galerias.php')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('galerias', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(276): view('galerias', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->galeria_de_fotos()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-05-30 16:01:48 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::get() must be of the type int, null given, called in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Models\GalleryModel.php on line 53
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Models\GalleryModel.php(53): CodeIgniter\Database\BaseBuilder->get(NULL, NULL)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(267): App\Models\GalleryModel->get_pictures_by_gallery_id('1')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->galeria_de_fotos('2021')
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-05-30 16:02:01 --> Undefined variable: limit
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Models\GalleryModel.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 53, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(267): App\Models\GalleryModel->get_pictures_by_gallery_id('1')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->galeria_de_fotos('2021')
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}

@@ -1,0 +1,52 @@
+CRITICAL - 2022-07-28 08:34:49 --> DOMDocument::loadHTML(): htmlParseEntityRef: expecting ';' in Entity, line: 1
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'DOMDocument::lo...', 'D:\\Usuarios\\Doc...', 898, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(898): DOMDocument->loadHTML('https://www.cep...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->cotacoes()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-07-28 08:38:45 --> Undefined variable: detail
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(918): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 918, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->cotacoes()
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-07-28 09:12:05 --> Call to undefined function App\Controllers\get_cdi()
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->cotacoes()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-07-28 09:38:21 --> Call to undefined method App\Controllers\Home::get_usdbr()
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->cotacoes()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#5 {main}
+CRITICAL - 2022-07-28 09:38:31 --> Cannot use object of type stdClass as array
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(976): App\Controllers\Home->get_usdbrl()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->cotacoes()
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-07-28 10:56:25 --> file_get_contents(https://www.cepea.esalq.usp.br/br/widgetproduto.js.php?fonte=arial&amp;tamanho=10&amp;largura=400px&amp;corfundo=dbd6b2&amp;cortexto=333333&amp;corlinha=ede7bf&amp;id_indicador%5B%5D=53&amp;id_indicador%5B%5D=103&amp;id_indicador%5B%5D=104): failed to open stream: Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu.
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'D:\\Usuarios\\Doc...', 943, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(943): file_get_contents('https://www.cep...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(124): App\Controllers\Home->get_quotation_list()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}

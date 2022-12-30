@@ -1,0 +1,11 @@
+CRITICAL - 2022-05-24 10:04:46 --> Call to undefined function bae_url()
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(210): include()
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(52): view('home', Array)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#9 {main}

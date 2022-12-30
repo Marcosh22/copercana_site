@@ -1,0 +1,533 @@
+CRITICAL - 2022-06-07 10:14:12 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:14:12 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:16:19 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:16:19 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:17:09 --> if_exists não é uma regra válida.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('if_exists')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('cover', 'Capa', NULL, Array, Array)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(246): CodeIgniter\Controller->validate(Array)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Galleries->update_gallery('4')
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#9 {main}
+CRITICAL - 2022-06-07 10:17:52 --> if_exists não é uma regra válida.
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('if_exists')
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('cover', 'Capa', NULL, Array, Array)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(246): CodeIgniter\Controller->validate(Array)
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Admin_Galleries->update_gallery('4')
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#9 {main}
+CRITICAL - 2022-06-07 10:19:06 --> Undefined index: file
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Usuarios\\Doc...', 142, Array)
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}(Array)
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\Database.php(166): array_map(Object(Closure), Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar\Collectors\BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1654607937.0636, 9.7372, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('admin/galleries...', 'after')
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#12 {main}
+CRITICAL - 2022-06-07 10:21:21 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:21:21 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:23:05 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:23:05 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:31:40 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:31:40 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:33:46 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:33:46 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:42:02 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:42:02 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:43:34 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:43:34 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:46:21 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:46:21 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 10:54:04 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 10:54:04 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 11:00:01 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 11:00:01 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 11:01:36 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 11:01:36 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 11:01:39 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 11:01:39 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-07 11:07:40 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\Usuarios\\Doc...', 290, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(290): ini_set('session.name', 'ci_session')
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Session\Session.php(228): CodeIgniter\Session\Session->configure()
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(577): CodeIgniter\Session\Session->start()
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\vendor\benedmunds\codeigniter-ion-auth\Libraries\IonAuth.php(65): session()
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Admin_Galleries.php(11): IonAuth\Libraries\IonAuth->__construct()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(802): App\Controllers\Admin_Galleries->__construct()
+#12 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#13 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#16 {main}
+CRITICAL - 2022-06-07 11:07:40 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Config\Events.php:32) in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Usuarios\\Doc...', 112, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2022-06-07 11:29:02 --> Unknown column 'require_registration_during_event' in 'field list'
+ERROR - 2022-06-07 11:29:17 --> Unknown column 'require_registration_during_event' in 'field list'
+ERROR - 2022-06-07 11:30:05 --> Unknown column 'require_registration_during_event' in 'field list'
+ERROR - 2022-06-07 11:31:18 --> Unknown column 'require_registration_during_event' in 'field list'
+ERROR - 2022-06-07 11:32:39 --> Unknown column 'require_registration_during_event' in 'field list'
+ERROR - 2022-06-07 11:32:57 --> Unknown column 'require_registration_during_event' in 'field list'
+ERROR - 2022-06-07 11:33:00 --> Unknown column 'require_registration_during_event' in 'field list'
+ERROR - 2022-06-07 11:33:05 --> Unknown column 'require_registration_during_event' in 'field list'
+CRITICAL - 2022-06-07 11:52:50 --> Argument 1 passed to _get_uri() must be of the type string, null given, called in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Helpers\url_helper.php on line 87
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Helpers\url_helper.php(87): _get_uri(NULL, Object(Config\App))
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Helpers\url_helper.php(106): site_url(NULL, NULL, Object(Config\App))
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Views\home.php(108): base_url(NULL)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(126): view('home', Array)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#12 {main}
+CRITICAL - 2022-06-07 11:52:53 --> Argument 1 passed to _get_uri() must be of the type string, null given, called in D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Helpers\url_helper.php on line 87
+#0 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Helpers\url_helper.php(87): _get_uri(NULL, Object(Config\App))
+#1 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Helpers\url_helper.php(106): site_url(NULL, NULL, Object(Config\App))
+#2 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Views\home.php(108): base_url(NULL)
+#3 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(210): include('D:\\Usuarios\\Doc...')
+#4 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#6 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\app\Controllers\Home.php(126): view('home', Array)
+#7 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#8 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Usuarios\Documents\Projetos\Copercana\site-copercana\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#12 {main}
+CRITICAL - 2022-06-07 14:34:51 --> Undefined variable: youtube_id
+#0 /var/www/html/agronegocioscopercana/app/Views/home.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/var/www/html/a...', 92, Array)
+#1 /var/www/html/agronegocioscopercana/system/View/View.php(210): include('/var/www/html/a...')
+#2 /var/www/html/agronegocioscopercana/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/agronegocioscopercana/system/Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#4 /var/www/html/agronegocioscopercana/app/Controllers/Home.php(126): view('home', Array)
+#5 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#6 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-07 14:35:06 --> Undefined variable: youtube_id
+#0 /var/www/html/agronegocioscopercana/app/Views/home.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/var/www/html/a...', 92, Array)
+#1 /var/www/html/agronegocioscopercana/system/View/View.php(210): include('/var/www/html/a...')
+#2 /var/www/html/agronegocioscopercana/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/agronegocioscopercana/system/Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#4 /var/www/html/agronegocioscopercana/app/Controllers/Home.php(126): view('home', Array)
+#5 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#6 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-07 14:38:45 --> Could not move file phppsHOaw to uploads/galleries/2021/ ()
+#0 /var/www/html/agronegocioscopercana/system/HTTP/Files/UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phppsHOaw', 'uploads/galleri...', '')
+#1 /var/www/html/agronegocioscopercana/app/Controllers/Admin_Galleries.php(281): CodeIgniter\HTTP\Files\UploadedFile->move('uploads/galleri...', '1654623525_7db0...')
+#2 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(825): App\Controllers\Admin_Galleries->update_gallery('5')
+#3 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#4 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-07 14:38:59 --> Could not move file phpOZC5t3 to uploads/galleries/2021/ ()
+#0 /var/www/html/agronegocioscopercana/system/HTTP/Files/UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phpOZC5t3', 'uploads/galleri...', '')
+#1 /var/www/html/agronegocioscopercana/app/Controllers/Admin_Galleries.php(281): CodeIgniter\HTTP\Files\UploadedFile->move('uploads/galleri...', '1654623539_4eb0...')
+#2 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(825): App\Controllers\Admin_Galleries->update_gallery('5')
+#3 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#4 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-07 14:39:04 --> Could not move file php1K9I3c to uploads/galleries/2021/ ()
+#0 /var/www/html/agronegocioscopercana/system/HTTP/Files/UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('php1K9I3c', 'uploads/galleri...', '')
+#1 /var/www/html/agronegocioscopercana/app/Controllers/Admin_Galleries.php(281): CodeIgniter\HTTP\Files\UploadedFile->move('uploads/galleri...', '1654623544_0ffb...')
+#2 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(825): App\Controllers\Admin_Galleries->update_gallery('5')
+#3 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#4 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-07 14:40:36 --> Could not move file phpt8W5zN to uploads/galleries/2021/ ()
+#0 /var/www/html/agronegocioscopercana/system/HTTP/Files/UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phpt8W5zN', 'uploads/galleri...', '')
+#1 /var/www/html/agronegocioscopercana/app/Controllers/Admin_Galleries.php(281): CodeIgniter\HTTP\Files\UploadedFile->move('uploads/galleri...', '1654623636_04bc...')
+#2 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(825): App\Controllers\Admin_Galleries->update_gallery('5')
+#3 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#4 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-07 14:40:51 --> Could not move file phpnzawFe to uploads/galleries/2021/ ()
+#0 /var/www/html/agronegocioscopercana/system/HTTP/Files/UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phpnzawFe', 'uploads/galleri...', '')
+#1 /var/www/html/agronegocioscopercana/app/Controllers/Admin_Galleries.php(281): CodeIgniter\HTTP\Files\UploadedFile->move('uploads/galleri...', '1654623651_8c4a...')
+#2 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(825): App\Controllers\Admin_Galleries->update_gallery('5')
+#3 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#4 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-07 14:41:01 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 /var/www/html/agronegocioscopercana/system/Images/Handlers/GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 /var/www/html/agronegocioscopercana/app/Controllers/Admin_Galleries.php(287): CodeIgniter\Images\Handlers\GDHandler->save('/var/www/html/a...')
+#2 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(825): App\Controllers\Admin_Galleries->update_gallery('5')
+#3 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Galleries))
+#4 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-07 14:41:29 --> Undefined index: file
+#0 /var/www/html/agronegocioscopercana/system/Debug/Toolbar/Collectors/Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/var/www/html/a...', 142, Array)
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}(Array)
+#2 /var/www/html/agronegocioscopercana/system/Debug/Toolbar/Collectors/Database.php(166): array_map(Object(Closure), Array)
+#3 /var/www/html/agronegocioscopercana/system/Debug/Toolbar/Collectors/BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 /var/www/html/agronegocioscopercana/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 /var/www/html/agronegocioscopercana/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run(1654623688.2548, 1.0718, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#6 /var/www/html/agronegocioscopercana/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#7 /var/www/html/agronegocioscopercana/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#8 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('admin/galleries...', 'after')
+#9 /var/www/html/agronegocioscopercana/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /var/www/html/agronegocioscopercana/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}

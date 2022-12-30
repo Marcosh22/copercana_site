@@ -1,0 +1,30 @@
+ERROR - 2022-09-02 10:20:43 --> Unknown column 'users.first_name' in 'field list'
+ERROR - 2022-09-02 10:20:49 --> Unknown column 'users.first_name' in 'field list'
+CRITICAL - 2022-09-02 10:52:22 --> filemtime(): stat failed for _assets/admin/js/blog.js
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/copercana/copercana.com.br/app/Controllers/Admin_Blog.php(47): filemtime()
+#2 /home/copercana/copercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Blog->add_new()
+#3 /home/copercana/copercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /home/copercana/copercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/copercana/copercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-02 11:37:34 --> Call to undefined method App\Controllers\Admin_Post::create_slug_from_category_title()
+#0 /home/copercana/copercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Post->add_category()
+#1 /home/copercana/copercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/copercana/copercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/copercana/copercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-02 12:19:43 --> Too few arguments to function App\Models\BlogModel::get_total_published_by_category(), 0 passed in /home/copercana/copercana.com.br/app/Controllers/Home.php on line 1282 and exactly 1 expected
+#0 /home/copercana/copercana.com.br/app/Controllers/Home.php(1282): App\Models\BlogModel->get_total_published_by_category()
+#1 /home/copercana/copercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->categoria()
+#2 /home/copercana/copercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#3 /home/copercana/copercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/copercana/copercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-02 12:20:31 --> Too few arguments to function App\Models\BlogModel::get_total_published_by_category(), 0 passed in /home/copercana/copercana.com.br/app/Controllers/Home.php on line 1282 and exactly 1 expected
+#0 /home/copercana/copercana.com.br/app/Controllers/Home.php(1282): App\Models\BlogModel->get_total_published_by_category()
+#1 /home/copercana/copercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->categoria()
+#2 /home/copercana/copercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#3 /home/copercana/copercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/copercana/copercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

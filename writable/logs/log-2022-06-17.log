@@ -1,0 +1,72 @@
+CRITICAL - 2022-06-17 14:31:18 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 14:32:35 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 14:32:40 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 14:32:54 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 14:33:09 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 14:33:23 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 15:57:34 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 15:57:50 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 15:57:54 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 15:58:07 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 15:58:12 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-17 15:58:24 --> Class 'Imagick' not found
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Admin_Exhibitors->make_cover()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

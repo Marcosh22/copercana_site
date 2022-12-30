@@ -1,0 +1,71 @@
+ERROR - 2022-08-03 09:17:36 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2022-08-03 09:17:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Models\GeneralModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(11): App\Models\GeneralModel->get_by_id(1)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(802): App\Controllers\Home->__construct()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#9 {main}
+ERROR - 2022-08-03 09:17:43 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2022-08-03 09:17:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Models\GeneralModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(11): App\Models\GeneralModel->get_by_id(1)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(802): App\Controllers\Home->__construct()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#9 {main}
+CRITICAL - 2022-08-03 09:18:08 --> file_get_contents(): php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido. 
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'D:\\Usuarios\\Doc...', 1297, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(1297): file_get_contents('https://www.cep...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(84): App\Controllers\Home->get_quotation_list()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}
+CRITICAL - 2022-08-03 10:28:14 --> Não é possível salvar a imagem. Por favor, certifique-se de que a imagem e o diretório de arquivos são graváveis.
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Images\Handlers\GDHandler.php(245): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Admin_Units.php(529): CodeIgniter\Images\Handlers\GDHandler->save('D:\\Usuarios\\Doc...')
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Admin_Units->add_unit()
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Units))
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#7 {main}
+CRITICAL - 2022-08-03 12:29:41 --> Undefined variable: header_dependencies
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(705): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 705, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->unidade_graos()
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-08-03 13:52:45 --> Undefined variable: units
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(760): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Usuarios\\Doc...', 760, Array)
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->laboratorio_solos()
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#6 {main}
+CRITICAL - 2022-08-03 16:48:23 --> syntax error, unexpected '}', expecting end of file
+#0 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Common.php(1089): CodeIgniter\View\View->render('laboratorio-de-...', Array, true)
+#2 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\app\Controllers\Home.php(768): view('laboratorio-de-...', Array)
+#3 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(825): App\Controllers\Home->laboratorio_solos()
+#4 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Usuarios\Documents\Projetos\Copercana\copercana.com.br\system\Commands\Server\rewrite.php(43): require_once('D:\\Usuarios\\Doc...')
+#8 {main}

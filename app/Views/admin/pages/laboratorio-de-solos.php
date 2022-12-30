@@ -1,0 +1,378 @@
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Páginas</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">Páginas</li>
+                <li class="breadcrumb-item active">Laboratório de Solos</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Editar Página</h5>
+                        <p>Insira as informações atualizadas da sua página:</p>
+                        <label>(<span class="required">*</span>) Campos obrigatórios</label>
+                        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </symbol>
+                            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </symbol>
+                        </svg>
+
+                        <?php 
+                            $response = $session->getFlashdata('response');
+                            
+                            if(isset($response) && !empty($response)) { ?>
+
+                        <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
+                            role="alert" style="margin-bottom: 20px">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                                <use
+                                    xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
+                            </svg>
+                            <div>
+                                <?= $response['message'] ?>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+                        <?php }
+                        ?>
+
+                        <?php echo form_open_multipart('admin/pages/update_page/23', ['class' => 'my-5']);?>
+
+                        <h3 class="card-title">Carrossel de cotações</h3>
+
+                        <div class="row mb-3">
+                            <?php echo form_label('Exibir?', 'show_quotation_carousel', ['class' => 'col-sm-2 col-form-label']);?>
+
+                            <div class="col-sm-10">
+
+                                <div class="switch__container">
+                                    <?php echo form_checkbox([
+                                            'name' => 'show_quotation_carousel',
+                                            'id'   => 'show_quotation_carousel',
+                                            'value'   => '1',
+                                            'checked' => isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1,
+                                        ], '1', isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1, ['class' => 'switch switch--shadow']);?>
+
+                                    <label for="show_quotation_carousel"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Laboratório de Solos</h3>
+                        <div class="row mb-3">
+                            <?php echo form_label('Banner</br><small>(Recomendado: 1110x300)</small>', 'intro_section_banner', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php if(isset($page_data) && isset($page_data->intro_section_banner) && !empty($page_data->intro_section_banner)) { ?>
+                                <div class="banner-preview">
+                                    <input type="hidden" name="intro_section_banner"
+                                        value="<?= $page_data->intro_section_banner; ?>">
+                                    <img src="<?= base_url($page_data->intro_section_banner) ?>" alt="">
+                                    <a class="delete-btn"
+                                        href="<?= base_url("admin/pages/delete_file/23/intro_section_banner") ?>"><i
+                                            class="bi bi-x-circle-fill"></i></a>
+                                </div>
+                                <?php } else { ?>
+                                <?php echo form_upload([
+                                            'name' => 'intro_section_banner',
+                                            'id'   => 'intro_section_banner'
+                                        ], '', ['class' => 'form-control']);?>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Banner Mobile</br><small>(Recomendado: 860x500)</small>', 'intro_section_mobile_banner', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php if(isset($page_data) && isset($page_data->intro_section_mobile_banner) && !empty($page_data->intro_section_mobile_banner)) { ?>
+                                <div class="banner-preview">
+                                    <input type="hidden" name="intro_section_mobile_banner"
+                                        value="<?= $page_data->intro_section_mobile_banner; ?>">
+                                    <img src="<?= base_url($page_data->intro_section_mobile_banner) ?>" alt="">
+                                    <a class="delete-btn"
+                                        href="<?= base_url("admin/pages/delete_file/23/intro_section_mobile_banner") ?>"><i
+                                            class="bi bi-x-circle-fill"></i></a>
+                                </div>
+                                <?php } else { ?>
+                                <?php echo form_upload([
+                                            'name' => 'intro_section_mobile_banner',
+                                            'id'   => 'intro_section_mobile_banner'
+                                        ], '', ['class' => 'form-control']);?>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Título', 'intro_section_title', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                                'name' => 'intro_section_title',
+                                                'id'   => 'intro_section_title',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->intro_section_title) ? $page_data->intro_section_title : '', ['class' => 'form-control']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Descrição', 'intro_section_description', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_textarea([
+                                            'name' => 'intro_section_description',
+                                            'id'   => 'intro_section_description',
+                                        ], isset($page_data) && isset($page_data->intro_section_description) ? $page_data->intro_section_description : '', ['class' => 'form-control editor', 'style' => 'height: 100px']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <?php echo form_label('Exibir seção?', 'intro_section_show', ['class' => 'col-sm-2 col-form-label']);?>
+
+                            <div class="col-sm-10">
+
+                                <div class="switch__container">
+                                    <?php echo form_checkbox([
+                                            'name' => 'intro_section_show',
+                                            'id'   => 'intro_section_show',
+                                            'value'   => '1',
+                                            'checked' => isset($page_data) && isset($page_data->intro_section_show) && $page_data->intro_section_show == 1,
+                                        ], '1', isset($page_data) && isset($page_data->intro_section_show) && $page_data->intro_section_show == 1, ['class' => 'switch switch--shadow']);?>
+
+                                    <label for="intro_section_show"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="card-title">Certificado de Qualidade</h3>
+                        <div class="row mb-3">
+                            <?php echo form_label('Título', 'quality_cert_section_title', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                                'name' => 'quality_cert_section_title',
+                                                'id'   => 'quality_cert_section_title',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->quality_cert_section_title) ? $page_data->quality_cert_section_title : '', ['class' => 'form-control']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Descrição', 'quality_cert_section_description', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_textarea([
+                                            'name' => 'quality_cert_section_description',
+                                            'id'   => 'quality_cert_section_description',
+                                        ], isset($page_data) && isset($page_data->quality_cert_section_description) ? $page_data->quality_cert_section_description : '', ['class' => 'form-control editor', 'style' => 'height: 100px']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <?php echo form_label('Exibir seção?', 'quality_cert_section_show', ['class' => 'col-sm-2 col-form-label']);?>
+
+                            <div class="col-sm-10">
+
+                                <div class="switch__container">
+                                    <?php echo form_checkbox([
+                                            'name' => 'quality_cert_section_show',
+                                            'id'   => 'quality_cert_section_show',
+                                            'value'   => '1',
+                                            'checked' => isset($page_data) && isset($page_data->quality_cert_section_show) && $page_data->quality_cert_section_show == 1,
+                                        ], '1', isset($page_data) && isset($page_data->quality_cert_section_show) && $page_data->quality_cert_section_show == 1, ['class' => 'switch switch--shadow']);?>
+
+                                    <label for="quality_cert_section_show"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="card-title">Banner Corpo</h3>
+                        <div class="row mb-3">
+                            <?php echo form_label('Imagem</br><small>(Recomendado: 1920x560)</small>', 'body_banner_section_picture', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php if(isset($page_data) && isset($page_data->body_banner_section_picture) && !empty($page_data->body_banner_section_picture)) { ?>
+                                <div class="banner-preview">
+                                    <input type="hidden" name="body_banner_section_picture"
+                                        value="<?= $page_data->body_banner_section_picture; ?>">
+                                    <img src="<?= base_url($page_data->body_banner_section_picture) ?>" alt="">
+                                    <a class="delete-btn"
+                                        href="<?= base_url("admin/pages/delete_file/11/body_banner_section_picture") ?>"><i
+                                            class="bi bi-x-circle-fill"></i></a>
+                                </div>
+                                <?php } else { ?>
+                                <?php echo form_upload([
+                                            'name' => 'body_banner_section_picture',
+                                            'id'   => 'body_banner_section_picture'
+                                        ], '', ['class' => 'form-control']);?>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <?php echo form_label('Exibir banner?', 'body_banner_section_show', ['class' => 'col-sm-2 col-form-label']);?>
+
+                            <div class="col-sm-10">
+
+                                <div class="switch__container">
+                                    <?php echo form_checkbox([
+                                            'name' => 'body_banner_section_show',
+                                            'id'   => 'body_banner_section_show',
+                                            'value'   => '1',
+                                            'checked' => isset($page_data) && isset($page_data->body_banner_section_show) && $page_data->body_banner_section_show == 1,
+                                        ], '1', isset($page_data) && isset($page_data->body_banner_section_show) && $page_data->body_banner_section_show == 1, ['class' => 'switch switch--shadow']);?>
+
+                                    <label for="body_banner_section_show"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Sobre o Laboratório</h3>
+                        <div class="row mb-3">
+                            <?php echo form_label('Título', 'about_section_title', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                                'name' => 'about_section_title',
+                                                'id'   => 'about_section_title',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->about_section_title) ? $page_data->about_section_title : '', ['class' => 'form-control']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Conteúdo (antes do CTA)', 'about_section_description_01', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_textarea([
+                                            'name' => 'about_section_description_01',
+                                            'id'   => 'about_section_description_01',
+                                        ], isset($page_data) && isset($page_data->about_section_description_01) ? $page_data->about_section_description_01 : '', ['class' => 'form-control editor', 'style' => 'height: 100px']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Conteúdo (após o CTA)', 'about_section_description_02', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_textarea([
+                                            'name' => 'about_section_description_02',
+                                            'id'   => 'about_section_description_02',
+                                        ], isset($page_data) && isset($page_data->about_section_description_02) ? $page_data->about_section_description_02 : '', ['class' => 'form-control editor', 'style' => 'height: 100px']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Texto CTA', 'about_section_cta_text', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                                'name' => 'about_section_cta_text',
+                                                'id'   => 'about_section_cta_text',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->about_section_cta_text) ? $page_data->about_section_cta_text : '', ['class' => 'form-control']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Link CTA', 'about_section_cta_link', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                                'name' => 'about_section_cta_link',
+                                                'id'   => 'about_section_cta_link',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->about_section_cta_link) ? $page_data->about_section_cta_link : '', ['class' => 'form-control']);?>
+
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-5">
+                            <?php echo form_label('Exibir seção?', 'about_section_show', ['class' => 'col-sm-2 col-form-label']);?>
+
+                            <div class="col-sm-10">
+
+                                <div class="switch__container">
+                                    <?php echo form_checkbox([
+                                            'name' => 'about_section_show',
+                                            'id'   => 'about_section_show',
+                                            'value'   => '1',
+                                            'checked' => isset($page_data) && isset($page_data->about_section_show) && $page_data->about_section_show == 1,
+                                        ], '1', isset($page_data) && isset($page_data->about_section_show) && $page_data->about_section_show == 1, ['class' => 'switch switch--shadow']);?>
+
+                                    <label for="about_section_show"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Contato</h3>
+                        <div class="row mb-3">
+                            <?php echo form_label('Título', 'contact_section_title', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                                'name' => 'contact_section_title',
+                                                'id'   => 'contact_section_title',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->contact_section_title) ? $page_data->contact_section_title : '', ['class' => 'form-control']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Descrição', 'contact_section_description', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_textarea([
+                                            'name' => 'contact_section_description',
+                                            'id'   => 'contact_section_description',
+                                        ], isset($page_data) && isset($page_data->contact_section_description) ? $page_data->contact_section_description : '', ['class' => 'form-control editor', 'style' => 'height: 100px']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Telefone', 'contact_section_phone', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                                'name' => 'contact_section_phone',
+                                                'id'   => 'contact_section_phone',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->contact_section_phone) ? $page_data->contact_section_phone : '', ['class' => 'form-control']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Whatsapp', 'contact_section_whatsapp', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                                'name' => 'contact_section_whatsapp',
+                                                'id'   => 'contact_section_whatsapp',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->contact_section_whatsapp) ? $page_data->contact_section_whatsapp : '', ['class' => 'form-control']);?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <?php echo form_label('Exibir seção?', 'contact_section_show', ['class' => 'col-sm-2 col-form-label']);?>
+
+                            <div class="col-sm-10">
+
+                                <div class="switch__container">
+                                    <?php echo form_checkbox([
+                                            'name' => 'contact_section_show',
+                                            'id'   => 'contact_section_show',
+                                            'value'   => '1',
+                                            'checked' => isset($page_data) && isset($page_data->contact_section_show) && $page_data->contact_section_show == 1,
+                                        ], '1', isset($page_data) && isset($page_data->contact_section_show) && $page_data->contact_section_show == 1, ['class' => 'switch switch--shadow']);?>
+
+                                    <label for="contact_section_show"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <?php echo form_submit('submit', 'Salvar', ['class' => 'btn btn-primary w-100']);?>
+                            </div>
+                        </div>  
+
+                        <?php echo form_close();?>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+</main>

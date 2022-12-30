@@ -1,0 +1,278 @@
+CRITICAL - 2022-06-09 13:29:14 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+CRITICAL - 2022-06-09 13:29:24 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+CRITICAL - 2022-06-09 13:29:31 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+CRITICAL - 2022-06-09 13:29:40 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+CRITICAL - 2022-06-09 13:37:15 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+CRITICAL - 2022-06-09 13:37:18 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+CRITICAL - 2022-06-09 13:38:17 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+CRITICAL - 2022-06-09 14:17:02 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+CRITICAL - 2022-06-09 14:17:23 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(28): require('/home/agronegoc...')
+#2 {main}
+ERROR - 2022-06-09 11:21:21 --> Error connecting to the database: Access denied for user '****'@'localhost' to database '****'
+CRITICAL - 2022-06-09 11:21:21 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' to database '****'
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Models/GeneralModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(11): App\Models\GeneralModel->get_by_id()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(802): App\Controllers\Home->__construct()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-06-09 11:25:15 --> Incorrect TIMESTAMP value: '0000-00-00 00:00:00'
+CRITICAL - 2022-06-09 11:25:15 --> Call to a member function getResult() on bool
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(66): App\Models\BannerModel->get_all_active_by_page_id()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-06-09 11:25:43 --> Incorrect TIMESTAMP value: '0000-00-00 00:00:00'
+CRITICAL - 2022-06-09 11:25:43 --> Call to a member function getResult() on bool
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(66): App\Models\BannerModel->get_all_active_by_page_id()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-06-09 11:25:51 --> Incorrect TIMESTAMP value: '0000-00-00 00:00:00'
+CRITICAL - 2022-06-09 11:25:51 --> Call to a member function getResult() on bool
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(66): App\Models\BannerModel->get_all_active_by_page_id()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-06-09 11:29:45 --> Incorrect TIMESTAMP value: '0000-00-00 00:00:00'
+CRITICAL - 2022-06-09 11:29:45 --> Undefined index: file
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(166): array_map()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run()
+#9 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-06-09 11:29:58 --> Incorrect TIMESTAMP value: '0000-00-00 00:00:00'
+ERROR - 2022-06-09 11:30:58 --> Incorrect TIMESTAMP value: '0000-00-00 00:00:00'
+ERROR - 2022-06-09 11:31:00 --> Incorrect TIMESTAMP value: '0000-00-00 00:00:00'
+ERROR - 2022-06-09 11:31:33 --> Incorrect TIMESTAMP value: '0000-00-00 00:00:00'
+CRITICAL - 2022-06-09 11:31:49 --> count(): Parameter must be an array or an object that implements Countable
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Views/home.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(210): include('/home/agronegoc...')
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(128): view()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-09 11:31:55 --> count(): Parameter must be an array or an object that implements Countable
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Views/home.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(210): include('/home/agronegoc...')
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(128): view()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-06-09 11:40:14 --> Object of class CodeIgniter\Email\Email could not be converted to string
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Registration->contact()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 11:40:48 --> Object of class CodeIgniter\Email\Email could not be converted to string
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Registration->contact()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 11:40:51 --> Object of class CodeIgniter\Email\Email could not be converted to string
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Registration->contact()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 11:41:56 --> Undefined index: file
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(166): array_map()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run()
+#9 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-06-09 11:47:50 --> Call to a member function printDebugger() on string
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Registration->contact()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 11:48:01 --> Undefined variable: form_data
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Registration.php(141): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Registration->contact()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-09 11:48:35 --> Undefined index: file
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(166): array_map()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run()
+#9 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-06-09 11:50:53 --> Call to a member function printDebugger() on string
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Registration->contact()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 11:51:19 --> Call to a member function printDebugger() on string
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Registration->contact()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 11:51:38 --> Undefined index: file
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(166): array_map()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run()
+#9 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-06-09 17:21:43 --> Class '3' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-09 17:21:45 --> Class '3' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-09 17:23:55 --> Class '3' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-09 17:23:57 --> Class '3' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-09 17:24:27 --> Class '3' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-09 17:24:29 --> Class '3' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-09 17:24:30 --> Class '3' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-09 17:25:25 --> Undefined index: file
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(142): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 [internal function]: CodeIgniter\Debug\Toolbar\Collectors\Database::CodeIgniter\Debug\Toolbar\Collectors\{closure}()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/Database.php(166): array_map()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar/Collectors/BaseCollector.php(224): CodeIgniter\Debug\Toolbar\Collectors\Database->display()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(90): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Debug/Toolbar.php(368): CodeIgniter\Debug\Toolbar->run()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after()
+#8 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(429): CodeIgniter\Filters\Filters->run()
+#9 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-06-09 17:27:06 --> Call to a member function get_all_active() on null
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-06-09 17:27:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OR `starts_at` >= '2022-06-09 17:27:08'
+AND `status` = 1
+AND temp_picture IS NOT' at line 7
+CRITICAL - 2022-06-09 17:27:08 --> Call to a member function getRow() on bool
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/app/Controllers/Home.php(73): App\Models\ScheduleModel->get_next_event()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-09 17:27:50 --> Call to a member function get_all_active() on null
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->index()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 17:38:14 --> syntax error, unexpected ''<script type="application/ld+' (T_ENCAPSED_AND_WHITESPACE)
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+#3 [internal function]: spl_autoload_call()
+#4 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(790): class_exists()
+#5 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->startController()
+#6 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-06-09 17:39:19 --> Call to a member function get_total() on null
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->expositores()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 17:39:21 --> Call to a member function get_total() on null
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->expositores()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-09 17:39:22 --> Call to a member function get_total() on null
+#0 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(825): App\Controllers\Home->expositores()
+#1 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#2 /home/agronegocioscopercana/agronegocioscopercana.com.br/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/agronegocioscopercana/agronegocioscopercana.com.br/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
