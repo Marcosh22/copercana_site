@@ -317,7 +317,6 @@ class Admin_Users extends BaseController
                 array(
                     'first_name' => $first_name,
                     'last_name' => $last_name,
-                    'email' => $email,
                     'picture_path' => $picture_path,
                     'description' => $description,
                     'website' => $website,
