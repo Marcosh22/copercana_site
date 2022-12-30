@@ -3908,3 +3908,10 @@ body {
   }
 
 }
+
+.ck-content .media {
+  clear: both;
+  margin: 0.9em 0;
+  display: block;
+  min-width: 15em;
+}
