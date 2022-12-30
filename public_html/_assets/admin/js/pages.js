@@ -1218,6 +1218,9 @@ if(editors) {
                     label: ' '
                 }]
             },
+            mediaEmbed: {
+                previewsInData: true
+            },
             toolbar: [
                 'heading', '|',
                 'fontfamily', 'fontsize', '|',
