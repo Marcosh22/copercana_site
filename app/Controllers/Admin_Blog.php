@@ -113,7 +113,8 @@ class Admin_Blog extends BaseController
         $data = array(
             'page' => 'blog-categories',
             'session' => $session,
-            'logged_user' => $this->ionAuth->user()
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
