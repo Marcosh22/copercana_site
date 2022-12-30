@@ -11,16 +11,18 @@ class Admin_Indications extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'indications';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/indications/index', $data);
@@ -31,10 +33,11 @@ class Admin_Indications extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $indicationModel = model('App\Models\IndicationModel', false);
@@ -48,6 +51,7 @@ class Admin_Indications extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -59,10 +63,11 @@ class Admin_Indications extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $indicationModel = model('App\Models\IndicationModel', false);
@@ -81,6 +86,7 @@ class Admin_Indications extends BaseController
         $data['session'] = $session;
         $data['indication'] = $indication;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/indications/edit', $data);
@@ -88,10 +94,11 @@ class Admin_Indications extends BaseController
     }
 
     public function add_indication() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -202,10 +209,11 @@ class Admin_Indications extends BaseController
     }
 
     public function update_indication($indication_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -299,10 +307,11 @@ class Admin_Indications extends BaseController
     }
     
     public function delete($indication_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -326,10 +335,11 @@ class Admin_Indications extends BaseController
     }
 
     public function remove_file($indication_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $indicationModel = model('App\Models\IndicationModel', false);
         $indication = $indicationModel->get_by_id($indication_id);
@@ -344,10 +354,11 @@ class Admin_Indications extends BaseController
     }
 
     public function remove_cover($indication_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $indicationModel = model('App\Models\IndicationModel', false);
         $indication = $indicationModel->get_by_id($indication_id);

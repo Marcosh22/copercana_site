@@ -11,17 +11,19 @@ class Admin_Contacts extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data = array(
             'page' => 'contacts',
             'session' => $session,
-            'logged_user' => $this->ionAuth->user()
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
@@ -33,10 +35,11 @@ class Admin_Contacts extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -51,6 +54,7 @@ class Admin_Contacts extends BaseController
         $data['session'] = $session;
         $data['contact'] = $contact;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/contacts/see_more', $data);
@@ -58,10 +62,11 @@ class Admin_Contacts extends BaseController
     }
 
     public function delete($contact_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 

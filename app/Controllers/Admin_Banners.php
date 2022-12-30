@@ -11,10 +11,11 @@ class Admin_Banners extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -36,6 +37,7 @@ class Admin_Banners extends BaseController
         $data['session'] = $session;
         $data['footer_dependencies'] = $footer_dependencies;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/banners/index', $data);
@@ -46,10 +48,11 @@ class Admin_Banners extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $bannerModel = model('App\Models\BannerModel', false);
@@ -60,6 +63,7 @@ class Admin_Banners extends BaseController
         $data['session'] = $session;
         $data['next_order'] = $next_order;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -71,10 +75,11 @@ class Admin_Banners extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $bannerModel = model('App\Models\BannerModel', false);
@@ -88,6 +93,7 @@ class Admin_Banners extends BaseController
         $data['session'] = $session;
         $data['banner'] = $banner;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/banners/edit', $data);
@@ -95,10 +101,11 @@ class Admin_Banners extends BaseController
     }
 
     public function add_banner() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -237,10 +244,11 @@ class Admin_Banners extends BaseController
     }
 
     public function update_banner($banner_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -352,10 +360,11 @@ class Admin_Banners extends BaseController
     }
     
     public function remove_desktop_picture($banner_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $bannerModel = model('App\Models\BannerModel', false);
         $banner = $bannerModel->get_by_id($banner_id);
@@ -370,10 +379,11 @@ class Admin_Banners extends BaseController
     }
 
     public function remove_mobile_picture($banner_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $bannerModel = model('App\Models\BannerModel', false);
         $banner = $bannerModel->get_by_id($banner_id);
@@ -388,10 +398,11 @@ class Admin_Banners extends BaseController
     }
 
     public function delete($banner_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 

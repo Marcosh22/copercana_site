@@ -11,16 +11,18 @@ class Admin_Offers extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(3)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'offers';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/offers/index', $data);
@@ -31,10 +33,11 @@ class Admin_Offers extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(3)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $offerModel = model('App\Models\OfferModel', false);
@@ -42,6 +45,7 @@ class Admin_Offers extends BaseController
         $data['page'] = 'offers-add_new';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -53,10 +57,11 @@ class Admin_Offers extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(3)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $offerModel = model('App\Models\OfferModel', false);
@@ -70,6 +75,7 @@ class Admin_Offers extends BaseController
         $data['session'] = $session;
         $data['offer'] = $offer;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/offers/edit', $data);
@@ -77,10 +83,11 @@ class Admin_Offers extends BaseController
     }
 
     public function add_offer() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(3)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -182,10 +189,11 @@ class Admin_Offers extends BaseController
     }
 
     public function update_offer($offer_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(3)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -266,10 +274,11 @@ class Admin_Offers extends BaseController
     }
     
     public function delete($offer_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(3)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -293,10 +302,11 @@ class Admin_Offers extends BaseController
     }
 
     public function remove_file($offer_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(3)) {
+            return redirect()->to('/admin');
+        }
 
         $offerModel = model('App\Models\OfferModel', false);
         $offer = $offerModel->get_by_id($offer_id);

@@ -11,10 +11,11 @@ class Admin_Pages extends BaseController
 
     public function home()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -37,6 +38,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/home', $data);
@@ -45,10 +47,11 @@ class Admin_Pages extends BaseController
 
     public function institucional()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -71,6 +74,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/institucional', $data);
@@ -79,10 +83,11 @@ class Admin_Pages extends BaseController
 
     public function sustentabilidade()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -105,6 +110,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/sustentabilidade', $data);
@@ -113,10 +119,11 @@ class Admin_Pages extends BaseController
 
     public function cooperativismo()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -139,6 +146,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/cooperativismo', $data);
@@ -147,10 +155,11 @@ class Admin_Pages extends BaseController
 
     public function politica_privacidade()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -173,6 +182,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/politica-de-privacidade', $data);
@@ -181,10 +191,11 @@ class Admin_Pages extends BaseController
 
     public function autocenter()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -207,6 +218,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/autocenter', $data);
@@ -215,10 +227,11 @@ class Admin_Pages extends BaseController
 
     public function centro_eventos()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -241,6 +254,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/centro-de-eventos', $data);
@@ -249,10 +263,11 @@ class Admin_Pages extends BaseController
 
     public function distribuidora_combustiveis()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -275,6 +290,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/distribuidora-de-combustiveis', $data);
@@ -283,10 +299,11 @@ class Admin_Pages extends BaseController
 
     public function ferragem_magazine()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -309,6 +326,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/ferragem-magazine', $data);
@@ -317,10 +335,11 @@ class Admin_Pages extends BaseController
 
     public function postos_combustiveis()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -343,6 +362,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/postos-de-combustiveis', $data);
@@ -351,10 +371,11 @@ class Admin_Pages extends BaseController
 
     public function copercana_solar()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -377,6 +398,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/copercana-solar', $data);
@@ -385,10 +407,11 @@ class Admin_Pages extends BaseController
 
     public function copercana_seguros()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -411,6 +434,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/copercana-seguros', $data);
@@ -419,11 +443,11 @@ class Admin_Pages extends BaseController
 
     public function supermercados()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
-
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
         helper(['form']);
 
         $session = \Config\Services::session();
@@ -445,6 +469,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/supermercados', $data);
@@ -453,10 +478,11 @@ class Admin_Pages extends BaseController
 
     public function unidade_graos()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -479,6 +505,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/unidade-de-graos', $data);
@@ -487,10 +514,11 @@ class Admin_Pages extends BaseController
 
     public function assessoria_imprensa()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -513,6 +541,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/assessoria-de-imprensa', $data);
@@ -521,10 +550,11 @@ class Admin_Pages extends BaseController
 
     public function revista_canavieiros()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -547,6 +577,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/revista-canavieiros', $data);
@@ -555,10 +586,11 @@ class Admin_Pages extends BaseController
 
     public function radio_copercana()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -581,6 +613,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/radio-copercana', $data);
@@ -589,10 +622,11 @@ class Admin_Pages extends BaseController
 
     public function redes_sociais()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -615,6 +649,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/redes-sociais', $data);
@@ -623,10 +658,11 @@ class Admin_Pages extends BaseController
 
     public function indicacoes()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -649,6 +685,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/indicacoes', $data);
@@ -657,10 +694,11 @@ class Admin_Pages extends BaseController
 
     public function cadastro()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -683,6 +721,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/cadastro', $data);
@@ -691,10 +730,11 @@ class Admin_Pages extends BaseController
 
     public function jovem_aprendiz()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -717,6 +757,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/jovem-aprendiz', $data);
@@ -725,10 +766,11 @@ class Admin_Pages extends BaseController
 
     public function vagas_disponiveis()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -751,6 +793,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/vagas-disponiveis', $data);
@@ -759,10 +802,11 @@ class Admin_Pages extends BaseController
 
     public function laboratorio_solos()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -785,6 +829,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/laboratorio-de-solos', $data);
@@ -793,10 +838,11 @@ class Admin_Pages extends BaseController
 
     public function tecnologia_bioas()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -819,6 +865,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/tecnologia-bioas', $data);
@@ -827,10 +874,11 @@ class Admin_Pages extends BaseController
 
     public function noticias()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -853,6 +901,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/noticias', $data);
@@ -861,10 +910,11 @@ class Admin_Pages extends BaseController
 
     public function blog()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -887,6 +937,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/blog', $data);
@@ -895,10 +946,11 @@ class Admin_Pages extends BaseController
 
     public function contato()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -921,6 +973,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/contato', $data);
@@ -929,10 +982,11 @@ class Admin_Pages extends BaseController
 
     public function departamento_agronomico()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         helper(['form']);
 
@@ -955,6 +1009,7 @@ class Admin_Pages extends BaseController
         $data['page_data'] = $page_data;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/pages/departamento-agronomico', $data);
@@ -962,10 +1017,11 @@ class Admin_Pages extends BaseController
     }
 
     public function update_page($page_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();

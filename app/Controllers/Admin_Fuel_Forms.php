@@ -11,16 +11,18 @@ class Admin_Fuel_Forms extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'fuel_forms';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/fuel_forms/index', $data);
@@ -31,16 +33,18 @@ class Admin_Fuel_Forms extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'fuel_forms-add_new';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -52,11 +56,11 @@ class Admin_Fuel_Forms extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
-
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
         $session = \Config\Services::session();
         $fuelFormModel = model('App\Models\FuelFormModel', false);
         $form = $fuelFormModel->get_by_id($form_id);
@@ -69,6 +73,7 @@ class Admin_Fuel_Forms extends BaseController
         $data['session'] = $session;
         $data['form'] = $form;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/fuel_forms/edit', $data);
@@ -76,10 +81,11 @@ class Admin_Fuel_Forms extends BaseController
     }
 
     public function add_form() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -162,10 +168,11 @@ class Admin_Fuel_Forms extends BaseController
     }
 
     public function update_form($form_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -228,10 +235,11 @@ class Admin_Fuel_Forms extends BaseController
     }
     
     public function delete($form_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -255,11 +263,11 @@ class Admin_Fuel_Forms extends BaseController
     }
 
     public function remove_file($form_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
-
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
         $fuelFormModel = model('App\Models\FuelFormModel', false);
         $form = $fuelFormModel->get_by_id($form_id);
 

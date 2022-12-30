@@ -13,10 +13,11 @@ class Admin_Galleries extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -24,6 +25,7 @@ class Admin_Galleries extends BaseController
         $data['session'] = $session;
        
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/galleries/index', $data);
@@ -34,10 +36,11 @@ class Admin_Galleries extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $footer_dependencies = array(
             '<script src="'.base_url('_assets/admin/js/galleries.js').'?v='.filemtime('_assets/admin/js/galleries.js').'"></script>'
@@ -53,6 +56,7 @@ class Admin_Galleries extends BaseController
         $data['next_order'] = $next_order;
         $data['footer_dependencies'] = $footer_dependencies;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/galleries/add_new', $data);
@@ -63,10 +67,11 @@ class Admin_Galleries extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $footer_dependencies = array(
             '<script src="'.base_url('_assets/admin/js/galleries.js').'?v='.filemtime('_assets/admin/js/galleries.js').'"></script>'
@@ -88,6 +93,7 @@ class Admin_Galleries extends BaseController
         $data['pictures'] = $pictures;
         $data['footer_dependencies'] = $footer_dependencies;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/galleries/edit', $data);
@@ -95,10 +101,11 @@ class Admin_Galleries extends BaseController
     }
 
     public function add_gallery() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -232,10 +239,11 @@ class Admin_Galleries extends BaseController
     }
 
     public function update_gallery($gallery_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -354,10 +362,11 @@ class Admin_Galleries extends BaseController
     }
     
     public function remove_cover($gallery_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $galleryModel = model('App\Models\GalleryModel', false);
         $gallery = $galleryModel->get_by_id($gallery_id);
@@ -399,10 +408,11 @@ class Admin_Galleries extends BaseController
     }
 
     public function delete_picture($gallery_id, $picture_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 

@@ -109,6 +109,8 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Banners ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'banners' && $page !== 'banners-add_new' && $page !== 'banners-edit' ? 'collapsed' : null ?>" data-bs-target="#banners-nav" data-bs-toggle="collapse">
         <i class="bi bi-image"></i><span>Banners</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -126,7 +128,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin() || $ion_auth->inGroup(3)) {?>
+      <!-- ======= Ofertas ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'offers' && $page !== 'offers-add_new'  && $page !== 'offers-edit' ? 'collapsed' : null ?>" data-bs-target="#offers-nav" data-bs-toggle="collapse">
         <i class="bi bi-tag"></i><span>Ofertas</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -144,7 +149,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Revistas ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'magazines' && $page !== 'magazines-add_new'  && $page !== 'magazines-edit' ? 'collapsed' : null ?>" data-bs-target="#magazines-nav" data-bs-toggle="collapse">
         <i class="bi bi-book"></i><span>Revistas</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -162,7 +170,10 @@
           </li>
         </ul>
       </li>
+      <?php } ?>
 
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Galeria de Eventos ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'galleries' && $page !== 'galleries-add_new' && $page !== 'galleries-edit' ? 'collapsed' : null ?>" data-bs-target="#galleries-nav" data-bs-toggle="collapse">
         <i class="bi bi-images"></i><span>Galerias de Eventos</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -180,7 +191,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Indicações ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'indications' && $page !== 'indications-add_new'  && $page !== 'indications-edit' ? 'collapsed' : null ?>" data-bs-target="#indications-nav" data-bs-toggle="collapse">
         <i class="bi bi-lightbulb"></i><span>Indicações</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -198,7 +212,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Depoimentos ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'testimonials' && $page !== 'testimonials-add_new'  && $page !== 'testimonials-edit' ? 'collapsed' : null ?>" data-bs-target="#testimonials-nav" data-bs-toggle="collapse">
         <i class="bi bi-quote"></i><span>Depoimentos</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -216,7 +233,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin() || $ion_auth->inGroup(4)) {?>
+      <!-- ======= Vagas ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'jobs' && $page !== 'jobs-add_new' && $page !== 'jobs-edit' && $page !== 'jobs-roles' && $page !== 'jobs-roles_add_new' && $page !== 'jobs-roles_edit' ? 'collapsed' : null ?>" data-bs-target="#jobs-nav" data-bs-toggle="collapse">
         <i class="bi bi-briefcase"></i><span>Vagas</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -239,7 +259,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin() || $ion_auth->inGroup(2)) {?>
+      <!-- ======= Blog ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'blog' && $page !== 'blog-add_new'  && $page !== 'blog-edit' && $page !== 'blog-categories' && $page !== 'blog-categories_add_new' && $page !== 'blog-categories_edit' ? 'collapsed' : null ?>" data-bs-target="#blog-nav" data-bs-toggle="collapse">
         <i class="bi bi-blockquote-right"></i><span>Blog</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -262,7 +285,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Noticias ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'news' && $page !== 'news-add_new'  && $page !== 'news-edit' ? 'collapsed' : null ?>" data-bs-target="#news-nav" data-bs-toggle="collapse">
         <i class="bi bi-newspaper"></i><span>Notícias</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -280,7 +306,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Páginas ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'pages-home' && $page !== 'pages-institucional' && $page !== 'pages-sustentabilidade' && $page !== 'pages-cooperativismo' && $page !== 'pages-politica-de-privacidade' && $page !== 'pages-autocenter' && $page !== 'pages-centro-de-eventos' && $page !== 'pages-distribuidora-de-combustiveis' && $page !== 'pages-ferragem-magazine' && $page !== 'pages-postos-de-combustiveis' && $page !== 'pages-copercana-solar' && $page !== 'pages-copercana-seguros' && $page !== 'pages-supermercados' && $page !== 'pages-unidade-de-graos' && $page !== 'pages-assessoria-de-imprensa' && $page !== 'pages-revista-canavieiros' && $page !== 'pages-radio-copercana' && $page !== 'pages-redes-sociais' && $page !== 'pages-indicacoes' && $page !== 'pages-cadastro' && $page !== 'pages-jovem-aprendiz' && $page !== 'pages-vagas-disponiveis' && $page !== 'pages-laboratorio-de-solos' && $page !== 'pages-tecnologia-bioas' && $page !== 'pages-departamento-agronomico' && $page !== 'pages-noticias' && $page !== 'pages-blog' && $page !== 'pages-contato' ? 'collapsed' : null ?>" data-bs-target="#pages-nav" data-bs-toggle="collapse">
         <i class="bi bi-file-earmark-code"></i><span>Páginas</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -451,8 +480,10 @@
           
         </ul>
       </li>
-
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Usuários ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'users' && $page !== 'users-add_new' && $page !== 'users-edit' ? 'collapsed' : null ?>" data-bs-target="#users-nav" data-bs-toggle="collapse">
         <i class="bi bi-people"></i><span>Usuários</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -470,7 +501,10 @@
           </li>
         </ul>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Unidades ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'unis' && $page !== 'units-autocenter' && $page !== 'units-magazines' && $page !== 'units-gas-station' && $page !== 'units-insurance' && $page !== 'units-supermarket' && $page !== 'units-grain-unit'  ? 'collapsed' : null ?>" data-bs-target="#units-nav" data-bs-toggle="collapse">
         <i class="bi bi-shop"></i><span>Unidades</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -513,22 +547,27 @@
           </li>
         </ul>
       </li>
+      <?php } ?>
       
-
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Contatos ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'contacts' && $page !== 'contacts-see_more' ? 'collapsed' : '' ?>" href="<?= base_url("admin/contacts") ?>">
           <i class="bi bi-envelope"></i>
           <span>Contatos</span>
         </a>
       </li>
-
+      <?php } ?>
+      
+      <?php if($ion_auth->isAdmin()) {?>
+      <!-- ======= Geral ======= -->
       <li class="nav-item">
         <a class="nav-link <?= $page !== 'general' ? 'collapsed' : '' ?>" href="<?= base_url("admin/general") ?>">
           <i class="bi bi-gear"></i>
           <span>Geral</span>
         </a>
       </li>
-
+      <?php } ?>
       
     </ul>
 

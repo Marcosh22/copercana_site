@@ -11,16 +11,18 @@ class Admin_Units extends BaseController
 
     public function autocenter()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'units-autocenter';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/autocenter/index', $data);
@@ -31,10 +33,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -46,6 +49,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -57,10 +61,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $unitModel = model('App\Models\UnitModel', false);
@@ -80,6 +85,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['form'] = $unit;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/autocenter/edit', $data);
@@ -88,16 +94,18 @@ class Admin_Units extends BaseController
 
     public function magazine()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'units-magazines';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/magazine/index', $data);
@@ -108,10 +116,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -123,6 +132,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -134,10 +144,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $unitModel = model('App\Models\UnitModel', false);
@@ -157,6 +168,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['form'] = $unit;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/magazine/edit', $data);
@@ -165,16 +177,18 @@ class Admin_Units extends BaseController
 
     public function gas_station()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'units-gas-station';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/gas-station/index', $data);
@@ -185,10 +199,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -200,6 +215,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -211,10 +227,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $unitModel = model('App\Models\UnitModel', false);
@@ -234,6 +251,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['form'] = $unit;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/gas-station/edit', $data);
@@ -242,16 +260,18 @@ class Admin_Units extends BaseController
 
     public function supermarket()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'units-supermarket';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/supermarket/index', $data);
@@ -262,11 +282,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
-
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
         $session = \Config\Services::session();
 
         $footer_dependencies = array(
@@ -277,6 +297,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -288,10 +309,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $unitModel = model('App\Models\UnitModel', false);
@@ -311,6 +333,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['form'] = $unit;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/supermarket/edit', $data);
@@ -319,16 +342,18 @@ class Admin_Units extends BaseController
 
     public function insurance()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'units-insurance';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/insurance/index', $data);
@@ -339,10 +364,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -354,6 +380,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -365,10 +392,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $unitModel = model('App\Models\UnitModel', false);
@@ -388,6 +416,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['form'] = $unit;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/insurance/edit', $data);
@@ -396,16 +425,18 @@ class Admin_Units extends BaseController
 
     public function grain_unit()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'units-grain-unit';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/grain-unit/index', $data);
@@ -416,10 +447,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -431,6 +463,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -442,10 +475,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $unitModel = model('App\Models\UnitModel', false);
@@ -465,6 +499,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['form'] = $unit;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/grain-unit/edit', $data);
@@ -474,16 +509,18 @@ class Admin_Units extends BaseController
 
     public function agronomic_department_unit()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'units-agronomic-department';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/agronomic-department/index', $data);
@@ -494,11 +531,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
-
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
         $session = \Config\Services::session();
 
         $footer_dependencies = array(
@@ -509,6 +546,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -520,10 +558,11 @@ class Admin_Units extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $unitModel = model('App\Models\UnitModel', false);
@@ -543,6 +582,7 @@ class Admin_Units extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['form'] = $unit;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/units/agronomic-department/edit', $data);
@@ -550,10 +590,11 @@ class Admin_Units extends BaseController
     }
 
     public function add_unit() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -653,10 +694,11 @@ class Admin_Units extends BaseController
     }
 
     public function update_unit($unit_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -732,10 +774,11 @@ class Admin_Units extends BaseController
     }
     
     public function delete($unit_type, $unit_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -759,10 +802,11 @@ class Admin_Units extends BaseController
     }
 
     public function remove_picture($unit_type, $unit_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $unitModel = model('App\Models\UnitModel', false);
         $unit = $unitModel->get_by_id($unit_id);

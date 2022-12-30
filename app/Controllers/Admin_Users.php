@@ -11,17 +11,18 @@ class Admin_Users extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
-
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
         $session = \Config\Services::session();
         
         $data = array(
             'page' => 'users',
             'session' => $session,
-            'logged_user' => $this->ionAuth->user()
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
@@ -32,15 +33,17 @@ class Admin_Users extends BaseController
     public function add_new() {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'users-add_new';
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         $data['session'] = $session;
         
         echo view('admin/includes/header', $data);
@@ -52,10 +55,11 @@ class Admin_Users extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $userModel = model('App\Models\UserModel', false);
@@ -77,6 +81,7 @@ class Admin_Users extends BaseController
         $data['user'] = $user;
         $data['user_groups'] = $user_groups;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/users/edit', $data);
@@ -84,10 +89,11 @@ class Admin_Users extends BaseController
     }
 
     public function add_user() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -230,10 +236,11 @@ class Admin_Users extends BaseController
     }
 
     public function update_user($user_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -346,11 +353,11 @@ class Admin_Users extends BaseController
     }
 
     public function remove_picture($user_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
-
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
         $userModel = model('App\Models\UserModel', false);
         $user = $userModel->get_by_id($user_id);
 
@@ -365,10 +372,11 @@ class Admin_Users extends BaseController
 
 	public function change_password()
 	{
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -419,10 +427,11 @@ class Admin_Users extends BaseController
 	}
 
     public function delete($user_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 

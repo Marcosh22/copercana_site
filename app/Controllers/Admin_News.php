@@ -11,17 +11,19 @@ class Admin_News extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data = array(
             'page' => 'news',
             'session' => $session,
-            'logged_user' => $this->ionAuth->user()
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
@@ -33,10 +35,11 @@ class Admin_News extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -52,6 +55,7 @@ class Admin_News extends BaseController
         $data['session'] = $session;
         $data['footer_dependencies'] = $footer_dependencies;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/news/add_new', $data);
@@ -62,10 +66,11 @@ class Admin_News extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $postModel = model('App\Models\PostModel', false);
@@ -88,6 +93,7 @@ class Admin_News extends BaseController
         $data['categories'] = $categories;
         $data['post'] = $post;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/news/edit', $data);

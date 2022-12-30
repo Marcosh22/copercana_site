@@ -13,10 +13,11 @@ class Admin_General extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $generalModel = model('App\Models\GeneralModel', false);
@@ -30,6 +31,7 @@ class Admin_General extends BaseController
         $data['session'] = $session;
         $data['general'] = $general;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/general/index', $data);
@@ -37,10 +39,11 @@ class Admin_General extends BaseController
     }
 
     public function update_general($id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();

@@ -16,19 +16,21 @@ class Admin_Post extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
     }
 
     public function add_post() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -171,10 +173,11 @@ class Admin_Post extends BaseController
     }
 
     public function update_post($post_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -282,10 +285,11 @@ class Admin_Post extends BaseController
 
     public function upload_image()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $validationRule = [
             'upload' => [
@@ -378,10 +382,11 @@ class Admin_Post extends BaseController
     }
 
     public function remove_cover($post_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $postModel = model('App\Models\PostModel', false);
         $post = $postModel->get_by_id($post_id);
@@ -399,10 +404,11 @@ class Admin_Post extends BaseController
     }
 
     public function delete($post_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -429,10 +435,11 @@ class Admin_Post extends BaseController
     }
 
     public function add_category() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -492,10 +499,11 @@ class Admin_Post extends BaseController
     }
 
     public function update_category($category_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -540,10 +548,11 @@ class Admin_Post extends BaseController
     }
 
     public function delete_category($category_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 

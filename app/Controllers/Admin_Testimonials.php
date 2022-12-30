@@ -11,16 +11,18 @@ class Admin_Testimonials extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'testimonials';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/testimonials/index', $data);
@@ -31,10 +33,11 @@ class Admin_Testimonials extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+ if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $testimonialModel = model('App\Models\TestimonialModel', false);
@@ -48,6 +51,7 @@ class Admin_Testimonials extends BaseController
         $data['footer_dependencies'] = $footer_dependencies;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         
         echo view('admin/includes/header', $data);
@@ -59,10 +63,11 @@ class Admin_Testimonials extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $testimonialModel = model('App\Models\TestimonialModel', false);
@@ -81,6 +86,7 @@ class Admin_Testimonials extends BaseController
         $data['session'] = $session;
         $data['testimonial'] = $testimonial;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/testimonials/edit', $data);
@@ -88,10 +94,11 @@ class Admin_Testimonials extends BaseController
     }
 
     public function add_testimonial() {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -190,10 +197,11 @@ class Admin_Testimonials extends BaseController
     }
 
     public function update_testimonial($testimonial_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -270,10 +278,11 @@ class Admin_Testimonials extends BaseController
     }
     
     public function delete($testimonial_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -297,10 +306,11 @@ class Admin_Testimonials extends BaseController
     }
 
     public function remove_picture($testimonial_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+ if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
 
         $testimonialModel = model('App\Models\TestimonialModel', false);
         $testimonial = $testimonialModel->get_by_id($testimonial_id);

@@ -11,17 +11,19 @@ class Admin_Blog extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data = array(
             'page' => 'blog',
             'session' => $session,
-            'logged_user' => $this->ionAuth->user()
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
@@ -33,10 +35,11 @@ class Admin_Blog extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -52,6 +55,7 @@ class Admin_Blog extends BaseController
         $data['session'] = $session;
         $data['footer_dependencies'] = $footer_dependencies;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/blog/add_new', $data);
@@ -62,10 +66,11 @@ class Admin_Blog extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
+        if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
-		}
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $postModel = model('App\Models\PostModel', false);
@@ -88,6 +93,7 @@ class Admin_Blog extends BaseController
         $data['categories'] = $categories;
         $data['post'] = $post;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/blog/edit', $data);
@@ -96,10 +102,11 @@ class Admin_Blog extends BaseController
 
     public function categories()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         
@@ -118,10 +125,11 @@ class Admin_Blog extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -129,6 +137,7 @@ class Admin_Blog extends BaseController
         $data['page'] = 'blog-sector_add_new';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/blog/category-add_new', $data);
@@ -139,10 +148,11 @@ class Admin_Blog extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(2)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $categoryModel = model('App\Models\CategoryModel', false);
@@ -156,6 +166,7 @@ class Admin_Blog extends BaseController
         $data['session'] = $session;
         $data['category'] = $category;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/blog/category-edit', $data);

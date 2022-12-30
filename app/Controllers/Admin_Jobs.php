@@ -13,17 +13,19 @@ class Admin_Jobs extends BaseController
 
     public function index()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         
         $data = array(
             'page' => 'jobs',
             'session' => $session,
-            'logged_user' => $this->ionAuth->user()
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
@@ -34,11 +36,11 @@ class Admin_Jobs extends BaseController
     public function add_new()
     {
         helper(['form']);
-
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -65,6 +67,7 @@ class Admin_Jobs extends BaseController
         $data['branches'] = $branches;
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/jobs/add_new', $data);
@@ -75,10 +78,11 @@ class Admin_Jobs extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $jobModel = model('App\Models\JobModel', false);
@@ -112,6 +116,7 @@ class Admin_Jobs extends BaseController
         $data['branches'] = $branches;
         $data['job'] = $job;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/jobs/edit', $data);
@@ -119,10 +124,11 @@ class Admin_Jobs extends BaseController
     }
 
     public function add_job() {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -239,10 +245,11 @@ class Admin_Jobs extends BaseController
     }
 
     public function update_job($job_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -342,10 +349,11 @@ class Admin_Jobs extends BaseController
     }
 
     public function delete($job_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
@@ -370,17 +378,19 @@ class Admin_Jobs extends BaseController
 
     public function roles()
     {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         
         $data = array(
             'page' => 'jobs-roles',
             'session' => $session,
-            'logged_user' => $this->ionAuth->user()
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
@@ -392,16 +402,18 @@ class Admin_Jobs extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
         $data['page'] = 'jobs-role_add_new';
         $data['session'] = $session;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/jobs/role-add_new', $data);
@@ -412,10 +424,11 @@ class Admin_Jobs extends BaseController
     {
         helper(['form']);
 
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $roleModel = model('App\Models\RoleModel', false);
@@ -429,6 +442,7 @@ class Admin_Jobs extends BaseController
         $data['session'] = $session;
         $data['role'] = $role;
         $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/jobs/role-edit', $data);
@@ -436,10 +450,11 @@ class Admin_Jobs extends BaseController
     }
 
     public function add_role() {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -497,10 +512,11 @@ class Admin_Jobs extends BaseController
     }
 
     public function update_role($role_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
         $request = \Config\Services::request();
@@ -545,10 +561,11 @@ class Admin_Jobs extends BaseController
     }
 
     public function delete_role($role_id) {
-        if (!$this->ionAuth->loggedIn())
-		{
-			return redirect()->to('/admin/auth/login');
-		}
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin() && !$this->ionAuth->inGroup(4)) {
+            return redirect()->to('/admin');
+        }
 
         $session = \Config\Services::session();
 
