@@ -45,7 +45,7 @@ class Home extends BaseController
         $bannerModel = model('App\Models\BannerModel', false);
         $banners = $bannerModel->get_all_active_by_page_id(1);
 
-        $postModel = model('App\Models\PostModel', false);
+        $postModel = model('App\Models\NewsModel', false);
         $posts = $postModel->get_all_published(0, 5);
 
         $offerModel = model('App\Models\OfferModel', false);
