@@ -98,7 +98,7 @@
                                             <p class="service-card__description">
                                                 <?= $page_data->service_02_description ?>
                                             </p>
-                                            <a href="<?= base_url("servicos/copercana-seguros") ?>" class="service-card__button">
+                                            <a href="<?= base_url("servicos/seguros") ?>" class="service-card__button">
                                                 Saiba mais
                                             </a>
                                         </div>
@@ -258,7 +258,7 @@
                                             <p class="service-card__description">
                                                 <?= $page_data->service_10_description ?>
                                             </p>
-                                            <a href="<?= base_url("servicos/postos-de-combustiveis") ?>" class="service-card__button">
+                                            <a href="<?= base_url("servicos/posto-de-combustivel") ?>" class="service-card__button">
                                                 Saiba mais
                                             </a>
                                         </div>
@@ -278,7 +278,7 @@
                                             <p class="service-card__description">
                                                 <?= $page_data->service_11_description ?>
                                             </p>
-                                            <a href="<?= base_url("servicos/supermercados") ?>" class="service-card__button">
+                                            <a href="<?= base_url("servicos/supermercado") ?>" class="service-card__button">
                                                 Saiba mais
                                             </a>
                                         </div>
@@ -450,6 +450,7 @@
             </section>
         <?php } ?>
 
+        <?php if(isset($offers) && count($offers) > 0) { ?>
         <?php if(isset($page_data->offers_section_show) && $page_data->offers_section_show == 1) { ?>
             <section class="page-section">
                 <div class="container">
@@ -463,7 +464,6 @@
                     </div>
                     <div class="row mt-5">
                         <div class="col-12">
-                        <?php if(isset($offers) && count($offers) > 0) { ?>
                             <div class="offers__carousel">
                                 <?php foreach($offers as $offer) { 
                                     $starts_at = !isset($offer->starts_at) || empty($offer->starts_at) || $offer->starts_at === '0000-00-00 00:00:00' || $offer->starts_at === '0000-00-00' ? null : date_format(date_create($offer->starts_at),"d/m/Y");
@@ -491,13 +491,11 @@
                                 </div>
                                 <?php } ?>
                             </div>
-                            <?php } else { ?>
-                            <p style="margin: 50px 0; text-align: center;">NENHUMA OFERTA ENCONTRADA</p>
-                        <?php } ?>
                         </div>
                     </div>
                 </div>
             </section>
+        <?php } ?>
         <?php } ?>
 
         <?php if(isset($page_data->jobs_section_show) && $page_data->jobs_section_show == 1) { ?>

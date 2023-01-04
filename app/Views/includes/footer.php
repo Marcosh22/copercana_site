@@ -8,7 +8,7 @@
         <div class="msg-wrap">
             <p>Este website utiliza cookies ou tecnologias semelhantes, para melhorar a sua experiência de navegação e
                 fornecer recomendações personalizadas. Ao continuar a usar nosso site, você concorda com nossa <a
-                    style="color:#115cfa;" href="<?= base_url("politica-de-privacidade") ?>">Política de Privacidade</a>
+                    style="color:#115cfa;" href="<?= base_url("institucional/politica-de-privacidade") ?>">Política de Privacidade</a>
             </p>
             <div class="btn-wrap">
                 <button class="btn-primary" onclick="acceptCookieConsent();">Aceitar</button>

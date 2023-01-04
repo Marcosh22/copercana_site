@@ -37,6 +37,7 @@
             </section>
         <?php } ?>
 
+        <?php if(isset($offers) && count($offers) > 0) { ?>
         <?php if(isset($page_data->offers_section_show) && $page_data->offers_section_show == 1) { ?>
             <section class="page-section bg-dark-green">
                 <div class="container">
@@ -82,6 +83,8 @@
                 </div>
             </section>
         <?php } ?>
+        <?php } ?>
+
 
         <?php if(isset($page_data->units_section_show) && $page_data->units_section_show == 1 && isset($units) && count($units) > 0) { ?>
             <section class="page-section bg-light-gray">
@@ -146,7 +149,7 @@
                                 Acesse as redes sociais
                             </strong>
                             <br />
-                                dos Postos de Combustíveis
+                                dos Supermercados
                         </p>
                         <div class="page-socials">
                             <?php if(isset($socials->supermarket->facebook) && !empty($socials->supermarket->facebook)) { ?>
