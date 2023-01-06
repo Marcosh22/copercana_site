@@ -536,7 +536,7 @@
                         <div class="col-lg-4">
                             <a href="<?= base_url("trabalhe-conosco/jovem-aprendiz") ?>" class="horizontal-card">
                                 <div class="horizontal-card__picture">
-                                    <img src="<?= base_url("_assets/images/jovem-aprendiz.jpg") ?>"
+                                    <img src="<?= base_url("_assets/images/jovem-aprendiz-img.jpg") ?>"
                                         alt="Programa Jovem Aprendiz">
                                 </div>
                                 <div class="horizontal-card__content">
