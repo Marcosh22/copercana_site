@@ -42,12 +42,19 @@ class OfferModel extends Model
         $db      = \Config\Database::connect();
         $builder = $db->table('offers');
 
-        $builder->where('DATE_ADD(starts_at, INTERVAL 1 DAY) >=', $today);
+        $builder->where('ends_at >=', $today);
+        $builder->where('status', 1);
+
+        $builder->orWhere('ends_at', 0);
+        $builder->where('status', 1);
+
+        $builder->orWhere('ends_at IS NULL', NULL, FALSE);
+        $builder->where('status', 1);
 
         return $builder->countAllResults();
     }
 
-    public function get_all_active()
+   /*  public function get_all_active()
     {
         $today = new Time('now');
 
@@ -88,6 +95,27 @@ class OfferModel extends Model
 
         $builder->orWhere('ends_at IS NULL', NULL, FALSE);
         $builder->where('starts_at IS NULL', NULL, FALSE);
+        $builder->where('status', 1);
+
+        $query  = $builder->get();
+
+        return $query->getResult();
+    } */
+    
+    public function get_all_active()
+    {
+        $today = new Time('now');
+
+        $db      = \Config\Database::connect();
+        $builder = $db->table('offers');
+
+        $builder->where('ends_at >=', $today);
+        $builder->where('status', 1);
+
+        $builder->orWhere('ends_at', 0);
+        $builder->where('status', 1);
+
+        $builder->orWhere('ends_at IS NULL', NULL, FALSE);
         $builder->where('status', 1);
 
         $query  = $builder->get();
