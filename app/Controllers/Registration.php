@@ -99,10 +99,15 @@ class Registration extends BaseController
                     if(isset($general) && isset($general->contact_emails) && !empty($general->contact_emails)) {
                         $email_srvc = \Config\Services::email();
 
+                        $email->setHeader('From', 'site@copercana.com.br');
+                        $email->setHeader('MIME-Version', '1.0');
+                        $email->setHeader('Content-Type', 'text/html; charset=ISO-8859-1');
+                        $email->setHeader('X-Priority', 1);
+
                         $email_srvc->setFrom('site@copercana.com.br', 'Copercana');
                         $email_srvc->setTo($general->contact_emails);
 
-                        $email_srvc->setSubject("Contato Via Site");
+                        $email_srvc->setSubject($general->contacts_subject);
 
                         $email_body = "Nome: $name\n";
                         $email_body .= "E-mail: $email\n";
