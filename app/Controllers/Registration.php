@@ -24,6 +24,7 @@ class Registration extends BaseController
         $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($recaptch_secret_key) .  '&response=' . urlencode($captcha);
         $response = file_get_contents($url);
         $g_response = json_decode($response,true);
+        $email_debug = "";
 
         if ($g_response['success'] === true) {
             $contact_rules  = [
@@ -112,7 +113,8 @@ class Registration extends BaseController
 
                         $email_srvc->setMessage($email_body);
 
-                        $email_srvc->send();
+                        $email_srvc->send(false);
+                        $email_debug = $email_srvc->printDebugger();
                     }
 
                     if($response) {
@@ -150,7 +152,8 @@ class Registration extends BaseController
         $response = array(
             'message' => $message,
             'success' => $success,
-            'form_data' => $form_data
+            'form_data' => $form_data,
+            'email_debug' => $email_debug 
         );
 
         $session->setFlashdata('response', $response);
