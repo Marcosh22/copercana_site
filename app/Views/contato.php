@@ -52,10 +52,6 @@
                                     if(isset($response['form_data']) && !empty($response['form_data'])) {
                                         $form_data = $response['form_data'];
                                     }
-
-                                    if(isset($response['email_debug']) && !empty($response['email_debug'])) {
-                                        $email_debug = $response['email_debug'];
-                                    }
                                     ?>
                 <div class="col-12">
 
@@ -71,11 +67,6 @@
 
                     <?php }
                             ?>
-                            <div class="col-12 email-debug d-none">
-                                <pre>
-                                    <?php print_r($email_debug); ?>
-                                </pre>
-                            </div>
                     <div class="col-12">
                         <form action="<?= base_url("registration/contact") ?>" method="POST">
                             <div class="row">
