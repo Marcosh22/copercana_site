@@ -102,7 +102,7 @@ class Registration extends BaseController
                         $email_srvc->setFrom('site@copercana.com.br', 'Copercana');
                         $email_srvc->setTo($general->contact_emails);
 
-                        $email_srvc->setSubject($general->contacts_subject);
+                        $email_srvc->setSubject("Contato Via Site");
 
                         $email_body = "Nome: $name\n";
                         $email_body .= "E-mail: $email\n";
