@@ -1,0 +1,50 @@
+CRITICAL - 2023-02-10 00:23:21 --> Class 'Imagick' not found
+#0 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(825): App\Controllers\Admin_Fuel_Forms->make_cover('uploads', 'files', '20230210', '1675999401_d3c1...')
+#1 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Fuel_Forms))
+#2 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Pessoal\Projetos\Repositorio\copercana_site\public_html\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Commands\Server\rewrite.php(43): require_once('D:\\Pessoal\\Proj...')
+#5 {main}
+CRITICAL - 2023-02-10 00:23:27 --> Class 'Imagick' not found
+#0 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(825): App\Controllers\Admin_Fuel_Forms->make_cover('uploads', 'files', '20230210', '1675999401_d3c1...')
+#1 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Fuel_Forms))
+#2 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Pessoal\Projetos\Repositorio\copercana_site\public_html\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Commands\Server\rewrite.php(43): require_once('D:\\Pessoal\\Proj...')
+#5 {main}
+CRITICAL - 2023-02-10 00:24:29 --> Class 'Imagick' not found
+#0 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(825): App\Controllers\Admin_Fuel_Forms->make_cover('uploads', 'files', '20230210', '1675999469_22ba...')
+#1 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Fuel_Forms))
+#2 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Pessoal\Projetos\Repositorio\copercana_site\public_html\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Commands\Server\rewrite.php(43): require_once('D:\\Pessoal\\Proj...')
+#5 {main}
+CRITICAL - 2023-02-10 00:24:53 --> Class 'Imagick' not found
+#0 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(825): App\Controllers\Admin_Fuel_Forms->make_cover('uploads', 'files', '20230210', '1675999492_5ad1...')
+#1 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Fuel_Forms))
+#2 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Pessoal\Projetos\Repositorio\copercana_site\public_html\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Commands\Server\rewrite.php(43): require_once('D:\\Pessoal\\Proj...')
+#5 {main}
+CRITICAL - 2023-02-10 00:54:08 --> Arquivo inválido: admin/pages/soucooperado.php
+#0 D:\Pessoal\Projetos\Repositorio\copercana_site\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/sou...')
+#1 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Common.php(1089): CodeIgniter\View\View->render('admin/pages/sou...', Array, true)
+#2 D:\Pessoal\Projetos\Repositorio\copercana_site\app\Controllers\Admin_Pages.php(1087): view('admin/pages/sou...', Array)
+#3 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(825): App\Controllers\Admin_Pages->soucooperado()
+#4 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_Pages))
+#5 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Pessoal\Projetos\Repositorio\copercana_site\public_html\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Commands\Server\rewrite.php(43): require_once('D:\\Pessoal\\Proj...')
+#8 {main}
+CRITICAL - 2023-02-10 01:17:21 --> Undefined variable: form_data
+#0 D:\Pessoal\Projetos\Repositorio\copercana_site\app\Views\soucooperado.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Pessoal\\Proj...', 34, Array)
+#1 D:\Pessoal\Projetos\Repositorio\copercana_site\system\View\View.php(210): include('D:\\Pessoal\\Proj...')
+#2 D:\Pessoal\Projetos\Repositorio\copercana_site\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Common.php(1089): CodeIgniter\View\View->render('soucooperado', Array, true)
+#4 D:\Pessoal\Projetos\Repositorio\copercana_site\app\Controllers\Home.php(1583): view('soucooperado', Array)
+#5 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(825): App\Controllers\Home->soucooperado()
+#6 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Pessoal\Projetos\Repositorio\copercana_site\public_html\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Commands\Server\rewrite.php(43): require_once('D:\\Pessoal\\Proj...')
+#10 {main}

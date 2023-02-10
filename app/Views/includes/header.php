@@ -74,7 +74,7 @@
         <?php } ?>
     </head>
 
-    <body>
+    <body id="page-<?= $page ?>">
         <?php if(isset($general) && isset($general->body_html) && !empty($general->body_html)) { ?>
         <?= $general->body_html; ?>
         <?php } ?>
@@ -123,13 +123,23 @@
                 <div class="row">
                     <div class="col-6 col-lg-3">
                         <a class="site-header__logo" href="<?= base_url() ?>">
+                        <?php if($page === "copercana-60-anos") { ?>
                             <picture>
                                 <source media="(max-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/copercana-60-anos@0,75x.png") ?> 1x, <?= base_url("_assets/images/copercana-60-anos@1,5x.png") ?> 2x">
+                                    srcset="<?= base_url("_assets/images/selo-copercana-60-anos@0,75x.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos@1,5x.png") ?> 2x">
                                 <source media="(min-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/copercana-60-anos.png") ?> 1x, <?= base_url("_assets/images/copercana-60-anos@2x.png") ?> 2x">
-                                <img src="<?= base_url("_assets/images/copercana-60-anos.png") ?>" alt="Copercana">
+                                    srcset="<?= base_url("_assets/images/selo-copercana-60-anos.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos@2x.png") ?> 2x">
+                                <img src="<?= base_url("_assets/images/selo-copercana-60-anos.png") ?>" alt="Copercana">
                             </picture>
+                            <?php } else { ?>
+                                <picture>
+                                    <source media="(max-width: 768px)"
+                                        srcset="<?= base_url("_assets/images/copercana-60-anos@0,75x.png") ?> 1x, <?= base_url("_assets/images/copercana-60-anos@1,5x.png") ?> 2x">
+                                    <source media="(min-width: 768px)"
+                                        srcset="<?= base_url("_assets/images/copercana-60-anos.png") ?> 1x, <?= base_url("_assets/images/copercana-60-anos@2x.png") ?> 2x">
+                                    <img src="<?= base_url("_assets/images/copercana-60-anos.png") ?>" alt="Copercana">
+                                </picture>
+                            <?php } ?>
                         </a>
                     </div>
                     <div class="col-6 col-lg-9 d-flex align-items-center justify-content-end d-lg-block">
@@ -311,7 +321,7 @@
                                 <?php if(isset($general) && isset($general->instagram) && !empty($general->instagram)) { ?>
                                 <a href="<?= $general->instagram ?>" target="_blank" class="socials__item"
                                     aria-label="Instagram">
-                                    <svg width="26" height="26" style="fill: #fff;" version="1.1"
+                                    <svg width="26" height="26" style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff"  ?>;" version="1.1"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         x="0px" y="0px" viewBox="0 0 600 600" xml:space="preserve">
                                         <title>Instagram</title>
@@ -341,7 +351,7 @@
                                 <?php if(isset($general) && isset($general->facebook) && !empty($general->facebook)) { ?>
                                 <a href="<?= $general->facebook ?>" target="_blank" class="socials__item"
                                     aria-label="Facebook">
-                                    <svg width="28" height="28" style="fill: #fff;" version="1.1" id="Layer_1"
+                                    <svg width="28" height="28" style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff"  ?>;" version="1.1" id="Layer_1"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
                                         <title>Facebook</title>
@@ -357,7 +367,7 @@
                                 <?php if(isset($general) && isset($general->youtube) && !empty($general->youtube)) { ?>
                                 <a href="<?= $general->youtube ?>" class="socials__item" target="_blank"
                                     rel="noopener noreferrer" aria-label="Youtube">
-                                    <svg width="26" height="26" id="Слой_1" x="0px" y="0px" viewBox="0 0 300 300"
+                                    <svg width="26" height="26" id="" x="0px" y="0px" viewBox="0 0 300 300"
                                         enable-background="new 0 0 400 400" xml:space="preserve" width="300"
                                         height="300">
                                         <title>Youtube</title>
@@ -367,10 +377,10 @@
                                         </defs>
                                         <g id="g4189" transform="scale(0.75,0.75)">
                                             <rect width="400" height="400" id="rect4"
-                                                style="fill:#ffffff;fill-opacity:1" x="0" y="0" ry="200" />
+                                                style="fill:<?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff"  ?>;fill-opacity:1" x="0" y="0" ry="200" />
                                             <g transform="matrix(7.8701756,0,0,7.8701756,695.19553,-948.4235)"
                                                 id="g4167">
-                                                <path style="fill:#005422;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                                <path style="fill:<?= $page === "copercana-60-anos" ? "#031401" : "#005422"  ?>;fill-opacity:1;fill-rule:nonzero;stroke:none"
                                                     d="M 149.9375 79.222656 C 149.9375 79.222656 86.718651 79.222715 70.851562 83.345703 C 62.355775 85.719505 55.360154 92.715203 52.986328 101.33594 C 48.863375 117.20304 48.863281 150.0625 48.863281 150.0625 C 48.863281 150.0625 48.863375 183.0467 52.986328 198.66406 C 55.360154 207.28468 62.230834 214.15544 70.851562 216.5293 C 86.843592 220.77718 149.9375 220.77734 149.9375 220.77734 C 149.9375 220.77734 213.28168 220.77729 229.14844 216.6543 C 237.76923 214.28049 244.63977 207.53464 246.88867 198.78906 C 251.1366 183.04674 251.13672 150.1875 251.13672 150.1875 C 251.13672 150.1875 251.26156 117.20304 246.88867 101.33594 C 244.63977 92.715203 237.76923 85.844606 229.14844 83.595703 C 213.28168 79.222856 149.9375 79.222656 149.9375 79.222656 z M 129.82227 119.70312 L 182.42188 150.0625 L 129.82227 180.29688 L 129.82227 119.70312 z "
                                                     transform="matrix(0.16941596,0,0,0.16941596,-88.332912,120.50856)"
                                                     id="path4156" />
@@ -389,7 +399,7 @@
                                         xml:space="preserve">
                                         <title>LinkedIn</title>
                                         <g>
-                                            <path style="fill: #ffffff;"
+                                            <path style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff"  ?>;"
                                                 d="M500,10C229.4,10,10,229.4,10,500s219.4,490,490,490s490-219.4,490-490C990,229.3,770.6,10,500,10z M377.5,737.3H255V308.6h122.5V737.3z M320,282.3c-31.7,0-57.4-25.7-57.4-57.5c0-31.7,25.7-57.5,57.4-57.5c31.7,0.1,57.5,25.8,57.5,57.5C377.5,256.6,351.8,282.3,320,282.3z M806.3,737.3H683.8V472.3c0-31.1-8.9-52.8-47-52.8c-63.3,0-75.5,52.8-75.5,52.8v265.1H438.8V308.6h122.5v41c17.5-13.4,61.3-40.9,122.5-40.9c39.8,0,122.5,23.8,122.5,167.3V737.3z" />
                                         </g>
                                     </svg>

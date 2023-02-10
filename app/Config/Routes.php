@@ -63,7 +63,8 @@ $routes->get('/trabalhe-conosco/jovem-aprendiz', 'Home::jovem_aprendiz');
 $routes->get('/trabalhe-conosco/vagas-disponiveis', 'Home::vagas_disponiveis');
 $routes->get('/trabalhe-conosco/vagas-disponiveis/(:any)', 'Home::vaga/$1');
 $routes->get('/trabalhe-conosco/cadastro', 'Home::cadastro');
-
+$routes->get('/copercana-60-anos', 'Home::copercana_60_anos');
+$routes->get('/soucooperado', 'Home::soucooperado');
 
 $routes->get('/noticias', 'Home::noticias');
 $routes->get('/noticias/(:any)', 'Home::noticia/$1');
@@ -165,6 +166,18 @@ $routes->group('admin', function ($routes) {
         $routes->get('make_cover/(:any)', 'Admin_Indications::make_cover/$1');
     });
 
+    $routes->group('files', function ($routes) {
+        $routes->get('/', 'Admin_Files::index');
+        $routes->get('add_new', 'Admin_Files::add_new');
+        $routes->get('edit/(:any)', 'Admin_Files::edit/$1');
+        $routes->post('add_file', 'Admin_Files::add_file');
+        $routes->post('update_file/(:any)', 'Admin_Files::update_file/$1');
+        $routes->get('delete/(:any)', 'Admin_Files::delete/$1');
+        $routes->get('remove_file/(:any)', 'Admin_Files::remove_file/$1');
+        $routes->get('remove_cover/(:any)', 'Admin_Files::remove_cover/$1');
+        $routes->get('make_cover/(:any)', 'Admin_Files::make_cover/$1');
+    });
+
     $routes->group('testimonials', function ($routes) {
         $routes->get('/', 'Admin_Testimonials::index');
         $routes->get('add_new', 'Admin_Testimonials::add_new');
@@ -186,14 +199,20 @@ $routes->group('admin', function ($routes) {
         $routes->get('make_cover/(:any)', 'Admin_Fuel_Forms::make_cover/$1');
     });
 
+    $routes->group('events_galleries', function ($routes) {
+        $routes->get('/', 'Admin_Events_Galleries::index');
+        $routes->get('add_new', 'Admin_Events_Galleries::add_new');
+        $routes->get('edit/(:any)', 'Admin_Events_Galleries::edit/$1');
+        $routes->post('add_gallery', 'Admin_Events_Galleries::add_gallery');
+        $routes->post('update_gallery/(:any)', 'Admin_Events_Galleries::update_gallery/$1');
+        $routes->get('delete/(:any)', 'Admin_Events_Galleries::delete/$1');
+        $routes->get('remove_cover/(:any)', 'Admin_Events_Galleries::remove_cover/$1');
+        $routes->get('delete_picture/(:any)/(:any)', 'Admin_Events_Galleries::delete_picture/$1/$2');
+    });
+
     $routes->group('galleries', function ($routes) {
-        $routes->get('/', 'Admin_Galleries::index');
-        $routes->get('add_new', 'Admin_Galleries::add_new');
         $routes->get('edit/(:any)', 'Admin_Galleries::edit/$1');
-        $routes->post('add_gallery', 'Admin_Galleries::add_gallery');
         $routes->post('update_gallery/(:any)', 'Admin_Galleries::update_gallery/$1');
-        $routes->get('delete/(:any)', 'Admin_Galleries::delete/$1');
-        $routes->get('remove_cover/(:any)', 'Admin_Galleries::remove_cover/$1');
         $routes->get('delete_picture/(:any)/(:any)', 'Admin_Galleries::delete_picture/$1/$2');
     });
 
@@ -235,6 +254,15 @@ $routes->group('admin', function ($routes) {
         $routes->post('update_general/(:any)', 'Admin_General::update_general/$1');
     });
 
+    $routes->group('videos', function ($routes) {
+        $routes->get('/', 'Admin_Videos::index');
+        $routes->get('add_new', 'Admin_Videos::add_new');
+        $routes->get('edit/(:any)', 'Admin_Videos::edit/$1');
+        $routes->post('add_video', 'Admin_Videos::add_video');
+        $routes->post('update_video/(:any)', 'Admin_Videos::update_video/$1');
+        $routes->get('delete/(:any)', 'Admin_Videos::delete/$1');
+    });
+
     $routes->group('pages', function ($routes) {
         $routes->get('home', 'Admin_Pages::home');
         $routes->get('institucional', 'Admin_Pages::institucional');
@@ -265,7 +293,9 @@ $routes->group('admin', function ($routes) {
         $routes->get('noticias', 'Admin_Pages::noticias');
         $routes->get('blog', 'Admin_Pages::blog');
         $routes->get('contato', 'Admin_Pages::contato');
-        
+        $routes->get('soucooperado', 'Admin_Pages::soucooperado');
+        $routes->get('copercana-60-anos', 'Admin_Pages::copercana_60_anos');
+
         $routes->post('update_page/(:any)', 'Admin_Pages::update_page/$1');
         $routes->get('delete_file/(:any)/(:any)', 'Admin_Pages::delete_file/$1/$2');
         $routes->get('make_cover/(:any)', 'Admin_Pages::make_cover/$1');
@@ -335,12 +365,14 @@ $routes->post('api/datatables/users', 'Api_Datatables::users');
 $routes->post('api/datatables/offers', 'Api_Datatables::offers');
 $routes->post('api/datatables/magazines', 'Api_Datatables::magazines');
 $routes->post('api/datatables/indications', 'Api_Datatables::indications');
+$routes->post('api/datatables/files', 'Api_Datatables::files');
 $routes->post('api/datatables/testimonials', 'Api_Datatables::testimonials');
 $routes->post('api/datatables/fuel_forms', 'Api_Datatables::fuel_forms');
 $routes->post('api/datatables/units/(:any)', 'Api_Datatables::units/$1');
 $routes->post('api/datatables/jobs', 'Api_Datatables::jobs');
 $routes->post('api/datatables/jobs/roles', 'Api_Datatables::jobs_roles');
-$routes->post('api/datatables/galleries', 'Api_Datatables::galleries');
+$routes->post('api/datatables/events_galleries', 'Api_Datatables::events_galleries');
+$routes->post('api/datatables/videos', 'Api_Datatables::videos');
 
 /*
  * --------------------------------------------------------------------

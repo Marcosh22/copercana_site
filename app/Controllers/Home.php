@@ -307,7 +307,7 @@ class Home extends BaseController
             '<script src="'. base_url("_assets/js/centro-de-eventos.js").'?v='. filemtime("_assets/js/centro-de-eventos.js").'" ></script>'
         );
 
-        $galleryModel = model('App\Models\GalleryModel', false);
+        $galleryModel = model('App\Models\EventsGalleryModel', false);
         $gallery = $galleryModel->get_all();
 
         $data = array(
@@ -1460,6 +1460,129 @@ class Home extends BaseController
 
     public function cotacoes() {
         return $this->get_quotation_list();
+    }
+
+    public function copercana_60_anos()
+    {
+        $pageModel = model('App\Models\PageModel', false);
+        $page = $pageModel->get_by_id(29);
+        $page_data = null;
+
+        if(isset($page->definition) && !empty($page->definition)) {
+            $page_data = json_decode($page->definition);
+        }
+
+        $seo = array(
+            'title' => 'Conheça a Copercana: Evolução do agronegócio Brasileiro',
+            'description' => 'Conheça as principais frente de uma das maiores responsáveis pela revolução em todo o agronegócio de nosso país, com diversas frentes de atuação.',
+            'keywords' => '',
+            'publisher' => 'https://suave.ppg.br',
+            'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+            'canonical' => base_url('copercana-60-anos')
+        );
+
+        $header_dependencies = array(
+            '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.css">',
+            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick.css").'">',
+            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick-theme.css").'">'
+        );
+
+        $footer_dependencies = array(
+            '<script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyBsD8KY5fUIb8-58f_MkpAJ0tRUsGVcloM"></script>',
+            '<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>',
+            '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
+            '<script src="'. base_url("_assets/js/copercana-60-anos.js").'?v='. filemtime("_assets/js/copercana-60-anos.js").'" ></script>'
+        );
+
+        $galleryModel = model('App\Models\GalleryModel', false);
+        $galleryAgrobusiness = $galleryModel->get_pictures_by_gallery_id(1);
+        $galleryBirthday = $galleryModel->get_pictures_by_gallery_id(2);
+        $galleryOrchestra = $galleryModel->get_pictures_by_gallery_id(3);
+        $galleryDigital = $galleryModel->get_pictures_by_gallery_id(4);
+        $galleryMagazine = $galleryModel->get_pictures_by_gallery_id(5);
+        $galleryMiscellaneous = $galleryModel->get_pictures_by_gallery_id(6);
+        
+
+        $videoModel = model('App\Models\VideoModel', false);
+        $videos = $videoModel->get_all();
+
+        $fileModel = model('App\Models\FileModel', false);
+        $files = $fileModel->get_all();
+
+        $data = array(
+            'page' => 'copercana-60-anos',
+            'header_dependencies' => $header_dependencies,
+            'footer_dependencies' => $footer_dependencies,
+            'seo' => $seo,
+            'galleryAgrobusiness' => $galleryAgrobusiness,
+            'galleryBirthday' => $galleryBirthday,
+            'galleryOrchestra' => $galleryOrchestra,
+            'galleryDigital' => $galleryDigital,
+            'galleryMagazine' => $galleryMagazine,
+            'galleryMiscellaneous' => $galleryMiscellaneous,
+            'videos' => $videos,
+            'files' => $files,
+            'page_data' => $page_data,
+            'general' => $this->general
+        );
+
+        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+            $data['quotation_list'] = true;
+        }
+
+        echo view('includes/header', $data);
+        echo view('copercana-60-anos', $data);
+        echo view('includes/footer', $data);
+    }
+
+    public function soucooperado()
+    {
+        $pageModel = model('App\Models\PageModel', false);
+        $page = $pageModel->get_by_id(30);
+        $page_data = null;
+
+        if(isset($page->definition) && !empty($page->definition)) {
+            $page_data = json_decode($page->definition);
+        }
+
+        $seo = array(
+            'title' => 'Fale Conosco: Tire suas dúvidas sobre a Copercana e nossos serviços',
+            'description' => 'A seção de contato é onde o você irá encontrar informações de contato da nossa empresa, como telefone, WhatsApp, e-mail, etc',
+            'keywords' => 'Fale Conosco,contato',
+            'publisher' => 'https://suave.ppg.br',
+            'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+            'canonical' => base_url("soucooperado")
+        );
+
+        $header_dependencies = array(
+            '<script src="https://www.google.com/recaptcha/api.js" async defer></script>'
+        );
+        
+        $footer_dependencies = array(
+            '<script src="'. base_url("_assets/js/jquery.mask.min.js").'" ></script>',
+            '<script src="'. base_url("_assets/js/masks.js").'" ></script>',
+            '<script src="'. base_url("_assets/js/soucooperado.js").'?v='. filemtime("_assets/js/soucooperado.js").'" ></script>'
+        );
+
+        $session = \Config\Services::session();
+        
+        $data = array(
+            'page' => 'soucooperado',
+            'header_dependencies' => $header_dependencies,
+            'footer_dependencies' => $footer_dependencies,
+            'session' => $session,
+            'seo' => $seo,
+            'page_data' => $page_data,
+            'general' => $this->general
+        );
+
+        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+            $data['quotation_list'] = true;
+        }
+
+        echo view('includes/header', $data);
+        echo view('soucooperado', $data);
+        echo view('includes/footer', $data);
     }
 
     private function check_registration() {

@@ -1,0 +1,13 @@
+ERROR - 2023-02-08 22:57:06 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2023-02-08 22:57:06 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Pessoal\Projetos\Repositorio\copercana_site\app\Models\GeneralModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Pessoal\Projetos\Repositorio\copercana_site\app\Controllers\Home.php(11): App\Models\GeneralModel->get_by_id(1)
+#4 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(802): App\Controllers\Home->__construct()
+#5 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#6 D:\Pessoal\Projetos\Repositorio\copercana_site\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Pessoal\Projetos\Repositorio\copercana_site\public_html\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Pessoal\Projetos\Repositorio\copercana_site\system\Commands\Server\rewrite.php(43): require_once('D:\\Pessoal\\Proj...')
+#9 {main}

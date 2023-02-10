@@ -157,6 +157,154 @@ class Registration extends BaseController
         return redirect()->to('/contato');
     }
 
+    public function cooperate() {
+        $recaptch_secret_key = "6Ld6qU0hAAAAAIfaHO-DEDxMUv3dk_KuQAqQs2lD";
+
+        helper(['form']);
+
+        $session = \Config\Services::session();
+        $request = \Config\Services::request();
+
+        $captcha = $request->getPost("g-recaptcha-response");
+
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($recaptch_secret_key) .  '&response=' . urlencode($captcha);
+        $response = file_get_contents($url);
+        $g_response = json_decode($response,true);
+
+        if ($g_response['success'] === true) {
+            $contact_rules  = [
+                'name' => [
+                    'rules' => 'required', 
+                    'errors' => [
+                        'required' => 'O campo \'Nome Completo\' é obrigatório',
+                    ]
+                ],
+                'registration' => [
+                    'rules' => 'required', 
+                    'errors' => [
+                        'required' => 'O campo \'Matrícula do cooperado\' é obrigatório',
+                    ]
+                ],
+                'cpf_cnpj' => [
+                    'rules' => 'required', 
+                    'errors' => [
+                        'required' => 'O campo \'CPF/CNPJ\' é obrigatório',
+                    ]
+                ],
+                'city' => [
+                    'rules' => 'required', 
+                    'errors' => [
+                        'required' => 'O campo \'Cidade/Estado\' é obrigatório',
+                    ]
+                ],
+                'email' => [
+                    'rules' => 'required|valid_email', 
+                    'errors' => [
+                        'required' => 'O campo \'E-mail\' é obrigatório',
+                        'valid_email' => 'O e-mail informado é inválido.'
+                    ]
+                ],
+                'cellphone' => [
+                    'rules' => 'required', 
+                    'errors' => [
+                        'required' => 'O campo \'Celular\' é obrigatório',
+                    ]
+                ],
+                'lgpd_opt_in' => [
+                    'rules' => 'required|integer', 
+                    'errors' => [
+                        'required' => 'Aceite nossa política de privacidade para continuar',
+                        'integer' => 'Aceite nossa política de privacidade para continuar'
+                    ]
+                ],
+            ];
+
+            if (!$this->validate($contact_rules)) {
+            $message = $this->validator->listErrors();
+            $success = false;
+
+            } else {
+
+                $name = $request->getPost('name');
+                $registration = $request->getPost('registration');
+                $cpf_cnpj = $request->getPost('cpf_cnpj');
+                $city = $request->getPost('city');
+                $email = $request->getPost('email');
+                $cellphone = $request->getPost('cellphone');
+                $lgpd_opt_in = $request->getPost('lgpd_opt_in');
+                $lgpd_opt_in = $lgpd_opt_in ? $lgpd_opt_in : 0;
+
+                try {
+                    $contactModel = model('App\Models\ContactModel', false);
+                    $response = $contactModel->addCooperated($name, $registration, $cpf_cnpj, $city, $email, $cellphone, $lgpd_opt_in);
+
+                    $generalModel = model('App\Models\GeneralModel', false);
+                    $general = $generalModel->get_by_id(1);
+
+                    if(isset($general) && isset($general->contact_emails) && !empty($general->contact_emails)) {
+                        $email_srvc = \Config\Services::email();
+
+                        $email_srvc->setFrom('site@copercana.com.br', 'Copercana');
+                        $email_srvc->setTo($general->contact_emails);
+
+                        $email_srvc->setSubject($general->contacts_subject);
+
+                        $email_body = "Nome: $name\n";
+                        $email_body .= "Matrícula Cooperado: $registration\n";
+                        $email_body .= "CPF/CNPJ: $cpf_cnpj\n";
+                        $email_body .= "Cidade/Estado: $city\n";
+                        $email_body .= "E-mail: $email\n";
+                        $email_body .= "Celular: $cellphone\n";
+
+                        $email_srvc->setMessage($email_body);
+
+                        $email_srvc->send();
+                    }
+
+                    if($response) {
+                        $message = "Retornaremos seu contato em breve.";
+                        $success = true;
+                    } else {
+                        $message = "Tente novamente mais tarde.";
+                        $success = false;
+                    }
+                    
+                } catch (\Exception $e) {
+                    $message = $e->getMessage();
+                    $success = false;
+                }
+            }
+        } else {
+            $message = "Marque a opção 'Não sou um robô' para continuar.";
+            $success = false;
+        }
+        
+        $form_data = array();
+
+        if(!$success) {
+
+            $form_data = array(
+                'name' => $request->getPost('name'),
+                'registration' => $request->getPost('registration'),
+                'cpf_cnpj' => $request->getPost('cpf_cnpj'),
+                'city' => $request->getPost('city'),
+                'email' => $request->getPost('email'),
+                'cellphone' => $request->getPost('cellphone'),
+                'lgpd_opt_in' => $request->getPost('lgpd_opt_in')
+            );
+        }
+
+        $response = array(
+            'message' => $message,
+            'success' => $success,
+            'form_data' => $form_data
+        );
+
+        $session->setFlashdata('response', $response);
+        return redirect()->to('/soucooperado#contact-form');
+    }
+
     public function subscribe() {
         helper(['form']);
 

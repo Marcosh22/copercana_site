@@ -192,6 +192,60 @@ class Api_Datatables extends ResourceController
         }
 	}
 
+    public function files() {
+
+        try {
+            $request = \Config\Services::request();
+
+            $table = 'files';
+            $columns = array('id', 'cover', 'title', 'created_at', 'id');
+            $search_columns = array('id', 'cover', 'title', 'created_at');
+            $order = array('id', 'cover', 'title', 'created_at', 'id');
+
+            $dataModel = model('App\Models\DtModel', false);
+            $fetch_data = $dataModel->make_datatables($table, $columns, $search_columns, $order);  
+            $data = array();  
+
+            foreach($fetch_data as $row) {  
+
+                $cover = '<div class="img-preview"><img src="'. base_url($row->cover) .'" alt=""></div>';
+
+                $created_at=date_create($row->created_at);
+                $created_at=date_format($created_at,"d/m/Y H:i");
+
+
+                $sub_array = array();  
+                $sub_array[] = $row->id;
+                $sub_array[] = $cover;
+                $sub_array[] = $row->title;
+                $sub_array[] = $created_at;
+
+                $sub_array[] = '<a href="'. base_url("admin/files/edit/".$row->id) .'" class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>&nbsp;
+                                <a href="'. base_url("admin/files/delete/".$row->id) .'" class="btn btn-sm btn-danger" onclick="handleConfirmation(event)"  data-title="Excluir arquivo?"><i class="bi bi-trash"></i></a>';
+                
+                $data[] = $sub_array;  
+            }  
+
+            $output = array(  
+                "draw" => intval($request->getPost('draw')),  
+                "recordsTotal" => $dataModel->get_all_data($table),  
+                "recordsFiltered" => $dataModel->get_filtered_data($table, $columns, $search_columns, $order), 
+                "data" => $data
+            );
+
+            return $this->respond($output);
+        } catch (\Exception $e) {
+
+            return $this->respond(array(  
+                "draw" => intval($request->getPost('draw')),  
+                "recordsTotal" => 0,  
+                "recordsFiltered" => 0,  
+                "data" => array(),
+                "error" => $e->getMessage()
+            ));
+        }
+	}
+
     public function testimonials() {
 
         try {
@@ -844,12 +898,12 @@ class Api_Datatables extends ResourceController
         }
 	}
 
-    public function galleries() {
+    public function events_galleries() {
 
         try {
             $request = \Config\Services::request();
 
-            $table = 'galleries';
+            $table = 'events_galleries';
             $columns = array('show_order', 'cover', 'title', 'date', 'status', 'created_at', 'id');
             $search_columns = array('show_order', 'cover', 'title', 'date', 'status', 'created_at', 'id');
             $order = array('show_order', 'cover', 'title', 'date', 'status', 'created_at', 'id');
@@ -877,8 +931,8 @@ class Api_Datatables extends ResourceController
                 $sub_array[] = $date;
                 $sub_array[] = $created_at;
 
-                $sub_array[] = '<a href="'. base_url("admin/galleries/edit/".$row->id) .'" class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>&nbsp;
-                                <a href="'. base_url("admin/galleries/delete/".$row->id) .'" class="btn btn-sm btn-danger" onclick="handleConfirmation(event)"  data-title="Excluir galeria?"><i class="bi bi-trash"></i></a>';
+                $sub_array[] = '<a href="'. base_url("admin/events_galleries/edit/".$row->id) .'" class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>&nbsp;
+                                <a href="'. base_url("admin/events_galleries/delete/".$row->id) .'" class="btn btn-sm btn-danger" onclick="handleConfirmation(event)"  data-title="Excluir galeria?"><i class="bi bi-trash"></i></a>';
                 
                 $data[] = $sub_array;  
             }  
@@ -887,6 +941,57 @@ class Api_Datatables extends ResourceController
                 "draw" => intval($request->getPost('draw')),  
                 "recordsTotal" => $dataModel->get_all_data($table),  
                 "recordsFiltered" => $dataModel->get_filtered_data($table, $columns, $search_columns, $order), 
+                "data" => $data
+            );
+
+            return $this->respond($output);
+        } catch (\Exception $e) {
+
+            return $this->respond(array(  
+                "draw" => intval($request->getPost('draw')),  
+                "recordsTotal" => 0,  
+                "recordsFiltered" => 0,  
+                "data" => array(),
+                "error" => $e->getMessage()
+            ));
+        }
+	}
+
+    public function videos() {
+
+        try {
+            $request = \Config\Services::request();
+
+            $table = 'videos';
+            $columns = array('id', 'url', 'title', 'created_at', 'id');
+            $search_columns = array('id', 'url', 'title', 'created_at');
+            $order = array('id', 'url', 'title', 'created_at', 'id');
+
+            $dataModel = model('App\Models\DtModel', false);
+            $fetch_data = $dataModel->make_datatables($table, $columns, $search_columns, $order, []);  
+            $data = array();  
+
+            foreach($fetch_data as $row) {  
+
+                $created_at=date_create($row->created_at);
+                $created_at=date_format($created_at,"d/m/Y H:i");
+
+                $sub_array = array();  
+                $sub_array[] = $row->id;
+                $sub_array[] = $row->url;
+                $sub_array[] = $row->title;
+                $sub_array[] = $created_at;
+
+                $sub_array[] = '<a href="'. base_url("admin/videos/edit_video/".$row->id) .'" class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>&nbsp;
+                                <a href="'. base_url("admin/videos/delete/".$row->id) .'" class="btn btn-sm btn-danger" onclick="handleConfirmation(event)"  data-title="Excluir video?"><i class="bi bi-trash"></i></a>';
+                
+                $data[] = $sub_array;  
+            }  
+
+            $output = array(  
+                "draw" => intval($request->getPost('draw')),  
+                "recordsTotal" => $dataModel->get_all_data($table, []),  
+                "recordsFiltered" => $dataModel->get_filtered_data($table, $columns, $search_columns, $order, []), 
                 "data" => $data
             );
 

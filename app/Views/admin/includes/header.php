@@ -180,12 +180,12 @@
         </a>
         <ul id="galleries-nav" class="nav-content collapse <?= $page === 'galleries' || $page === 'galleries-add_new' || $page === 'galleries-edit' ? 'show' : null ?>" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="<?= base_url("admin/galleries/add_new") ?>" <?= $page === 'galleries-add_new' ? 'class="active"' : null ?>>
+            <a href="<?= base_url("admin/events_galleries/add_new") ?>" <?= $page === 'galleries-add_new' ? 'class="active"' : null ?>>
               <i class="bi bi-circle"></i><span>Adicionar Novo</span>
             </a>
           </li>
           <li>
-            <a href="<?= base_url("admin/galleries") ?>" <?= $page === 'galleries' ? 'class="active"' : null ?>>
+            <a href="<?= base_url("admin/events_galleries") ?>" <?= $page === 'galleries' ? 'class="active"' : null ?>>
               <i class="bi bi-circle"></i><span>Visualizar Todos</span>
             </a>
           </li>
@@ -311,10 +311,10 @@
       <?php if($ion_auth->isAdmin()) {?>
       <!-- ======= Páginas ======= -->
       <li class="nav-item">
-        <a class="nav-link <?= $page !== 'pages-home' && $page !== 'pages-institucional' && $page !== 'pages-sustentabilidade' && $page !== 'pages-cooperativismo' && $page !== 'pages-politica-de-privacidade' && $page !== 'pages-autocenter' && $page !== 'pages-centro-de-eventos' && $page !== 'pages-distribuidora-de-combustiveis' && $page !== 'pages-ferragem-magazine' && $page !== 'pages-postos-de-combustiveis' && $page !== 'pages-copercana-solar' && $page !== 'pages-copercana-seguros' && $page !== 'pages-supermercados' && $page !== 'pages-unidade-de-graos' && $page !== 'pages-assessoria-de-imprensa' && $page !== 'pages-revista-canavieiros' && $page !== 'pages-radio-copercana' && $page !== 'pages-redes-sociais' && $page !== 'pages-indicacoes' && $page !== 'pages-cadastro' && $page !== 'pages-jovem-aprendiz' && $page !== 'pages-vagas-disponiveis' && $page !== 'pages-laboratorio-de-solos' && $page !== 'pages-tecnologia-bioas' && $page !== 'pages-departamento-agronomico' && $page !== 'pages-noticias' && $page !== 'pages-blog' && $page !== 'pages-contato' ? 'collapsed' : null ?>" data-bs-target="#pages-nav" data-bs-toggle="collapse">
+        <a class="nav-link <?= $page !== 'pages-home' && $page !== 'pages-institucional' && $page !== 'pages-sustentabilidade' && $page !== 'pages-cooperativismo' && $page !== 'pages-politica-de-privacidade' && $page !== 'pages-autocenter' && $page !== 'pages-centro-de-eventos' && $page !== 'pages-distribuidora-de-combustiveis' && $page !== 'pages-ferragem-magazine' && $page !== 'pages-postos-de-combustiveis' && $page !== 'pages-copercana-solar' && $page !== 'pages-copercana-seguros' && $page !== 'pages-supermercados' && $page !== 'pages-unidade-de-graos' && $page !== 'pages-assessoria-de-imprensa' && $page !== 'pages-revista-canavieiros' && $page !== 'pages-radio-copercana' && $page !== 'pages-redes-sociais' && $page !== 'pages-indicacoes' && $page !== 'pages-cadastro' && $page !== 'pages-jovem-aprendiz' && $page !== 'pages-vagas-disponiveis' && $page !== 'pages-laboratorio-de-solos' && $page !== 'pages-tecnologia-bioas' && $page !== 'pages-departamento-agronomico' && $page !== 'pages-noticias' && $page !== 'pages-blog' && $page !== 'pages-contato' && $page !== 'pages-soucooperado' && $page !== 'pages-copercana-60-anos' ? 'collapsed' : null ?>" data-bs-target="#pages-nav" data-bs-toggle="collapse">
         <i class="bi bi-file-earmark-code"></i><span>Páginas</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="pages-nav" class="nav-content collapse <?= $page === 'pages-home' || $page === 'pages-institucional' || $page === 'pages-sustentabilidade' || $page === 'pages-cooperativismo' || $page === 'pages-politica-de-privacidade' || $page === 'pages-autocenter' || $page === 'pages-centro-de-eventos' || $page === 'pages-distribuidora-de-combustiveis' || $page === 'pages-ferragem-magazine' || $page === 'pages-postos-de-combustiveis' || $page === 'pages-copercana-solar' || $page === 'pages-copercana-seguros' || $page === 'pages-supermercados' || $page === 'pages-unidade-de-graos' || $page === 'pages-assessoria-de-imprensa' || $page === 'pages-revista-canavieiros' || $page === 'pages-radio-copercana' || $page === 'pages-redes-sociais' || $page === 'pages-indicacoes' || $page === 'pages-cadastro' || $page === 'pages-jovem-aprendiz' || $page === 'pages-vagas-disponiveis' || $page === 'pages-laboratorio-de-solos' || $page === 'pages-tecnologia-bioas' || $page === 'pages-departamento-agronomico' || $page === 'pages-noticias' || $page === 'pages-contato' ? 'show' : null ?>" data-bs-parent="#sidebar-nav">
+        <ul id="pages-nav" class="nav-content collapse <?= $page === 'pages-home' || $page === 'pages-institucional' || $page === 'pages-sustentabilidade' || $page === 'pages-cooperativismo' || $page === 'pages-politica-de-privacidade' || $page === 'pages-autocenter' || $page === 'pages-centro-de-eventos' || $page === 'pages-distribuidora-de-combustiveis' || $page === 'pages-ferragem-magazine' || $page === 'pages-postos-de-combustiveis' || $page === 'pages-copercana-solar' || $page === 'pages-copercana-seguros' || $page === 'pages-supermercados' || $page === 'pages-unidade-de-graos' || $page === 'pages-assessoria-de-imprensa' || $page === 'pages-revista-canavieiros' || $page === 'pages-radio-copercana' || $page === 'pages-redes-sociais' || $page === 'pages-indicacoes' || $page === 'pages-cadastro' || $page === 'pages-jovem-aprendiz' || $page === 'pages-vagas-disponiveis' || $page === 'pages-laboratorio-de-solos' || $page === 'pages-tecnologia-bioas' || $page === 'pages-departamento-agronomico' || $page === 'pages-noticias' || $page === 'pages-contato' || $page === 'pages-soucooperado' || $page === 'pages-copercana-60-anos' ? 'show' : null ?>" data-bs-parent="#sidebar-nav">
           <li>
             <a href="<?= base_url("admin/pages/home") ?>" <?= $page === 'pages-home' ? 'class="active"' : null ?>>
               <i class="bi bi-circle"></i><span>Home</span>
@@ -475,6 +475,18 @@
           <li>
             <a href="<?= base_url("admin/pages/contato") ?>" <?= $page === 'pages-contato' ? 'class="active"' : null ?>>
               <i class="bi bi-circle"></i><span>Contato</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="<?= base_url("admin/pages/soucooperado") ?>" <?= $page === 'pages-soucooperado' ? 'class="active"' : null ?>>
+              <i class="bi bi-circle"></i><span>Cooperados Coopercana</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="<?= base_url("admin/pages/copercana-60-anos") ?>" <?= $page === 'pages-copercana-60-anos' ? 'class="active"' : null ?>>
+              <i class="bi bi-circle"></i><span>Copercana 60 Anos</span>
             </a>
           </li>
           

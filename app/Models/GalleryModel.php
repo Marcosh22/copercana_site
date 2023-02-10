@@ -7,16 +7,12 @@ use CodeIgniter\Model;
 class GalleryModel extends Model
 {
 
-    public function add($cover, $title, $date, $show_order, $slug, $status = 0) {
+    public function add($title, $status = 0) {
         $db      = \Config\Database::connect();
         $builder = $db->table('galleries');
         
         $data = [
-            'cover'  => $cover,
             'title' => $title,
-            'date' => $date,
-            'show_order' => $show_order,
-            'slug'  => $slug,
             'status' => $status
         ];
         
@@ -27,16 +23,12 @@ class GalleryModel extends Model
         }
     }
 
-    public function update_gallery($id, $cover, $title, $date, $show_order, $slug, $status = 0) {
+    public function update_gallery($id, $title, $status = 0) {
         $db      = \Config\Database::connect();
         $builder = $db->table('galleries');
         
         $data = [
-            'cover'  => $cover,
             'title' => $title,
-            'date' => $date,
-            'show_order' => $show_order,
-            'slug'  => $slug,
             'status' => $status
         ];
 
@@ -51,7 +43,7 @@ class GalleryModel extends Model
         $db      = \Config\Database::connect();
         $builder = $db->table('galleries');
 
-        $builder->orderBy('show_order', 'ASC');
+        $builder->orderBy('id', 'DESC');
         $query  = $builder->get();
         $result = array();
 
@@ -73,16 +65,6 @@ class GalleryModel extends Model
         return $query->getRow();
     }
 
-    public function get_by_slug($slug)
-    {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('galleries');
-        $builder->where('slug', $slug);
-        $query  = $builder->get();
-
-        return $query->getRow();
-    }
-
     public function get_total()
     {
         $db      = \Config\Database::connect();
@@ -90,77 +72,14 @@ class GalleryModel extends Model
         return $builder->countAllResults();
     }
 
-    public function update_order($id, $show_order) {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('galleries');
-
-        $data = [
-            'show_order'  => $show_order
-        ];
-
-        $builder = $builder->where('id', $id);
-        
-        $builder->update($data);
-        return true;
-    }
-    
-    public function get_next_order()
-    {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('galleries');
-        return $builder->countAllResults() + 1;
-    }
-
-    public function update_all_orders($new_order, $old_order) {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('galleries');
-
-        if($new_order > $old_order) {
-            $builder->set('show_order', 'show_order-1', false);
-            $builder->where('show_order >', $old_order);
-            $builder->where('show_order <=', $new_order);
-        } else {
-            $builder->set('show_order', 'show_order+1', false);
-            $builder->where('show_order <', $old_order);
-            $builder->where('show_order >=', $new_order);
-        }
-        
-        $builder->update();
-        return true;
-    }
-
-    
     public function delete_gallery($gallery_id) {
 
-        $gallery = $this->get_by_id($gallery_id);
-
         $db      = \Config\Database::connect();
-        $builder = $db->table('galleries');
-
-        $builder->set('show_order', 'show_order-1', false);
-        $builder->where('show_order >', $gallery->show_order);
-        
-        $builder->update();
-
         $builder = $db->table('galleries');
         $builder->where('id', $gallery_id);
 
         $builder->delete();
 
-        return true;
-    }
-
-    public function remove_cover($id) {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('galleries');
-        
-        $data = [
-            'cover'  => ""
-        ];
-
-        $builder->where('id', $id);
-
-        $builder->update($data);
         return true;
     }
 

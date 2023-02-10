@@ -259,7 +259,7 @@
                             <div class="col-12">
                                 <div class="page-action-button d-flex my-4">
                                     <a class="btn btn-success mx-2 my-2"
-                                        href="<?= base_url("admin/galleries/edit/1") ?>"><i class="bi bi-plus-square"></i>
+                                        href="<?= base_url("admin/events_galleries/edit/1") ?>"><i class="bi bi-plus-square"></i>
                                         Ver Fotos da Galeria
                                     </a>
                                 </div>

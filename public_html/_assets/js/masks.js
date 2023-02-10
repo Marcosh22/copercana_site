@@ -27,4 +27,13 @@ $(document).ready(function() {
 	  };
 	  
 	$(".mask-decimal").mask("#0,00", MoneyOpts);
+
+	var options = {
+		onKeyPress: function (cpf, ev, el, op) {
+			var masks = ['000.000.000-000', '00.000.000/0000-00'];
+			$('.mask-cpf_cnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+		}
+	}
+	
+	$('.mask-cpf_cnpj').length > 11 ? $('.mask-cpf_cnpj').mask('00.000.000/0000-00', options) : $('.mask-cpf_cnpj').mask('000.000.000-00#', options);
 });

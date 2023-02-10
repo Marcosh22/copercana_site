@@ -28,6 +28,27 @@ class ContactModel extends Model
         }
     }
 
+    public function addCooperated($name, $registration, $cpf_cnpj, $city, $email, $cellphone, $lgpd_opt_in) {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('cooperated');
+        
+        $data = [
+            'name' => $name,
+            'registration'  => $registration,
+            'cpf_cnpj'  => $cpf_cnpj,
+            'city' => $city,
+            'email'  => $email,
+            'cellphone'  => $cellphone,
+            'lgpd_opt_in'  => $lgpd_opt_in
+        ];
+        
+        if($builder->insert($data)) {
+            return $db->insertID();
+        } else {
+            return null;
+        }
+    }
+
     public function get_all()
     {
         $db      = \Config\Database::connect();

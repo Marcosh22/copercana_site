@@ -5,7 +5,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">Home</li>
-                <li class="breadcrumb-item"><a href="<?= base_url("admin/galleries") ?>">Galerias</a></li>
+                <li class="breadcrumb-item">Galerias</li>
                 <li class="breadcrumb-item active">Editar</li>
             </ol>
         </nav>
@@ -51,23 +51,6 @@
                         ?>
 
                         <?php echo form_open_multipart('admin/galleries/update_gallery/'.$gallery->id, ['class' => 'my-5']);?>
-                        <div class="row mb-3">
-                            <?php echo form_label('Capa <small>(Max.: 5MB)</small><span class="required">*</span></br><small>(Recomendado: 350x350)</small>', 'picture', ['class' => 'col-sm-2 col-form-label']);?>
-                            <div class="col-sm-10">
-
-                                <?php if(isset($gallery->cover) && !empty($gallery->cover)) { ?>
-                                <div class="banner-preview">
-                                    <img src="<?= base_url($gallery->cover) ?>" alt="">
-                                    <a class="delete-btn" href="<?= base_url("admin/galleries/remove_cover/".$gallery->id) ?>"><i class="bi bi-x-circle-fill"></i></a>
-                                </div>
-                                <?php } else { ?>
-                                <?php echo form_upload([
-                                                    'name' => 'cover',
-                                                    'id'   => 'cover'
-                                                ], '', ['class' => 'form-control', 'required' => 'required']);?>
-                                <?php } ?>
-                            </div>
-                        </div>
                        
                         <div class="row mb-3">
                             <?php echo form_label('Título<span class="required">*</span>', 'title', ['class' => 'col-sm-2 col-form-label']);?>
@@ -80,36 +63,7 @@
 
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <?php echo form_label('Ordem de exibição<span class="required">*</span>', 'show_order', ['class' => 'col-sm-2 col-form-label']);?>
-                            <div class="col-sm-10">
-                                <?php echo form_input([
-                                            'name' => 'show_order',
-                                            'id'   => 'show_order',
-                                            'type' => 'number'
-                                        ], $gallery->show_order, ['class' => 'form-control', 'required' => 'required', 'min' => '1']);?>
-
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <?php echo form_label('Data do Evento<span class="required">*</span>', 'date', ['class' => 'col-sm-2 col-form-label', 'required' => 'required']);?>
-                            <div class="col-sm-10">
-                                <?php
-                                    if(isset($gallery->date) && !empty($gallery->date)) {
-                                        $date = new DateTime($gallery->date);
-                                        $date_input =  $date->format('Y-m-d');
-                                    } else {
-                                        $date_input = "";
-                                    }
-                                ?>
-                                <?php echo form_input([
-                                            'name' => 'date',
-                                            'id'   => 'date',
-                                            'type' => 'date'
-                                        ], $date_input, ['class' => 'form-control']);?>
-
-                            </div>
-                        </div>
+                       
                         <div class="row mb-3">
                             <?php echo form_label('Imagens da galeria <small>(Max.: 40MB)</small>', 'images', ['class' => 'col-sm-2 col-form-label']);?>
                             <div class="col-sm-10">
