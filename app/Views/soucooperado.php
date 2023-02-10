@@ -158,7 +158,7 @@
                                         value="<?= $form_data && $form_data['name'] ? $form_data['name'] : '' ?>">
                                 </div>
                                 <div class="col-12">
-                                    <input class="c-input" type="text" name="registration" id="registration" placeholder="Matrícula do cooperado"
+                                    <input class="c-input" type="text" name="registration" id="registration" placeholder="Código do cooperado"
                                         value="<?= $form_data && $form_data['registration'] ? $form_data['registration'] : '' ?>">
                                 </div>
                                 
@@ -177,8 +177,13 @@
                                 
                                 <div class="col-12">
                                     <input class="c-input mask-cellphone" type="text" name="cellphone" id="cellphone"
-                                        placeholder="Celular"
-                                        value="<?= $form_data && $form_data['cellphone'] ? $form_data['cellphone'] : '' ?>">
+                                        placeholder="Celular/Whatsapp"
+                                        value="<?= $form_data && $form_data['cellphone'] ? $form_data['cellphone'] : '' ?>" required min="16">
+                                </div>
+                                <div class="col-12">
+                                    <input class="c-input mask-telephone" type="text" name="telephone" id="telephone"
+                                        placeholder="Telefone"
+                                        value="<?= $form_data && $form_data['telephone'] ? $form_data['telephone'] : '' ?>" min="15">
                                 </div>
                                 <div class="col-12">
                                     <div class="c-checkbox-group">

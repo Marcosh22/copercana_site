@@ -208,7 +208,7 @@ class Registration extends BaseController
                 'cellphone' => [
                     'rules' => 'required', 
                     'errors' => [
-                        'required' => 'O campo \'Celular\' é obrigatório',
+                        'required' => 'O campo \'Celular/Whatsapp\' é obrigatório',
                     ]
                 ],
                 'lgpd_opt_in' => [
@@ -232,12 +232,13 @@ class Registration extends BaseController
                 $city = $request->getPost('city');
                 $email = $request->getPost('email');
                 $cellphone = $request->getPost('cellphone');
+                $telephone = $request->getPost('telephone');
                 $lgpd_opt_in = $request->getPost('lgpd_opt_in');
                 $lgpd_opt_in = $lgpd_opt_in ? $lgpd_opt_in : 0;
 
                 try {
                     $contactModel = model('App\Models\ContactModel', false);
-                    $response = $contactModel->addCooperated($name, $registration, $cpf_cnpj, $city, $email, $cellphone, $lgpd_opt_in);
+                    $response = $contactModel->addCooperated($name, $registration, $cpf_cnpj, $city, $email, $cellphone, $telephone, $lgpd_opt_in);
 
                     $generalModel = model('App\Models\GeneralModel', false);
                     $general = $generalModel->get_by_id(1);
@@ -251,11 +252,12 @@ class Registration extends BaseController
                         $email_srvc->setSubject($general->contacts_subject);
 
                         $email_body = "Nome: $name\n";
-                        $email_body .= "Matrícula Cooperado: $registration\n";
+                        $email_body .= "Código Cooperado: $registration\n";
                         $email_body .= "CPF/CNPJ: $cpf_cnpj\n";
                         $email_body .= "Cidade/Estado: $city\n";
                         $email_body .= "E-mail: $email\n";
-                        $email_body .= "Celular: $cellphone\n";
+                        $email_body .= "Celular/Whatsapp: $cellphone\n";
+                        $email_body .= "Telefone: $telephone\n";
 
                         $email_srvc->setMessage($email_body);
 
@@ -291,6 +293,7 @@ class Registration extends BaseController
                 'city' => $request->getPost('city'),
                 'email' => $request->getPost('email'),
                 'cellphone' => $request->getPost('cellphone'),
+                'telephone' => $request->getPost('telephone'),
                 'lgpd_opt_in' => $request->getPost('lgpd_opt_in')
             );
         }

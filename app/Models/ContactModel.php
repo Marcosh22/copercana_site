@@ -28,7 +28,7 @@ class ContactModel extends Model
         }
     }
 
-    public function addCooperated($name, $registration, $cpf_cnpj, $city, $email, $cellphone, $lgpd_opt_in) {
+    public function addCooperated($name, $registration, $cpf_cnpj, $city, $email, $cellphone, $telephone, $lgpd_opt_in) {
         $db      = \Config\Database::connect();
         $builder = $db->table('cooperated');
         
@@ -39,6 +39,7 @@ class ContactModel extends Model
             'city' => $city,
             'email'  => $email,
             'cellphone'  => $cellphone,
+            'telephone'  => $telephone,
             'lgpd_opt_in'  => $lgpd_opt_in
         ];
         
