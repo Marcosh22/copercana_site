@@ -6,33 +6,33 @@
 </picture>
 <?php } ?>
 
-<nav class="page-navigation">
+<nav class="page-navigation" id="navigation">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <ul class="page-navigation__list">
-                    <li class="page-navigation__item page-navigation__item--active">
-                        <a class="page-navigation__link" href="#sobre">
+                    <li class="page-navigation__item">
+                        <a class="js-scroll page-navigation__link js-scroll page-navigation__link--active" href="#sobre" data-href="#sobre">
                             Sobre
                         </a>
                     </li>
                     <li class="page-navigation__item">
-                        <a class="page-navigation__link" href="#eventos">
+                        <a class="js-scroll page-navigation__link" href="#eventos" data-href="#eventos">
                             Eventos
                         </a>
                     </li>
                     <li class="page-navigation__item">
-                        <a class="page-navigation__link" href="#depoimentos">
+                        <a class="js-scroll page-navigation__link" href="#depoimentos" data-href="#depoimentos">
                             Depoimentos
                         </a>
                     </li>
                     <li class="page-navigation__item">
-                        <a class="page-navigation__link" href="#parceiros">
+                        <a class="js-scroll page-navigation__link" href="#parceiros" data-href="#parceiros">
                             Parceiros
                         </a>
                     </li>
                     <li class="page-navigation__item">
-                        <a class="page-navigation__link" href="#materiais">
+                        <a class="js-scroll page-navigation__link" href="#materiais" data-href="#materiais">
                             Materiais
                         </a>
                     </li>
@@ -331,7 +331,7 @@
     <?php } ?>
 
     <?php if(isset($page_data->experiences_section_show) && $page_data->experiences_section_show == 1) { ?>
-    <section class="page-section copercana-60-anos-section">
+    <section class="page-section copercana-60-anos-section" id="depoimentos">
         <div class="container">
             <div class="row">
                 <div class="col-12">
