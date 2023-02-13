@@ -303,7 +303,7 @@ class Registration extends BaseController
             'success' => $success,
             'form_data' => $form_data
         );
-
+        
         $session->setFlashdata('response', $response);
         return redirect()->to('/soucooperado#contact-form');
     }

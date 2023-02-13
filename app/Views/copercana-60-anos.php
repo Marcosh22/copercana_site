@@ -6,11 +6,47 @@
 </picture>
 <?php } ?>
 
+<nav class="page-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="page-navigation__list">
+                    <li class="page-navigation__item page-navigation__item--active">
+                        <a class="page-navigation__link" href="#sobre">
+                            Sobre
+                        </a>
+                    </li>
+                    <li class="page-navigation__item">
+                        <a class="page-navigation__link" href="#eventos">
+                            Eventos
+                        </a>
+                    </li>
+                    <li class="page-navigation__item">
+                        <a class="page-navigation__link" href="#depoimentos">
+                            Depoimentos
+                        </a>
+                    </li>
+                    <li class="page-navigation__item">
+                        <a class="page-navigation__link" href="#parceiros">
+                            Parceiros
+                        </a>
+                    </li>
+                    <li class="page-navigation__item">
+                        <a class="page-navigation__link" href="#materiais">
+                            Materiais
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
 <main>
     <?php if(isset($page_data)) { ?>
 
     <?php if(isset($page_data->about_section_show) && $page_data->about_section_show == 1) { ?>
-    <section class="page-section bg-secondary-dark-green with-stripes--laterals">
+    <section class="page-section bg-secondary-dark-green with-stripes--laterals" id="sobre">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-6">
@@ -48,7 +84,7 @@
     <?php } ?>
 
     <?php if(isset($page_data->celebration_section_show) && $page_data->celebration_section_show == 1) { ?>
-    <section class="page-section">
+    <section class="page-section" id="eventos">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -384,7 +420,7 @@
 
 
     <?php if(isset($page_data->partners_section_show) && $page_data->partners_section_show == 1) { ?>
-    <section class="page-section bg-secondary-dark-green">
+    <section class="page-section bg-secondary-dark-green" id="parceiros">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -423,7 +459,7 @@
     <?php } ?>
 
     <?php if(isset($page_data->share_section_show) && $page_data->share_section_show == 1) { ?>
-    <section class="page-section bg-darkest-green">
+    <section class="page-section bg-darkest-green" id="materiais">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -433,7 +469,7 @@
                 </div>
 
                 <?php if(isset($files) && count($files) > 0) { ?>
-                    <div class="col-12">
+                <div class="col-12">
                     <div class="files__carousel">
                         <?php foreach($files as $file) { ?>
                         <div class="file-item__wrapper">
@@ -441,54 +477,55 @@
                                 <div class="file-item__picture">
                                     <img src="<?= base_url($file->cover) ?>"
                                         alt="<?= $file->title ?> - <?= $file->subtitle ?>" class="img-fluid d-block">
-                                        <svg fill="#FFF" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 29.978 29.978" xml:space="preserve">
-<g>
-	<path d="M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012
-		v-8.861H25.462z"/>
-	<path d="M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723
+                                    <svg fill="#FFF" height="800px" width="800px" version="1.1" id="Capa_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 29.978 29.978" xml:space="preserve">
+                                        <g>
+                                            <path d="M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012
+		v-8.861H25.462z" />
+                                            <path d="M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723
 		c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742
 		c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193
-		C15.092,18.979,14.62,18.426,14.62,18.426z"/>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-</g>
-</svg>
+		C15.092,18.979,14.62,18.426,14.62,18.426z" />
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                        </g>
+                                    </svg>
 
                                 </div>
                             </a>
                         </div>
                         <?php } ?>
                     </div>
-                    </div>
+                </div>
                 <?php } ?>
 
                 <div class="col-12">
@@ -503,4 +540,9 @@
 
 </main>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><svg stroke="#FFF" fill="#FFF" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"></path></svg></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><svg stroke="#FFF" fill="#FFF"
+        stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z">
+        </path>
+    </svg></a>
