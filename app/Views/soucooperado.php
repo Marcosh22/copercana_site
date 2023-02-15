@@ -28,7 +28,7 @@
                 <?php } ?>
 
                 <div class="col-12" style="margin: 50px 0;">
-                <h4 style="font-weight: 900; color: #5b5b5f;">VOCÊ É UM COOPERADO DA COOPERCANA?</h4>
+                <h4 style="font-weight: 900; color: #5b5b5f;">VOCÊ É UM COOPERADO DA COPERCANA?</h4>
                     <div class="c-radio-group">
                         <label for="is-cooperated-yes" class="c-radio-group__option">
                             <input type="radio" name="is-cooperated" id="is-cooperated-yes" value="1" >
@@ -269,6 +269,6 @@
 
 <div class="popup-overlayer d-none" id="message-popup">
     <div class="popup">
-        <p>ESTE CADASTRO<br/>É EXCLUSIVO<br/>PARA COOPERADOS<br/>COOPERCANA.<br/>AGRADECEMOS A<br/>COMPREENSÃO.</p>
+        <p>ESTE CADASTRO<br/>É EXCLUSIVO<br/>PARA COOPERADOS<br/>COPERCANA.<br/>AGRADECEMOS A<br/>COMPREENSÃO.</p>
     </div>
 </div>
