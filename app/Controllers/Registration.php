@@ -243,7 +243,7 @@ class Registration extends BaseController
                     $generalModel = model('App\Models\GeneralModel', false);
                     $general = $generalModel->get_by_id(1);
 
-                    if(isset($general) && isset($general->contact_emails) && !empty($general->contact_emails)) {
+                    if(isset($general) && isset($general->contact_emails) && !empty($general->contact_emails) && false) {
                         $email_srvc = \Config\Services::email();
 
                         $email_srvc->setFrom('site@copercana.com.br', 'Copercana');
