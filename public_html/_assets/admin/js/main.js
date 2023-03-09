@@ -304,7 +304,7 @@
   datatables.forEach(datatable => {
 
       let ssr_url = datatable.getAttribute('data-ssr');
-      let exportable = datatable.getAttribute('data-exportable');
+      let exportable = datatable.getAttribute('data-export');
       let isExportable = exportable && exportable == 'true';
 
       console.log('isExportable', isExportable);

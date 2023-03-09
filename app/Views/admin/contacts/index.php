@@ -98,7 +98,9 @@
                                             </div>
                                             <div class="col-12">
                                                 <table class="table datatable"
-                                                    data-ssr="<?= base_url("api/datatables/contacts") ?>">
+                                                    data-ssr="<?= base_url("api/datatables/contacts") ?>"
+                                                    style="width: 100%;"
+                                                    >
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">#</th>
@@ -141,7 +143,9 @@
                                             <div class="col-12">
                                                 <table class="table datatable"
                                                     data-ssr="<?= base_url("api/datatables/cooperated_contacts") ?>"
-                                                    data-export="true">
+                                                    data-export="true"
+                                                    style="width: 100%;"
+                                                    >
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">#</th>
