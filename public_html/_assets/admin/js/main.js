@@ -439,6 +439,7 @@
             {
               extend: "pdf",
               titleAttr: "PDF",
+              orientation: 'landscape',
               action: newexportaction,
             },
           ]
