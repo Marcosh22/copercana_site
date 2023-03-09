@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
   <link href="<?= base_url('_assets/admin/vendor/DataTables/datatables.min.css'); ?>" rel="stylesheet">
 
-  <link href="<?= base_url('_assets/admin/css/style.css'); ?>" rel="stylesheet">
+  <link href="<?= base_url('_assets/admin/css/style.css'); ?>?v=<?= filemtime('_assets/admin/css/style.css'); ?>" rel="stylesheet">
 
   <?php if(isset($header_dependencies)) {
     foreach($header_dependencies as $dependency) {

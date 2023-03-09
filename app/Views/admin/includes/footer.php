@@ -20,7 +20,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?= base_url('_assets/admin/js/main.js'); ?>?v=".<?= filemtime('_assets/admin/js/main.js'); ?>></script>
+  <script src="<?= base_url('_assets/admin/js/main.js'); ?>?v=<?= filemtime('_assets/admin/js/main.js'); ?>"></script>
 
   <?php if(isset($footer_dependencies)) {
     foreach($footer_dependencies as $dependency) {

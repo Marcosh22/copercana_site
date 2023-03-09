@@ -99,6 +99,7 @@
                                             <div class="col-12">
                                                 <table class="table datatable"
                                                     data-ssr="<?= base_url("api/datatables/contacts") ?>"
+                                                    data-export="true"
                                                     style="width: 100%;"
                                                     >
                                                     <thead>
