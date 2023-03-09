@@ -903,7 +903,7 @@ class Api_Datatables extends ResourceController
         try {
             $request = \Config\Services::request();
 
-            $table = 'contacts';
+            $table = 'cooperated';
             $columns = array('id', 'name', 'registration', 'cpf_cnpj', 'email', 'cellphone', 'telephone', 'city', 'created_at','id');
             $search_columns = array('id', 'name', 'registration', 'cpf_cnpj', 'email', 'cellphone', 'telephone', 'city', 'created_at');
             $order = array('id', 'name', 'registration', 'cpf_cnpj', 'email', 'cellphone', 'telephone', 'city', 'created_at','id');
