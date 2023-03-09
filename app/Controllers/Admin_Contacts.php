@@ -144,6 +144,6 @@ class Admin_Contacts extends BaseController
 
         $session->setFlashdata('response', $response);
 
-        return redirect()->to('/admin/contacts');
+        return redirect()->to('/admin/contacts?tab=cooperated');
     }
 }

@@ -61,100 +61,106 @@
 
                                     <li class="nav-item">
                                         <button
-                                            class="nav-link <?= isset($_GET['tab']) && $_GET['tab'] === 'edit' ? 'active' : '' ?>"
+                                            class="nav-link <?= !isset($_GET['tab']) || $_GET['tab'] !== 'cooperated' ? 'active' : '' ?>"
                                             data-bs-toggle="tab" data-bs-target="#contacts">Contatos</button>
                                     </li>
-                                    <?php if($user->id === $logged_user->row()->id) { ?>
                                     <li class="nav-item">
                                         <button
                                             class="nav-link <?= isset($_GET['tab']) && $_GET['tab'] === 'cooperated' ? 'active' : '' ?>"
                                             data-bs-toggle="tab" data-bs-target="#cooperated">Cooperados</button>
                                     </li>
-                                    <?php } ?>
 
                                 </ul>
                                 <div class="tab-content pt-2">
 
-                                    <div class="tab-pane fade <?= isset($_GET['tab']) && $_GET['tab'] === 'contacts' ? 'show active' : '' ?> contacts pt-3"
+                                    <div class="tab-pane fade <?= !isset($_GET['tab']) || $_GET['tab'] !== 'cooperated' ? 'show active' : '' ?> contacts pt-3"
                                         id="contacts">
-                                        <?php 
-                                     if(isset($response) && !empty($response) && $response['tab'] === 'edit') { 
-                              ?>
-                                        <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
-                                            role="alert" style="margin-bottom: 20px">
-                                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
-                                                aria-label="Success:">
-                                                <use
-                                                    xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
-                                            </svg>
-                                            <div>
-                                                <?= $response['message'] ?>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <?php 
+                                                    if(isset($response) && !empty($response) && $response['tab'] === 'edit') { 
+                                                ?>
+                                                <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
+                                                    role="alert" style="margin-bottom: 20px">
+                                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                                        aria-label="Success:">
+                                                        <use
+                                                            xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
+                                                    </svg>
+                                                    <div>
+                                                        <?= $response['message'] ?>
+                                                    </div>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                        aria-label="Close"></button>
+                                                </div>
+
+                                                <?php } ?>
                                             </div>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                                aria-label="Close"></button>
+                                            <div class="col-12">
+                                                <table class="table datatable"
+                                                    data-ssr="<?= base_url("api/datatables/contacts") ?>">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Nome</th>
+                                                            <th scope="col">E-mail</th>
+                                                            <th scope="col">Celular</th>
+                                                            <th scope="col">Cidade</th>
+                                                            <th scope="col">Assunto</th>
+                                                            <th scope="col">Data</th>
+                                                            <th scope="col">Ações</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
                                         </div>
-
-                                        <?php } ?>
-                                        <table class="table datatable"
-                                            data-ssr="<?= base_url("api/datatables/contacts") ?>">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Nome</th>
-                                                    <th scope="col">E-mail</th>
-                                                    <th scope="col">Celular</th>
-                                                    <th scope="col">Cidade</th>
-                                                    <th scope="col">Assunto</th>
-                                                    <th scope="col">Data</th>
-                                                    <th scope="col">Ações</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
-
                                     </div>
 
-                                    <?php if($user->id === $logged_user->row()->id) { ?>
                                     <div class="tab-pane fade <?= isset($_GET['tab']) && $_GET['tab'] === 'cooperated' ? 'show active' : '' ?> pt-3"
                                         id="cooperated" data-export="true">
-                                        <?php 
-                                            if(isset($response) && !empty($response) && $response['tab'] === 'cooperated') { 
-                                    ?>
-                                        <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
-                                            role="alert" style="margin-bottom: 20px">
-                                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
-                                                aria-label="Success:">
-                                                <use
-                                                    xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
-                                            </svg>
-                                            <div>
-                                                <?= $response['message'] ?>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <?php 
+                                                    if(isset($response) && !empty($response) && $response['tab'] === 'cooperated') { 
+                                                ?>
+                                                <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
+                                                    role="alert" style="margin-bottom: 20px">
+                                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                                        aria-label="Success:">
+                                                        <use
+                                                            xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
+                                                    </svg>
+                                                    <div>
+                                                        <?= $response['message'] ?>
+                                                    </div>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <?php } ?>
                                             </div>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                                aria-label="Close"></button>
+                                            <div class="col-12">
+                                                <table class="table datatable"
+                                                    data-ssr="<?= base_url("api/datatables/cooperated_contacts") ?>"
+                                                    data-export="true">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Nome</th>
+                                                            <th scope="col">Cod. cooperado</th>
+                                                            <th scope="col">CPF/CNPJ</th>
+                                                            <th scope="col">E-mail</th>
+                                                            <th scope="col">Celular/Whatsapp</th>
+                                                            <th scope="col">Telefone</th>
+                                                            <th scope="col">Cidade</th>
+                                                            <th scope="col">Data</th>
+                                                            <th scope="col">Ações</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
                                         </div>
 
-                                        <?php }
-                                    ?>
-
-                                        <table class="table datatable"
-                                            data-ssr="<?= base_url("api/datatables/cooperated_contacts") ?>" data-export="true">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Nome</th>
-                                                    <th scope="col">Cod. cooperado</th>
-                                                    <th scope="col">CPF/CNPJ</th>
-                                                    <th scope="col">E-mail</th>
-                                                    <th scope="col">Celular/Whatsapp</th>
-                                                    <th scope="col">Telefone</th>
-                                                    <th scope="col">Cidade</th>
-                                                    <th scope="col">Data</th>
-                                                    <th scope="col">Ações</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
                                     </div>
-                                    <?php } ?>
 
                                 </div><!-- End Bordered Tabs -->
 
