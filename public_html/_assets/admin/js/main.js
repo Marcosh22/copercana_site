@@ -299,16 +299,23 @@
    * Initiate Datatables
    */
   const base_url = document.getElementById('base_url').value;
-
   const datatables = select('.datatable', true)
+
   datatables.forEach(datatable => {
 
       let ssr_url = datatable.getAttribute('data-ssr');
+      let exportable = datatable.getAttribute('data-exportable');
+      let isExportable = exportable && exportable == 'true';
 
       $(datatable).DataTable({
-          dom: 'Rlfrtip',
+          dom: isExportable ? 'Blfrtip' : 'Rlfrtip',
           stateSave: true,
           responsive: true,
+          buttons: isExportable ? [
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5'
+          ] : null,
           processing: !!ssr_url,
           serverSide: !!ssr_url,
           ajax: !!ssr_url ? {

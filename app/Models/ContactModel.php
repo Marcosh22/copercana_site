@@ -83,4 +83,27 @@ class ContactModel extends Model
 
         return true;
     }
+
+    public function get_cooperated_by_id($id) {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('cooperated');
+
+        $builder->where('id', $id);
+        $builder->orderBy('id', 'DESC');
+        $query  = $builder->get();
+
+        return $query->getRow();
+    }
+
+    public function delete_cooperated($contact_id) {
+
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('cooperated');
+        $builder->where('id', $contact_id);
+
+        $builder->delete();
+
+        return true;
+    }
 }

@@ -898,6 +898,62 @@ class Api_Datatables extends ResourceController
         }
 	}
 
+    public function cooperated_contacts() {
+
+        try {
+            $request = \Config\Services::request();
+
+            $table = 'contacts';
+            $columns = array('id', 'name', 'registration', 'cpf_cnpj', 'email', 'cellphone', 'telephone', 'city', 'created_at','id');
+            $search_columns = array('id', 'name', 'registration', 'cpf_cnpj', 'email', 'cellphone', 'telephone', 'city', 'created_at');
+            $order = array('id', 'name', 'registration', 'cpf_cnpj', 'email', 'cellphone', 'telephone', 'city', 'created_at','id');
+
+            $dataModel = model('App\Models\DtModel', false);
+            $fetch_data = $dataModel->make_datatables($table, $columns, $search_columns, $order);  
+            $data = array();  
+
+            foreach($fetch_data as $row) {  
+
+                $created_at=date_create($row->created_at);
+                $created_at=date_format($created_at,"d/m/Y H:i");
+
+                $sub_array = array();  
+                $sub_array[] = $row->id;  
+                $sub_array[] = $row->name;
+                $sub_array[] = $row->registration;
+                $sub_array[] = $row->cpf_cnpj;
+                $sub_array[] = $row->email;
+                $sub_array[] = $row->cellphone;
+                $sub_array[] = $row->telephone;
+                $sub_array[] = $row->city;
+                $sub_array[] = $created_at;
+
+                $sub_array[] = '<a href="'. base_url("admin/contacts/see_more_cooperated/".$row->id) .'" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a>&nbsp;
+                                <a href="'. base_url("admin/contacts/delete_cooperated/".$row->id) .'" class="btn btn-sm btn-danger" onclick="handleConfirmation(event)"  data-title="Excluir contato?"><i class="bi bi-trash"></i></a>';
+                
+                $data[] = $sub_array;  
+            }  
+
+            $output = array(  
+                "draw" => intval($request->getPost('draw')),  
+                "recordsTotal" => $dataModel->get_all_data($table),  
+                "recordsFiltered" => $dataModel->get_filtered_data($table, $columns, $search_columns, $order), 
+                "data" => $data
+            );
+
+            return $this->respond($output);
+        } catch (\Exception $e) {
+
+            return $this->respond(array(  
+                "draw" => intval($request->getPost('draw')),  
+                "recordsTotal" => 0,  
+                "recordsFiltered" => 0,  
+                "data" => array(),
+                "error" => $e->getMessage()
+            ));
+        }
+	}
+
     public function events_galleries() {
 
         try {

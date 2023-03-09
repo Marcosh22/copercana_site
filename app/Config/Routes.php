@@ -247,6 +247,8 @@ $routes->group('admin', function ($routes) {
         $routes->get('/', 'Admin_Contacts::index');
         $routes->get('see_more/(:any)', 'Admin_Contacts::see_more/$1');
         $routes->get('delete/(:any)', 'Admin_Contacts::delete/$1');
+        $routes->get('see_more_cooperated/(:any)', 'Admin_Contacts::see_more_cooperated/$1');
+        $routes->get('delete_cooperated/(:any)', 'Admin_Contacts::delete_cooperated/$1');
     });
 
     $routes->group('general', function ($routes) {
@@ -361,6 +363,7 @@ $routes->post('api/datatables/news', 'Api_Datatables::news');
 $routes->post('api/datatables/blog', 'Api_Datatables::blog');
 $routes->post('api/datatables/blog/categories', 'Api_Datatables::blog_categories');
 $routes->post('api/datatables/contacts', 'Api_Datatables::contacts');
+$routes->post('api/datatables/cooperated_contacts', 'Api_Datatables::cooperated_contacts');
 $routes->post('api/datatables/users', 'Api_Datatables::users');
 $routes->post('api/datatables/offers', 'Api_Datatables::offers');
 $routes->post('api/datatables/magazines', 'Api_Datatables::magazines');
