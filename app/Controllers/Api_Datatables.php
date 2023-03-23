@@ -865,11 +865,11 @@ class Api_Datatables extends ResourceController
 
                 $sub_array = array();  
                 $sub_array[] = $row->id;  
-                $sub_array[] = $row->name;
-                $sub_array[] = $row->email;
-                $sub_array[] = $row->cellphone;
-                $sub_array[] = $row->city;
-                $sub_array[] = $row->subject;
+                $sub_array[] = htmlentities($row->name);
+                $sub_array[] = htmlentities($row->email);
+                $sub_array[] = htmlentities($row->cellphone);
+                $sub_array[] = htmlentities($row->city);
+                $sub_array[] = htmlentities($row->subject);
                 $sub_array[] = $created_at;
 
                 $sub_array[] = '<a href="'. base_url("admin/contacts/see_more/".$row->id) .'" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a>&nbsp;
@@ -919,13 +919,13 @@ class Api_Datatables extends ResourceController
 
                 $sub_array = array();  
                 $sub_array[] = $row->id;  
-                $sub_array[] = $row->name;
-                $sub_array[] = $row->registration;
-                $sub_array[] = $row->cpf_cnpj;
-                $sub_array[] = $row->email;
-                $sub_array[] = $row->cellphone;
-                $sub_array[] = $row->telephone;
-                $sub_array[] = $row->city;
+                $sub_array[] = htmlentities($row->name);
+                $sub_array[] = htmlentities($row->registration);
+                $sub_array[] = htmlentities($row->cpf_cnpj);
+                $sub_array[] = htmlentities($row->email);
+                $sub_array[] = htmlentities($row->cellphone);
+                $sub_array[] = htmlentities($row->telephone);
+                $sub_array[] = htmlentities($row->city);
                 $sub_array[] = $created_at;
 
                 $sub_array[] = '<a href="'. base_url("admin/contacts/see_more_cooperated/".$row->id) .'" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a>&nbsp;
