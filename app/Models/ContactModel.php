@@ -12,12 +12,12 @@ class ContactModel extends Model
         $builder = $db->table('contacts');
         
         $data = [
-            'name' => $name,
-            'email'  => $email,
-            'cellphone'  => $cellphone,
-            'city' => $city,
-            'subject'  => $subject,
-            'message'  => $message,
+            'name' => htmlentites($name),
+            'email'  => htmlentites($email),
+            'cellphone'  => htmlentites($cellphone),
+            'city' => htmlentites($city),
+            'subject'  => htmlentites($subject),
+            'message'  => htmlentites($message),
             'lgpd_opt_in'  => $lgpd_opt_in
         ];
         
@@ -33,13 +33,13 @@ class ContactModel extends Model
         $builder = $db->table('cooperated');
         
         $data = [
-            'name' => $name,
-            'registration'  => $registration,
-            'cpf_cnpj'  => $cpf_cnpj,
-            'city' => $city,
-            'email'  => $email,
-            'cellphone'  => $cellphone,
-            'telephone'  => $telephone,
+            'name' => htmlentites($name),
+            'registration'  => htmlentites($registration),
+            'cpf_cnpj'  => htmlentites($cpf_cnpj),
+            'city' => htmlentites($city),
+            'email'  => htmlentites($email),
+            'cellphone'  =>htmlentites($cellphone),
+            'telephone'  => htmlentites($telephone),
             'lgpd_opt_in'  => $lgpd_opt_in
         ];
         
