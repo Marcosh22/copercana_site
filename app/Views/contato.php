@@ -72,28 +72,28 @@
                             <div class="row">
                                 <div class="col-12">
                                     <input class="c-input" type="text" name="name" id="name" placeholder="Nome Completo"
-                                        value="<?= $form_data && $form_data['name'] ? $form_data['name'] : '' ?>">
+                                        value="<?= $form_data && $form_data['name'] ? htmlentites($form_data['name']) : '' ?>">
                                 </div>
                                 <div class="col-12">
                                     <input class="c-input" type="email" name="email" id="email" placeholder="E-mail"
-                                        value="<?= $form_data && $form_data['email'] ? $form_data['email'] : '' ?>">
+                                        value="<?= $form_data && $form_data['email'] ? htmlentites($form_data['email']) : '' ?>">
                                 </div>
                                 <div class="col-md-6">
                                     <input class="c-input mask-cellphone" type="text" name="cellphone" id="cellphone"
                                         placeholder="Celular"
-                                        value="<?= $form_data && $form_data['cellphone'] ? $form_data['cellphone'] : '' ?>">
+                                        value="<?= $form_data && $form_data['cellphone'] ? htmlentites($form_data['cellphone']) : '' ?>">
                                 </div>
                                 <div class="col-md-6">
                                     <input class="c-input" type="text" name="city" id="city" placeholder="Cidade/Estado"
-                                        value="<?= $form_data && $form_data['city'] ? $form_data['city'] : '' ?>">
+                                        value="<?= $form_data && $form_data['city'] ? htmlentites($form_data['city']) : '' ?>">
                                 </div>
                                 <div class="col-12">
                                     <input class="c-input" type="text" name="subject" id="subject" placeholder="Assunto"
-                                        value="<?= $form_data && $form_data['subject'] ? $form_data['subject'] : '' ?>">
+                                        value="<?= $form_data && $form_data['subject'] ? htmlentites($form_data['subject']) : '' ?>">
                                 </div>
                                 <div class="col-12">
                                     <textarea class="c-textarea" name="message" id="message" placeholder="Mensagem"
-                                        rows="8"><?= $form_data && $form_data['message'] ? $form_data['message'] : '' ?></textarea>
+                                        rows="8"><?= $form_data && $form_data['message'] ? htmlentites($form_data['message']) : '' ?></textarea>
                                 </div>
 
                                 <div class="col-12">

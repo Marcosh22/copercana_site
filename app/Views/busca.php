@@ -6,7 +6,7 @@
                 <div class="col-12">
                     <p class="showing-results">
                         Exibindo resultados para:<br/>
-                        <strong><?= $search_term ?></strong>
+                        <strong><?= htmlentites($search_term) ?></strong>
                     </p>
                     <form action="<?= base_url("busca") ?>" method="GET">
                         <label for="custom-search-input" class="custom-search-input">
