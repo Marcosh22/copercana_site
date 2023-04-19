@@ -26,12 +26,34 @@
                     <?= $page_data->page_description ?>
                 </div>
                 <?php } ?>
+                <?php 
+                                $response = $session->getFlashdata('response');
+                                $form_data = null;
 
+                                if(isset($response) && !empty($response)) { 
+                                    if(isset($response['form_data']) && !empty($response['form_data'])) {
+                                        $form_data = $response['form_data'];
+                                    }
+                                    ?>
+                <div class="col-12">
+
+
+                    <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> alert-dismissible fade show my-3"
+                        role="alert">
+                        <strong><?= $response['success'] ? 'Formulário enviado com sucesso!' : 'Erro ao enviar formulário:' ?></strong><br />
+                        <?= $response['message'] ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <?php }
+                            ?>
                 <div class="col-12" style="margin: 50px 0;">
                 <h4 style="font-weight: 900; color: #5b5b5f;">VOCÊ É UM COOPERADO DA COPERCANA?</h4>
                     <div class="c-radio-group">
                         <label for="is-cooperated-yes" class="c-radio-group__option">
-                            <input type="radio" name="is-cooperated" id="is-cooperated-yes" value="1" <?= $response !== null ? 'checked' : '' ?>>
+                            <input type="radio" name="is-cooperated" id="is-cooperated-yes" value="1" <?= isset($form_data) && $form_data !== null ? 'checked' : '' ?>>
                             <label for="is-cooperated-yes">
                                 <i><svg xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
@@ -127,30 +149,8 @@
                     </div>
                 </div>
 
-                <?php 
-                                $response = $session->getFlashdata('response');
-                                $form_data = null;
-
-                                if(isset($response) && !empty($response)) { 
-                                    if(isset($response['form_data']) && !empty($response['form_data'])) {
-                                        $form_data = $response['form_data'];
-                                    }
-                                    ?>
-                <div class="col-12">
-
-
-                    <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> alert-dismissible fade show my-3"
-                        role="alert">
-                        <strong><?= $response['success'] ? 'Formulário enviado com sucesso!' : 'Erro ao enviar formulário:' ?></strong><br />
-                        <?= $response['message'] ?>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <?php }
-                            ?>
-                    <div class="col-12 <?= $response !== null ? '' : 'd-none' ?>" id="contact-form">
+               
+                    <div class="col-12 <?= isset($form_data) && $form_data !== null ? '' : 'd-none' ?>" id="contact-form">
                         <form action="<?= base_url("registration/cooperate") ?>" method="POST">
                             <div class="row">
                                 <div class="col-12">
