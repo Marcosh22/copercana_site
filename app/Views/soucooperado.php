@@ -155,35 +155,35 @@
                             <div class="row">
                                 <div class="col-12">
                                     <input class="c-input" type="text" name="name" id="name" placeholder="Nome Completo"
-                                        value="<?= $form_data && $form_data['name'] ? htmlentites($form_data['name']) : '' ?>">
+                                        value="<?= $form_data && $form_data['name'] ? htmlentities($form_data['name']) : '' ?>">
                                 </div>
                                 <div class="col-12">
                                     <input class="c-input" type="text" name="registration" id="registration" placeholder="Código do cooperado"
-                                        value="<?= $form_data && $form_data['registration'] ? htmlentites($form_data['registration']) : '' ?>">
+                                        value="<?= $form_data && $form_data['registration'] ? htmlentities($form_data['registration']) : '' ?>">
                                 </div>
                                 
                                 <div class="col-md-6">
                                     <input class="c-input mask-cpf_cnpj" type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="CPF/CNPJ"
-                                        value="<?= $form_data && $form_data['cpf_cnpj'] ? htmlentites($form_data['cpf_cnpj']) : '' ?>">
+                                        value="<?= $form_data && $form_data['cpf_cnpj'] ? htmlentities($form_data['cpf_cnpj']) : '' ?>">
                                 </div>
                                 <div class="col-md-6">
                                     <input class="c-input " type="text" name="city" id="city" placeholder="Cidade/Estado"
-                                        value="<?= $form_data && $form_data['city'] ? htmlentites($form_data['city']) : '' ?>">
+                                        value="<?= $form_data && $form_data['city'] ? htmlentities($form_data['city']) : '' ?>">
                                 </div>
                                 <div class="col-12">
                                     <input class="c-input" type="email" name="email" id="email" placeholder="E-mail"
-                                        value="<?= $form_data && $form_data['email'] ? htmlentites($form_data['email']) : '' ?>">
+                                        value="<?= $form_data && $form_data['email'] ? htmlentities($form_data['email']) : '' ?>">
                                 </div>
                                 
                                 <div class="col-12">
                                     <input class="c-input mask-cellphone" type="text" name="cellphone" id="cellphone"
                                         placeholder="Celular/Whatsapp"
-                                        value="<?= $form_data && $form_data['cellphone'] ? htmlentites($form_data['cellphone']) : '' ?>" required min="16">
+                                        value="<?= $form_data && $form_data['cellphone'] ? htmlentities($form_data['cellphone']) : '' ?>" required min="16">
                                 </div>
                                 <div class="col-12">
                                     <input class="c-input mask-telephone" type="text" name="telephone" id="telephone"
                                         placeholder="Telefone"
-                                        value="<?= $form_data && $form_data['telephone'] ? htmlentites($form_data['telephone']) : '' ?>" min="15">
+                                        value="<?= $form_data && $form_data['telephone'] ? htmlentities($form_data['telephone']) : '' ?>" min="15">
                                 </div>
                                 <div class="col-12">
                                     <div class="c-checkbox-group">
