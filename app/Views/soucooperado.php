@@ -31,7 +31,7 @@
                 <h4 style="font-weight: 900; color: #5b5b5f;">VOCÊ É UM COOPERADO DA COPERCANA?</h4>
                     <div class="c-radio-group">
                         <label for="is-cooperated-yes" class="c-radio-group__option">
-                            <input type="radio" name="is-cooperated" id="is-cooperated-yes" value="1" >
+                            <input type="radio" name="is-cooperated" id="is-cooperated-yes" value="1" <?= $response !== null ? 'checked' : '' ?>>
                             <label for="is-cooperated-yes">
                                 <i><svg xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
@@ -150,29 +150,29 @@
 
                     <?php }
                             ?>
-                    <div class="col-12 d-none" id="contact-form">
+                    <div class="col-12 <?= $response !== null ? '' : 'd-none' ?>" id="contact-form">
                         <form action="<?= base_url("registration/cooperate") ?>" method="POST">
                             <div class="row">
                                 <div class="col-12">
                                     <input class="c-input" type="text" name="name" id="name" placeholder="Nome Completo"
-                                        value="<?= $form_data && $form_data['name'] ? htmlentities($form_data['name']) : '' ?>">
+                                        value="<?= $form_data && $form_data['name'] ? htmlentities($form_data['name']) : '' ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <input class="c-input" type="text" name="registration" id="registration" placeholder="Código do cooperado"
-                                        value="<?= $form_data && $form_data['registration'] ? htmlentities($form_data['registration']) : '' ?>">
+                                        value="<?= $form_data && $form_data['registration'] ? htmlentities($form_data['registration']) : '' ?>" required>
                                 </div>
                                 
                                 <div class="col-md-6">
                                     <input class="c-input mask-cpf_cnpj" type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="CPF/CNPJ"
-                                        value="<?= $form_data && $form_data['cpf_cnpj'] ? htmlentities($form_data['cpf_cnpj']) : '' ?>">
+                                        value="<?= $form_data && $form_data['cpf_cnpj'] ? htmlentities($form_data['cpf_cnpj']) : '' ?>" required>
                                 </div>
                                 <div class="col-md-6">
                                     <input class="c-input " type="text" name="city" id="city" placeholder="Cidade/Estado"
-                                        value="<?= $form_data && $form_data['city'] ? htmlentities($form_data['city']) : '' ?>">
+                                        value="<?= $form_data && $form_data['city'] ? htmlentities($form_data['city']) : '' ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <input class="c-input" type="email" name="email" id="email" placeholder="E-mail"
-                                        value="<?= $form_data && $form_data['email'] ? htmlentities($form_data['email']) : '' ?>">
+                                        value="<?= $form_data && $form_data['email'] ? htmlentities($form_data['email']) : '' ?>" required>
                                 </div>
                                 
                                 <div class="col-12">
