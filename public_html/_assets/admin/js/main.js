@@ -418,12 +418,11 @@
     let exportable = datatable.getAttribute("data-export");
     let isExportable = exportable && exportable == "true";
 
-    console.log("isExportable", isExportable);
-
     $(datatable).DataTable({
       dom: isExportable ? "Blfrtip" : "Rlfrtip",
       stateSave: true,
       responsive: true,
+      order: [[ 0, 'desc' ]],
       buttons: isExportable
         ? [
             {

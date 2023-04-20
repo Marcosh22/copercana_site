@@ -147,7 +147,7 @@
                             <ul class="site-nav__menu nav-menu">
                                 <li
                                     class="nav-menu__item nav-menu__item--has-submenu<?= $page == 'institucional' || (isset($parent_page) && $parent_page == 'institucional') ? ' active' : '' ?>">
-                                    <a href="#" class="nav-menu__link">INSTITUCIONAL</a>
+                                    <a class="nav-menu__link">INSTITUCIONAL</a>
                                     <ul class="nav-menu__submenu nav-submenu">
                                     <li
                                             class="nav-submenu__item<?= $page == 'cooperativismo' || (isset($parent_page) && $parent_page == 'cooperativismo') ? ' active' : '' ?>">
@@ -175,7 +175,7 @@
                                 </li>
                                 <li
                                     class="nav-menu__item nav-menu__item--has-submenu<?= $page == 'servicos' || (isset($parent_page) && $parent_page == 'servicos') ? ' active' : '' ?>">
-                                    <a href="#" class="nav-menu__link">SERVIÇOS</a>
+                                    <a class="nav-menu__link">SERVIÇOS</a>
                                     <ul class="nav-menu__submenu nav-submenu">
                                         <li
                                             class="nav-submenu__item<?= $page == 'autocenter' || (isset($parent_page) && $parent_page == 'autocenter') ? ' active' : '' ?>">
@@ -243,7 +243,7 @@
                                 </li>
                                 <li
                                     class="nav-menu__item nav-menu__item--has-submenu<?= $page == 'comunicacao' || (isset($parent_page) && $parent_page == 'comunicacao') ? ' active' : '' ?>">
-                                    <a href="#" class="nav-menu__link">COMUNICAÇÃO</a>
+                                    <a class="nav-menu__link">COMUNICAÇÃO</a>
                                     <ul class="nav-menu__submenu nav-submenu">
                                         <li
                                             class="nav-submenu__item<?= $page == 'assessoria-de-imprensa' || (isset($parent_page) && $parent_page == 'assessoria-de-imprensa') ? ' active' : '' ?>">
@@ -278,7 +278,7 @@
                                 </li>
                                 <li
                                     class="nav-menu__item nav-menu__item--has-submenu<?= $page == 'trabalhe-conosco' || (isset($parent_page) && $parent_page == 'trabalhe-conosco') ? ' active' : '' ?>">
-                                    <a href="#" class="nav-menu__link">TRABALHE CONOSCO</a>
+                                    <a class="nav-menu__link">TRABALHE CONOSCO</a>
                                     <ul class="nav-menu__submenu nav-submenu">
                                         <li
                                             class="nav-submenu__item<?= $page == 'cadastro' || (isset($parent_page) && $parent_page == 'cadastro') ? ' active' : '' ?>">
@@ -456,7 +456,7 @@
             <ul class="mobile-site-nav__menu mobile-nav-menu">
                 <li
                     class="mobile-nav-menu__item mobile-nav-menu__item--has-submenu<?= $page == 'institucional' || (isset($parent_page) && $parent_page == 'institucional') ? ' active' : '' ?>">
-                    <a href="#" class="mobile-nav-menu__link">INSTITUCIONAL</a>
+                    <a class="mobile-nav-menu__link">INSTITUCIONAL</a>
                     <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
                     <li
                             class="mobile-nav-submenu__item<?= $page == 'cooperativismo' || (isset($parent_page) && $parent_page == 'cooperativismo') ? ' active' : '' ?>">
@@ -484,7 +484,7 @@
                 </li>
                 <li
                     class="mobile-nav-menu__item mobile-nav-menu__item--has-submenu<?= $page == 'servicos' || (isset($parent_page) && $parent_page == 'servicos') ? ' active' : '' ?>">
-                    <a href="#" class="mobile-nav-menu__link">SERVIÇOS</a>
+                    <a class="mobile-nav-menu__link">SERVIÇOS</a>
                     <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'autocenter' || (isset($parent_page) && $parent_page == 'autocenter') ? ' active' : '' ?>">
@@ -557,7 +557,7 @@
                 </li>
                 <li
                     class="mobile-nav-menu__item mobile-nav-menu__item--has-submenu<?= $page == 'comunicacao' || (isset($parent_page) && $parent_page == 'comunicacao') ? ' active' : '' ?>">
-                    <a href="#" class="mobile-nav-menu__link">COMUNICAÇÃO</a>
+                    <a class="mobile-nav-menu__link">COMUNICAÇÃO</a>
                     <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'assessoria-de-imprensa' || (isset($parent_page) && $parent_page == 'assessoria-de-imprensa') ? ' active' : '' ?>">
@@ -595,7 +595,7 @@
                 </li>
                 <li
                     class="mobile-nav-menu__item mobile-nav-menu__item--has-submenu<?= $page == 'trabalhe-conosco' || (isset($parent_page) && $parent_page == 'trabalhe-conosco') ? ' active' : '' ?>">
-                    <a href="#" class="mobile-nav-menu__link">TRABALHE CONOSCO</a>
+                    <a class="mobile-nav-menu__link">TRABALHE CONOSCO</a>
                     <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
                     <li
                             class="mobile-nav-submenu__item<?= $page == 'cadastro' || (isset($parent_page) && $parent_page == 'cadastro') ? ' active' : '' ?>">

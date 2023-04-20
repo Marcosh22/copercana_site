@@ -48,6 +48,15 @@
                         <?= $job->description; ?>
                     </div>
                 </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-center">
+                            <a class="button button--light-green button--block button--sm mx-auto my-4"
+                                href="https://career19.sapsf.com/career?career_company=coopdospla&lang=pt_BR&company=coopdospla&site=&loginFlowRequired=true&_s.crb=FUbHCmtsTCLwvShGgo82IEDPQpQ%3d" target="_blank"
+                                rel="noopener noreferrer">Cadastrar</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
