@@ -20,6 +20,27 @@
                         <p>Veja aqui todas as informações do contato:</p>
 
                         <div class="my-5">
+                        <?php 
+                            $response = $session->getFlashdata('response');
+                            
+                            if(isset($response) && !empty($response)) { ?>
+
+                        <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
+                            role="alert" style="margin-bottom: 20px">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                                <use
+                                    xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
+                            </svg>
+                            <div>
+                                <?= $response['message'] ?>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+                        <?php }
+                        ?>
+                        
+                        <?php echo form_open('admin/contacts/update_cooperated/'.$contact->id, ['class' => 'my-5']);?>
                             <div class="row mb-3">
                                 <?php echo form_label('Nome', 'name', ['class' => 'col-sm-2 col-form-label']);?>
                                 <div class="col-sm-10">
@@ -27,7 +48,7 @@
                                             'name' => 'name',
                                             'id'   => 'name',
                                             'type' => 'text'
-                                        ], $contact->name, ['class' => 'form-control', 'disabled' => 'disabled']);?>
+                                        ], $contact->name, ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -38,7 +59,7 @@
                                             'name' => 'registration',
                                             'id'   => 'registration',
                                             'type' => 'text'
-                                        ], $contact->registration, ['class' => 'form-control', 'disabled' => 'disabled']);?>
+                                        ], $contact->registration, ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -49,7 +70,7 @@
                                             'name' => 'cpf_cnpj',
                                             'id'   => 'cpf_cnpj',
                                             'type' => 'text'
-                                        ], $contact->cpf_cnpj, ['class' => 'form-control', 'disabled' => 'disabled']);?>
+                                        ], $contact->cpf_cnpj, ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -60,7 +81,7 @@
                                             'name' => 'email',
                                             'id'   => 'email',
                                             'type' => 'email'
-                                        ], $contact->email, ['class' => 'form-control', 'disabled' => 'disabled']);?>
+                                        ], $contact->email, ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -71,7 +92,7 @@
                                             'name' => 'cellphone',
                                             'id'   => 'cellphone',
                                             'type' => 'text'
-                                        ], $contact->cellphone, ['class' => 'form-control', 'disabled' => 'disabled']);?>
+                                        ], $contact->cellphone, ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -82,7 +103,7 @@
                                             'name' => 'telephone',
                                             'id'   => 'telephone',
                                             'type' => 'text'
-                                        ], $contact->telephone, ['class' => 'form-control', 'disabled' => 'disabled']);?>
+                                        ], $contact->telephone, ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -93,7 +114,7 @@
                                             'name' => 'city',
                                             'id'   => 'city',
                                             'type' => 'text'
-                                        ], $contact->city, ['class' => 'form-control', 'disabled' => 'disabled']);?>
+                                        ], $contact->city, ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -113,6 +134,29 @@
 
                                 </div>
                             </div>
+                            <div class="row mb-3">
+                                <?php 
+                                    $contact_update_date=date_create($contact->updated_at);
+                                    $contact_update_date=date_format($contact_update_date,"d/m/Y H:i");
+                                    ?>
+                                <?php echo form_label('Última atualização', 'updated_at', ['class' => 'col-sm-2 col-form-label']);?>
+                                <div class="col-sm-10">
+                                    <?php echo form_input([
+                                            'name' => 'updated_at',
+                                            'id'   => 'updated_at',
+                                            'type' => 'text'
+                                        ], $contact_update_date, ['class' => 'form-control', 'disabled' => 'disabled']);?>
+
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                            <div class="col-12">
+                                <?php echo form_submit('submit', 'Atualizar', ['class' => 'btn btn-primary w-100']);?>
+                            </div>
+                        </div>
+
+                        <?php echo form_close();?>
+
                         </div>
 
                     </div>

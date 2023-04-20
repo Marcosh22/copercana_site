@@ -249,6 +249,7 @@ $routes->group('admin', function ($routes) {
         $routes->get('delete/(:any)', 'Admin_Contacts::delete/$1');
         $routes->get('see_more_cooperated/(:any)', 'Admin_Contacts::see_more_cooperated/$1');
         $routes->get('delete_cooperated/(:any)', 'Admin_Contacts::delete_cooperated/$1');
+        $routes->post('update_cooperated/(:any)', 'Admin_Contacts::update_cooperated/$1');
     });
 
     $routes->group('general', function ($routes) {

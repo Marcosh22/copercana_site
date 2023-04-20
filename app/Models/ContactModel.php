@@ -50,6 +50,26 @@ class ContactModel extends Model
         }
     }
 
+    public function updateCooperated($id, $name, $registration, $cpf_cnpj, $city, $email, $cellphone, $telephone) {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('cooperated');
+        
+        $data = [
+            'name' => $name,
+            'registration'  => $registration,
+            'cpf_cnpj'  => $cpf_cnpj,
+            'city' => $city,
+            'email'  => $email,
+            'cellphone'  =>$cellphone,
+            'telephone'  => $telephone
+        ];
+        
+        $builder->where('id', $id);
+
+        $builder->update($data);
+        return true;
+    }
+
     public function get_all()
     {
         $db      = \Config\Database::connect();
