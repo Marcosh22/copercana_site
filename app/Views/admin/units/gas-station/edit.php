@@ -324,9 +324,27 @@
                                                     in_array('diesel-s-10', $definition->fuels)
                                                     : false
                                                 ); ?>
-                                                <?php echo form_label('Diesel S-10', 'fuels-diesel-s-10', ['class' => 'col-form-label']);?>
+                                                <?php echo form_label('Diesel S-10 Aditivado CoperNitro Ultra Filtrado', 'fuels-diesel-s-10', ['class' => 'col-form-label']);?>
                                             </div>
                                         </div>
+
+                                        <div class="col-6 col-md-4 col-lg-2">
+                                            <div class="form-group">
+                                                <?php echo form_checkbox([
+                                                    'name' => 'definition[fuels][]',
+                                                    'id'   => 'fuels-diesel-s-500',
+                                                    'value'   => 'diesel-s-500',
+                                                    ],
+                                                    'diesel-s-500', 
+                                                    isset($definition) ?  
+                                                    isset($definition->fuels) &&
+                                                    in_array('diesel-s-500', $definition->fuels)
+                                                    : false
+                                                ); ?>
+                                                <?php echo form_label('Diesel S-500 Aditivado CoperNitro Ultra Filtrado', 'fuels-diesel-s-500', ['class' => 'col-form-label']);?>
+                                            </div>
+                                        </div>
+
 
                                         <div class="col-6 col-md-4 col-lg-2">
                                             <div class="form-group">

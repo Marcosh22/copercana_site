@@ -240,7 +240,10 @@
                                 <li>D diesel aditivado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-s-10', $definition->fuels)) { ?>
-                                <li>D diesel S-10</li>
+                                <li>D diesel S-10 aditivado CoperNitro ultra filtrado</li>
+                            <?php } ?>
+                            <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-s-500', $definition->fuels)) { ?>
+                                <li>D diesel S-500 aditivado CoperNitro ultra filtrado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('ethanol', $definition->fuels)) { ?>
                                 <li>E etanol</li>
