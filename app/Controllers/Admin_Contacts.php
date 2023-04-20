@@ -89,6 +89,34 @@ class Admin_Contacts extends BaseController
         return redirect()->to('/admin/contacts');
     }
 
+    public function bulk_delete() {
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
+
+        $session = \Config\Services::session();
+        $request = \Config\Services::request();
+
+        $contact_ids = $request->getPost('contact_ids');
+        $contact_ids = explode(',', $contact_ids);
+
+        $session = \Config\Services::session();
+
+        $contactModel = model('App\Models\ContactModel', false);
+        $contactModel->bulk_delete_contact($contact_ids);
+
+        $response = array(
+            'message' => "contato(s) excluído(s) com sucesso!",
+            'success' => true
+        );
+
+        $session->setFlashdata('response', $response);
+
+        return redirect()->to('/admin/contacts');
+    }
+
     public function see_more_cooperated($contact_id)
     {
         helper(['form']);
@@ -130,7 +158,7 @@ class Admin_Contacts extends BaseController
         $request = \Config\Services::request();
 
         $contactModel = model('App\Models\ContactModel', false);
-        $contact = $contactModel->get_by_id($contact_id);
+        $contact = $contactModel->get_cooperated_by_id($contact_id);
 
         if(!isset($contact) || empty($contact) || !$contact) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
@@ -225,6 +253,34 @@ class Admin_Contacts extends BaseController
 
         $response = array(
             'message' => "Contato excluído com sucesso!",
+            'success' => true
+        );
+
+        $session->setFlashdata('response', $response);
+
+        return redirect()->to('/admin/contacts?tab=cooperated');
+    }
+
+    public function bulk_delete_cooperated() {
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
+
+        $session = \Config\Services::session();
+        $request = \Config\Services::request();
+
+        $contact_ids = $request->getPost('contact_ids');
+        $contact_ids = explode(',', $contact_ids);
+
+        $session = \Config\Services::session();
+
+        $contactModel = model('App\Models\ContactModel', false);
+        $contactModel->bulk_delete_cooperated($contact_ids);
+
+        $response = array(
+            'message' => "contato(s) excluído(s) com sucesso!",
             'success' => true
         );
 

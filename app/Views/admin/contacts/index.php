@@ -29,27 +29,6 @@
                             </symbol>
                         </svg>
 
-                        <?php 
-                                $response = $session->getFlashdata('response');
-                                
-                                if(isset($response) && !empty($response)) { ?>
-
-                        <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
-                            role="alert" style="margin-bottom: 20px">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
-                                <use
-                                    xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
-                            </svg>
-                            <div>
-                                <?= $response['message'] ?>
-                            </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-
-                        <?php }
-                            ?>
-
-
                         <div class="card">
                             <?php 
                         $response = $session->getFlashdata('response');
@@ -78,7 +57,7 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 <?php 
-                                                    if(isset($response) && !empty($response) && $response['tab'] === 'edit') { 
+                                                    if(isset($response) && !empty($response)) { 
                                                 ?>
                                                 <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
                                                     role="alert" style="margin-bottom: 20px">
@@ -99,7 +78,9 @@
                                             <div class="col-12">
                                                 <table class="table datatable"
                                                     data-ssr="<?= base_url("api/datatables/contacts") ?>"
+                                                    data-delete="<?= base_url("admin/contacts/bulk_delete") ?>"
                                                     data-export="true"
+                                                    data-select="true"
                                                     style="width: 100%;"
                                                     >
                                                     <thead>
@@ -124,7 +105,7 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 <?php 
-                                                    if(isset($response) && !empty($response) && $response['tab'] === 'cooperated') { 
+                                                    if(isset($response) && !empty($response)) { 
                                                 ?>
                                                 <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
                                                     role="alert" style="margin-bottom: 20px">
@@ -144,7 +125,9 @@
                                             <div class="col-12">
                                                 <table class="table datatable"
                                                     data-ssr="<?= base_url("api/datatables/cooperated_contacts") ?>"
+                                                    data-delete="<?= base_url("admin/contacts/bulk_delete_cooperated") ?>"
                                                     data-export="true"
+                                                    data-select="true"
                                                     style="width: 100%;"
                                                     >
                                                     <thead>

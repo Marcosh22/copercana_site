@@ -415,14 +415,40 @@
 
   datatables.forEach((datatable) => {
     let ssr_url = datatable.getAttribute("data-ssr");
+    let delete_url = datatable.getAttribute("data-delete");
     let exportable = datatable.getAttribute("data-export");
+    let selectable = datatable.getAttribute("data-select");
     let isExportable = exportable && exportable == "true";
+    let isSelectable = selectable && selectable == "true";
+    let columnsLength = datatable.querySelectorAll('th').length;
+    let columns = [];
 
-    $(datatable).DataTable({
+    for(let i = 0; i < columnsLength; i++) {
+      columns[i] = {
+        orderable: i + 1 === columnsLength ? false : true,
+      };
+    }
+
+    $.fn.dataTable.ext.buttons.remove = {
+      className: 'buttons-remove',
+      action: function ( e, dt, node, config ) {
+        const ids = dt.rows({ selected: true }).data().pluck(0).toArray();
+
+        const url = delete_url;
+        const form = $('<form action="' + url + '" method="post">' +
+          '<input type="hidden" name="contact_ids" value="' + ids.join(',') + '" />' +
+          '</form>');
+        $('body').append(form);
+        form.submit();
+      }
+  };
+
+  $(datatable).DataTable({
       dom: isExportable ? "Blfrtip" : "Rlfrtip",
       stateSave: true,
       responsive: true,
       order: [[ 0, 'desc' ]],
+      columns: columns,
       buttons: isExportable
         ? [
             {
@@ -441,8 +467,17 @@
               orientation: 'landscape',
               action: newexportaction,
             },
+            isSelectable ? {
+              extend: 'remove',
+              text: 'Excluir Selecionados'
+            } : null,
           ]
         : null,
+      select: isSelectable ? {
+          style:    'os',
+          selector: 'td:first-child',
+          blurable: true
+      } : null,
       processing: !!ssr_url,
       serverSide: !!ssr_url,
       ajax: !!ssr_url
@@ -453,6 +488,7 @@
         : null,
     });
   });
+  
 
   /**
    * Autoresize echart charts

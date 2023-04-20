@@ -104,6 +104,17 @@ class ContactModel extends Model
         return true;
     }
 
+    public function bulk_delete_contact($contact_ids) {
+
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('contacts');
+        $builder->whereIn('id', $contact_ids);
+
+        return $builder->delete();
+    }
+    
+
     public function get_cooperated_by_id($id) {
         $db      = \Config\Database::connect();
         $builder = $db->table('cooperated');
@@ -125,5 +136,15 @@ class ContactModel extends Model
         $builder->delete();
 
         return true;
+    }
+
+    public function bulk_delete_cooperated($contact_ids) {
+
+        $db      = \Config\Database::connect();
+
+        $builder = $db->table('cooperated');
+        $builder->whereIn('id', $contact_ids);
+
+        return $builder->delete();
     }
 }

@@ -39,8 +39,8 @@
 
                         <?php }
                         ?>
-                        
-                        <?php echo form_open('admin/contacts/update_cooperated/'.$contact->id, ['class' => 'my-5']);?>
+
+                        <?php echo form_open_multipart('admin/contacts/update_cooperated/'.$contact->id, ['class' => 'my-5']);?>
                             <div class="row mb-3">
                                 <?php echo form_label('Nome', 'name', ['class' => 'col-sm-2 col-form-label']);?>
                                 <div class="col-sm-10">
@@ -48,7 +48,7 @@
                                             'name' => 'name',
                                             'id'   => 'name',
                                             'type' => 'text'
-                                        ], $contact->name, ['class' => 'form-control']);?>
+                                        ], $contact->name ? $contact->name : '', ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                             'name' => 'registration',
                                             'id'   => 'registration',
                                             'type' => 'text'
-                                        ], $contact->registration, ['class' => 'form-control']);?>
+                                        ], $contact->registration ? $contact->registration : '', ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                             'name' => 'cpf_cnpj',
                                             'id'   => 'cpf_cnpj',
                                             'type' => 'text'
-                                        ], $contact->cpf_cnpj, ['class' => 'form-control']);?>
+                                        ], $contact->cpf_cnpj ? $contact->cpf_cnpj : '', ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                             'name' => 'email',
                                             'id'   => 'email',
                                             'type' => 'email'
-                                        ], $contact->email, ['class' => 'form-control']);?>
+                                        ], $contact->email ? $contact->email : '', ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                                             'name' => 'cellphone',
                                             'id'   => 'cellphone',
                                             'type' => 'text'
-                                        ], $contact->cellphone, ['class' => 'form-control']);?>
+                                        ], $contact->cellphone ? $contact->cellphone : '', ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
                                             'name' => 'telephone',
                                             'id'   => 'telephone',
                                             'type' => 'text'
-                                        ], $contact->telephone, ['class' => 'form-control']);?>
+                                        ], $contact->telephone ? $contact->telephone : '', ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                                             'name' => 'city',
                                             'id'   => 'city',
                                             'type' => 'text'
-                                        ], $contact->city, ['class' => 'form-control']);?>
+                                        ], $contact->city ? $contact->city : '', ['class' => 'form-control']);?>
 
                                 </div>
                             </div>
