@@ -116,7 +116,7 @@ class Admin_Users extends BaseController
             ],
             'email' => [
                 'label' => 'E-mail',
-                'rules' => 'trim|required|valid_email|is_unique[users.email]',
+                'rules' => 'trim|required|valid_email',
             ],
             'password' => [
                 'label' => 'Senha',
@@ -156,48 +156,56 @@ class Admin_Users extends BaseController
             $flickr = $request->getPost('flickr');
             $github = $request->getPost('github');
 
-            if(isset($picture) && !empty($picture) && $picture->isValid() && !$picture->hasMoved()) {
-                $random_name = $picture->getRandomName();
-                $date = date('Ymd');
+            $user = $userModel->get_by_email($email);
 
-                if (!is_dir(PUBLIC_PATH."/uploads/users/$date")) {
-                    mkdir(PUBLIC_PATH."/uploads/users/$date", 0777, TRUE);
+            if($user && $user->active == 1) {
+                $message = 'Já existe um usuário com o e-mail informado.';
+                $success = false;
+            } else {
+
+                if(isset($picture) && !empty($picture) && $picture->isValid() && !$picture->hasMoved()) {
+                    $random_name = $picture->getRandomName();
+                    $date = date('Ymd');
+
+                    if (!is_dir(PUBLIC_PATH."/uploads/users/$date")) {
+                        mkdir(PUBLIC_PATH."/uploads/users/$date", 0777, TRUE);
+                    }
+
+                    $picture->move("uploads/users/$date", $random_name);
+                    $picture_path = "uploads/users/$date/$random_name";
+                } else {
+                    $picture_path = "";
                 }
 
-                $picture->move("uploads/users/$date", $random_name);
-                $picture_path = "uploads/users/$date/$random_name";
-            } else {
-                $picture_path = "";
-            }
+                $additionalData = array(
+                    'first_name' => $this->request->getPost('first_name'),
+                    'last_name'  => $this->request->getPost('last_name'),
+                    'description' => $description,
+                    'picture' => $picture_path,
+                    'website' => $website,
+                    'instagram' => $instagram,
+                    'facebook' => $facebook,
+                    'twitter' => $twitter,
+                    'youtube' => $youtube,
+                    'linkedin' => $linkedin,
+                    'tiktok' => $tiktok,
+                    'behance' => $behance,
+                    'pinterest' => $pinterest,
+                    'flickr' => $flickr,
+                    'github' => $github
+                );
 
-            $additionalData = array(
-                'first_name' => $this->request->getPost('first_name'),
-                'last_name'  => $this->request->getPost('last_name'),
-                'description' => $description,
-                'picture' => $picture_path,
-                'website' => $website,
-                'instagram' => $instagram,
-                'facebook' => $facebook,
-                'twitter' => $twitter,
-                'youtube' => $youtube,
-                'linkedin' => $linkedin,
-                'tiktok' => $tiktok,
-                'behance' => $behance,
-                'pinterest' => $pinterest,
-                'flickr' => $flickr,
-                'github' => $github
-            );
+                $groups = array($group);
 
-            $groups = array($group);
+                $user_id = $this->ionAuth->register($email, $password, $email, $additionalData, $groups);
 
-            $user_id = $this->ionAuth->register($email, $password, $email, $additionalData, $groups);
-
-            if($user_id) {
-                $message = $this->ionAuth->messages();
-                $success = true;
-            } else {
-                $message = $this->ionAuth->errors('list');
-                $success = false;
+                if($user_id) {
+                    $message = $this->ionAuth->messages();
+                    $success = true;
+                } else {
+                    $message = $this->ionAuth->errors('list');
+                    $success = false;
+                }
             }
         } 
 

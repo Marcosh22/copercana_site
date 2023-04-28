@@ -91,6 +91,15 @@ class UserModel extends Model
         $builder->update($data);
         return true;
     }
+    
+    public function get_by_email($email) {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('users');
+        $builder->where('email', $email);
+        $query  = $builder->get();
+
+        return $query->getRow();
+    }
 
     public function delete_user($id) {
 
@@ -98,6 +107,7 @@ class UserModel extends Model
         $builder = $db->table('users');
         
         $data = [
+            'email' => 'inactive@user.com',
             'active' => 0
         ];
 
