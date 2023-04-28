@@ -156,6 +156,7 @@ class Admin_Users extends BaseController
             $flickr = $request->getPost('flickr');
             $github = $request->getPost('github');
 
+            $userModel = model('App\Models\UserModel', false);
             $user = $userModel->get_by_email($email);
 
             if($user && $user->active == 1) {
