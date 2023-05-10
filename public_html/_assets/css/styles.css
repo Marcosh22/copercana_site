@@ -4251,11 +4251,6 @@ body {
   opacity: 1;
 }
 
-#page-soucooperado {
-  overflow: hidden;
-  height: 100vh;
-}
-
 .popup-overlayer {
   position: fixed;
   top: 0;
