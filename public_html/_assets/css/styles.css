@@ -4251,6 +4251,11 @@ body {
   opacity: 1;
 }
 
+#page-soucooperado {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .popup-overlayer {
   position: fixed;
   top: 0;
@@ -4263,6 +4268,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.popup-overlayer#registration-finished {
+  overflow: hidden;
 }
 
 .popup {
@@ -4278,6 +4287,23 @@ body {
   color: #FFF;
   font-weight: 800;
   font-size: 28px;
+}
+
+.popup-overlayer#registration-finished .popup {
+    min-height: 280px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/copercana-stripes.png');
+    background-repeat: no-repeat;
+    background-size: 390px auto;
+    background-position: right -80px center;
+}
+
+.popup-overlayer#registration-finished .popup  p {
+  font-size: 50px;
+  line-height: 1.1em;
 }
 
 @media (max-width: 767.98px) {

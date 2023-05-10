@@ -150,7 +150,7 @@
                 </div>
 
                
-                    <div class="col-12 <?= isset($form_data) && $form_data !== null ? '' : 'd-none' ?>" id="contact-form">
+                   <!--  <div class="col-12 <?= isset($form_data) && $form_data !== null ? '' : 'd-none' ?>" id="contact-form">
                         <form action="<?= base_url("registration/cooperate") ?>" method="POST">
                             <div class="row">
                                 <div class="col-12">
@@ -253,7 +253,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
             </div>
     </script>
@@ -270,5 +270,11 @@
 <div class="popup-overlayer d-none" id="message-popup">
     <div class="popup">
         <p>ESTE CADASTRO<br/>É EXCLUSIVO<br/>PARA COOPERADOS<br/>COPERCANA.<br/>AGRADECEMOS A<br/>COMPREENSÃO.</p>
+    </div>
+</div>
+
+<div class="popup-overlayer" id="registration-finished" >
+    <div class="popup">
+        <p>CADASTROS<br/>ENCERRADOS.</p>
     </div>
 </div>
