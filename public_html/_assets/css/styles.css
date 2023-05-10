@@ -4267,13 +4267,14 @@ body {
 
 .popup-overlayer#registration-finished {
   overflow: hidden;
+  pointer-events: none;
 }
 
 .popup {
   background-color: rgb(0, 84, 34, 0.9);
   padding: 20px 80px;
   pointer-events: none;
-  box-shadow: -4px 4px 3px rgb(0 84 34 / 40%)
+  box-shadow: -4px 4px 3px rgb(0 84 34 / 40%);
 }
 
 .popup p {
