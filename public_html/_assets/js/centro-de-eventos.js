@@ -115,7 +115,7 @@ function direction(o) {
     let wps = [];
 
     let org = o;
-    let dest = "Rua Dr. Pio Dufles, 510 Sertãozinho/SP ";
+    let dest = "Estrada Hermínio Bizio, 28 Sertãozinho/SP ";
 
     let address_input = document.getElementById("address_input");
     if (address_input) dest = address_input.value;
