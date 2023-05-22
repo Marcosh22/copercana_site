@@ -126,10 +126,10 @@
                         <?php if($page === "copercana-60-anos") { ?>
                             <picture>
                                 <source media="(max-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/selo-copercana-60-anos@0,75x.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos@1,5x.png") ?> 2x">
+                                    srcset="<?= base_url("_assets/images/selo-copercana-60-anos-2023@0,75x.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos-2023@1,5x.png") ?> 2x">
                                 <source media="(min-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/selo-copercana-60-anos.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos@2x.png") ?> 2x">
-                                <img src="<?= base_url("_assets/images/selo-copercana-60-anos.png") ?>" alt="Copercana">
+                                    srcset="<?= base_url("_assets/images/selo-copercana-60-anos-2023.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos-2023@2x.png") ?> 2x">
+                                <img src="<?= base_url("_assets/images/selo-copercana-60-anos-2023.png") ?>" alt="Copercana">
                             </picture>
                             <?php } else { ?>
                                 <picture>
