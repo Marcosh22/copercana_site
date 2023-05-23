@@ -437,7 +437,7 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="sponsors-title">Patrocinadores Premium</h2>
-                    <img src="<?= base_url("_assets/images/patrocinadores-premiums.jpg") ?>" alt=""
+                    <img src="<?= base_url("_assets/images/patrocinadores-premiums-v2.jpg") ?>" alt=""
                         class="img-fluid d-block">
                 </div>
             </div>

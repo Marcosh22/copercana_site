@@ -149,7 +149,12 @@
                                     class="nav-menu__item nav-menu__item--has-submenu<?= $page == 'institucional' || (isset($parent_page) && $parent_page == 'institucional') ? ' active' : '' ?>">
                                     <a class="nav-menu__link" style="cursor: default;">INSTITUCIONAL</a>
                                     <ul class="nav-menu__submenu nav-submenu">
-                                    <li
+                                        <li
+                                            class="nav-submenu__item<?= $page == 'copercana-60-anos' || (isset($parent_page) && $parent_page == 'copercana-60-anos') ? ' active' : '' ?>">
+                                            <a href="<?= base_url("copercana-60-anos") ?>"
+                                                class="nav-submenu__link">60 ANOS</a>
+                                        </li>
+                                        <li
                                             class="nav-submenu__item<?= $page == 'cooperativismo' || (isset($parent_page) && $parent_page == 'cooperativismo') ? ' active' : '' ?>">
                                             <a href="<?= base_url("institucional/cooperativismo") ?>"
                                                 class="nav-submenu__link">COOPERATIVISMO</a>
@@ -458,6 +463,11 @@
                     class="mobile-nav-menu__item mobile-nav-menu__item--has-submenu<?= $page == 'institucional' || (isset($parent_page) && $parent_page == 'institucional') ? ' active' : '' ?>">
                     <a class="mobile-nav-menu__link" style="cursor: default;">INSTITUCIONAL</a>
                     <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
+                    <li
+                            class="mobile-nav-submenu__item<?= $page == 'copercana-60-anos' || (isset($parent_page) && $parent_page == 'copercana-60-anos') ? ' active' : '' ?>">
+                            <a href="<?= base_url("copercana-60-anos") ?>"
+                                class="mobile-nav-submenu__link">60 Anos</a>
+                        </li>
                     <li
                             class="mobile-nav-submenu__item<?= $page == 'cooperativismo' || (isset($parent_page) && $parent_page == 'cooperativismo') ? ' active' : '' ?>">
                             <a href="<?= base_url("institucional/cooperativismo") ?>"
