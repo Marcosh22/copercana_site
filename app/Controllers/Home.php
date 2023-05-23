@@ -1511,6 +1511,7 @@ class Home extends BaseController
 
         $data = array(
             'page' => 'copercana-60-anos',
+            'parent_page' => 'institucional',
             'header_dependencies' => $header_dependencies,
             'footer_dependencies' => $footer_dependencies,
             'seo' => $seo,
