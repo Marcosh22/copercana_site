@@ -107,7 +107,7 @@ class OfferModel extends Model
         $today = new Time('now');
 
         $db      = \Config\Database::connect();
-        $builder = $db->table('banners');
+        $builder = $db->table('offers');
 
         $builder->where('ends_at >=', $today);
         $builder->where('starts_at <=', $today);
