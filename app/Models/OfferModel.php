@@ -107,15 +107,18 @@ class OfferModel extends Model
         $today = new Time('now');
 
         $db      = \Config\Database::connect();
-        $builder = $db->table('offers');
+        $builder = $db->table('banners');
 
         $builder->where('ends_at >=', $today);
-        $builder->where('status', 1);
-
-        $builder->orWhere('ends_at', 0);
+        $builder->where('starts_at <=', $today);
         $builder->where('status', 1);
 
         $builder->orWhere('ends_at IS NULL', NULL, FALSE);
+        $builder->where('starts_at <=', $today);
+        $builder->where('status', 1);
+
+        $builder->orWhere('ends_at', 0);
+        $builder->where('starts_at <=', $today);
         $builder->where('status', 1);
 
         $query  = $builder->get();
