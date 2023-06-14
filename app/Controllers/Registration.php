@@ -405,7 +405,7 @@ class Registration extends BaseController
                     $message = "Agora você pode acessar o site!";
                     $success = true;
 
-                    $today = new Time('-3 hours', 'America/Sao_Paulo');
+                    $today = new Time('now', 'America/Sao_Paulo');
 
                     $cookie = array(
                         'subscribe_id' => $response,
