@@ -1609,7 +1609,7 @@ class Home extends BaseController
             if(isset($this->general->event_start_date) && !empty($this->general->event_start_date)) {
                 $is_event_ocurring = false;
 
-                $today = new Time('now', 'America/Sao_Paulo');
+                $today = new Time('-3 hours', 'America/Sao_Paulo');
                 $event_start_date = Time::createFromFormat('Y-m-d H:i:s', $this->general->event_start_date, 'America/Sao_Paulo');
                 $event_end_date = Time::createFromFormat('Y-m-d H:i:s', $this->general->event_end_date, 'America/Sao_Paulo');
 

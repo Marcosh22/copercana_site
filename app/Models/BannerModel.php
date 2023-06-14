@@ -56,7 +56,7 @@ class BannerModel extends Model
 
     public function get_all_active()
     {
-        $today = new Time('now', 'America/Sao_Paulo');
+        $today = new Time('-3 hours', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('banners');
@@ -82,7 +82,7 @@ class BannerModel extends Model
 
     public function get_all_active_by_page_id($page_id)
     {
-        $today = new Time('now', 'America/Sao_Paulo');
+        $today = new Time('-3 hours', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('banners');

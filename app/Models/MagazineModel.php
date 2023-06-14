@@ -37,7 +37,7 @@ class MagazineModel extends Model
 
     public function get_total_active()
     {
-        $today = new Time('now', 'America/Sao_Paulo');
+        $today = new Time('-3 hours', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('magazines');
@@ -48,7 +48,7 @@ class MagazineModel extends Model
 
     public function get_all_active($page=0, $limit=200)
     {
-        $today = new Time('now', 'America/Sao_Paulo');
+        $today = new Time('-3 hours', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('magazines');

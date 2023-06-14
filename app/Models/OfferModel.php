@@ -37,7 +37,7 @@ class OfferModel extends Model
 
     public function get_total_active()
     {
-        $today = new Time('now', 'America/Sao_Paulo');
+        $today = new Time('-3 hours', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('offers');
@@ -56,7 +56,7 @@ class OfferModel extends Model
 
    /*  public function get_all_active()
     {
-        $today = new Time('now', 'America/Sao_Paulo');
+        $today = new Time('-3 hours', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('offers');
@@ -104,7 +104,7 @@ class OfferModel extends Model
     
     public function get_all_active()
     {
-        $today = new Time('now', 'America/Sao_Paulo');
+        $today = new Time('-3 hours', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('offers');
