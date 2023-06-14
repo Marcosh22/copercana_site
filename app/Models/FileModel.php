@@ -37,7 +37,7 @@ class FileModel extends Model
 
     public function get_total_active()
     {
-        $today = new Time('now');
+        $today = new Time('now', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('files');
@@ -47,7 +47,7 @@ class FileModel extends Model
 
     public function get_all_active($page=0, $limit=200)
     {
-        $today = new Time('now');
+        $today = new Time('now', 'America/Sao_Paulo');
 
         $db      = \Config\Database::connect();
         $builder = $db->table('files');
