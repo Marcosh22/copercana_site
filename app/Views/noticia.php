@@ -1,6 +1,6 @@
 <main>
     <?php 
-        $dateTimeObj = new \DateTime($post->created_at, new \DateTimeZone('America/Sao_Paulo'));
+        $dateTimeObj = new \DateTime($post->published_at, new \DateTimeZone('America/Sao_Paulo'));
       
         $date = \IntlDateFormatter::formatObject($dateTimeObj, "dd", 'pt');
         $month = ucfirst(\IntlDateFormatter::formatObject($dateTimeObj, "MMMM", 'pt'));

@@ -36,7 +36,7 @@ class PostModel extends Model
         }
     }
 
-    public function update_post($id, $title, $cover, $thumbnail, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect)
+    public function update_post($id, $title, $cover, $thumbnail, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect, $published_at)
     {
         $db      = \Config\Database::connect();
         $builder = $db->table('posts');
@@ -54,7 +54,8 @@ class PostModel extends Model
             'page_tags' => $page_tags,
             'slug' => $slug,
             'status' => $status,
-            'redirect' => $redirect
+            'redirect' => $redirect,
+            'published_at' => $published_at
         ];
 
         $builder->where('id', $id);

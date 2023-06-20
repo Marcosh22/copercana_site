@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Files\File;
+use CodeIgniter\I18n\Time;
 
 class Admin_Post extends BaseController
 {
@@ -266,7 +267,13 @@ class Admin_Post extends BaseController
                 $thumbnail_path = $post->thumbnail;
             }
 
-            $postModel->update_post($post_id, $title, $cover_path, $thumbnail_path, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect);
+            $published_at = $post->created_at;
+
+            if($post->status === 'draft' && $status === 'published') {
+                $published_at = new Time('now', 'America/Sao_Paulo');
+            }
+
+            $postModel->update_post($post_id, $title, $cover_path, $thumbnail_path, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect, $published_at);
             $message = "Publicação atualizada com sucesso!";
             $success = true;
         }
