@@ -58,7 +58,8 @@
                                     <th scope="col">Título</th>
                                     <th scope="col">Autor</th>
                                     <th scope="col">Status</th>
-                                    <th scope="col">Data da publicação</th>
+                                    <th scope="col">Publicado em</th>
+                                    <th scope="col">Criado em</th>
                                     <th scope="col">Ações</th>
                                 </tr>
                             </thead>

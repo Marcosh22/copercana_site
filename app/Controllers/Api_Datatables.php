@@ -559,9 +559,9 @@ class Api_Datatables extends ResourceController
             $request = \Config\Services::request();
 
             $table = 'posts';
-            $columns = array('posts.id', 'posts.title', 'CONCAT(users.first_name, " ", users.last_name) as author', 'posts.status', 'posts.created_at', 'posts.id');
-            $search_columns = array('posts.id', 'posts.title', 'users.first_name', 'users.last_name', 'posts.status', 'posts.created_at');
-            $order = array('posts.id', 'posts.title', 'users.first_name', 'posts.status', 'posts.created_at', 'posts.id');
+            $columns = array('posts.id', 'posts.title', 'CONCAT(users.first_name, " ", users.last_name) as author', 'posts.status', 'posts.published_at', 'posts.created_at', 'posts.id');
+            $search_columns = array('posts.id', 'posts.title', 'users.first_name', 'users.last_name', 'posts.status', 'posts.published_at', 'posts.created_at');
+            $order = array('posts.id', 'posts.title', 'users.first_name', 'posts.status', 'posts.published_at', 'posts.created_at', 'posts.id');
 
             $joins = array(
                 array(
@@ -601,12 +601,16 @@ class Api_Datatables extends ResourceController
                 $created_at=date_create($row->created_at);
                 $created_at=date_format($created_at,"d/m/Y H:i");
 
+                $published_at=date_create($row->published_at);
+                $published_at=date_format($published_at,"d/m/Y H:i");
+
                 $sub_array = array();  
                 $sub_array[] = $row->id;  
                 $sub_array[] = $row->title;
 
                 $sub_array[] = $row->author;
                 $sub_array[] = $post_status;
+                $sub_array[] = $published_at;
                 $sub_array[] = $created_at;
 
                 $sub_array[] = '<a href="'. base_url("admin/news/edit/".$row->id) .'" class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>&nbsp;
@@ -641,9 +645,9 @@ class Api_Datatables extends ResourceController
             $request = \Config\Services::request();
 
             $table = 'posts';
-            $columns = array('posts.id', 'posts.title', 'categories.title as category', 'CONCAT(users.first_name, " ", users.last_name) as author', 'posts.status', 'posts.created_at', 'posts.id');
-            $search_columns = array('posts.id', 'posts.title', 'categories.title', 'users.first_name', 'users.last_name', 'posts.status', 'posts.created_at');
-            $order = array('posts.id', 'posts.title', 'categories.title', 'users.first_name', 'posts.status', 'posts.created_at', 'posts.id');
+            $columns = array('posts.id', 'posts.title', 'categories.title as category', 'CONCAT(users.first_name, " ", users.last_name) as author', 'posts.status', 'posts.published_at', 'posts.created_at', 'posts.id');
+            $search_columns = array('posts.id', 'posts.title', 'categories.title', 'users.first_name', 'users.last_name', 'posts.status', 'posts.published_at', 'posts.created_at');
+            $order = array('posts.id', 'posts.title', 'categories.title', 'users.first_name', 'posts.status', 'posts.published_at', 'posts.created_at', 'posts.id');
 
             $additional_conditions = array(
                 array(
@@ -688,6 +692,9 @@ class Api_Datatables extends ResourceController
                 $created_at=date_create($row->created_at);
                 $created_at=date_format($created_at,"d/m/Y H:i");
 
+                $published_at=date_create($row->published_at);
+                $published_at=date_format($published_at,"d/m/Y H:i");
+
                 $sub_array = array();  
                 $sub_array[] = $row->id;  
                 $sub_array[] = $row->title;
@@ -695,6 +702,7 @@ class Api_Datatables extends ResourceController
 
                 $sub_array[] = $row->author;
                 $sub_array[] = $post_status;
+                $sub_array[] = $published_at;
                 $sub_array[] = $created_at;
 
                 $sub_array[] = '<a href="'. base_url("admin/blog/edit/".$row->id) .'" class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>&nbsp;
