@@ -234,16 +234,16 @@
                                 <li>G aditivada</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-common', $definition->fuels)) { ?>
-                                <li>D diesel comum</li>
+                                <li>Diesel comum</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-additive', $definition->fuels)) { ?>
-                                <li>D diesel aditivado</li>
+                                <li>Diesel aditivado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-s-10', $definition->fuels)) { ?>
-                                <li>D diesel S-10 aditivado CoperNitro ultra filtrado</li>
+                                <li>Diesel S-10 aditivado CoperNitro ultra filtrado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-s-500', $definition->fuels)) { ?>
-                                <li>D diesel S-500 aditivado CoperNitro ultra filtrado</li>
+                                <li>Diesel S-500 aditivado CoperNitro ultra filtrado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('ethanol', $definition->fuels)) { ?>
                                 <li>E etanol</li>
