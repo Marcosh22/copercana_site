@@ -228,10 +228,10 @@
                         <strong class="unit__subtitle">Combustíveis:</strong>&nbsp;
                         <ul class="unit__fuels">
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('gasoline-common', $definition->fuels)) { ?>
-                                <li>G comum</li>
+                                <li>Gasolina comum</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('gasoline-additive', $definition->fuels)) { ?>
-                                <li>G aditivada</li>
+                                <li>Gasolina aditivada CoperNitro</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-common', $definition->fuels)) { ?>
                                 <li>Diesel comum</li>
@@ -246,7 +246,7 @@
                                 <li>Diesel S-500 aditivado CoperNitro ultra filtrado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('ethanol', $definition->fuels)) { ?>
-                                <li>E etanol</li>
+                                <li>Etanol</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('arla-32', $definition->fuels)) { ?>
                                 <li>Arla 32</li>

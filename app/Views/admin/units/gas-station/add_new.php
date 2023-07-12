@@ -272,7 +272,7 @@
                                                         in_array('gasoline-additive', $form_data['definition']['fuels'])
                                                     : false
                                                 ); ?>
-                                                <?php echo form_label('Gasolina Aditivada', 'fuels-gasoline-additive', ['class' => 'col-form-label']);?>
+                                                <?php echo form_label('Gasolina Aditivada CoperNitro', 'fuels-gasoline-additive', ['class' => 'col-form-label']);?>
                                             </div>
                                         </div>
 
