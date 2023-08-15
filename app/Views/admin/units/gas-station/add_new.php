@@ -272,7 +272,7 @@
                                                         in_array('gasoline-additive', $form_data['definition']['fuels'])
                                                     : false
                                                 ); ?>
-                                                <?php echo form_label('Gasolina Aditivada CoperNitro', 'fuels-gasoline-additive', ['class' => 'col-form-label']);?>
+                                                <?php echo form_label('Gasolina Aditivada Copernitro Pro', 'fuels-gasoline-additive', ['class' => 'col-form-label']);?>
                                             </div>
                                         </div>
 
@@ -328,7 +328,7 @@
                                                         in_array('diesel-s-10', $form_data['definition']['fuels'])
                                                     : false
                                                 ); ?>
-                                                <?php echo form_label('Diesel S-10 Aditivado CoperNitro Ultra Filtrado', 'fuels-diesel-s-10', ['class' => 'col-form-label']);?>
+                                                <?php echo form_label('Diesel S-10 Aditivado Copernitro Pro Ultra Filtrado', 'fuels-diesel-s-10', ['class' => 'col-form-label']);?>
                                             </div>
                                         </div>
 
@@ -347,7 +347,7 @@
                                                         in_array('diesel-s-500', $form_data['definition']['fuels'])
                                                     : false
                                                 ); ?>
-                                                <?php echo form_label('Diesel S-500 Aditivado CoperNitro Ultra Filtrado', 'fuels-diesel-s-500', ['class' => 'col-form-label']);?>
+                                                <?php echo form_label('Diesel S-500 Aditivado Copernitro Pro Ultra Filtrado', 'fuels-diesel-s-500', ['class' => 'col-form-label']);?>
                                             </div>
                                         </div>
 

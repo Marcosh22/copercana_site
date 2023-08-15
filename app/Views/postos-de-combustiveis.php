@@ -231,7 +231,7 @@
                                 <li>Gasolina comum</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('gasoline-additive', $definition->fuels)) { ?>
-                                <li>Gasolina aditivada CoperNitro</li>
+                                <li>Gasolina aditivada Copernitro Pro</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-common', $definition->fuels)) { ?>
                                 <li>Diesel comum</li>
@@ -240,10 +240,10 @@
                                 <li>Diesel aditivado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-s-10', $definition->fuels)) { ?>
-                                <li>Diesel S-10 aditivado CoperNitro ultra filtrado</li>
+                                <li>Diesel S-10 aditivado Copernitro Pro ultra filtrado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('diesel-s-500', $definition->fuels)) { ?>
-                                <li>Diesel S-500 aditivado CoperNitro ultra filtrado</li>
+                                <li>Diesel S-500 aditivado Copernitro Pro ultra filtrado</li>
                             <?php } ?>
                             <?php if(isset($definition) && isset($definition->fuels) && in_array('ethanol', $definition->fuels)) { ?>
                                 <li>Etanol</li>
