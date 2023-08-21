@@ -81,7 +81,7 @@
                                         value="<?= $page_data->supermarket_section_banner; ?>">
                                     <img src="<?= base_url($page_data->supermarket_section_banner) ?>" alt="">
                                     <a class="delete-btn"
-                                        href="<?= base_url("admin/pages/delete_file/9/supermarket_section_banner") ?>"><i
+                                        href="<?= base_url("admin/pages/delete_file/13/supermarket_section_banner") ?>"><i
                                             class="bi bi-x-circle-fill"></i></a>
                                 </div>
                                 <?php } else { ?>
@@ -101,7 +101,7 @@
                                         value="<?= $page_data->supermarket_section_mobile_banner; ?>">
                                     <img src="<?= base_url($page_data->supermarket_section_mobile_banner) ?>" alt="">
                                     <a class="delete-btn"
-                                        href="<?= base_url("admin/pages/delete_file/9/supermarket_section_mobile_banner") ?>"><i
+                                        href="<?= base_url("admin/pages/delete_file/13/supermarket_section_mobile_banner") ?>"><i
                                             class="bi bi-x-circle-fill"></i></a>
                                 </div>
                                 <?php } else { ?>
