@@ -4392,7 +4392,7 @@ body {
   gap: 15px;
 }
 
-.ethics-channel h2 {
+.ethics-channel h3 {
   font-weight: 700;
   font-size: 16px;
   color: #FFF;
@@ -4404,4 +4404,9 @@ body {
   font-size: 16px;
   color: #FFF;
   margin: 0px;
+}
+
+.ethics-channel p > a {
+  text-decoration: underline;
+  font-weight: 600;
 }
