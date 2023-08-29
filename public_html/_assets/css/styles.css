@@ -4385,3 +4385,23 @@ body {
 		transform: translateY(0)
 	}
 }
+
+.ethics-channel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ethics-channel h2 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.ethics-channel p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFF;
+  margin: 0px;
+}
