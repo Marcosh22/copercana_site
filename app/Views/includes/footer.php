@@ -263,11 +263,13 @@
                         alt="Canal de Ética"
                     >
                 </picture>
-                <h3><strong>CANAL DE ÉTICA</strong></h3>
-                <p>
-                    <a href="https://contatoseguro.com.br/copercana" target="_blank" rel="noopener noreferrer">Clique aqui</a> ou ligue<br/>
-                    Telefone <a href="tel:+5508005171238">0800 517 1238</a>.
-                </p>
+                <span>
+                    <h3><strong>CANAL DE ÉTICA</strong></h3>
+                    <p>
+                        <a href="https://contatoseguro.com.br/copercana" target="_blank" rel="noopener noreferrer">Clique aqui</a> ou ligue<br/>
+                        Telefone <a href="tel:+5508005171238">0800 517 1238</a>.
+                    </p>
+                </span>
                </div>
             </div>
             <div class="col-12 d-md-flex justify-content-between">
