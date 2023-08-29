@@ -269,7 +269,7 @@
                                         <li class="nav-submenu__item">
                                             <a href="<?= base_url("files/Codigo_de_conduta_Copercana.pdf") ?>"
                                                 class="nav-submenu__link" target="_blank" rel="noopener noreferrer">
-                                                CÓDIGO DE CONDUTO
+                                                CÓDIGO DE CONDUTA
                                             </a>
                                         </li>
                                     </ul>
