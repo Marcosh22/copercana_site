@@ -251,7 +251,7 @@ class Home extends BaseController
             'keywords' => '',
             'publisher' => 'https://suave.ppg.br',
             'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-            'canonical' => base_url("servicos/autocenter")
+            'canonical' => base_url("servicos/auto-center")
         );
 
         $unitModel = model('App\Models\UnitModel', false);
