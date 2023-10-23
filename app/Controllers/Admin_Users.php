@@ -22,6 +22,7 @@ class Admin_Users extends BaseController
             'page' => 'users',
             'session' => $session,
             'logged_user' => $this->ionAuth->user(),
+            'is_admin' => $this->ionAuth->isAdmin(),
             'ion_auth' => $this->ionAuth
         );
         
@@ -44,6 +45,7 @@ class Admin_Users extends BaseController
         $data['page'] = 'users-add_new';
         $data['logged_user'] = $this->ionAuth->user();
          $data['ion_auth'] = $this->ionAuth;
+         $data['is_admin'] = $this->ionAuth->isAdmin();
         $data['session'] = $session;
         
         echo view('admin/includes/header', $data);
@@ -81,6 +83,7 @@ class Admin_Users extends BaseController
         $data['user'] = $user;
         $data['user_groups'] = $user_groups;
         $data['logged_user'] = $this->ionAuth->user();
+        $data['is_admin'] = $this->ionAuth->isAdmin();
          $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);

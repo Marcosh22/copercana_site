@@ -110,7 +110,7 @@
                                 <button class="nav-link <?= isset($_GET['tab']) && $_GET['tab'] === 'edit' ? 'active' : '' ?>" data-bs-toggle="tab" data-bs-target="#profile-edit">Editar
                                     Perfil</button>
                             </li>
-                            <?php if($user->id === $logged_user->row()->id) { ?>
+                            <?php if($user->id === $logged_user->row()->id || $is_admin) { ?>
                             <li class="nav-item">
                                 <button class="nav-link <?= isset($_GET['tab']) && $_GET['tab'] === 'change-password' ? 'active' : '' ?>" data-bs-toggle="tab"
                                     data-bs-target="#profile-change-password">Alterar Senha</button>
@@ -365,7 +365,7 @@
                                 <?php echo form_close();?>
                             </div>
                             
-                            <?php if($user->id === $logged_user->row()->id) { ?>
+                            <?php if($user->id === $logged_user->row()->id || $is_admin) { ?>
                                 <div class="tab-pane fade <?= isset($_GET['tab']) && $_GET['tab'] === 'change-password' ? 'show active' : '' ?> pt-3" id="profile-change-password">
                                 <?php 
                                         if(isset($response) && !empty($response) && $response['tab'] === 'change-password') { 
