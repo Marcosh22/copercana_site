@@ -238,6 +238,7 @@ $routes->group('admin', function ($routes) {
         $routes->get('edit/(:any)', 'Admin_Users::edit/$1');
         $routes->post('add_user', 'Admin_Users::add_user');
         $routes->post('change_password', 'Admin_Users::change_password');
+        $routes->post('change_password/(:any)', 'Admin_Users::change_password/$1');
         $routes->post('update_user/(:any)', 'Admin_Users::update_user/$1');
         $routes->get('delete/(:any)', 'Admin_Users::delete/$1');
         $routes->get('remove_picture/(:any)', 'Admin_Users::remove_picture/$1');
