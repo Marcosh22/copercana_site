@@ -381,7 +381,7 @@ class Admin_Users extends BaseController
         return redirect()->to('/admin/users/edit/'.$user_id.'?tab=edit');
     }
 
-	public function change_password()
+	public function change_password($user_id = null)
 	{
         if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
@@ -395,10 +395,6 @@ class Admin_Users extends BaseController
         $user = $this->ionAuth->user()->row();
 
         $validationRule = [
-            'old_password' => [
-                'label' => 'Senha atual',
-                'rules' => 'required',
-            ],
             'new_password' => [
                 'label' => 'Nova senha',
                 'rules' => 'required|min_length[8]|matches[new_password_confirm]',
@@ -409,13 +405,33 @@ class Admin_Users extends BaseController
             ]
         ];
 
+        if(!$this->ionAuth->isAdmin()) {
+            $validationRule = [
+                'old_password' => [
+                    'label' => 'Senha atual',
+                    'rules' => 'required',
+                ],
+                ...$validationRule
+            ];
+        }
+
         if (!$this->validate($validationRule)) {
             $message = $this->validator->listErrors();
             $success = false;
         } else {
-			$identity = $session->get('identity');
 
-			$change = $this->ionAuth->changePassword($identity, $this->request->getPost('old_password'), $this->request->getPost('new_password'));
+            $change;
+
+            if($this->ionAuth->isAdmin() && isset($user_id) && !empty($user_id)) {
+                $data = array(
+                    'password' => $this->request->getPost('new_password'),
+                );
+
+                $change = $this->ionAuth->update($user_id, $data);
+            } else {
+			    $identity = $session->get('identity');
+                $change = $this->ionAuth->changePassword($identity, $this->request->getPost('old_password'), $this->request->getPost('new_password'));
+            }
 
             if($change) {
                 $message = $this->ionAuth->messages();

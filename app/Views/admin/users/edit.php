@@ -385,8 +385,9 @@
                                         <?php }
                                     ?>    
                                 <!-- Change Password Form -->
-                                    <?php echo form_open('users/change_password');?>
+                                    <?php echo form_open('admin/users/change_password/'.$user->id);?>
 
+                                        <?php if(!$is_admin) { ?>
                                         <div class="row mb-3">
                                             <?php echo form_label('Senha atual', 'old_password', ['class' => 'col-md-4 col-lg-3 col-form-label']);?>
                                             <div class="col-md-8 col-lg-9">
@@ -397,7 +398,8 @@
 
                                             </div>
                                         </div>
-
+                                        <?php }
+                                    ?> 
                                         <div class="row mb-3">
                                             <?php echo form_label('Nova senha', 'new_password', ['class' => 'col-md-4 col-lg-3 col-form-label']);?>
                                             <div class="col-md-8 col-lg-9">
