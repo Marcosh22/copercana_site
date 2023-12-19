@@ -31,9 +31,9 @@ class NewsModel extends Model
         $builder->select('posts.*, categories.title as category, categories.slug as category_slug, CONCAT(users.first_name, " ", users.last_name) as author');
         $builder->join('categories', 'categories.id = posts.category_id');
         $builder->join('users', 'users.id = posts.author_id');
-        
+
         $builder->where('posts.category_id', 1);
-        $builder->where('sposts.tatus', 'published');
+        $builder->where('posts.tatus', 'published');
 
         $builder->orWhere('posts.show_at_blog_and_news', 1);
         $builder->where('posts.status', 'published');
