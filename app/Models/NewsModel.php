@@ -27,11 +27,16 @@ class NewsModel extends Model
     public function get_all_published($page=0, $limit=200) {
         $db      = \Config\Database::connect();
         $builder = $db->table('posts');
+
+        $builder->select('posts.*, categories.title as category, categories.slug as category_slug, CONCAT(users.first_name, " ", users.last_name) as author');
+        $builder->join('categories', 'categories.id = posts.category_id');
+        $builder->join('users', 'users.id = posts.author_id');
+        
         $builder->where('posts.category_id', 1);
-        $builder->where('status', 'published');
+        $builder->where('sposts.tatus', 'published');
 
         $builder->orWhere('posts.show_at_blog_and_news', 1);
-        $builder->where('status', 'published');
+        $builder->where('posts.status', 'published');
 
         $builder->orderBy('id', 'DESC');
         $query  = $builder->get($limit, $page);
@@ -86,12 +91,12 @@ class NewsModel extends Model
     public function get_total_published() {
         $db      = \Config\Database::connect();
         $builder = $db->table('posts');
-        $builder->where('status', 'published');
+        $builder->where('posts.status', 'published');
         $builder->where('posts.category_id', 1);
 
         $builder->orWhere('posts.show_at_blog_and_news', 1);
-        $builder->where('status', 'published');
-        
+        $builder->where('posts.status', 'published');
+
         $builder->orderBy('id', 'DESC');
         return $builder->countAllResults();
     }
