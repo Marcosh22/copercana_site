@@ -33,7 +33,7 @@ class NewsModel extends Model
         $builder->join('users', 'users.id = posts.author_id');
 
         $builder->where('posts.category_id', 1);
-        $builder->where('posts.tatus', 'published');
+        $builder->where('posts.status', 'published');
 
         $builder->orWhere('posts.show_at_blog_and_news', 1);
         $builder->where('posts.status', 'published');
