@@ -146,6 +146,23 @@
                             </div>
 
                             <div class="row mb-5">
+                                <?php echo form_label('Exibir Também no Blog?', 'show_at_blog_and_news', ['class' => 'col-sm-2 col-form-label']);?>
+
+                                <div class="col-sm-10">
+                                    <div class="switch__container">
+                                        <?php echo form_checkbox([
+                                            'name' => 'show_at_blog_and_news',
+                                            'id'   => 'show_at_blog_and_news',
+                                            'value'   => '1',
+                                            'checked' => $form_data ? $form_data['show_at_blog_and_news'] && $form_data['show_at_blog_and_news'] == 1 : true,
+                                        ], '1', $form_data ?  $form_data['show_at_blog_and_news'] && $form_data['show_at_blog_and_news'] == 1 : true, ['class' => 'switch switch--shadow']);?>
+                                        
+                                        <label for="show_at_blog_and_news"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-5">
                                 <?php echo form_label('Conteúdo', 'content', ['class' => 'col-sm-2 col-form-label']);?>
                                 <div class="col-sm-10">
                                     <?php echo form_textarea([

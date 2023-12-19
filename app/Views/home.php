@@ -329,21 +329,21 @@
                         <div class="row">
                             <div class="col-12">
                                 <article class="post-preview post-preview--feature">
-                                    <a href="<?= base_url("noticias/$feature->slug") ?>" class="post-preview__thumb">
+                                    <a href="<?= base_url(($feature->category_id == 1 ? "noticias" : "blog/$feature->category_slug")."/$feature->slug") ?>" class="post-preview__thumb">
                                         <img src="<?= base_url($feature->thumbnail) ?>" alt="Seminário de Precisão">
                                     </a>
                                     <div>
                                         <h4 class="post-preview__title">
-                                            <a href="<?= base_url("noticias/$feature->slug") ?>">
+                                            <a href="<?= base_url(($feature->category_id == 1 ? "noticias" : "blog/$feature->category_slug")."/$feature->slug") ?>">
                                                 <?= $feature->title ?>
                                             </a>
                                         </h4>
                                         <p class="post-preview__excerpt">
-                                            <a href="<?= base_url("noticias/$feature->slug") ?>">
+                                            <a href="<?= base_url(($feature->category_id == 1 ? "noticias" : "blog/$feature->category_slug")."/$feature->slug") ?>">
                                                 <?= $feature->excerpt ?>
                                             </a>
                                         </p>
-                                        <a class="post-preview__link" href="<?= base_url("noticias/$feature->slug") ?>">Saiba
+                                        <a class="post-preview__link" href="<?= base_url(($feature->category_id == 1 ? "noticias" : "blog/$feature->category_slug")."/$feature->slug") ?>">Saiba
                                             Mais</a>
                                     </div>
                                 </article>
@@ -353,20 +353,20 @@
                             <?php foreach($posts as $post) { ?>
                             <div class="col-md-6 col-lg-3">
                                 <article class="post-preview">
-                                    <a href="<?= base_url("noticias/$post->slug") ?>" class="post-preview__thumb">
+                                    <a href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")."/$post->slug") ?>" class="post-preview__thumb">
                                         <img src="<?= base_url($post->thumbnail) ?>" alt="Seminário de Precisão">
                                     </a>
                                     <h4 class="post-preview__title">
-                                        <a href="<?= base_url("noticias/$post->slug") ?>">
+                                        <a href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")."/$post->slug") ?>">
                                             <?= $post->title ?>
                                         </a>
                                     </h4>
                                     <p class="post-preview__excerpt">
-                                        <a href="<?= base_url("noticias/$post->slug") ?>">
+                                        <a href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")."/$post->slug") ?>">
                                             <?= $post->excerpt ?>
                                         </a>
                                     </p>
-                                    <a class="post-preview__link" href="<?= base_url("noticias/$post->slug") ?>">Saiba Mais</a>
+                                    <a class="post-preview__link" href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")."/$post->slug") ?>">Saiba Mais</a>
                                 </article>
                             </div>
                             <?php } ?>

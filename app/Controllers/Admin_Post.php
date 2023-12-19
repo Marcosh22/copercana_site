@@ -119,9 +119,12 @@ class Admin_Post extends BaseController
                 $redirect = $request->getPost('redirect');
                 $slug = $this->create_slug_from_post_title($title);
 
+                $show_at_blog_and_news = $request->getPost('show_at_blog_and_news');
+                $show_at_blog_and_news = $show_at_blog_and_news ? $show_at_blog_and_news : 0;
+
                 try {
                     $postModel = model('App\Models\PostModel', false);
-                    $post_id = $postModel->add($title, $cover_path, $thumbnail_path, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect);
+                    $post_id = $postModel->add($title, $cover_path, $thumbnail_path, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect, $show_at_blog_and_news);
     
                     if($post_id) {
                         $message = "Banner Cadastrado com sucesso.";
@@ -244,6 +247,9 @@ class Admin_Post extends BaseController
             $redirect = $request->getPost('redirect');
             $slug = $post->slug;
 
+            $show_at_blog_and_news = $request->getPost('show_at_blog_and_news');
+            $show_at_blog_and_news = $show_at_blog_and_news ? $show_at_blog_and_news : 0;
+
             if(isset($cover) && !empty($cover) && $cover->isValid() && !$cover->hasMoved()) {
                 $random_name = $cover->getRandomName();
                 $date = date('Ymd');
@@ -273,7 +279,7 @@ class Admin_Post extends BaseController
                 $published_at = new Time('now', 'America/Sao_Paulo');
             }
 
-            $postModel->update_post($post_id, $title, $cover_path, $thumbnail_path, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect, $published_at);
+            $postModel->update_post($post_id, $title, $cover_path, $thumbnail_path, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect, $published_at, $show_at_blog_and_news);
             $message = "Publicação atualizada com sucesso!";
             $success = true;
         }

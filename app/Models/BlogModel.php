@@ -34,6 +34,10 @@ class BlogModel extends Model
 
         $builder->where('posts.category_id <>', 1);
         $builder->where('posts.status', 'published');
+
+        $builder->orWhere('posts.show_at_blog_and_news', 1);
+        $builder->where('status', 'published');
+        
         $builder->orderBy('posts.id', 'DESC');
         $query  = $builder->get($limit, $page);
 
@@ -104,6 +108,10 @@ class BlogModel extends Model
         $builder = $db->table('posts');
         $builder->where('status', 'published');
         $builder->where('posts.category_id <>', 1);
+
+        $builder->orWhere('posts.show_at_blog_and_news', 1);
+        $builder->where('status', 'published');
+
         $builder->orderBy('id', 'DESC');
         return $builder->countAllResults();
     }

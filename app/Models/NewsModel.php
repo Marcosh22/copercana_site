@@ -29,6 +29,10 @@ class NewsModel extends Model
         $builder = $db->table('posts');
         $builder->where('posts.category_id', 1);
         $builder->where('status', 'published');
+
+        $builder->orWhere('posts.show_at_blog_and_news', 1);
+        $builder->where('status', 'published');
+
         $builder->orderBy('id', 'DESC');
         $query  = $builder->get($limit, $page);
 
@@ -84,6 +88,10 @@ class NewsModel extends Model
         $builder = $db->table('posts');
         $builder->where('status', 'published');
         $builder->where('posts.category_id', 1);
+
+        $builder->orWhere('posts.show_at_blog_and_news', 1);
+        $builder->where('status', 'published');
+        
         $builder->orderBy('id', 'DESC');
         return $builder->countAllResults();
     }

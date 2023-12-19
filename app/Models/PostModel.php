@@ -8,35 +8,7 @@ class PostModel extends Model
 {
     protected $table      = 'posts';
 
-    public function add($title, $cover, $thumbnail, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect)
-    {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('posts');
-        
-        $data = [
-            'title' => $title,
-            'cover'  => $cover,
-            'thumbnail'  => $thumbnail,
-            'content'  => $content,
-            'excerpt' => $excerpt,
-            'category_id'  => $category_id,
-            'author_id'  => $author_id,
-            'page_title'  => $page_title,
-            'page_description' => $page_description,
-            'page_tags' => $page_tags,
-            'slug' => $slug,
-            'status' => $status,
-            'redirect' => $redirect
-        ];
-        
-        if($builder->insert($data)) {
-            return $db->insertID();
-        } else {
-            return null;
-        }
-    }
-
-    public function update_post($id, $title, $cover, $thumbnail, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect, $published_at)
+    public function add($title, $cover, $thumbnail, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect, $show_at_blog_and_news = 0)
     {
         $db      = \Config\Database::connect();
         $builder = $db->table('posts');
@@ -55,7 +27,37 @@ class PostModel extends Model
             'slug' => $slug,
             'status' => $status,
             'redirect' => $redirect,
-            'published_at' => $published_at
+            'show_at_blog_and_news' => $show_at_blog_and_news
+        ];
+        
+        if($builder->insert($data)) {
+            return $db->insertID();
+        } else {
+            return null;
+        }
+    }
+
+    public function update_post($id, $title, $cover, $thumbnail, $content, $excerpt, $category_id, $author_id, $page_title, $page_description, $page_tags, $slug, $status, $redirect, $published_at, $show_at_blog_and_news = 0)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('posts');
+        
+        $data = [
+            'title' => $title,
+            'cover'  => $cover,
+            'thumbnail'  => $thumbnail,
+            'content'  => $content,
+            'excerpt' => $excerpt,
+            'category_id'  => $category_id,
+            'author_id'  => $author_id,
+            'page_title'  => $page_title,
+            'page_description' => $page_description,
+            'page_tags' => $page_tags,
+            'slug' => $slug,
+            'status' => $status,
+            'redirect' => $redirect,
+            'published_at' => $published_at,
+            'show_at_blog_and_news' => $show_at_blog_and_news
         ];
 
         $builder->where('id', $id);

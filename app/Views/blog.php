@@ -25,24 +25,24 @@
                     <div class="row">
                             <div class="col-12">
                                 <article class="post-preview post-preview--feature">
-                                    <a href="<?= base_url("blog/$post->category_slug/$post->slug") ?>" class="post-preview__thumb">
+                                    <a href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")."/$post->slug") ?>" class="post-preview__thumb">
                                         <img src="<?= base_url($post->thumbnail) ?>" alt="<?= $post->title ?>">
                                     </a>
                                     <div>
-                                        <a class="post-preview__category" href="<?= base_url("blog/$post->category_slug") ?>">
+                                        <a class="post-preview__category" href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")) ?>">
                                             <?= $post->category ?>
                                         </a>
                                         <h4 class="post-preview__title">
-                                            <a href="<?= base_url("blog/$post->category_slug/$post->slug") ?>">
+                                            <a href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")."/$post->slug") ?>">
                                                 <?= $post->title ?>
                                             </a>
                                         </h4>
                                         <p class="post-preview__excerpt">
-                                            <a href="<?= base_url("blog/$post->category_slug/$post->slug") ?>">
+                                            <a href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")."/$post->slug") ?>">
                                                 <?= $post->excerpt ?>
                                             </a>
                                         </p>
-                                        <a class="post-preview__link" href="<?= base_url("blog/$post->category_slug/$post->slug") ?>">Saiba
+                                        <a class="post-preview__link" href="<?= base_url(($post->category_id == 1 ? "noticias" : "blog/$post->category_slug")."/$post->slug") ?>">Saiba
                                             Mais</a>
                                     </div>
                                 </article>
