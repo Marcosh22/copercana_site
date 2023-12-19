@@ -149,7 +149,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-5">
+<!--                             <div class="row mb-5">
                                 <?php echo form_label('Exibir Também no Blog?', 'show_at_blog_and_news', ['class' => 'col-sm-2 col-form-label']);?>
 
                                 <div class="col-sm-10">
@@ -165,7 +165,7 @@
                                         <label for="show_at_blog_and_news"></label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="row mb-5">
                                 <?php echo form_label('Conteúdo', 'content', ['class' => 'col-sm-2 col-form-label']);?>
