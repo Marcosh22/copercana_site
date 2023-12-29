@@ -317,13 +317,13 @@
                                             class="nav-submenu__item nav-submenu__item--has-submenu<?= $page == 'laboratorio-de-solos' || (isset($parent_page) && $parent_page == 'laboratorio-de-solos') ? ' active' : '' ?>">
                                             <a href="<?= base_url("servicos/laboratorio-de-solos") ?>"
                                                 class="nav-submenu__link">LABORATÓRIO DE SOLOS</a>
-                                            <!-- <ul class="nav-submenu__submenu submenu-submenu">
+                                            <ul class="nav-submenu__submenu submenu-submenu">
                                                 <li
                                                     class="submenu-submenu__item<?= $page == 'tecnologia-bioas' || (isset($parent_page) && $parent_page == 'tecnologia-bioas') ? ' active' : '' ?>">
                                                     <a href="<?= base_url("servicos/laboratorio-de-solos/tecnologia-bioas") ?>"
                                                         class="submenu-submenu__link">TECNOLOGIA BioAS</a>
                                                 </li>
-                                            </ul> -->
+                                            </ul>
                                         </li>
                                         <li
                                             class="nav-submenu__item<?= $page == 'postos-de-combustiveis' || (isset($parent_page) && $parent_page == 'postos-de-combustiveis') ? ' active' : '' ?>">
@@ -645,12 +645,12 @@
                             <a href="<?= base_url("servicos/laboratorio-de-solos") ?>"
                                 class="mobile-nav-submenu__link">Laboratório de
                                 Solos</a>
-                            <!-- <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
+                            <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
                                     <li
                                         class="mobile-nav-submenu__item<?= $page == 'tecnologia-bioas' || (isset($parent_page) && $parent_page == 'tecnologia-bioas') ? ' active' : '' ?>">
                                         <a href="<?= base_url("servicos/laboratorio-de-solos/tecnologia-bioas") ?>" class="mobile-nav-submenu__link">Tecnologia BioAS</a>
                                     </li>
-                                </ul> -->
+                                </ul>
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'postos-de-combustiveis' || (isset($parent_page) && $parent_page == 'postos-de-combustiveis') ? ' active' : '' ?>">
