@@ -75,6 +75,7 @@ $routes->get('/blog/(:any)', 'Home::categoria/$1');
 
 $routes->get('/contato', 'Home::contato');
 $routes->get('/cotacoes', 'Home::cotacoes');
+$routes->get('/info', 'Home::info');
 
 $routes->get('/busca', 'Home::busca');
 

@@ -1772,4 +1772,7 @@ class Home extends BaseController
         }
     }
     
+    public function info () {
+        phpinfo();
+    }
 }
