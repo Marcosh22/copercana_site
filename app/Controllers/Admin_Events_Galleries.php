@@ -5,6 +5,7 @@ namespace App\Controllers;
 class Admin_Events_Galleries extends BaseController
 {
     private $slug_counter = 0;
+    private $ionAuth;
 
     public function __construct()
 	{

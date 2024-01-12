@@ -9,6 +9,7 @@ class Admin_Post extends BaseController
 {
     protected $helpers = ['form'];
     private $slug_counter = 0;
+    private $ionAuth;
 
     public function __construct()
 	{

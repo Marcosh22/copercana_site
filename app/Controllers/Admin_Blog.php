@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 class Admin_Blog extends BaseController
 {
+    private $ionAuth;
+
     public function __construct()
 	{
 		$this->ionAuth = new \IonAuth\Libraries\IonAuth();

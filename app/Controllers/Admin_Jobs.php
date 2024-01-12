@@ -5,6 +5,7 @@ namespace App\Controllers;
 class Admin_Jobs extends BaseController
 {
     protected $helpers = ['form'];
+    private $ionAuth;
 
     public function __construct()
 	{
