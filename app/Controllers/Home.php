@@ -5,6 +5,9 @@ use CodeIgniter\I18n\Time;
 
 class Home extends BaseController
 {
+
+    private $general;
+
     public function __construct()
 	{
         $generalModel = model('App\Models\GeneralModel', false);
