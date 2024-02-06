@@ -38,29 +38,47 @@
             </section>
         <?php } ?>
 
-        <?php if(isset($page_data->report_section_show) && $page_data->report_section_show == 1) { ?>
-            <section class="page-section bg-light-gray" id="magazine-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <picture>
-                                <img id="magazine" src="<?= base_url($page_data->report_section_picture) ?>" alt="<?= $page_data->report_section_title ?>" />
-                            </picture>
+        <section class="page-section bg-light-gray" id="magazine-section">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <picture>
+                            <img id="magazine" src="<?= base_url("_assets/images/capa-sustentabilidade-2022.png") ?>" alt="Relatório de Sustentabilidade 2022" />
+                        </picture>
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="with-underline" style="margin-left: 0;">Relatório de Sustentabilidade 2022</h2>
+                        <div style="margin-bottom: 30px;">
+                        <p>
+                        Confira aqui, em nosso Relatório de Sustentabilidade, as ações adotadas pela Copercana em 2022, destacando-se em desempenho financeiro, social, ambiental e de governança.
+                        </p>
                         </div>
-                        <div class="col-md-8">
-                            <h2 class="with-underline" style="margin-left: 0;"><?= $page_data->report_section_title ?></h2>
-                            <div style="margin-bottom: 30px;">
-                            <?= $page_data->report_section_description ?>
-                            </div>
-                            <?php if(isset($page_data->report_section_file) && !empty($page_data->report_section_file)) { ?>
-                            <a class="button" href="<?= base_url($page_data->report_section_file) ?>" target="_blank" rel="noopener noreferrer">
-                                Baixar
-                            </a>
-                            <?php } ?>
-                        </div>
+                        <a class="button" href="<?= base_url("files/relatorio-sustentabilidade-2022.pdf") ?>" target="_blank" rel="noopener noreferrer">
+                            Baixar
+                        </a>
                     </div>
                 </div>
-            </section>
-        <?php } ?>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <picture>
+                            <img id="magazine" src="<?= base_url("_assets/images/capa-sustentabilidade-2021.png") ?>" alt="Relatório de Sustentabilidade 2021" />
+                        </picture>
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="with-underline" style="margin-left: 0;">Relatório de Sustentabilidade 2021</h2>
+                        <div style="margin-bottom: 30px;">
+                        <p>
+                        Confira aqui, em nosso Relatório de Sustentabilidade, as ações adotadas pela Copercana em 2021, destacando-se em desempenho financeiro, social, ambiental e de governança.
+                        </p>
+                        </div>
+                        <a class="button" href="<?= base_url("files/relatorio-sustentabilidade-2021.pdf") ?>" target="_blank" rel="noopener noreferrer">
+                            Baixar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     <?php } ?>
 </main>
