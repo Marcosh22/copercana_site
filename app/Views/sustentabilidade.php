@@ -51,7 +51,7 @@
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-md-3">
                         <picture>
-                            <img id="magazine" src="<?= base_url("_assets/images/capa-sustentabilidade-2022.png") ?>?v=01" alt="Relatório de sustentabilidade 2022" />
+                            <img id="magazine" src="<?= base_url("_assets/images/capa-sustentabilidade-2022.png") ?>?v=01" alt="Relatório de sustentabilidade 2022" class="img-fluid" />
                         </picture>
                     </div>
                     <div class="col-md-9 d-flex flex-column justify-content-center">
@@ -64,7 +64,7 @@
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-md-3">
                         <picture>
-                            <img id="magazine" src="<?= base_url("_assets/images/capa-sustentabilidade-2021.png") ?>?v=01" alt="Relatório de sustentabilidade 2021" />
+                            <img id="magazine" src="<?= base_url("_assets/images/capa-sustentabilidade-2021.png") ?>?v=01" alt="Relatório de sustentabilidade 2021"  class="img-fluid" />
                         </picture>
                     </div>
                     <div class="col-md-9 d-flex flex-column justify-content-center">
