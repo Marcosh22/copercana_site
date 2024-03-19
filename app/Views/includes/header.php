@@ -226,10 +226,10 @@
                             <?php } else { ?>
                             <picture>
                                 <source media="(max-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/copercana-60-anos@0,75x.png") ?> 1x, <?= base_url("_assets/images/copercana-60-anos@1,5x.png") ?> 2x">
+                                    srcset="<?= base_url("_assets/images/copercana@0,75x.png") ?> 1x, <?= base_url("_assets/images/copercana@1,5x.png") ?> 2x">
                                 <source media="(min-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/copercana-60-anos.png") ?> 1x, <?= base_url("_assets/images/copercana-60-anos@2x.png") ?> 2x">
-                                <img src="<?= base_url("_assets/images/copercana-60-anos.png") ?>" alt="Copercana">
+                                    srcset="<?= base_url("_assets/images/copercana.png") ?> 1x, <?= base_url("_assets/images/copercana@2x.png") ?> 2x">
+                                <img src="<?= base_url("_assets/images/copercana.png") ?>" alt="Copercana">
                             </picture>
                             <?php } ?>
                         </a>
@@ -241,11 +241,11 @@
                                     class="nav-menu__item nav-menu__item--has-submenu<?= $page == 'institucional' || (isset($parent_page) && $parent_page == 'institucional') ? ' active' : '' ?>">
                                     <a class="nav-menu__link" style="cursor: default;">INSTITUCIONAL</a>
                                     <ul class="nav-menu__submenu nav-submenu">
-                                        <li
+                                        <!-- <li
                                             class="nav-submenu__item<?= $page == 'copercana-60-anos' || (isset($parent_page) && $parent_page == 'copercana-60-anos') ? ' active' : '' ?>">
                                             <a href="<?= base_url("copercana-60-anos") ?>" class="nav-submenu__link">60
                                                 ANOS</a>
-                                        </li>
+                                        </li> -->
                                         <li
                                             class="nav-submenu__item<?= $page == 'cooperativismo' || (isset($parent_page) && $parent_page == 'cooperativismo') ? ' active' : '' ?>">
                                             <a href="<?= base_url("institucional/cooperativismo") ?>"
@@ -566,10 +566,10 @@
                     class="mobile-nav-menu__item mobile-nav-menu__item--has-submenu<?= $page == 'institucional' || (isset($parent_page) && $parent_page == 'institucional') ? ' active' : '' ?>">
                     <a class="mobile-nav-menu__link" style="cursor: default;">INSTITUCIONAL</a>
                     <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
-                        <li
+                        <!-- <li
                             class="mobile-nav-submenu__item<?= $page == 'copercana-60-anos' || (isset($parent_page) && $parent_page == 'copercana-60-anos') ? ' active' : '' ?>">
                             <a href="<?= base_url("copercana-60-anos") ?>" class="mobile-nav-submenu__link">60 Anos</a>
-                        </li>
+                        </li> -->
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'cooperativismo' || (isset($parent_page) && $parent_page == 'cooperativismo') ? ' active' : '' ?>">
                             <a href="<?= base_url("institucional/cooperativismo") ?>"

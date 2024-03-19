@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use CodeIgniter\I18n\Time;
 
 class Home extends BaseController
@@ -9,12 +10,12 @@ class Home extends BaseController
     private $general;
 
     public function __construct()
-	{
+    {
         $generalModel = model('App\Models\GeneralModel', false);
-		$this->general = $generalModel->get_by_id(1);
+        $this->general = $generalModel->get_by_id(1);
 
         $this->save_access();
-	}
+    }
 
     public function index()
     {
@@ -22,7 +23,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(1);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -36,13 +37,13 @@ class Home extends BaseController
         );
 
         $header_dependencies = array(
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick.css").'">',
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick-theme.css").'">'
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick.css") . '">',
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick-theme.css") . '">'
         );
 
         $footer_dependencies = array(
-            '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/home.js").'?v='. filemtime("_assets/js/home.js").'" ></script>'
+            '<script src="' . base_url("_assets/vendor/slick/slick.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/home.js") . '?v=' . filemtime("_assets/js/home.js") . '" ></script>'
         );
 
         $bannerModel = model('App\Models\BannerModel', false);
@@ -66,7 +67,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -81,7 +82,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(2);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -98,13 +99,13 @@ class Home extends BaseController
         $testimonials = $testimonialModel->get_all();
 
         $header_dependencies = array(
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick.css").'">',
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick-theme.css").'">'
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick.css") . '">',
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick-theme.css") . '">'
         );
 
         $footer_dependencies = array(
-            '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/institucional.js").'?v='. filemtime("_assets/js/institucional.js").'" ></script>'
+            '<script src="' . base_url("_assets/vendor/slick/slick.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/institucional.js") . '?v=' . filemtime("_assets/js/institucional.js") . '" ></script>'
         );
 
         $data = array(
@@ -117,7 +118,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -126,7 +127,8 @@ class Home extends BaseController
         echo view('includes/footer', $data);
     }
 
-    public function esg() {
+    public function esg()
+    {
         return redirect()->to('/institucional/sustentabilidade');
     }
 
@@ -136,7 +138,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(3);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -157,7 +159,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -172,7 +174,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(4);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -193,7 +195,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -208,7 +210,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(5);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -229,7 +231,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -244,7 +246,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(6);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -269,7 +271,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -284,7 +286,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(7);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -299,15 +301,15 @@ class Home extends BaseController
 
         $header_dependencies = array(
             '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.css">',
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick.css").'">',
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick-theme.css").'">'
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick.css") . '">',
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick-theme.css") . '">'
         );
 
         $footer_dependencies = array(
             '<script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyBsD8KY5fUIb8-58f_MkpAJ0tRUsGVcloM"></script>',
             '<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>',
-            '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/centro-de-eventos.js").'?v='. filemtime("_assets/js/centro-de-eventos.js").'" ></script>'
+            '<script src="' . base_url("_assets/vendor/slick/slick.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/centro-de-eventos.js") . '?v=' . filemtime("_assets/js/centro-de-eventos.js") . '" ></script>'
         );
 
         $galleryModel = model('App\Models\EventsGalleryModel', false);
@@ -324,7 +326,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -339,7 +341,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(8);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -364,7 +366,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -379,7 +381,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(9);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -404,7 +406,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -419,7 +421,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(10);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -444,7 +446,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -459,7 +461,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(11);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -480,7 +482,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -495,7 +497,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(12);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -520,7 +522,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -535,7 +537,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(13);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -549,13 +551,13 @@ class Home extends BaseController
         );
 
         $header_dependencies = array(
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick.css").'">',
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick-theme.css").'">'
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick.css") . '">',
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick-theme.css") . '">'
         );
 
         $footer_dependencies = array(
-            '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/supermercados.js").'?v='. filemtime("_assets/js/supermercados.js").'" ></script>'
+            '<script src="' . base_url("_assets/vendor/slick/slick.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/supermercados.js") . '?v=' . filemtime("_assets/js/supermercados.js") . '" ></script>'
         );
 
         $unitModel = model('App\Models\UnitModel', false);
@@ -576,7 +578,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -591,7 +593,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(14);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -616,7 +618,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -631,7 +633,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(23);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -652,7 +654,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -667,7 +669,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(24);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -688,7 +690,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -703,7 +705,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(27);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -728,7 +730,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -743,7 +745,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(15);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -764,7 +766,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -779,7 +781,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(16);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -793,13 +795,13 @@ class Home extends BaseController
         );
 
         $header_dependencies = array(
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick.css").'">',
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick-theme.css").'">'
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick.css") . '">',
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick-theme.css") . '">'
         );
 
         $footer_dependencies = array(
-            '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/revista.js").'?v='. filemtime("_assets/js/revista.js").'" ></script>'
+            '<script src="' . base_url("_assets/vendor/slick/slick.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/revista.js") . '?v=' . filemtime("_assets/js/revista.js") . '" ></script>'
         );
 
         $magazineModel = model('App\Models\MagazineModel', false);
@@ -816,7 +818,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -831,7 +833,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(17);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -852,7 +854,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -867,7 +869,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(18);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -888,7 +890,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -900,13 +902,14 @@ class Home extends BaseController
     public function indicacoes()
     {
         $render_registration = $this->check_registration();
-        if($render_registration) return $render_registration;
+        if ($render_registration)
+            return $render_registration;
 
         $pageModel = model('App\Models\PageModel', false);
         $page = $pageModel->get_by_id(19);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -923,23 +926,23 @@ class Home extends BaseController
 
         $pager = \Config\Services::pager();
 
-        $page = (($this->request->getVar('page') !== null) ? (int)$this->request->getVar('page') : 1 ) - 1;
+        $page = (($this->request->getVar('page') !== null) ? (int) $this->request->getVar('page') : 1) - 1;
         $limit = 10;
         $total = $indicationModel->get_total_active();
 
         $indications = $indicationModel->get_all_active(($page * $limit), $limit);
-        
+
         $data = array(
             'page' => 'indicacoes',
             'indications' => $indications,
             'parent_page' => 'comunicacao',
-            'pagination' => $pager->makeLinks($page + 1,$limit,$total,'bootstrap_full'),
+            'pagination' => $pager->makeLinks($page + 1, $limit, $total, 'bootstrap_full'),
             'seo' => $seo,
             'page_data' => $page_data,
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -954,7 +957,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(20);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -975,7 +978,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -990,7 +993,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(21);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1011,7 +1014,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1026,7 +1029,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(22);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1051,7 +1054,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1066,7 +1069,7 @@ class Home extends BaseController
 
         $job = $jobModel->get_active_by_id($id);
 
-        if(!isset($job) || empty($job) || !$job) {
+        if (!isset ($job) || empty ($job) || !$job) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1074,7 +1077,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(22);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1084,7 +1087,7 @@ class Home extends BaseController
             'keywords' => '',
             'publisher' => 'https://suave.ppg.br',
             'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-            'canonical' => base_url("trabalhe-conosco/vagas-disponiveis/".$id)
+            'canonical' => base_url("trabalhe-conosco/vagas-disponiveis/" . $id)
         );
 
         $data = array(
@@ -1096,7 +1099,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1111,7 +1114,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(25);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1128,22 +1131,22 @@ class Home extends BaseController
 
         $pager = \Config\Services::pager();
 
-        $page = (($this->request->getVar('page') !== null) ? (int)$this->request->getVar('page') : 1 ) - 1;
+        $page = (($this->request->getVar('page') !== null) ? (int) $this->request->getVar('page') : 1) - 1;
         $limit = 9;
         $total = $postModel->get_total_published();
 
         $posts = $postModel->get_all_published(($page * $limit), $limit);
-        
+
         $data = array(
             'page' => 'noticias',
             'posts' => $posts,
-            'pagination' => $pager->makeLinks($page + 1,$limit,$total,'bootstrap_full'),
+            'pagination' => $pager->makeLinks($page + 1, $limit, $total, 'bootstrap_full'),
             'seo' => $seo,
             'page_data' => $page_data,
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1158,7 +1161,7 @@ class Home extends BaseController
 
         $post = $postModel->get_published_by_slug($slug);
 
-        if(!isset($post) || empty($post) || !$post) {
+        if (!isset ($post) || empty ($post) || !$post) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1166,7 +1169,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(25);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1174,18 +1177,18 @@ class Home extends BaseController
         $posts = $postModel->get_others_published($post->id, 0, 4);
 
         $seo = array(
-            'title' => isset($post->page_title) && !empty($post->page_title) ? $post->page_title : $post->title,
-            'description' => isset($post->page_description) && !empty($post->page_description) ? $post->page_description : $post->excerpt,
-            'keywords' => isset($post->page_tags) && !empty($post->page_tags) ? $post->page_tags : '',
+            'title' => isset ($post->page_title) && !empty ($post->page_title) ? $post->page_title : $post->title,
+            'description' => isset ($post->page_description) && !empty ($post->page_description) ? $post->page_description : $post->excerpt,
+            'keywords' => isset ($post->page_tags) && !empty ($post->page_tags) ? $post->page_tags : '',
             'publisher' => 'https://suave.ppg.br',
             'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-            'canonical' => base_url('noticias/'.$post->slug),
+            'canonical' => base_url('noticias/' . $post->slug),
             'share_thumb' => base_url($post->cover),
             'type' => 'article'
         );
-        
+
         $header_dependencies = array(
-            '<link rel="stylesheet" href="'. base_url("_assets/css/ckeditor-defaults.css") .'">'
+            '<link rel="stylesheet" href="' . base_url("_assets/css/ckeditor-defaults.css") . '">'
         );
 
         $data = array(
@@ -1198,7 +1201,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1213,7 +1216,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(28);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1230,22 +1233,22 @@ class Home extends BaseController
 
         $pager = \Config\Services::pager();
 
-        $page = (($this->request->getVar('page') !== null) ? (int)$this->request->getVar('page') : 1 ) - 1;
+        $page = (($this->request->getVar('page') !== null) ? (int) $this->request->getVar('page') : 1) - 1;
         $limit = 9;
         $total = $postModel->get_total_published();
 
         $posts = $postModel->get_all_published(($page * $limit), $limit);
-        
+
         $data = array(
             'page' => 'blog',
             'posts' => $posts,
-            'pagination' => $pager->makeLinks($page + 1,$limit,$total,'bootstrap_full'),
+            'pagination' => $pager->makeLinks($page + 1, $limit, $total, 'bootstrap_full'),
             'seo' => $seo,
             'page_data' => $page_data,
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1260,14 +1263,14 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(28);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
         $categoryModel = model('App\Models\CategoryModel', false);
         $current_category = $categoryModel->get_by_slug($slug);
 
-        if(!isset($current_category) || empty($current_category) || !$current_category) {
+        if (!isset ($current_category) || empty ($current_category) || !$current_category) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1277,30 +1280,30 @@ class Home extends BaseController
             'keywords' => '',
             'publisher' => 'https://suave.ppg.br',
             'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-            'canonical' => base_url('blog/'.$current_category->slug)
+            'canonical' => base_url('blog/' . $current_category->slug)
         );
 
         $postModel = model('App\Models\BlogModel', false);
 
         $pager = \Config\Services::pager();
 
-        $page = (($this->request->getVar('page') !== null) ? (int)$this->request->getVar('page') : 1 ) - 1;
+        $page = (($this->request->getVar('page') !== null) ? (int) $this->request->getVar('page') : 1) - 1;
         $limit = 9;
         $total = $postModel->get_total_published_by_category($current_category->id);
 
         $posts = $postModel->get_all_published_by_category($current_category->id, ($page * $limit), $limit);
-        
+
         $data = array(
             'page' => 'blog',
             'posts' => $posts,
-            'pagination' => $pager->makeLinks($page + 1,$limit,$total,'bootstrap_full'),
+            'pagination' => $pager->makeLinks($page + 1, $limit, $total, 'bootstrap_full'),
             'seo' => $seo,
             'page_data' => $page_data,
             'current_category' => $current_category,
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1314,7 +1317,7 @@ class Home extends BaseController
         $categoryModel = model('App\Models\CategoryModel', false);
         $current_category = $categoryModel->get_by_slug($category);
 
-        if(!isset($current_category) || empty($current_category) || !$current_category) {
+        if (!isset ($current_category) || empty ($current_category) || !$current_category) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1322,7 +1325,7 @@ class Home extends BaseController
 
         $post = $postModel->get_published_by_category_and_slug($current_category->id, $slug);
 
-        if(!isset($post) || empty($post) || !$post) {
+        if (!isset ($post) || empty ($post) || !$post) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1330,7 +1333,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(28);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1338,18 +1341,18 @@ class Home extends BaseController
         $posts = $postModel->get_others_published($post->id, 0, 4);
 
         $seo = array(
-            'title' => isset($post->page_title) && !empty($post->page_title) ? $post->page_title : $post->title,
-            'description' => isset($post->page_description) && !empty($post->page_description) ? $post->page_description : $post->excerpt,
-            'keywords' => isset($post->page_tags) && !empty($post->page_tags) ? $post->page_tags : '',
+            'title' => isset ($post->page_title) && !empty ($post->page_title) ? $post->page_title : $post->title,
+            'description' => isset ($post->page_description) && !empty ($post->page_description) ? $post->page_description : $post->excerpt,
+            'keywords' => isset ($post->page_tags) && !empty ($post->page_tags) ? $post->page_tags : '',
             'publisher' => 'https://suave.ppg.br',
             'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-            'canonical' => base_url('blog/'.$current_category->slug.'/'.$post->slug),
+            'canonical' => base_url('blog/' . $current_category->slug . '/' . $post->slug),
             'share_thumb' => base_url($post->cover),
             'type' => 'article'
         );
-        
+
         $header_dependencies = array(
-            '<link rel="stylesheet" href="'. base_url("_assets/css/ckeditor-defaults.css") .'">'
+            '<link rel="stylesheet" href="' . base_url("_assets/css/ckeditor-defaults.css") . '">'
         );
 
         $data = array(
@@ -1362,7 +1365,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1377,7 +1380,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(26);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1393,14 +1396,14 @@ class Home extends BaseController
         $header_dependencies = array(
             '<script src="https://www.google.com/recaptcha/api.js" async defer></script>'
         );
-        
+
         $footer_dependencies = array(
-            '<script src="'. base_url("_assets/js/jquery.mask.min.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/masks.js").'" ></script>'
+            '<script src="' . base_url("_assets/js/jquery.mask.min.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/masks.js") . '" ></script>'
         );
 
         $session = \Config\Services::session();
-        
+
         $data = array(
             'page' => 'contato',
             'header_dependencies' => $header_dependencies,
@@ -1411,7 +1414,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1438,8 +1441,8 @@ class Home extends BaseController
         );
 
         $footer_dependencies = array(
-            '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/home.js").'?v='. filemtime("_assets/js/home.js").'" ></script>'
+            '<script src="' . base_url("_assets/vendor/slick/slick.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/home.js") . '?v=' . filemtime("_assets/js/home.js") . '" ></script>'
         );
 
         $search_term = $this->request->getVar('q');
@@ -1461,82 +1464,86 @@ class Home extends BaseController
         echo view('includes/footer', $data);
     }
 
-    public function cotacoes() {
+    public function cotacoes()
+    {
         return $this->get_quotation_list();
     }
 
     public function copercana_60_anos()
     {
-        $pageModel = model('App\Models\PageModel', false);
-        $page = $pageModel->get_by_id(29);
-        $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
-            $page_data = json_decode($page->definition);
-        }
+        return redirect()->to('/');
 
-        $seo = array(
-            'title' => 'Conheça a Copercana: Evolução do agronegócio Brasileiro',
-            'description' => 'Conheça as principais frente de uma das maiores responsáveis pela revolução em todo o agronegócio de nosso país, com diversas frentes de atuação.',
-            'keywords' => '',
-            'publisher' => 'https://suave.ppg.br',
-            'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-            'canonical' => base_url('copercana-60-anos')
-        );
+        /*         $pageModel = model('App\Models\PageModel', false);
+                $page = $pageModel->get_by_id(29);
+                $page_data = null;
 
-        $header_dependencies = array(
-            '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.css">',
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick.css").'">',
-            '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick-theme.css").'">'
-        );
+                if(isset($page->definition) && !empty($page->definition)) {
+                    $page_data = json_decode($page->definition);
+                }
 
-        $footer_dependencies = array(
-            '<script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyBsD8KY5fUIb8-58f_MkpAJ0tRUsGVcloM"></script>',
-            '<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>',
-            '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/copercana-60-anos.js").'?v='. filemtime("_assets/js/copercana-60-anos.js").'" ></script>'
-        );
+                $seo = array(
+                    'title' => 'Conheça a Copercana: Evolução do agronegócio Brasileiro',
+                    'description' => 'Conheça as principais frente de uma das maiores responsáveis pela revolução em todo o agronegócio de nosso país, com diversas frentes de atuação.',
+                    'keywords' => '',
+                    'publisher' => 'https://suave.ppg.br',
+                    'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+                    'canonical' => base_url('copercana-60-anos')
+                );
 
-        $galleryModel = model('App\Models\GalleryModel', false);
-        $galleryAgrobusiness = $galleryModel->get_pictures_by_gallery_id(1);
-        $galleryBirthday = $galleryModel->get_pictures_by_gallery_id(2);
-        $galleryOrchestra = $galleryModel->get_pictures_by_gallery_id(3);
-        $galleryDigital = $galleryModel->get_pictures_by_gallery_id(4);
-        $galleryMagazine = $galleryModel->get_pictures_by_gallery_id(5);
-        $galleryMiscellaneous = $galleryModel->get_pictures_by_gallery_id(6);
-        
+                $header_dependencies = array(
+                    '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.css">',
+                    '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick.css").'">',
+                    '<link rel="stylesheet" href="'. base_url("_assets/vendor/slick/slick-theme.css").'">'
+                );
 
-        $videoModel = model('App\Models\VideoModel', false);
-        $videos = $videoModel->get_all();
+                $footer_dependencies = array(
+                    '<script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyBsD8KY5fUIb8-58f_MkpAJ0tRUsGVcloM"></script>',
+                    '<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>',
+                    '<script src="'. base_url("_assets/vendor/slick/slick.js").'" ></script>',
+                    '<script src="'. base_url("_assets/js/copercana-60-anos.js").'?v='. filemtime("_assets/js/copercana-60-anos.js").'" ></script>'
+                );
 
-        $fileModel = model('App\Models\FileModel', false);
-        $files = $fileModel->get_all();
+                $galleryModel = model('App\Models\GalleryModel', false);
+                $galleryAgrobusiness = $galleryModel->get_pictures_by_gallery_id(1);
+                $galleryBirthday = $galleryModel->get_pictures_by_gallery_id(2);
+                $galleryOrchestra = $galleryModel->get_pictures_by_gallery_id(3);
+                $galleryDigital = $galleryModel->get_pictures_by_gallery_id(4);
+                $galleryMagazine = $galleryModel->get_pictures_by_gallery_id(5);
+                $galleryMiscellaneous = $galleryModel->get_pictures_by_gallery_id(6);
+                
 
-        $data = array(
-            'page' => 'copercana-60-anos',
-            'parent_page' => 'institucional',
-            'header_dependencies' => $header_dependencies,
-            'footer_dependencies' => $footer_dependencies,
-            'seo' => $seo,
-            'galleryAgrobusiness' => $galleryAgrobusiness,
-            'galleryBirthday' => $galleryBirthday,
-            'galleryOrchestra' => $galleryOrchestra,
-            'galleryDigital' => $galleryDigital,
-            'galleryMagazine' => $galleryMagazine,
-            'galleryMiscellaneous' => $galleryMiscellaneous,
-            'videos' => $videos,
-            'files' => $files,
-            'page_data' => $page_data,
-            'general' => $this->general
-        );
+                $videoModel = model('App\Models\VideoModel', false);
+                $videos = $videoModel->get_all();
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
-            $data['quotation_list'] = true;
-        }
+                $fileModel = model('App\Models\FileModel', false);
+                $files = $fileModel->get_all();
 
-        echo view('includes/header', $data);
-        echo view('copercana-60-anos', $data);
-        echo view('includes/footer', $data);
+                $data = array(
+                    'page' => 'copercana-60-anos',
+                    'parent_page' => 'institucional',
+                    'header_dependencies' => $header_dependencies,
+                    'footer_dependencies' => $footer_dependencies,
+                    'seo' => $seo,
+                    'galleryAgrobusiness' => $galleryAgrobusiness,
+                    'galleryBirthday' => $galleryBirthday,
+                    'galleryOrchestra' => $galleryOrchestra,
+                    'galleryDigital' => $galleryDigital,
+                    'galleryMagazine' => $galleryMagazine,
+                    'galleryMiscellaneous' => $galleryMiscellaneous,
+                    'videos' => $videos,
+                    'files' => $files,
+                    'page_data' => $page_data,
+                    'general' => $this->general
+                );
+
+                if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+                    $data['quotation_list'] = true;
+                }
+
+                echo view('includes/header', $data);
+                echo view('copercana-60-anos', $data);
+                echo view('includes/footer', $data); */
     }
 
     public function soucooperado()
@@ -1545,7 +1552,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(30);
         $page_data = null;
 
-        if(isset($page->definition) && !empty($page->definition)) {
+        if (isset ($page->definition) && !empty ($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1561,15 +1568,15 @@ class Home extends BaseController
         $header_dependencies = array(
             '<script src="https://www.google.com/recaptcha/api.js" async defer></script>'
         );
-        
+
         $footer_dependencies = array(
-            '<script src="'. base_url("_assets/js/jquery.mask.min.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/masks.js").'" ></script>',
-            '<script src="'. base_url("_assets/js/soucooperado.js").'?v='. filemtime("_assets/js/soucooperado.js").'" ></script>'
+            '<script src="' . base_url("_assets/js/jquery.mask.min.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/masks.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/soucooperado.js") . '?v=' . filemtime("_assets/js/soucooperado.js") . '" ></script>'
         );
 
         $session = \Config\Services::session();
-        
+
         $data = array(
             'page' => 'soucooperado',
             'header_dependencies' => $header_dependencies,
@@ -1580,7 +1587,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if(isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1589,27 +1596,28 @@ class Home extends BaseController
         echo view('includes/footer', $data);
     }
 
-    private function check_registration() {
+    private function check_registration()
+    {
 
         $uri = current_url(true);
 
         $session = \Config\Services::session();
-        $session->setFlashdata('income_url', (string)$uri);
+        $session->setFlashdata('income_url', (string) $uri);
 
         $subdata = null;
         helper('cookie');
 
         $cookie = get_cookie('subdata');
-        
-        if(isset($cookie) && !empty($cookie)) {
+
+        if (isset ($cookie) && !empty ($cookie)) {
             list($encrypted_data, $iv) = explode('::', $cookie, 2);
             $subdata = openssl_decrypt($encrypted_data, 'aes-256-cbc', 'hpvao0xA3bs07H2YBbxdcVbxi4HCk8BS', 0, $iv);
             $subdata = json_decode(base64_decode($subdata));
         }
 
-        if(isset($this->general) && isset($this->general->require_registration_during_event) && $this->general->require_registration_during_event == 1 && $subdata == null) {
+        if (isset ($this->general) && isset ($this->general->require_registration_during_event) && $this->general->require_registration_during_event == 1 && $subdata == null) {
 
-            if(isset($this->general->event_start_date) && !empty($this->general->event_start_date)) {
+            if (isset ($this->general->event_start_date) && !empty ($this->general->event_start_date)) {
                 $is_event_ocurring = false;
 
                 $today = new Time('now', 'America/Sao_Paulo');
@@ -1618,27 +1626,31 @@ class Home extends BaseController
 
                 $event_start_date_is_valid = $this->general->event_start_date != '0000-00-00 00:00:00' && checkdate($event_start_date->getMonth(), $event_start_date->getDay(), $event_start_date->getYear());
                 $event_end_date_is_valid = $this->general->event_end_date != '0000-00-00 00:00:00' && checkdate($event_end_date->getMonth(), $event_end_date->getDay(), $event_end_date->getYear());
-                
-                if(
-                    (($today->isAfter($event_start_date) || $today->equals($event_start_date)) && $event_start_date_is_valid) && 
+
+                if (
+                    (($today->isAfter($event_start_date) || $today->equals($event_start_date)) && $event_start_date_is_valid) &&
                     ($today->isBefore($event_end_date) || $today->equals($event_end_date) || !$event_end_date_is_valid)
-                ) $is_event_ocurring = true;
-                
+                )
+                    $is_event_ocurring = true;
+
                 $segments = $uri->getSegments();
                 $is_registration_page = FALSE;
-        
-                foreach($segments as $segment) {
-                   if($segment === 'cadastro') $is_registration_page = TRUE;
+
+                foreach ($segments as $segment) {
+                    if ($segment === 'cadastro')
+                        $is_registration_page = TRUE;
                 }
-    
-                if(!$is_registration_page && $is_event_ocurring) return redirect()->to('/cadastro');
+
+                if (!$is_registration_page && $is_event_ocurring)
+                    return redirect()->to('/cadastro');
             }
-        } 
+        }
 
         return null;
     }
 
-    private function save_access() {
+    private function save_access()
+    {
         $session = \Config\Services::session();
         $uri = current_url(true);
 
@@ -1647,9 +1659,9 @@ class Home extends BaseController
 
         $subscribe_id = null;
         $session_id = session_id();
-        $page = (string)$uri;
-        
-        if(isset($cookie) && !empty($cookie)) {
+        $page = (string) $uri;
+
+        if (isset ($cookie) && !empty ($cookie)) {
             list($encrypted_data, $iv) = explode('::', $cookie, 2);
             $subdata = openssl_decrypt($encrypted_data, 'aes-256-cbc', 'hpvao0xA3bs07H2YBbxdcVbxi4HCk8BS', 0, $iv);
             $subdata = json_decode(base64_decode($subdata));
@@ -1658,124 +1670,128 @@ class Home extends BaseController
 
         $accessModel = model('App\Models\AccessModel', false);
         $accessModel->add($subscribe_id, $session_id, $page);
-        
-        if($subscribe_id) $accessModel->update_subscribe_id_by_session_id($session_id, $subscribe_id);
+
+        if ($subscribe_id)
+            $accessModel->update_subscribe_id_by_session_id($session_id, $subscribe_id);
     }
 
-    private function get_selic() {
+    private function get_selic()
+    {
         $url = "https://www.bcb.gov.br/api/servico/sitebcb/historicotaxasjuros";
-        
+
         $htmlContent = file_get_contents($url);
 
         $curlSession = curl_init();
         curl_setopt($curlSession, CURLOPT_URL, $url);
         curl_setopt($curlSession, CURLOPT_BINARYTRANSFER, true);
         curl_setopt($curlSession, CURLOPT_RETURNTRANSFER, true);
-        
+
         $jsonData = curl_exec($curlSession);
         $jsonData = json_decode($jsonData);
         curl_close($curlSession);
 
         $selic = $jsonData->conteudo[0]->MetaSelic;
-        return $selic."%";
+        return $selic . "%";
     }
 
-    private function get_cdi() {
+    private function get_cdi()
+    {
         $url = "https://www2.cetip.com.br/ConsultarTaxaDi/ConsultarTaxaDICetip.aspx";
-        
+
         $htmlContent = file_get_contents($url);
 
         $curlSession = curl_init();
         curl_setopt($curlSession, CURLOPT_URL, $url);
         curl_setopt($curlSession, CURLOPT_BINARYTRANSFER, true);
         curl_setopt($curlSession, CURLOPT_RETURNTRANSFER, true);
-        
+
         $jsonData = curl_exec($curlSession);
         $jsonData = json_decode($jsonData);
         curl_close($curlSession);
 
         $cdi = $jsonData->taxa;
-        return str_replace(",", ".", $cdi)."%";
+        return str_replace(",", ".", $cdi) . "%";
     }
 
-    private function get_usdbrl() {
+    private function get_usdbrl()
+    {
         $url = "https://economia.awesomeapi.com.br/last/USD-BRL";
-        
+
         $htmlContent = file_get_contents($url);
 
         $curlSession = curl_init();
         curl_setopt($curlSession, CURLOPT_URL, $url);
         curl_setopt($curlSession, CURLOPT_BINARYTRANSFER, true);
         curl_setopt($curlSession, CURLOPT_RETURNTRANSFER, true);
-        
+
         $jsonData = curl_exec($curlSession);
         $jsonData = json_decode($jsonData);
         curl_close($curlSession);
 
         $brl = round((($jsonData->USDBRL->ask + $jsonData->USDBRL->bid) / 2), 4);
-        return "R$ ".$brl;
+        return "R$ " . $brl;
     }
 
-    private function get_quotation_list () {
+    private function get_quotation_list()
+    {
         try {
-        $url = "https://www.cepea.esalq.usp.br/br/widgetproduto.js.php?fonte=arial&tamanho=10&largura=400px&corfundo=dbd6b2&cortexto=333333&corlinha=ede7bf&id_indicador%5B%5D=53&id_indicador%5B%5D=103&id_indicador%5B%5D=104";
-        
-        $htmlContent = file_get_contents($url);
+            $url = "https://www.cepea.esalq.usp.br/br/widgetproduto.js.php?fonte=arial&tamanho=10&largura=400px&corfundo=dbd6b2&cortexto=333333&corlinha=ede7bf&id_indicador%5B%5D=53&id_indicador%5B%5D=103&id_indicador%5B%5D=104";
 
-        $curlSession = curl_init();
-        curl_setopt($curlSession, CURLOPT_URL, $url);
-        curl_setopt($curlSession, CURLOPT_BINARYTRANSFER, true);
-        curl_setopt($curlSession, CURLOPT_RETURNTRANSFER, true);
-        
-        $jsonData = curl_exec($curlSession);
-        curl_close($curlSession);
-        
-        $DOM = new \DOMDocument();
-	    $DOM->loadHTML('<?xml encoding="utf-8" ?>' . $htmlContent);
+            $htmlContent = file_get_contents($url);
 
-        $Header = $DOM->getElementsByTagName('th');
-        $Detail = $DOM->getElementsByTagName('td');
-        
+            $curlSession = curl_init();
+            curl_setopt($curlSession, CURLOPT_URL, $url);
+            curl_setopt($curlSession, CURLOPT_BINARYTRANSFER, true);
+            curl_setopt($curlSession, CURLOPT_RETURNTRANSFER, true);
 
-        foreach($Header as $NodeHeader) 
-        {
-            $aDataTableHeaderHTML[] = trim($NodeHeader->textContent);
-        }
+            $jsonData = curl_exec($curlSession);
+            curl_close($curlSession);
 
-        $i = 0;
-        $j = 0;
-        foreach($Detail as $sNodeDetail) 
-        {
-            $aDataTableDetailHTML[$j][] = trim($sNodeDetail->textContent);
-            $i = $i + 1;
-            $j = $i % count($aDataTableHeaderHTML) == 0 ? $j + 1 : $j;
-        }
+            $DOM = new \DOMDocument();
+            $DOM->loadHTML('<?xml encoding="utf-8" ?>' . $htmlContent);
 
-        array_shift($aDataTableDetailHTML);
+            $Header = $DOM->getElementsByTagName('th');
+            $Detail = $DOM->getElementsByTagName('td');
 
-        $list = "<ul class='quotation-list'>";
-        $list .= "<li class='quotation-list__item'><strong>Dólar</strong>&nbsp;".$this->get_usdbrl()."</li>";
-        $list .= "<li class='quotation-list__item'><strong>SELIC</strong>&nbsp;".$this->get_selic()."</li>";
-        $list .= "<li class='quotation-list__item'><strong>CDI</strong>&nbsp;".$this->get_cdi()."</li>";
 
-        foreach($aDataTableDetailHTML as $row) {
-            $list .= "<li class='quotation-list__item'>";
-            $list .= "<strong>".(explode(" - ", $row[1])[0])."</strong>&nbsp;";
-            $list .= $row[2];
-            $list .= "&nbsp;|&nbsp;";
-            $list .= $row[0];
-            $list .= "</li>";
-        }
+            foreach ($Header as $NodeHeader) {
+                $aDataTableHeaderHTML[] = trim($NodeHeader->textContent);
+            }
 
-        $list .= "</ul>";
+            $i = 0;
+            $j = 0;
+            foreach ($Detail as $sNodeDetail) {
+                $aDataTableDetailHTML[$j][] = trim($sNodeDetail->textContent);
+                $i = $i + 1;
+                $j = $i % count($aDataTableHeaderHTML) == 0 ? $j + 1 : $j;
+            }
 
-        return $list;
+            array_shift($aDataTableDetailHTML);
+
+            $list = "<ul class='quotation-list'>";
+            $list .= "<li class='quotation-list__item'><strong>Dólar</strong>&nbsp;" . $this->get_usdbrl() . "</li>";
+            $list .= "<li class='quotation-list__item'><strong>SELIC</strong>&nbsp;" . $this->get_selic() . "</li>";
+            $list .= "<li class='quotation-list__item'><strong>CDI</strong>&nbsp;" . $this->get_cdi() . "</li>";
+
+            foreach ($aDataTableDetailHTML as $row) {
+                $list .= "<li class='quotation-list__item'>";
+                $list .= "<strong>" . (explode(" - ", $row[1])[0]) . "</strong>&nbsp;";
+                $list .= $row[2];
+                $list .= "&nbsp;|&nbsp;";
+                $list .= $row[0];
+                $list .= "</li>";
+            }
+
+            $list .= "</ul>";
+
+            return $list;
         } catch (\Exception $e) {
             return "";
         }
     }
-    
-    public function info () {
+
+    public function info()
+    {
         phpinfo();
     }
 }
