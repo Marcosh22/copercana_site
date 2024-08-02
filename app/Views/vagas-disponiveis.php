@@ -63,8 +63,7 @@
                                 <?= ucfirst(mb_strtolower($job->title)) ?>
                             </h4>
                             <div class="unit__address">
-                                <?= $job->city ?>&nbsp;/<?= $job->uf ?><br />
-                                <?= $created_at ?>
+                                <?= $job->city ?>&nbsp;/<?= $job->uf ?>
                             </div>
                             <a href="<?= base_url("trabalhe-conosco/vagas-disponiveis/".$job->id) ?>" class="button button--sm">
                                 Saiba mais

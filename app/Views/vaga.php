@@ -27,7 +27,7 @@
                 <div class="col-12" id="job">
                     <h1><?= $job->title; ?></h1>
                     <div class="job-description<?= $job->type == 1 ? ' is-pcd-job' : '' ?>">
-                        <p><strong>Alterado em:&nbsp;</strong><?= $updated_at; ?></p>
+                        <!-- <p><strong>Alterado em:&nbsp;</strong><?= $updated_at; ?></p> -->
                         <p>
                             <strong>Número de Vagas:&nbsp;</strong><?= ((int)$job->quantity <= 1 ? "0" : "") . $job->quantity ?>&nbsp;Vaga<?= ((int)$job->quantity > 1 ? "s" : "") ?><br/>
                             <strong>Escolaridade:&nbsp;</strong><?= $job->grade; ?><br/>
