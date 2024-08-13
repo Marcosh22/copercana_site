@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aviso Importante</title>
-    <link rel="stylesheet" href="<?= base_url("_assets/landing-pages/avisos/css/aviso.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("_assets/landing-pages/avisos/css/styles.css") ?>">
 </head>
 <body>
     <div class="container">
