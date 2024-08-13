@@ -79,6 +79,12 @@ $routes->get('/info', 'Home::info');
 
 $routes->get('/busca', 'Home::busca');
 
+/* Landing Pages */
+
+$routes->get('/metamorfose', 'Landing_Pages::metamorfose');
+
+/* Fim - Landing Page */
+
 $routes->post('/post/upload_image', 'Admin_Post::upload_image');
 $routes->get('/admin', 'Admin::index');
 
