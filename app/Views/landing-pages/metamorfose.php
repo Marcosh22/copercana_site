@@ -13,7 +13,7 @@
     <header class="header">
         <div class="logo-container">
             <div class="logo">
-                <a href="index.html" style="color: inherit; text-decoration: none;">
+                <a href="<?= base_url("metamorfose") ?>" style="color: inherit; text-decoration: none;">
                     <img src="<?= base_url("_assets/landing-pages/metamorfose/images/Logo.png"); ?>" alt="Minha Logo" class="logo-image">
                 </a>
             </div>
