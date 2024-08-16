@@ -1,0 +1,687 @@
+@font-face {
+  font-family: "Conthrax";
+  src: url("../fonts/conthrax-sb.otf") format("truetype");
+}
+
+/* -------------------------------------
+   Estilos Gerais
+   ------------------------------------- */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url("../images/BG.png");
+}
+
+/* -------------------------------------
+   Header
+   ------------------------------------- */
+header {
+  padding: 20px;
+  text-align: center;
+  position: fixed; /* Fixa o header no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-image: url("../images/BG.png");
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.logo-image {
+  max-width: 100%;
+  height: auto;
+}
+.imagem_heder {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* -------------------------------------
+   Video Container
+   ------------------------------------- */
+.video-container {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  overflow: visible;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+.video-container video {
+  width: 100%;
+  max-width: 120vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* -------------------------------------
+   Menu
+   ------------------------------------- */
+.menu {
+  background-image: url("../images/BaseMenu.png");
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_title h1 {
+  margin: 0;
+  font-family: "Conthrax";
+  margin-top: 25px;
+}
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+.content-box:hover {
+  transform: translateY(-20px);
+}
+.content-box {
+  flex: 1 1 auto;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.custom-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.button-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* -------------------------------------
+   Apresentação
+   ------------------------------------- */
+.apresentação {
+  padding: 50px;
+  text-align: center;
+}
+.imagem-ajuste {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+.texto_1 {
+  color: white;
+  padding: 0 20px;
+  font-size: 20px;
+  max-width: 800px;
+  line-height: 1.6;
+  margin: 50px auto 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.Textoapresentacao_titulo {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  line-height: 1.6;
+  margin-bottom: 30px 50px;
+  color: #fff;
+}
+
+/* -------------------------------------
+   Sobre O Sap
+   ------------------------------------- */
+.SobreSap {
+  padding: 10px;
+  text-align: center;
+}
+.SobreSap_Titulo {
+  margin: 20px;
+  color: #b0e5e7;
+  font-size: 2.5rem;
+  font-family: "Conthrax";
+}
+.SobreSap_Imagens {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.Tesxte_Maior,
+.Tesxte_Maior1 {
+  max-width: 100%;
+  height: auto;
+  margin: 20px;
+}
+
+/* -------------------------------------
+   Cronograma
+   ------------------------------------- */
+.cronograma {
+  padding: 20px;
+  text-align: center;
+  font-family: "Conthrax";
+  color: #76c933;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.local_cronograma1 {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+.texto_2 {
+  color: white;
+  padding: 0 20px;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* -------------------------------------
+   Manual SAP
+   ------------------------------------- */
+.cotender_sap {
+  color: white;
+  padding: 50px;
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.local_manual_sap {
+  max-width: 100%;
+  height: auto;
+}
+.titulo {
+  font-family: "Conthrax", sans-serif;
+  color: #b0e5e7;
+  font-size: 32px;
+  margin: 50px;
+  margin-bottom: 20px;
+}
+.botoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botao-container {
+  text-align: center;
+}
+
+.botao-imagem {
+  display: block;
+  margin: 0 auto;
+}
+
+.titulo2 {
+  margin-top: 10px; /* Ajuste o espaço entre o botão e o título conforme necessário */
+}
+.local_manual_sap {
+  margin: auto;
+}
+.titulo2 {
+  margin-top: 60px;
+  font-family: "Conthrax", sans-serif;
+  margin-bottom: 20px;
+}
+.texto2 {
+  color: white;
+  padding: px;
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.Download1 {
+  margin-bottom: 10px;
+}
+
+/* -------------------------------------
+   Pop-up
+   ------------------------------------- */
+/* Overlay para aplicar desfoque ao fundo */
+.overlay {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Fixa o overlay na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+  backdrop-filter: blur(5px); /* Aplica o efeito de desfoque */
+  z-index: 999; /* Um pouco abaixo do popup */
+}
+
+/* Estilo do popup */
+.popup {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Fixar o popup na tela */
+  z-index: 1000; /* Garantir que o popup fique acima do overlay */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Fundo branco com um pouco de transparência */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  width: 500px; /* Ajuste a largura conforme necessário */
+  background-image: url(../images/Basepopup.png);
+  background-size: cover; /* Ajusta o tamanho da imagem de fundo */
+  background-position: center; /* Centraliza a imagem de fundo */
+  top: 50%; /* Centralizar verticalmente */
+  left: 50%; /* Centralizar horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
+  font-family: "Conthrax", sans-serif;
+  color: #76c933;
+}
+
+.popup-content {
+  position: relative;
+  text-align: center;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.download-menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.download-menu li {
+  margin: 10px 0;
+}
+
+.download-menu a {
+  text-decoration: none;
+  color: white;
+  font-family: "Conthrax", sans-serif;
+}
+
+.download-menu a:hover {
+  text-decoration: underline;
+  color: #76c933;
+}
+
+/* -------------------------------------
+   Como Acessar
+   ------------------------------------- */
+como_acessar {
+  padding: 20px;
+  text-align: center;
+}
+
+.box_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box_acessar {
+  flex: 1 1 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-center {
+  margin: 0;
+}
+
+.background-container {
+  position: relative;
+  width: 100vw; /* Use 100vw para garantir que ocupe toda a largura da viewport */
+  background-image: url("../images/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Remova padding/margens que possam limitar a largura */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.acessar_titulo {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: "Conthrax", sans-serif;
+
+  color: #76c933;
+}
+
+.acessar_texto {
+  color: white;
+  padding: 0 20px;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 5px;
+  text-align: center; /* Centraliza o texto dentro do parágrafo */
+}
+
+.box_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+}
+
+.box_acessar {
+  display: flex;
+  position: relative;
+}
+
+.box_acessar:hover {
+  transform: translateY(-5px);
+}
+
+.container {
+  padding: 5px;
+  position: relative;
+}
+
+.como_acessar1 {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 0 auto;
+  max-width: 800px;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-align: center; /* Centraliza o texto dentro do parágrafo */
+}
+
+.text-center h4 {
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  color: #76c933;
+  font-family: "Conthrax", sans-serif;
+}
+
+.text-center p {
+  margin-top: px;
+}
+
+/* -------------------------------------
+   Central de Suporte
+   ------------------------------------- */
+.central_de_suporte {
+  color: white;
+  padding: 50px;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+.local_central {
+  max-width: 100%;
+  height: auto;
+}
+.central_titulo {
+  font-family: "Conthrax", sans-serif;
+  font-size: 38px;
+  color: #b0e5e7;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.central_texto2 {
+  font-family: 30px;
+  font-weight: bold; /* Aplica o estilo de negrito */
+}
+
+/* -------------------------------------
+   Footer
+   ------------------------------------- */
+/* Estiliza o rodapé */
+.footer {
+  background-image: url("../images/Logo.png"); /* Caminho relativo para a imagem de fundo */
+  background-size: cover; /* Faz com que a imagem de fundo cubra toda a área do rodapé */
+  background-position: center; /* Centraliza a imagem de fundo */
+  color: white;
+  padding: 50px; /* Aumenta o preenchimento para melhor aparência */
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Container do footer */
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Coloca os itens em uma coluna para que o texto e as imagens fiquem empilhados verticalmente */
+  align-items: center; /* Centraliza horizontalmente os itens dentro do contêiner */
+  width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+  background-image: url("../images/01.png"); /* Caminho relativo para a imagem de fundo */
+}
+
+/* Estilo das imagens no footer */
+.footer-images {
+  display: flex;
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 50px; /* Espaçamento entre as imagens */
+  margin-bottom: 30px; /* Adiciona uma margem inferior para separar as imagens do texto */
+  width: 100%; /* Garante que o contêiner de imagens ocupe toda a largura disponível */
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Estiliza a imagem 02 */
+.imagem02 {
+  width: 200px; /* Define uma largura específica para garantir alinhamento */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Ajusta a imagem ao contêiner, mantendo a proporção */
+}
+
+/* Estiliza a imagem 03 */
+.imagem03 {
+  width: 120px; /* Define uma largura específica para garantir alinhamento */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Ajusta a imagem ao contêiner, mantendo a proporção */
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+  text-align: center;
+  margin-top: 5px; /* Aumenta a margem superior para separar o texto das imagens */
+  color: #fff;
+}
+
+/* -------------------------------------
+   Media Queries para Dispositivos Móveis
+   ------------------------------------- */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+  }
+  .content-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cotender_sap {
+    padding: 10px;
+  }
+
+  .popup-content {
+    max-width: 95%;
+  }
+
+  .imagem_heder {
+    height: auto;
+  }
+
+  .apresentação {
+    margin: none;
+    padding: auto;
+  }
+  .button-image {
+    display: block;
+    transform: scale(2);
+    transform-origin: center;
+    margin: 50px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .logo-image {
+    width: 200px;
+  }
+
+  .button-image {
+    width: 100px;
+    height: auto;
+  }
+
+  .texto_1,
+  .texto_2,
+  .texto,
+  .acessar_texto,
+  .central_texto {
+    font-size: auto;
+  }
+
+  .imagem_heder {
+    height: auto;
+  }
+
+  .logo-container,
+  .content-container,
+  .header,
+  .footer,
+  .cotender_sap,
+  .popup {
+    margin: 0;
+  }
+  .button-image {
+    display: block;
+    transform: scale(2);
+    transform-origin: center;
+    margin: 50px;
+  }
+  .menu_title {
+    margin-bottom: 10px;
+  }
+  .Tesxte_Maior,
+  .Tesxte_Maior1 {
+    align-items: center;
+    margin: 10px 5px;
+  }
+  .central_de_suporte {
+    margin: 0;
+  }
+  .logo-container {
+    margin-top: 5px;
+  }
+  .popup {
+    max-width: 300px;
+    align-items: center;
+  }
+  .footer {
+    padding: 1px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .footer-images {
+    display: flex; /* Ativa o flexbox no contêiner */
+    align-items: center; /* Centraliza as imagens horizontalmente */
+    padding: 0; /* Remove o preenchimento */
+    margin: 0; /* Remove margens */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+    margin-top: 10px;
+  }
+
+  /* Estiliza a imagem 02 */
+  .imagem02 {
+    width: 160px; /* Define a largura da imagem como 100% da largura da viewport */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: none; /* Remove qualquer limite máximo de largura */
+    margin: 10px 0; /* Adiciona margem superior e inferior para espaçamento vertical */
+  }
+
+  /* Estiliza a imagem 03 */
+  .imagem03 {
+    width: 100px; /* Define uma largura específica para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: none; /* Remove qualquer limite máximo de largura */
+  }
+
+  /* Estiliza a parte inferior do rodapé */
+  .footer-bottom {
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 30px; /* Adiciona margem superior para separar o texto das imagens */
+    color: #fff; /* Define a cor do texto */
+    font-size: 12px;
+  }
+}
