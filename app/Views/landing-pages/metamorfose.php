@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Missão Metamorfose - Copercana</title>
-    <link rel="stylesheet" href="<?= base_url("_assets/landing-pages/metamorfose/css/style.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("_assets/landing-pages/metamorfose/css/style.css") ?>?v=<?= filemtime("_assets/landing-pages/metamorfose/css/style.css") ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -284,9 +284,9 @@
 
 
         <!-- Scripts -->
-        <script src="<?= base_url("_assets/landing-pages/metamorfose/js/luz.js"); ?>"></script>
-        <script src="<?= base_url("_assets/landing-pages/metamorfose/js/PopUp_Glossário.js"); ?>"></script>
-        <script src="<?= base_url("_assets/landing-pages/metamorfose/js/Regressiva.js"); ?>"></script>
+        <script src="<?= base_url("_assets/landing-pages/metamorfose/js/luz.js"); ?>?v=<?= filemtime("_assets/landing-pages/metamorfose/js/luz.js"); ?>"></script>
+        <script src="<?= base_url("_assets/landing-pages/metamorfose/js/PopUp_Glossário.js"); ?>?v=<?= filemtime("_assets/landing-pages/metamorfose/js/PopUp_Glossário.js"); ?>"></script>
+        <script src="<?= base_url("_assets/landing-pages/metamorfose/js/Regressiva.js"); ?>?v=<?= filemtime("_assets/landing-pages/metamorfose/js/Regressiva.js"); ?>"></script>
 </body>
 
 </html>
