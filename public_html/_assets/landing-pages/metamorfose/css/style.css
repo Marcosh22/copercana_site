@@ -153,8 +153,8 @@ header {
 /* Contêiner do vídeo */
 #video-container {
   position: relative;
-  width: 680px; /* Largura fixa para desktops */
-  height: 480px; /* Altura fixa para desktops */
+  width: 800px; /* Largura fixa para desktops */
+  height: 400px; /* Altura fixa para desktops */
   display: none; /* Oculta o contêiner inicialmente */
   margin: 0 auto; /* Centraliza o contêiner horizontalmente */
   overflow: hidden; /* Garante que o conteúdo não saia do contêiner */
@@ -467,7 +467,7 @@ como_acessar {
 }
 
 .acessar_titulo {
-  font-size: 36px;
+  font-size: 42px;
   margin-bottom: 20px;
   font-family: "Conthrax", sans-serif;
 
@@ -591,10 +591,19 @@ como_acessar {
 }
 
 .central_titulo {
+  font-size: 42px;
+  color: #b0e5e7;
+  margin-bottom: 1px; /* Espaçamento entre o título e a imagem do botão */
+  font-family: "Conthrax", sans-serif;
+}
+.central_titulo1,
+.central_titulo2,
+.central_titulo3 {
   font-size: 2rem;
   color: #b0e5e7;
   margin-bottom: 1px; /* Espaçamento entre o título e a imagem do botão */
   font-family: "Conthrax", sans-serif;
+  margin-top: 20px;
 }
 
 .guia_suporte img,
