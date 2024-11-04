@@ -63,6 +63,9 @@ $routes->get('/trabalhe-conosco/jovem-aprendiz', 'Home::jovem_aprendiz');
 $routes->get('/trabalhe-conosco/vagas-disponiveis', 'Home::vagas_disponiveis');
 $routes->get('/trabalhe-conosco/vagas-disponiveis/(:any)', 'Home::vaga/$1');
 $routes->get('/trabalhe-conosco/cadastro', 'Home::cadastro');
+
+$routes->get('/talentos', 'Home::talentos');
+
 $routes->get('/copercana-60-anos', 'Home::copercana_60_anos');
 $routes->get('/soucooperado', 'Home::soucooperado');
 

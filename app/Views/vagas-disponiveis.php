@@ -60,7 +60,7 @@
                             <h4 class="unit__title">
                                 <?= ((int)$job->quantity <= 1 ? "0" : "") . $job->quantity ?>&nbsp;
                                 Vaga<?= ((int)$job->quantity > 1 ? "s" : "") ?>&nbsp;de
-                                <?= ucfirst(mb_strtolower($job->title)) ?>
+                                <?= mb_convert_case(mb_strtolower($job->title), MB_CASE_TITLE, "UTF-8") ?>
                             </h4>
                             <div class="unit__address">
                                 <?= $job->city ?>&nbsp;/<?= $job->uf ?>

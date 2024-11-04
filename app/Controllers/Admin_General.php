@@ -61,6 +61,7 @@ class Admin_General extends BaseController
         $address_link = $request->getPost('address_link');
         $address_iframe = $request->getPost('address_iframe');
         $phone = $request->getPost('phone');
+        $jobs_link = $request->getPost('jobs_link');
         $radio = $request->getPost('radio');
         $facebook = $request->getPost('facebook');
         $instagram = $request->getPost('instagram');
@@ -75,7 +76,7 @@ class Admin_General extends BaseController
         $body_html = $request->getPost('body_html');
         $footer_html = $request->getPost('footer_html');
         
-        $generalModel->update_general($id, $address, $address_link, $address_iframe, $phone, $radio, $facebook, $instagram, $youtube, $linkedin, $socials, $contact_emails, $contacts_subject, $footer_legal_text, $head_html, $body_html, $footer_html);
+        $generalModel->update_general($id, $address, $address_link, $address_iframe, $phone, $jobs_link, $radio, $facebook, $instagram, $youtube, $linkedin, $socials, $contact_emails, $contacts_subject, $footer_legal_text, $head_html, $body_html, $footer_html);
         $message = "Dados atualizados com sucesso!";
         $success = true;
 

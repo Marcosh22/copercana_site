@@ -23,7 +23,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(1);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -67,7 +67,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -82,7 +82,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(2);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -118,7 +118,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -138,7 +138,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(3);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -159,7 +159,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -174,7 +174,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(4);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -195,7 +195,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -210,7 +210,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(5);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -231,7 +231,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -246,7 +246,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(6);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -271,7 +271,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -286,7 +286,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(7);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -326,7 +326,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -341,7 +341,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(8);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -366,7 +366,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -381,7 +381,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(9);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -406,7 +406,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -421,7 +421,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(10);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -446,7 +446,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -461,7 +461,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(11);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -482,7 +482,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -497,7 +497,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(12);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -522,7 +522,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -537,7 +537,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(13);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -578,7 +578,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -593,7 +593,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(14);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -618,7 +618,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -633,7 +633,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(23);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -654,7 +654,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -669,7 +669,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(24);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -690,7 +690,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -705,7 +705,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(27);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -730,7 +730,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -745,7 +745,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(15);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -766,7 +766,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -781,7 +781,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(16);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -818,7 +818,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -833,7 +833,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(17);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -854,7 +854,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -869,7 +869,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(18);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -890,7 +890,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -909,7 +909,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(19);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -942,7 +942,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -957,7 +957,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(20);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -978,7 +978,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -993,7 +993,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(21);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1014,7 +1014,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1029,7 +1029,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(22);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1054,7 +1054,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1069,7 +1069,7 @@ class Home extends BaseController
 
         $job = $jobModel->get_active_by_id($id);
 
-        if (!isset ($job) || empty ($job) || !$job) {
+        if (!isset($job) || empty($job) || !$job) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1077,7 +1077,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(22);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1099,7 +1099,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1114,7 +1114,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(25);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1146,7 +1146,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1161,7 +1161,7 @@ class Home extends BaseController
 
         $post = $postModel->get_published_by_slug($slug);
 
-        if (!isset ($post) || empty ($post) || !$post) {
+        if (!isset($post) || empty($post) || !$post) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1169,7 +1169,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(25);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1177,9 +1177,9 @@ class Home extends BaseController
         $posts = $postModel->get_others_published($post->id, 0, 4);
 
         $seo = array(
-            'title' => isset ($post->page_title) && !empty ($post->page_title) ? $post->page_title : $post->title,
-            'description' => isset ($post->page_description) && !empty ($post->page_description) ? $post->page_description : $post->excerpt,
-            'keywords' => isset ($post->page_tags) && !empty ($post->page_tags) ? $post->page_tags : '',
+            'title' => isset($post->page_title) && !empty($post->page_title) ? $post->page_title : $post->title,
+            'description' => isset($post->page_description) && !empty($post->page_description) ? $post->page_description : $post->excerpt,
+            'keywords' => isset($post->page_tags) && !empty($post->page_tags) ? $post->page_tags : '',
             'publisher' => 'https://suave.ppg.br',
             'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
             'canonical' => base_url('noticias/' . $post->slug),
@@ -1201,7 +1201,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1216,7 +1216,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(28);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1248,7 +1248,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1263,14 +1263,14 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(28);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
         $categoryModel = model('App\Models\CategoryModel', false);
         $current_category = $categoryModel->get_by_slug($slug);
 
-        if (!isset ($current_category) || empty ($current_category) || !$current_category) {
+        if (!isset($current_category) || empty($current_category) || !$current_category) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1303,7 +1303,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1317,7 +1317,7 @@ class Home extends BaseController
         $categoryModel = model('App\Models\CategoryModel', false);
         $current_category = $categoryModel->get_by_slug($category);
 
-        if (!isset ($current_category) || empty ($current_category) || !$current_category) {
+        if (!isset($current_category) || empty($current_category) || !$current_category) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1325,7 +1325,7 @@ class Home extends BaseController
 
         $post = $postModel->get_published_by_category_and_slug($current_category->id, $slug);
 
-        if (!isset ($post) || empty ($post) || !$post) {
+        if (!isset($post) || empty($post) || !$post) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
@@ -1333,7 +1333,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(28);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1341,9 +1341,9 @@ class Home extends BaseController
         $posts = $postModel->get_others_published($post->id, 0, 4);
 
         $seo = array(
-            'title' => isset ($post->page_title) && !empty ($post->page_title) ? $post->page_title : $post->title,
-            'description' => isset ($post->page_description) && !empty ($post->page_description) ? $post->page_description : $post->excerpt,
-            'keywords' => isset ($post->page_tags) && !empty ($post->page_tags) ? $post->page_tags : '',
+            'title' => isset($post->page_title) && !empty($post->page_title) ? $post->page_title : $post->title,
+            'description' => isset($post->page_description) && !empty($post->page_description) ? $post->page_description : $post->excerpt,
+            'keywords' => isset($post->page_tags) && !empty($post->page_tags) ? $post->page_tags : '',
             'publisher' => 'https://suave.ppg.br',
             'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
             'canonical' => base_url('blog/' . $current_category->slug . '/' . $post->slug),
@@ -1365,7 +1365,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1380,7 +1380,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(26);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1414,7 +1414,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1552,7 +1552,7 @@ class Home extends BaseController
         $page = $pageModel->get_by_id(30);
         $page_data = null;
 
-        if (isset ($page->definition) && !empty ($page->definition)) {
+        if (isset($page->definition) && !empty($page->definition)) {
             $page_data = json_decode($page->definition);
         }
 
@@ -1587,7 +1587,7 @@ class Home extends BaseController
             'general' => $this->general
         );
 
-        if (isset ($page_data) && isset ($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
             $data['quotation_list'] = true;
         }
 
@@ -1609,15 +1609,15 @@ class Home extends BaseController
 
         $cookie = get_cookie('subdata');
 
-        if (isset ($cookie) && !empty ($cookie)) {
+        if (isset($cookie) && !empty($cookie)) {
             list($encrypted_data, $iv) = explode('::', $cookie, 2);
             $subdata = openssl_decrypt($encrypted_data, 'aes-256-cbc', 'hpvao0xA3bs07H2YBbxdcVbxi4HCk8BS', 0, $iv);
             $subdata = json_decode(base64_decode($subdata));
         }
 
-        if (isset ($this->general) && isset ($this->general->require_registration_during_event) && $this->general->require_registration_during_event == 1 && $subdata == null) {
+        if (isset($this->general) && isset($this->general->require_registration_during_event) && $this->general->require_registration_during_event == 1 && $subdata == null) {
 
-            if (isset ($this->general->event_start_date) && !empty ($this->general->event_start_date)) {
+            if (isset($this->general->event_start_date) && !empty($this->general->event_start_date)) {
                 $is_event_ocurring = false;
 
                 $today = new Time('now', 'America/Sao_Paulo');
@@ -1661,7 +1661,7 @@ class Home extends BaseController
         $session_id = session_id();
         $page = (string) $uri;
 
-        if (isset ($cookie) && !empty ($cookie)) {
+        if (isset($cookie) && !empty($cookie)) {
             list($encrypted_data, $iv) = explode('::', $cookie, 2);
             $subdata = openssl_decrypt($encrypted_data, 'aes-256-cbc', 'hpvao0xA3bs07H2YBbxdcVbxi4HCk8BS', 0, $iv);
             $subdata = json_decode(base64_decode($subdata));
@@ -1790,8 +1790,14 @@ class Home extends BaseController
         }
     }
 
-    public function info()
+    public function talentos()
     {
-        phpinfo();
+        $url = 'trabalhe-conosco/cadastro';
+
+        if (!empty($this->general->jobs_link)) {
+            $url = $this->general->jobs_link;
+        }
+
+        return redirect()->to($url, 301);
     }
 }

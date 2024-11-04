@@ -18,7 +18,7 @@ class GeneralModel extends Model
         return $query->getRow();
     }
 
-    public function update_general($id, $address, $address_link, $address_iframe, $phone, $radio, $facebook, $instagram, $youtube, $linkedin, $socials, $contact_emails, $contacts_subject, $footer_legal_text, $head_html, $body_html, $footer_html) {
+    public function update_general($id, $address, $address_link, $address_iframe, $phone, $jobs_link, $radio, $facebook, $instagram, $youtube, $linkedin, $socials, $contact_emails, $contacts_subject, $footer_legal_text, $head_html, $body_html, $footer_html) {
         $db      = \Config\Database::connect();
         $builder = $db->table('general');
         
@@ -27,6 +27,7 @@ class GeneralModel extends Model
             'address_link' => $address_link, 
             'address_iframe' => $address_iframe, 
             'phone' => $phone, 
+            'jobs_link' => $jobs_link, 
             'radio' => $radio, 
             'facebook' => $facebook, 
             'instagram' => $instagram, 

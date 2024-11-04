@@ -98,6 +98,16 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
+                                <?php echo form_label('Link Talentos', 'jobs_link', ['class' => 'col-sm-2 col-form-label']);?>
+                                <div class="col-sm-10">
+                                    <?php echo form_input([
+                                            'name' => 'jobs_link',
+                                            'id'   => 'jobs_link',
+                                            'type' => 'text'
+                                        ], $general->jobs_link ? $general->jobs_link : '', ['class' => 'form-control']);?>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
                                 <?php echo form_label('Rádio Copercana', 'radio', ['class' => 'col-sm-2 col-form-label']);?>
                                 <div class="col-sm-10">
                                     <?php echo form_input([
