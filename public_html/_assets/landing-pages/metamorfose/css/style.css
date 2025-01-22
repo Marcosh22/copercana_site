@@ -1,846 +1,836 @@
 @font-face {
-  font-family: "Conthrax";
-  src: url("../fonts/conthrax-sb.otf") format("truetype");
+    font-family: 'Conthrax';
+    src: url('../fonts/conthrax-sb.otf') format('truetype'); 
 }
 
 /* -------------------------------------
    Estilos Gerais
    ------------------------------------- */
-
-html,
 body {
-  overflow-x: hidden;
-}
-
-body {
-  margin: 0px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-image: url("../images/BG.jpg");
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('../images/BG.jpg');
 }
 
 /* -------------------------------------
    Header
    ------------------------------------- */
 header {
-  padding: 20px;
-  text-align: center;
-  position: fixed; /* Fixa o header no topo */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-image: url("../images/BG.jpg");
+    padding:  20px;
+    text-align: center;
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-image: url('../images/BG.jpg');
 }
 .logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .logo-image {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 .imagem_heder {
-  width: 100%;
-  max-width: 100vw;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* -------------------------------------
    Video Container
    ------------------------------------- */
 .video-container {
-  text-align: center;
-  margin: 0 auto;
-  padding: 0;
-  overflow: visible;
-  box-sizing: border-box;
-  margin-top: 100px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    overflow: visible;
+    box-sizing: border-box;
+    margin-top: 100px;
 }
 .video-container video {
-  width: 100%;
-  max-width: 120vw;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+    width: 100%;
+    max-width: 120vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 /* -------------------------------------
    Menu
    ------------------------------------- */
 .menu {
-  background-image: url("../images/BaseMenu.png");
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+    background-image: url('../images/BaseMenu.png');
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .menu_title h1 {
-  margin: 0;
-  font-family: "Conthrax";
-  margin-top: 25px;
+    margin: 0;
+    font-family: 'Conthrax';
+    margin-top: 25px;
 }
 .content-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
 }
 .content-box:hover {
-  transform: translateY(-20px);
+    transform: translateY(-20px);
 }
 .content-box {
-  flex: 1 1 auto;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 .custom-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 .button-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
 }
 
 /*-------------------------------------
   Cronometro
 ---------------------------------------- */
 #container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Estilo do título do contador */
 .Titulo_contador {
-  font-size: 36px; /* Usa unidades de largura da viewport para escalabilidade */
-  margin-bottom: 2vw; /* Espaçamento inferior ajustável */
-  color: #76c933;
-  margin-top: 5vw; /* Ajuste superior com base na largura da viewport */
-  font-family: "Conthrax";
+    font-size: 36px; /* Usa unidades de largura da viewport para escalabilidade */
+    margin-bottom: 2vw; /* Espaçamento inferior ajustável */
+    color: #76C933;
+    margin-top: 5vw; /* Ajuste superior com base na largura da viewport */
+    font-family: 'Conthrax';
 }
 
 /* Estilo do contador */
 #contador {
-  font-size: 48px; /* Usa unidades de largura da viewport para escalabilidade */
-  margin-bottom: 2vw; /* Espaçamento inferior ajustável */
-  color: #fff;
-  font-family: "Conthrax";
+    font-size: 48px; /* Usa unidades de largura da viewport para escalabilidade */
+    margin-bottom: 2vw; /* Espaçamento inferior ajustável */
+    color: #fff;
+    font-family: 'Conthrax';
 }
 
 /* Contêiner do vídeo */
 #video-container {
-  position: relative;
-  width: 800px; /* Largura fixa para desktops */
-  height: 400px; /* Altura fixa para desktops */
-  display: none; /* Oculta o contêiner inicialmente */
-  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-  overflow: hidden; /* Garante que o conteúdo não saia do contêiner */
-  margin-top: 30px;
-  margin-bottom: 10px;
+    position: relative;
+    width: 800px; /* Largura fixa para desktops */
+    height: 400px; /* Altura fixa para desktops */
+    display: none; /* Oculta o contêiner inicialmente */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    overflow: hidden; /* Garante que o conteúdo não saia do contêiner */
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 /* Estilo do vídeo */
 #video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Garante que o vídeo cubra o contêiner sem distorção */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra o contêiner sem distorção */
 }
 
 /* Estilo do botão de reprodução */
 #play-button {
-  display: none; /* Oculta o botão de play inicialmente */
-  position: absolute;
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: none; /* Oculta o botão de play inicialmente */
+    position: absolute;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* -------------------------------------
    Apresentação
    ------------------------------------- */
 .apresentação {
-  text-align: center;
+    text-align: center; 
 }
 .imagem-ajuste {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
+    max-width: 100%; 
+    height: auto;
+    margin: 20px 0;
 }
 .texto_1 {
-  color: white;
-  padding: 0 20px;
-  font-size: 20px;
-  max-width: 800px;
-  line-height: 1.6;
-  margin: 50px auto 50px auto;
-  text-align: center;
+    color: white; 
+    padding: 0 20px;
+    font-size: 20px; 
+    max-width: 800px; 
+    line-height: 1.6;
+    margin: 50px auto 50px auto; 
+    text-align: center; 
 
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
 }
 .Textoapresentacao_titulo {
-  font-family: Arial, sans-serif;
-  font-size: 26px;
-  line-height: 1.6;
-  margin-bottom: 30px 50px;
-  color: #fff;
+    font-family: Arial, sans-serif; 
+    font-size: 26px; 
+    line-height: 1.6; 
+    margin-bottom: 30px 50px; 
+    color: #fff;
 }
 
 /* -------------------------------------
    Sobre O Sap
    ------------------------------------- */
 .SobreSap {
-  padding: 10px;
-  text-align: center;
+    padding: 10px;
+    text-align: center;
+    
+    
 }
 .SobreSap_Titulo {
-  margin: 20px;
-  color: #b0e5e7;
-  font-size: 2.5rem;
-  font-family: "Conthrax";
+    margin: 20px;
+    color: #B0E5E7;
+    font-size: 2.5rem; 
+    font-family: 'Conthrax';
 }
 .SobreSap_Imagens {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  width: 100%;
-  flex-wrap: wrap;
-  margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%; 
+    flex-wrap: wrap;
+    margin: 20px;
+    
 }
 .Tesxte_Maior,
 .Tesxte_Maior1 {
-  max-width: 100%;
-  height: auto;
-  margin: 20px;
+    max-width: 100%;
+    height: auto;
+    margin:  20px;
 }
+
 
 /* -------------------------------------
    Cronograma
    ------------------------------------- */
 .cronograma {
-  padding: 20px;
-  text-align: center;
-  font-family: "Conthrax";
-  color: #76c933;
-  margin-top: 10px;
-  margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Conthrax';
+    color: #76C933;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .local_cronograma1 {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 50px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 50px;
 }
 .texto_2 {
-  color: white;
-  padding: 0 20px;
-  max-width: 800px;
-  font-size: 20px;
-  line-height: 1.6;
-  margin: 0 auto 50px auto;
-  text-align: center;
-  font-family: Arial, sans-serif;
+    color: white;
+    padding: 0 20px;
+    max-width: 800px; 
+    font-size: 20px; 
+    line-height: 1.6;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 /* -------------------------------------
    Manual SAP
    ------------------------------------- */
 .cotender_sap {
-  color: white;
-  padding: 50px;
-  max-width: 800px;
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 10px auto;
-  text-align: center;
-  font-family: Arial, sans-serif;
+    color: white;
+    padding: 50px;
+    max-width: 800px; 
+    font-size: 18px; 
+    line-height: 1.6;
+    margin: 10px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 .local_manual_sap {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 .titulo {
-  font-family: "Conthrax", sans-serif;
-  color: #b0e5e7;
-  font-size: 32px;
-  margin: 50px;
-  margin-bottom: 20px;
+    font-family: 'Conthrax', sans-serif;
+    color: #B0E5E7;
+    font-size: 32px; 
+    margin: 50px;
+    margin-bottom: 20px;
 }
 .botoes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .botao-container {
-  text-align: center;
+    text-align: center;
 }
 
 .botao-imagem {
-  display: block;
-  margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .titulo2 {
-  margin-top: 10px; /* Ajuste o espaço entre o botão e o título conforme necessário */
+    margin-top: 10px; /* Ajuste o espaço entre o botão e o título conforme necessário */
 }
-.local_manual_sap {
-  margin: auto;
+.local_manual_sap{
+    margin: auto;
 }
-.titulo2 {
-  margin-top: 60px;
-  font-family: "Conthrax", sans-serif;
-  margin-bottom: 20px;
+.titulo2{
+    margin-top: 60px;
+    font-family: 'Conthrax', sans-serif;
+    margin-bottom: 20px;
+
 }
 .texto2 {
-  color: white;
-  padding: px;
-  max-width: 800px;
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 10px auto;
-  text-align: center;
-  font-family: Arial, sans-serif;
+    color: white;
+    padding: px;
+    max-width: 800px; 
+    font-size: 18px; 
+    line-height: 1.6;
+    margin: 10px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
-.Download1 {
-  margin-bottom: 10px;
+.Download1{
+    margin-bottom: 10px;
 }
 
 /* -------------------------------------
    Pop-up
    ------------------------------------- */
-/* Overlay para aplicar desfoque ao fundo */
+   /* Overlay para aplicar desfoque ao fundo */
 .overlay {
-  display: none; /* Inicialmente oculto */
-  position: fixed; /* Fixa o overlay na tela */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
-  backdrop-filter: blur(5px); /* Aplica o efeito de desfoque */
-  z-index: 999; /* Um pouco abaixo do popup */
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixa o overlay na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+    backdrop-filter: blur(5px); /* Aplica o efeito de desfoque */
+    z-index: 999; /* Um pouco abaixo do popup */
 }
 
 /* Estilo do popup */
 .popup {
-  display: none; /* Inicialmente oculto */
-  position: fixed; /* Fixar o popup na tela */
-  z-index: 1000; /* Garantir que o popup fique acima do overlay */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Fundo branco com um pouco de transparência */
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
-  padding: 20px;
-  width: 500px; /* Ajuste a largura conforme necessário */
-  background-image: url(../images/Basepopup.png);
-  background-size: cover; /* Ajusta o tamanho da imagem de fundo */
-  background-position: center; /* Centraliza a imagem de fundo */
-  top: 50%; /* Centralizar verticalmente */
-  left: 50%; /* Centralizar horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
-  font-family: "Conthrax", sans-serif;
-  color: #76c933;
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixar o popup na tela */
+    z-index: 1000; /* Garantir que o popup fique acima do overlay */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com um pouco de transparência */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    width: 500px; /* Ajuste a largura conforme necessário */
+    background-image: url(../images/Basepopup.png);
+    background-size: cover; /* Ajusta o tamanho da imagem de fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    top: 50%; /* Centralizar verticalmente */
+    left: 50%; /* Centralizar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
+    font-family: 'Conthrax', sans-serif;
+    color: #76C933;
 }
 
 .popup-content {
-  position: relative;
-  text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 .close-popup {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
 }
 
 .download-menu {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 0 0;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
 }
 
 .download-menu li {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .download-menu a {
-  text-decoration: none;
-  color: white;
-  font-family: "Conthrax", sans-serif;
+    text-decoration: none;
+    color: white;
+    font-family: 'Conthrax', sans-serif;
 }
 
 .download-menu a:hover {
-  text-decoration: underline;
-  color: #76c933;
+    text-decoration: underline;
+    color: #76C933;
 }
 .popup-image {
-  position: relative; /* Pode ser usado para posicionar outros elementos em relação a esta imagem */
-  width: 100%; /* Largura do contêiner ocupando 100% da largura disponível */
-  max-width: 500px; /* Largura máxima do contêiner */
-  height: auto; /* Altura automática para manter a proporção */
+    position: relative; /* Pode ser usado para posicionar outros elementos em relação a esta imagem */
+    width: 100%; /* Largura do contêiner ocupando 100% da largura disponível */
+    max-width: 500px; /* Largura máxima do contêiner */
+    height: auto; /* Altura automática para manter a proporção */
 }
 
 /* -------------------------------------
    Como Acessar
    ------------------------------------- */
-como_acessar {
-  padding: 20px;
-  text-align: center;
+   como_acessar {
+    padding: 20px;
+    text-align: center;
 }
 
 .box_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .box_acessar {
-  flex: 1 1 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    flex: 1 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .text-center {
-  margin: 0;
+    margin: 0;
 }
 
 .background-container {
-  position: relative;
-  width: 100vw; /* Use 100vw para garantir que ocupe toda a largura da viewport */
-  background-image: url("../images/fundo.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Remova padding/margens que possam limitar a largura */
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    position: relative;
+    width: 100vw; /* Use 100vw para garantir que ocupe toda a largura da viewport */
+    background-image: url('../images/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Remova padding/margens que possam limitar a largura */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.acessar_titulo {
-  font-size: 42px;
-  margin-bottom: 20px;
-  font-family: "Conthrax", sans-serif;
 
-  color: #76c933;
+.acessar_titulo {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-family: 'Conthrax', sans-serif;
+
+    color: #76C933;
 }
 
 .acessar_texto {
-  color: white;
-  padding: 0 20px;
-  max-width: 800px;
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 5px;
-  text-align: center; /* Centraliza o texto dentro do parágrafo */
+    color: white;
+    padding: 0 20px;
+    max-width: 800px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    text-align: center; /* Centraliza o texto dentro do parágrafo */
+    
 }
 
 .box_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
 }
 
 .box_acessar {
-  display: flex;
-  position: relative;
+    display: flex;
+    position: relative;
 }
 
 .box_acessar:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .container {
-  padding: 5px;
-  position: relative;
+    padding: 5px;
+    position: relative;
 }
 
 .como_acessar1 {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .text-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  padding: 0 auto;
-  max-width: 800px;
-  font-size: 16px;
-  line-height: 1;
-  margin-bottom: 10px;
-  text-align: center; /* Centraliza o texto dentro do parágrafo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 0 auto;
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o texto dentro do parágrafo */
 }
 
 .text-center h4 {
-  padding: 10px;
-  font-family: "Courier New", Courier, monospace;
-  color: #76c933;
-  font-family: "Conthrax", sans-serif;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #76C933;
+    font-family: 'Conthrax', sans-serif;
+    
 }
 
 .text-center p {
-  margin-top: px;
+    margin-top: px;
 }
 
 /* -------------------------------------
    Central de Suporte
    ------------------------------------- */
 .central_de_suporte {
-  color: white;
-  padding: 10px;
-  max-width: 800px;
-  font-size: 20px;
-  line-height: 1.6;
-  margin: 0 auto 50px auto;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  margin-top: 50px;
+    color: white;
+    padding: 10px;
+    max-width: 800px;
+    font-size: 20px; 
+    line-height: 1.6;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
 }
 .local_central {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 .central_titulo {
-  font-family: "Conthrax", sans-serif;
-  font-size: 38px;
-  color: #b0e5e7;
-  margin-top: 50px;
-  margin-bottom: 20px;
+    font-family: 'Conthrax', sans-serif;
+    font-size: 38px; 
+    color: #B0E5E7;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
 }
-.central_texto2 {
-  font-family: 30px;
-  font-weight: bold; /* Aplica o estilo de negrito */
+.central_texto2{
+    font-family: 30px;
+    font-weight: bold; /* Aplica o estilo de negrito */
 }
 #centralSuporte {
-  display: flex;
-  flex-direction: column; /* Empilha os elementos verticalmente */
-  align-items: center; /* Centraliza os elementos horizontalmente */
-  text-align: center;
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    text-align: center;
 }
 
 .central_de_suporte {
-  margin-bottom: 2px; /* Espaçamento entre a seção de suporte e o primeiro botão */
+    margin-bottom: 2px; /* Espaçamento entre a seção de suporte e o primeiro botão */
 }
 
-.guia_suporte {
-  display: flex;
-  flex-direction: column; /* Empilha o título e o botão verticalmente */
-  align-items: center; /* Centraliza o conteúdo */
-  text-align: center;
+.guia_suporte{
+    display: flex;
+    flex-direction: column; /* Empilha o título e o botão verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+    text-align: center;
 }
 .guia_suporte2 {
-  display: flex;
-  flex-direction: column; /* Empilha o título e o botão verticalmente */
-  align-items: center; /* Centraliza o conteúdo */
-  text-align: center;
-  margin-bottom: 50px;
+    display: flex;
+    flex-direction: column; /* Empilha o título e o botão verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+    text-align: center;
+    margin-bottom: 50px;
 }
 
+
 .central_titulo {
-  font-size: 42px;
-  color: #b0e5e7;
-  margin-bottom: 1px; /* Espaçamento entre o título e a imagem do botão */
-  font-family: "Conthrax", sans-serif;
+    font-size: 42px;
+    color: #B0E5E7;
+    margin-bottom: 1px; /* Espaçamento entre o título e a imagem do botão */
+    font-family: 'Conthrax', sans-serif;
 }
-.central_titulo1,
-.central_titulo2,
-.central_titulo3 {
-  font-size: 2rem;
-  color: #b0e5e7;
-  margin-bottom: 1px; /* Espaçamento entre o título e a imagem do botão */
-  font-family: "Conthrax", sans-serif;
-  margin-top: 20px;
+.central_titulo1, .central_titulo2, .central_titulo3{
+    font-size: 2rem;
+    color: #B0E5E7;
+    margin-bottom: 1px; /* Espaçamento entre o título e a imagem do botão */
+    font-family: 'Conthrax', sans-serif;
+    margin-top: 20px;
 }
 
 .guia_suporte img,
 .guia_suporte2 img {
-  width: auto;
-  max-width: 100%; /* Assegura que as imagens não ultrapassem a largura do contêiner */
-  cursor: pointer; /* Mostra um cursor pointer para indicar que são clicáveis */
+    width: auto;
+    max-width: 100%; /* Assegura que as imagens não ultrapassem a largura do contêiner */
+    cursor: pointer; /* Mostra um cursor pointer para indicar que são clicáveis */
 }
 
 /* -------------------------------------
    Footer
    ------------------------------------- */
-/* Estiliza o rodapé */
+  /* Estiliza o rodapé */
 .footer {
-  background-image: url("../images/Logo.png"); /* Caminho relativo para a imagem de fundo */
-  background-size: cover; /* Faz com que a imagem de fundo cubra toda a área do rodapé */
-  background-position: center; /* Centraliza a imagem de fundo */
-  color: white;
-  padding: 50px; /* Aumenta o preenchimento para melhor aparência */
-  font-size: 12px;
-  line-height: 1.6;
-  text-align: center;
-  font-family: Arial, sans-serif;
+    background-image: url('../images/Logo.png'); /* Caminho relativo para a imagem de fundo */
+    background-size: cover; /* Faz com que a imagem de fundo cubra toda a área do rodapé */
+    background-position: center; /* Centraliza a imagem de fundo */
+    color: white;
+    padding: 50px; /* Aumenta o preenchimento para melhor aparência */
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 /* Container do footer */
 .footer-container {
-  display: flex;
-  flex-direction: column; /* Coloca os itens em uma coluna para que o texto e as imagens fiquem empilhados verticalmente */
-  align-items: center; /* Centraliza horizontalmente os itens dentro do contêiner */
-  width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
-  background-image: url("../images/01.png"); /* Caminho relativo para a imagem de fundo */
+    display: flex;
+    flex-direction: column; /* Coloca os itens em uma coluna para que o texto e as imagens fiquem empilhados verticalmente */
+    align-items: center; /* Centraliza horizontalmente os itens dentro do contêiner */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+    background-image: url('../images/01.png'); /* Caminho relativo para a imagem de fundo */
 }
 
 /* Estilo das imagens no footer */
 .footer-images {
-  display: flex;
-  justify-content: center; /* Centraliza as imagens horizontalmente */
-  gap: 50px; /* Espaçamento entre as imagens */
-  margin-bottom: 30px; /* Adiciona uma margem inferior para separar as imagens do texto */
-  width: 100%; /* Garante que o contêiner de imagens ocupe toda a largura disponível */
-  align-items: center;
-  margin-top: 30px;
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 50px; /* Espaçamento entre as imagens */
+    margin-bottom: 30px; /* Adiciona uma margem inferior para separar as imagens do texto */
+    width: 100%; /* Garante que o contêiner de imagens ocupe toda a largura disponível */
+    align-items: center;
+    margin-top: 30px;
 }
 
 /* Estiliza a imagem 02 */
 .imagem02 {
-  width: 200px; /* Define uma largura específica para garantir alinhamento */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: contain; /* Ajusta a imagem ao contêiner, mantendo a proporção */
+    width: 200px; /* Define uma largura específica para garantir alinhamento */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Ajusta a imagem ao contêiner, mantendo a proporção */
 }
 
 /* Estiliza a imagem 03 */
 .imagem03 {
-  width: 120px; /* Define uma largura específica para garantir alinhamento */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: contain; /* Ajusta a imagem ao contêiner, mantendo a proporção */
+    width: 120px; /* Define uma largura específica para garantir alinhamento */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Ajusta a imagem ao contêiner, mantendo a proporção */
 }
 
 /* Rodapé inferior */
 .footer-bottom {
-  text-align: center;
-  margin-top: 5px; /* Aumenta a margem superior para separar o texto das imagens */
-  color: #fff;
+    text-align: center;
+    margin-top: 5px; /* Aumenta a margem superior para separar o texto das imagens */
+    color: #fff;
 }
+
 
 /* -------------------------------------
    Media Queries para Dispositivos Móveis
    ------------------------------------- */
 @media (max-width: 768px) {
-  .logo-container {
+.logo-container {
     flex-direction: column;
-  }
-  .content-container {
+ }
+.content-container {
     flex-direction: column;
     gap: 10px;
-  }
+    }
 
-  .cotender_sap {
+.cotender_sap {
     padding: 10px;
-  }
+    }
 
-  .popup-content {
-    max-width: 95%;
-  }
+    .popup-content {
+        max-width: 95%;
+    }
 
-  .imagem_heder {
-    height: auto;
-  }
+    .imagem_heder {
+        height: auto;
+    }
 
-  .apresentação {
+.apresentação {
     margin: none;
     padding: auto;
-  }
-  .button-image {
-    display: block;
+}
+.button-image{
+    display: block; 
     transform: scale(2);
-    transform-origin: center;
+    transform-origin: center; 
     margin: 50px;
     margin-top: 10px;
-  }
-  #video-container {
+}
+#video-container {
     width: 90vw; /* Ajusta a largura para telas menores */
     height: auto; /* Altura ajustável com base na proporção 16:9 */
     max-width: 680px; /* Limita a largura máxima para não exceder o tamanho do desktop */
     padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
-  }
+}
 
-  .Titulo_contador {
+.Titulo_contador {
     font-size: 6vw; /* Ajusta o tamanho da fonte para telas menores */
     margin-bottom: 4vw; /* Ajusta o espaçamento inferior */
     margin-top: 4vw; /* Ajusta o espaçamento superior */
-  }
+}
 
-  #contador {
+#contador {
     font-size: 10vw; /* Ajusta o tamanho da fonte para telas menores */
     margin-bottom: 4vw; /* Ajusta o espaçamento inferior */
-  }
+}
+
+    
 }
 
 @media (max-width: 480px) {
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  .logo-image {
-    width: 200px;
-  }
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .logo-image {
+        width: 200px;
+    }
 
-  .button-image {
-    width: 100px;
-    height: auto;
-  }
+    .button-image {
+        width: 100px; 
+        height: auto;
+    }
 
-  .texto_1,
-  .texto_2,
-  .texto,
-  .acessar_texto,
-  .central_texto {
-    font-size: auto;
-  }
+    .texto_1, .texto_2, .texto, .acessar_texto, .central_texto {
+        font-size: auto;
+    }
 
-  .imagem_heder {
-    height: auto;
-  }
+    .imagem_heder {
+        height: auto;
+    }
 
-  .logo-container,
-  .content-container,
-  .header,
-  .footer,
-  .cotender_sap,
-  .popup {
-    margin: 0;
-  }
-  .button-image {
-    display: block;
-    transform: scale(2);
-    transform-origin: center;
-    margin: 50px;
-  }
-  .menu_title {
-    margin-bottom: 10px;
-  }
-  .Tesxte_Maior,
-  .Tesxte_Maior1 {
-    align-items: center;
-    margin: 10px 5px;
-  }
-  .central_de_suporte {
-    margin: 0;
-  }
-  .logo-container {
-    margin-top: 5px;
-  }
-  .popup {
-    max-width: 300px;
-    align-items: center;
-  }
-  .footer {
-    padding: 1px;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  #video-container {
-    width: 90vw; /* Ajusta a largura para dispositivos móveis */
-    height: auto; /* Altura ajustável com base na proporção 16:9 */
-    max-width: 680px; /* Limita a largura máxima para não exceder o tamanho do desktop */
-    padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
-    margin-top: auto;
-  }
+    .logo-container, .content-container, .header, .footer, .cotender_sap, .popup {
+        margin: 0;
 
-  .Titulo_contador {
-    font-size: 7vw; /* Ajusta ainda mais o tamanho da fonte */
-    margin-bottom: 5vw; /* Ajusta o espaçamento inferior */
-    margin-top: 3vw; /* Ajusta o espaçamento superior */
-  }
+    }
+    .button-image{
+        display: block; 
+        transform: scale(2); 
+        transform-origin: center; 
+        margin: 50px; 
+    }
+    .menu_title{
+        margin-bottom: 10px;
+    }
+    .Tesxte_Maior, .Tesxte_Maior1 {
+        align-items: center;
+        margin: 10px 5px;
+    }
+    .central_de_suporte{
+        margin: 0;
+    }
+    .logo-container{
+        margin-top: 5px;
+    }
+    .popup{
+        max-width: 300px;
+        align-items: center;
+    }
+    .footer {
+        padding: 1px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #video-container {
+        width: 90vw; /* Ajusta a largura para dispositivos móveis */
+        height: auto; /* Altura ajustável com base na proporção 16:9 */
+        max-width: 680px; /* Limita a largura máxima para não exceder o tamanho do desktop */
+        padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
+        margin-top: auto;
+    }
 
-  #contador {
-    font-size: 10vw; /* Ajusta o tamanho da fonte */
-    margin-bottom: 5vw; /* Ajusta o espaçamento inferior */
-  }
+    .Titulo_contador {
+        font-size: 7vw; /* Ajusta ainda mais o tamanho da fonte */
+        margin-bottom: 5vw; /* Ajusta o espaçamento inferior */
+        margin-top: 3vw; /* Ajusta o espaçamento superior */
+    }
 
-  .footer-images {
-    display: flex; /* Ativa o flexbox no contêiner */
-    align-items: center; /* Centraliza as imagens horizontalmente */
-    padding: 0; /* Remove o preenchimento */
-    margin: 0; /* Remove margens */
-    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
-    margin-top: 10px;
-  }
-
-  /* Estiliza a imagem 02 */
-  .imagem02 {
-    width: 160px; /* Define a largura da imagem como 100% da largura da viewport */
-    height: auto; /* Mantém a proporção da imagem */
-    max-width: none; /* Remove qualquer limite máximo de largura */
-    margin: 10px 0; /* Adiciona margem superior e inferior para espaçamento vertical */
-  }
-
-  /* Estiliza a imagem 03 */
-  .imagem03 {
-    width: 100px; /* Define uma largura específica para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    max-width: none; /* Remove qualquer limite máximo de largura */
-  }
-
-  /* Estiliza a parte inferior do rodapé */
-  .footer-bottom {
-    text-align: center; /* Alinha o texto ao centro */
-    margin-top: 30px; /* Adiciona margem superior para separar o texto das imagens */
-    color: #fff; /* Define a cor do texto */
-    font-size: 12px;
-  }
+    #contador {
+        font-size: 10vw; /* Ajusta o tamanho da fonte */
+        margin-bottom: 5vw; /* Ajusta o espaçamento inferior */
+    }
+   
+    .footer-images {
+        display: flex; /* Ativa o flexbox no contêiner */
+        align-items: center; /* Centraliza as imagens horizontalmente */
+        padding: 0; /* Remove o preenchimento */
+        margin: 0; /* Remove margens */
+        width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+        margin-top: 10px;
+    }
+    
+    /* Estiliza a imagem 02 */
+    .imagem02 {
+        width: 160px; /* Define a largura da imagem como 100% da largura da viewport */
+        height: auto; /* Mantém a proporção da imagem */
+        max-width: none; /* Remove qualquer limite máximo de largura */
+        margin: 10px 0; /* Adiciona margem superior e inferior para espaçamento vertical */
+    }
+    
+    /* Estiliza a imagem 03 */
+    .imagem03 {
+        width: 100px; /* Define uma largura específica para a imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        max-width: none; /* Remove qualquer limite máximo de largura */
+    }
+    
+    /* Estiliza a parte inferior do rodapé */
+    .footer-bottom {
+        text-align: center; /* Alinha o texto ao centro */
+        margin-top: 30px; /* Adiciona margem superior para separar o texto das imagens */
+        color: #fff; /* Define a cor do texto */
+        font-size: 12px;
+    }
 }

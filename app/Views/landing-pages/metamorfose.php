@@ -77,13 +77,10 @@
 
     <!-- Apresentação -->
     <div class="apresentação">
-        <p class="texto_1">
+    <p class="texto_1">
             A Missão Metamorfose foi iniciada e a transformação digital já começou na Copercana.
-            Com o SAP, estamos integrando mais tecnologia, automação e eficiência aos nossos processos. Enquanto
-            avançamos na implementação, sua missão é identificar e resolver problemas, além de reduzir riscos em seu
-            setor, sempre colaborando em equipe para alcançar nossos objetivos.
-            Confira abaixo o relatório completo da missão e esclareça todas as suas dúvidas. Estamos contando com você a
-            cada passo dessa jornada.
+            Com o SAP, estamos integrando mais tecnologia, automação e eficiência aos nossos processos. Enquanto avançamos na implementação, sua missão é identificar e resolver problemas, além de reduzir riscos em seu setor, sempre colaborando em equipe para alcançar nossos objetivos.
+            Confira abaixo o relatório completo da missão e esclareça todas as suas dúvidas. Estamos contando com você a cada passo dessa jornada.
         </p>
         <h3 class="Textoapresentacao_titulo">O futuro já chegou!</h3>
         <div id="informacoesSAP">
@@ -117,14 +114,11 @@
             </div>
         </div>
         <div class="texto">
-            <p>
-                O Manual do SAP é um recurso essencial para todos os agentes. Ele contém instruções detalhadas sobre
-                como utilizar o sistema de forma eficiente, garantindo que você tenha todas as informações necessárias
-                para desempenhar suas funções.
+        <p>
+                O Manual do SAP é um recurso essencial para todos os agentes. Ele contém instruções detalhadas sobre como utilizar o sistema de forma eficiente, garantindo que você tenha todas as informações necessárias para desempenhar suas funções.
             </p>
             <p>
-                Baixe o Manual e Glossário no botão abaixo para ter acesso a todas as informações que você precisa para
-                dominar o sistema.
+                Baixe o Manual e Glossário no botão abaixo para ter acesso a todas as informações que você precisa para dominar o sistema.
             </p>
         </div>
         <div class="botoes">
@@ -137,9 +131,8 @@
                 <h2 class="titulo2">Glossário SAP</h2>
             </div>
             <div class="texto2">
-                <p>
-                    Glossário SAP é a sua ferramenta de referência para entender os termos e siglas mais importantes do
-                    sistema. Confira-os no botão abaixo:
+            <p>
+                    Glossário SAP é a sua ferramenta de referência para entender os termos e siglas mais importantes do sistema. Confira-os no botão abaixo:
                 </p>
             </div>
             <!-- Botão que abrirá o pop-up -->
@@ -189,8 +182,7 @@
                 <h1 class="acessar_titulo">Como Acessar</h1>
                 <p class="acessar_texto">
                     Agente, sua chave de acesso é o código exclusivo que permite entrar no sistema SAP.
-                    Ela garante que apenas usuários autorizados possam acessar as informações e funcionalidades do
-                    sistema, mantendo a segurança e integridade dos dados.
+                    Ela garante que apenas usuários autorizados possam acessar as informações e funcionalidades do sistema, mantendo a segurança e integridade dos dados.
                 </p>
                 <div class="box_container">
                     <div class="box_acessar">

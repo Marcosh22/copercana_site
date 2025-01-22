@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Data e hora de teste: Define o cronômetro para terminar em 2 de setembro do ano atual
     const now = new Date();
     const currentYear = now.getFullYear();
-    const targetDate = new Date(currentYear, 8, 2, 0, 0, 0); // 2 de setembro (mês 8 porque janeiro é 0)
+    const targetDate = new Date(currentYear, 0, 0, 0, 0, 0); // 2 de setembro (mês 8 porque janeiro é 0)
 
     function updateCountdown() {
         const now = new Date();
