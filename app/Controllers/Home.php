@@ -302,12 +302,16 @@ class Home extends BaseController
         $unitModel = model('App\Models\UnitModel', false);
         $units = $unitModel->get_all_by_type('truckcenter');
 
+         $servicesModel = model('App\Models\TruckcenterServiceModel', false);
+            $services = $servicesModel->get_all_active();
+
         $data = array(
             'page' => 'truckcenter',
             'parent_page' => 'servicos',
             'seo' => $seo,
             'page_data' => $page_data,
             'units' => $units,
+            'services' => $services,
             'general' => $this->general
         );
 

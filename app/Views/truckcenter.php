@@ -86,7 +86,7 @@ if (isset($socials) && !empty($socials)) {
 
 
         <?php if (isset($page_data->units_section_show) && $page_data->units_section_show == 1 && isset($units) && count($units) > 0) { ?>
-            <section class="page-section bg-light-gray">
+            <section class="page-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -101,7 +101,7 @@ if (isset($socials) && !empty($socials)) {
             </section>
 
             <?php foreach ($units as $unit) { ?>
-                <article class="unit">
+                <article class="unit" style="background-color: #FFF;">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6 col-lg-5 order-md-1">
