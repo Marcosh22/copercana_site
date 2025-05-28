@@ -88,7 +88,7 @@ class Admin_Testimonials extends BaseController
         $data['session'] = $session;
         $data['testimonial'] = $testimonial;
         $data['logged_user'] = $this->ionAuth->user();
-         $data['ion_auth'] = $this->ionAuth;
+        $data['ion_auth'] = $this->ionAuth;
         
         echo view('admin/includes/header', $data);
         echo view('admin/testimonials/edit', $data);

@@ -26,7 +26,9 @@ class Admin_Truckcenter_Services extends Controller
         $data = array(
             'page' => 'truckcenter_services',
             'user' => $this->ionAuth->user()->row(),
-            'session' =>$session
+            'session' => $session,
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
@@ -47,7 +49,9 @@ class Admin_Truckcenter_Services extends Controller
         $data = array(
             'page' => 'truckcenter_services',
             'user' => $this->ionAuth->user()->row(),
-            'session' => $session
+            'session' => $session,
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth
         );
         
         echo view('admin/includes/header', $data);
@@ -127,14 +131,18 @@ class Admin_Truckcenter_Services extends Controller
             'order' => $request->getPost('order'),
             'status' => $request->getPost('status')
         );
+
+        $session = \Config\Services::session();
         
         $response = array(
             'message' => $message,
             'success' => $success,
-            'form_data' => $form_data
+            'form_data' => $form_data,
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth,
+            'session' => $session,
         );
 
-        $session = \Config\Services::session();
         
         $session->setFlashdata('response', $response);
         
@@ -166,7 +174,10 @@ class Admin_Truckcenter_Services extends Controller
             'page' => 'truckcenter_services',
             'user' => $this->ionAuth->user()->row(),
             'session' => $session,
-            'service' => $service
+            'service' => $service,
+            'logged_user' => $this->ionAuth->user(),
+            'ion_auth' => $this->ionAuth,
+            'session' => $session,
         );
         
         echo view('admin/includes/header', $data);
