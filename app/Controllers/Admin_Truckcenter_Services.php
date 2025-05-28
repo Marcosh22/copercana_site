@@ -96,7 +96,7 @@ class Admin_Truckcenter_Services extends BaseController
             if ($icon->isValid() && !$icon->hasMoved()) {
                 $newName = $icon->getRandomName();
                 
-                if ($icon->move(ROOTPATH . 'public/uploads/truckcenter/services/', $newName)) {
+                if ($icon->move(PUBLIC_PATH . '/uploads/truckcenter/services/', $newName)) {
                     $icon_path = 'uploads/truckcenter/services/' . $newName;
                     
                     try {
@@ -156,7 +156,7 @@ class Admin_Truckcenter_Services extends BaseController
     public function edit($id = null)
     {
         helper(['form']);
-        
+
         if (!$this->ionAuth->loggedIn()) {
             return redirect()->to('/auth/login');
         } else if (!$this->ionAuth->isAdmin()) {
@@ -240,12 +240,12 @@ class Admin_Truckcenter_Services extends BaseController
             
             $newName = $icon->getRandomName();
             
-            if ($icon->move(ROOTPATH . 'public/uploads/truckcenter/services/', $newName)) {
+            if ($icon->move(PUBLIC_PATH . '/uploads/truckcenter/services/', $newName)) {
                 $icon_path = 'uploads/truckcenter/services/' . $newName;
                 
                 // Remove old image if exists
-                if (isset($service->icon) && !empty($service->icon) && file_exists(ROOTPATH . 'public/' . $service->icon)) {
-                    @unlink(ROOTPATH . 'public/' . $service->icon);
+                if (isset($service->icon) && !empty($service->icon) && file_exists(PUBLIC_PATH . '/' . $service->icon)) {
+                    @unlink(PUBLIC_PATH . '/' . $service->icon);
                 }
             } else {
                 $message = "Erro ao efetuar upload. Tente novamente.";
