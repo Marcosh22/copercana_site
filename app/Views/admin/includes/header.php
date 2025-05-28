@@ -346,6 +346,11 @@
             </a>
           </li>
           <li>
+            <a href="<?= base_url("admin/pages/truckcenter") ?>" <?= $page === 'pages-truckcenter' ? 'class="active"' : null ?>>
+              <i class="bi bi-circle"></i><span>Truck Center</span>
+            </a>
+          </li>
+          <li>
             <a href="<?= base_url("admin/pages/centro-de-eventos") ?>" <?= $page === 'pages-centro-de-eventos' ? 'class="active"' : null ?>>
               <i class="bi bi-circle"></i><span>Centro de Eventos</span>
             </a>

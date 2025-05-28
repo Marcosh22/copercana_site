@@ -286,6 +286,7 @@ $routes->group('admin', function ($routes) {
         $routes->get('cooperativismo', 'Admin_Pages::cooperativismo');
         $routes->get('politica-de-privacidade', 'Admin_Pages::politica_privacidade');
         $routes->get('autocenter', 'Admin_Pages::autocenter');
+        $routes->get('truckcenter', 'Admin_Pages::truckcenter');
         $routes->get('centro-de-eventos', 'Admin_Pages::centro_eventos');
         $routes->get('distribuidora-de-combustiveis', 'Admin_Pages::distribuidora_combustiveis');
         $routes->get('ferragem-magazine', 'Admin_Pages::ferragem_magazine');

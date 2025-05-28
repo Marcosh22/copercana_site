@@ -50,7 +50,7 @@
                         <?php }
                         ?>
 
-                        <?php echo form_open_multipart('admin/pages/update_page/26', ['class' => 'my-5']);?>
+                        <?php echo form_open_multipart('admin/pages/update_page/31', ['class' => 'my-5']);?>
 
                         <h3 class="card-title">Carrossel de cotações</h3>
 
@@ -81,7 +81,7 @@
                                         value="<?= $page_data->truckcenter_section_banner; ?>">
                                     <img src="<?= base_url($page_data->truckcenter_section_banner) ?>" alt="">
                                     <a class="delete-btn"
-                                        href="<?= base_url("admin/pages/delete_file/6/truckcenter_section_banner") ?>"><i
+                                        href="<?= base_url("admin/pages/delete_file/31/truckcenter_section_banner") ?>"><i
                                             class="bi bi-x-circle-fill"></i></a>
                                 </div>
                                 <?php } else { ?>
@@ -101,7 +101,7 @@
                                         value="<?= $page_data->truckcenter_section_mobile_banner; ?>">
                                     <img src="<?= base_url($page_data->truckcenter_section_mobile_banner) ?>" alt="">
                                     <a class="delete-btn"
-                                        href="<?= base_url("admin/pages/delete_file/6/truckcenter_section_mobile_banner") ?>"><i
+                                        href="<?= base_url("admin/pages/delete_file/31/truckcenter_section_mobile_banner") ?>"><i
                                             class="bi bi-x-circle-fill"></i></a>
                                 </div>
                                 <?php } else { ?>
