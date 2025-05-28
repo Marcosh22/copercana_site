@@ -3,22 +3,15 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use CodeIgniter\HTTP\RequestInterface;
-use CodeIgniter\HTTP\ResponseInterface;
-use Psr\Log\LoggerInterface;
 
 class Admin_Truckcenter_Services extends Controller
 {
-    protected $ionAuth;
-    protected $session;
+    private $ionAuth;
     
-    public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
-    {
-        parent::initController($request, $response, $logger);
-        
-        $this->ionAuth = new \IonAuth\Libraries\IonAuth();
-        $this->session = \Config\Services::session();
-    }
+    public function __construct()
+	{
+		$this->ionAuth = new \IonAuth\Libraries\IonAuth();
+	}
     
     public function index()
     {
@@ -27,11 +20,13 @@ class Admin_Truckcenter_Services extends Controller
         } else if (!$this->ionAuth->isAdmin()) {
             return redirect()->to('/admin');
         }
+
+        $session = \Config\Services::session();
         
         $data = array(
             'page' => 'truckcenter_services',
             'user' => $this->ionAuth->user()->row(),
-            'session' => $this->session
+            'session' =>$session
         );
         
         echo view('admin/common/header', $data);
@@ -47,10 +42,12 @@ class Admin_Truckcenter_Services extends Controller
             return redirect()->to('/admin');
         }
         
+        $session = \Config\Services::session();
+
         $data = array(
             'page' => 'truckcenter_services',
             'user' => $this->ionAuth->user()->row(),
-            'session' => $this->session
+            'session' => $session
         );
         
         echo view('admin/common/header', $data);
@@ -66,7 +63,6 @@ class Admin_Truckcenter_Services extends Controller
             return redirect()->to('/admin');
         }
         
-        $session = $this->session;
         $request = $this->request;
         $message = '';
         $success = false;
@@ -137,6 +133,8 @@ class Admin_Truckcenter_Services extends Controller
             'success' => $success,
             'form_data' => $form_data
         );
+
+        $session = \Config\Services::session();
         
         $session->setFlashdata('response', $response);
         
@@ -161,11 +159,13 @@ class Admin_Truckcenter_Services extends Controller
         if (!$service) {
             return redirect()->to('/admin/truckcenter/services');
         }
+
+        $session = \Config\Services::session();
         
         $data = array(
             'page' => 'truckcenter_services',
             'user' => $this->ionAuth->user()->row(),
-            'session' => $this->session,
+            'session' => $session,
             'service' => $service
         );
         
@@ -182,7 +182,7 @@ class Admin_Truckcenter_Services extends Controller
             return redirect()->to('/admin');
         }
         
-        $session = $this->session;
+
         $request = $this->request;
         $message = '';
         $success = false;
@@ -201,6 +201,8 @@ class Admin_Truckcenter_Services extends Controller
         $status = $request->getPost('status') ? 1 : 0;
         
         $icon_path = $request->getPost('icon');
+
+        $session = \Config\Services::session();
         
         if ($icon && $icon->isValid() && !$icon->hasMoved()) {
             $validationRule = [
@@ -292,8 +294,10 @@ class Admin_Truckcenter_Services extends Controller
             'message' => $message,
             'success' => $success
         );
+
+        $session = \Config\Services::session();
         
-        $this->session->setFlashdata('response', $response);
+        $session->setFlashdata('response', $response);
         return redirect()->to('/admin/truckcenter/services/edit/' . $id);
     }
     
@@ -326,8 +330,8 @@ class Admin_Truckcenter_Services extends Controller
             'message' => $message,
             'success' => $success
         );
-        
-        $this->session->setFlashdata('response', $response);
+        $session = \Config\Services::session();
+        $session->setFlashdata('response', $response);
         return redirect()->to('/admin/truckcenter/services');
     }
 }

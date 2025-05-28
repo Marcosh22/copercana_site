@@ -532,6 +532,11 @@
               <i class="bi bi-circle"></i><span>Auto Center</span>
             </a>
           </li>
+           <li>
+            <a href="<?= base_url("admin/units/truckcenter") ?>" <?= $page === 'units-truckcenter' ? 'class="active"' : null ?>>
+              <i class="bi bi-circle"></i><span>Truck Center</span>
+            </a>
+          </li>
           <li>
             <a href="<?= base_url("admin/units/agronomic-department") ?>" <?= $page === 'units-agronomic-department' ? 'class="active"' : null ?>>
               <i class="bi bi-circle"></i><span>Departamento Agronômico</span>

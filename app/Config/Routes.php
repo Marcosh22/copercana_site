@@ -325,6 +325,12 @@ $routes->group('admin', function ($routes) {
             $routes->get('edit/(:any)', 'Admin_Units::autocenter_edit/$1');
         });
 
+         $routes->group('truckcenter', function ($routes) {
+            $routes->get('/', 'Admin_Units::truckcenter');
+            $routes->get('add_new', 'Admin_Units::truckcenter_add_new');
+            $routes->get('edit/(:any)', 'Admin_Units::truckcenter_edit/$1');
+        });
+
         $routes->group('agronomic-department', function ($routes) {
             $routes->get('/', 'Admin_Units::agronomic_department_unit');
             $routes->get('add_new', 'Admin_Units::agronomic_department_add_new');
