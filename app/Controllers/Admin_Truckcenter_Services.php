@@ -29,9 +29,9 @@ class Admin_Truckcenter_Services extends Controller
             'session' =>$session
         );
         
-        echo view('admin/common/header', $data);
+        echo view('admin/includes/header', $data);
         echo view('admin/truckcenter/services/index', $data);
-        echo view('admin/common/footer', $data);
+        echo view('admin/includes/footer', $data);
     }
     
     public function add_new()
@@ -50,9 +50,9 @@ class Admin_Truckcenter_Services extends Controller
             'session' => $session
         );
         
-        echo view('admin/common/header', $data);
+        echo view('admin/includes/header', $data);
         echo view('admin/truckcenter/services/add_new', $data);
-        echo view('admin/common/footer', $data);
+        echo view('admin/includes/footer', $data);
     }
     
     public function add()
@@ -169,9 +169,9 @@ class Admin_Truckcenter_Services extends Controller
             'service' => $service
         );
         
-        echo view('admin/common/header', $data);
+        echo view('admin/includes/header', $data);
         echo view('admin/truckcenter/services/edit', $data);
-        echo view('admin/common/footer', $data);
+        echo view('admin/includes/footer', $data);
     }
     
     public function update($id = null)
