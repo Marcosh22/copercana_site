@@ -370,6 +370,17 @@ $routes->group('admin', function ($routes) {
 
 });
 
+$routes->get('/admin/truckcenter/services', 'Admin_Truckcenter_Services::index', ['filter' => 'auth']);
+$routes->get('/admin/truckcenter/services/add_new', 'Admin_Truckcenter_Services::add_new', ['filter' => 'auth']);
+$routes->post('/admin/truckcenter/services/add', 'Admin_Truckcenter_Services::add', ['filter' => 'auth']);
+$routes->get('/admin/truckcenter/services/edit/(:num)', 'Admin_Truckcenter_Services::edit/$1', ['filter' => 'auth']);
+$routes->post('/admin/truckcenter/services/update/(:num)', 'Admin_Truckcenter_Services::update/$1', ['filter' => 'auth']);
+$routes->get('/admin/truckcenter/services/remove_icon/(:num)', 'Admin_Truckcenter_Services::remove_icon/$1', ['filter' => 'auth']);
+$routes->get('/admin/truckcenter/services/delete/(:num)', 'Admin_Truckcenter_Services::delete/$1', ['filter' => 'auth']);
+
+$routes->get('/api/datatables/truckcenter/services', 'Api_Truckcenter_Services::index');
+$routes->post('/api/truckcenter/services/update_order', 'Api_Truckcenter_Services::update_order');
+
 $routes->post('api/banners/increment_click/(:any)', 'Api_Banners::increment_click/$1');
 $routes->post('api/banners/save_order', 'Api_Banners::save_order');
 $routes->post('api/pictures/save_order', 'Api_Pictures::save_order');
