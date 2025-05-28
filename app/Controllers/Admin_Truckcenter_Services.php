@@ -36,6 +36,8 @@ class Admin_Truckcenter_Services extends BaseController
     
     public function add_new()
     {
+        helper(['form']);
+
         if (!$this->ionAuth->loggedIn()) {
             return redirect()->to('/auth/login');
         } else if (!$this->ionAuth->isAdmin()) {
@@ -153,6 +155,8 @@ class Admin_Truckcenter_Services extends BaseController
     
     public function edit($id = null)
     {
+        helper(['form']);
+        
         if (!$this->ionAuth->loggedIn()) {
             return redirect()->to('/auth/login');
         } else if (!$this->ionAuth->isAdmin()) {

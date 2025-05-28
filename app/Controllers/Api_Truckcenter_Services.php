@@ -11,12 +11,12 @@ class Api_Truckcenter_Services extends ResourceController
     public function index()
     {
         $request = $this->request;
-        $draw = $request->getGet('draw');
-        $start = $request->getGet('start');
-        $length = $request->getGet('length');
-        $search = $request->getGet('search')['value'];
-        $order_by = $request->getGet('order')[0]['column'];
-        $order_dir = $request->getGet('order')[0]['dir'];
+        $draw = $request->getPost('draw');
+        $start = $request->getPost('start');
+        $length = $request->getPost('length');
+        $search = $request->getPost('search')['value'];
+        $order_by = $request->getPost('order')[0]['column'];
+        $order_dir = $request->getPost('order')[0]['dir'];
 
         $columns = [
             0 => 'id',

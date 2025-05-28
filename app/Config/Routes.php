@@ -385,7 +385,7 @@ $routes->post('/admin/truckcenter/services/update/(:num)', 'Admin_Truckcenter_Se
 $routes->get('/admin/truckcenter/services/remove_icon/(:num)', 'Admin_Truckcenter_Services::remove_icon/$1');
 $routes->get('/admin/truckcenter/services/delete/(:num)', 'Admin_Truckcenter_Services::delete/$1');
 
-$routes->get('/api/datatables/truckcenter/services', 'Api_Truckcenter_Services::index');
+$routes->post('/api/datatables/truckcenter/services', 'Api_Truckcenter_Services::index');
 $routes->post('/api/truckcenter/services/update_order', 'Api_Truckcenter_Services::update_order');
 
 $routes->post('api/banners/increment_click/(:any)', 'Api_Banners::increment_click/$1');
