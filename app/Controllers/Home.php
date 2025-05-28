@@ -280,6 +280,45 @@ class Home extends BaseController
         echo view('includes/footer', $data);
     }
 
+        public function truckcenter()
+    {
+        $pageModel = model('App\Models\PageModel', false);
+        $page = $pageModel->get_by_id(31);
+        $page_data = null;
+
+        if (isset($page->definition) && !empty($page->definition)) {
+            $page_data = json_decode($page->definition);
+        }
+
+        $seo = array(
+            'title' => 'Serviços automotivos exclusivos, qualidade e eficiência! Confira.',
+            'description' => 'Oferecemos serviços automotivos aos nossos cooperados e clientes, prezando sempre pela qualidade, comodidade e eficiência. Conheça nossas condições.',
+            'keywords' => '',
+            'publisher' => 'https://suave.ppg.br',
+            'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+            'canonical' => base_url("servicos/truck-center")
+        );
+
+        $unitModel = model('App\Models\UnitModel', false);
+        $units = $unitModel->get_all_by_type('truckcenter');
+
+        $data = array(
+            'page' => 'truckcenter',
+            'parent_page' => 'servicos',
+            'seo' => $seo,
+            'page_data' => $page_data,
+            'units' => $units,
+            'general' => $this->general
+        );
+
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+            $data['quotation_list'] = true;
+        }
+
+        echo view('includes/header', $data);
+        echo view('truckcenter', $data);
+        echo view('includes/footer', $data);
+    }
     public function centro_eventos()
     {
         $pageModel = model('App\Models\PageModel', false);

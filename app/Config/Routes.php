@@ -41,6 +41,7 @@ $routes->get('/institucional/cooperativismo', 'Home::cooperativismo');
 $routes->get('/institucional/politica-de-privacidade', 'Home::politica_privacidade');
 
 $routes->get('/servicos/auto-center', 'Home::autocenter');
+$routes->get('/servicos/truck-center', 'Home::truckcenter');
 $routes->get('/servicos/centro-de-eventos', 'Home::centro_eventos');
 $routes->get('/servicos/distribuidora-de-combustiveis', 'Home::distribuidora_combustiveis');
 $routes->get('/servicos/ferragem-magazine', 'Home::ferragem_magazine');
