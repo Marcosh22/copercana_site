@@ -4422,6 +4422,10 @@ body {
   font-weight: 600;
 }
 
+  .truckcenter_services {
+    padding-bottom: 30px;
+  }
+
 .truckcenter_service {
   display: flex;
   align-items: center;
@@ -4446,11 +4450,13 @@ body {
 }
 
 @media (min-width: 768px) {
-  .truckcenter_service {
+  .truckcenter_services {
     columns: 2;
+    padding-bottom: 50px;
   }
 
   .truckcenter_service .truckcenter_service__title {
     padding-right: 24px;
+    font-size: 18px;
   }
 }

@@ -284,6 +284,11 @@
                                                 class="nav-submenu__link">AUTO CENTER E AUTOMOTIVO</a>
                                         </li>
                                         <li
+                                            class="nav-submenu__item<?= $page == 'truckcenter' || (isset($parent_page) && $parent_page == 'truckcenter') ? ' active' : '' ?>">
+                                            <a href="<?= base_url("servicos/truck-center") ?>"
+                                                class="nav-submenu__link">TRUCK CENTER VEÍCULOS PESADOS</a>
+                                        </li>
+                                        <li
                                             class="nav-submenu__item<?= $page == 'centro-de-eventos' || (isset($parent_page) && $parent_page == 'centro-de-eventos') ? ' active' : '' ?>">
                                             <a href="<?= base_url("servicos/centro-de-eventos") ?>"
                                                 class="nav-submenu__link">CENTRO DE EVENTOS</a>
@@ -607,6 +612,11 @@
                             <a href="<?= base_url("servicos/auto-center") ?>" class="mobile-nav-submenu__link">Auto
                                 Center e Automotivo</a>
                         </li>
+                        <li
+                            class="mobile-nav-submenu__item<?= $page == 'truckcenter' || (isset($parent_page) && $parent_page == 'truckcenter') ? ' active' : '' ?>">
+                            <a href="<?= base_url("servicos/auto-center") ?>" class="mobile-nav-submenu__link">Truck
+                                Center Veículos Pesados</a>
+                    </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'centro-de-eventos' || (isset($parent_page) && $parent_page == 'centro-de-eventos') ? ' active' : '' ?>">
                             <a href="<?= base_url("servicos/centro-de-eventos") ?>"
