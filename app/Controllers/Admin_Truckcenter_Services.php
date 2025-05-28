@@ -2,9 +2,7 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
-
-class Admin_Truckcenter_Services extends Controller
+class Admin_Truckcenter_Services extends BaseController
 {
     private $ionAuth;
     
