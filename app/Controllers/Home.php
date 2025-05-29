@@ -299,6 +299,19 @@ class Home extends BaseController
             'canonical' => base_url("servicos/truck-center")
         );
 
+        $header_dependencies = array(
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick.css") . '">',
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick-theme.css") . '">'
+        );
+
+        $footer_dependencies = array(
+            '<script src="' . base_url("_assets/vendor/slick/slick.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/home.js") . '?v=' . filemtime("_assets/js/home.js") . '" ></script>'
+        );
+
+        $bannerModel = model('App\Models\BannerModel', false);
+        $banners = $bannerModel->get_all_active_by_page_id(1);
+
         $unitModel = model('App\Models\UnitModel', false);
         $units = $unitModel->get_all_by_type('truckcenter');
 
@@ -310,7 +323,10 @@ class Home extends BaseController
             'parent_page' => 'servicos',
             'seo' => $seo,
             'page_data' => $page_data,
+            'header_dependencies' => $header_dependencies,
+            'footer_dependencies' => $footer_dependencies,
             'units' => $units,
+            'banners' => $banners,
             'services' => $services,
             'general' => $this->general
         );

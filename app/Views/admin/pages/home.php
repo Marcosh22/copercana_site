@@ -155,6 +155,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="row mb-5">
                             <div class="col-sm-2">
                                 <?php echo form_label('Seguros', '', ['class' => 'card-title col-form-label']);?>
@@ -758,6 +759,62 @@
                                                 ], '1', isset($page_data) && isset($page_data->show_service_12) && $page_data->show_service_12 == 1, ['class' => 'switch switch--shadow']);?>
 
                                             <label for="show_service_12"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-5">
+                            <div class="col-sm-2">
+                                <?php echo form_label('Truck Center', '', ['class' => 'card-title col-form-label']);?>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <?php echo form_label('Imagem</br><small>(Recomendado: 300x160)</small>', 'service_13_picture', ['class' => 'col-form-label']);?>
+                                        <?php if(isset($page_data) && isset($page_data->service_13_picture) && !empty($page_data->service_13_picture)) { ?>
+                                        <div class="banner-preview">
+                                            <input type="hidden" name="service_13_picture"
+                                                value="<?= $page_data->service_13_picture; ?>">
+                                            <img src="<?= base_url($page_data->service_13_picture) ?>" alt="">
+                                            <a class="delete-btn"
+                                                href="<?= base_url("admin/pages/delete_file/1/service_13_picture") ?>"><i
+                                                    class="bi bi-x-circle-fill"></i></a>
+                                        </div>
+                                        <?php } else { ?>
+                                        <?php echo form_upload([
+                                                    'name' => 'service_13_picture',
+                                                    'id'   => 'service_13_picture'
+                                                ], '', ['class' => 'form-control']);?>
+                                        <?php } ?>
+                                    </div>
+                                    <div class="col-sm-8 d-flex flex-column justify-content-end">
+                                        <?php echo form_label('Título', 'service_13_picture', ['class' => 'col-form-label']);?>
+                                        <?php echo form_input([
+                                                'name' => 'service_13_picture',
+                                                'id'   => 'service_13_picture',
+                                                'type' => 'text'
+                                            ], isset($page_data) && isset($page_data->service_13_picture) ? $page_data->service_13_picture : '', ['class' => 'form-control']);?>
+                                    </div>
+                                    <div class="col-12">
+                                        <?php echo form_label('Descrição', 'service_13_description', ['class' => 'col-form-label']);?>
+                                        <?php echo form_textarea([
+                                                'name' => 'service_13_description',
+                                                'id'   => 'service_13_description',
+                                            ], isset($page_data) && isset($page_data->service_13_description) ? $page_data->service_13_description : '', ['class' => 'form-control', 'style' => 'height: 70px']);?>
+                                    </div>
+                                    <div class="col-12">
+                                        <?php echo form_label('Exibir?', 'show_service_13', ['class' => 'col-form-label']);?>
+                                        <div class="switch__container">
+                                            <?php echo form_checkbox([
+                                                    'name' => 'show_service_13',
+                                                    'id'   => 'show_service_13',
+                                                    'value'   => '1',
+                                                    'checked' => isset($page_data) && isset($page_data->show_service_13) && $page_data->show_service_13 == 1,
+                                                ], '1', isset($page_data) && isset($page_data->show_service_13) && $page_data->show_service_13 == 1, ['class' => 'switch switch--shadow']);?>
+
+                                            <label for="show_service_13"></label>
                                         </div>
                                     </div>
                                 </div>

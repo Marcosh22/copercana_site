@@ -795,6 +795,8 @@ body {
 
 .acessibility-bar {
   height: 30px;
+  max-height: 30px;
+  overflow: hidden;
   width: 100%;
   background-color: #5b5a5f;
   position: fixed;
@@ -816,7 +818,7 @@ body {
   align-items: center;
   width: 45px;
   height: 30px;
-  position: static;
+  position: relative;
   top: unset;
   background-color: #616165;
   border: none;
@@ -838,6 +840,13 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+.acessibility-bar .acessibility__button[vw] {
+ margin: 0!important;
+ transform: none!important;
+ max-height: 30px!important;
+}
+
 
 .acessibility-bar .acessibility__button[vw] [vw-access-button] img {
   display: none;

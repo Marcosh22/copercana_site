@@ -85,6 +85,26 @@
                                     </article>
                                 <?php } ?>
 
+                                 <?php if(isset($page_data->show_service_13) && $page_data->show_service_13 == 1) { ?>
+                                    <article class="service__item service-card">
+                                        <div class="service-card__header">
+                                            <img src="<?= base_url($page_data->show_service_13) ?>"
+                                                alt="<?= $page_data->show_service_13 ?>">
+                                        </div>
+                                        <div class="service-card__body">
+                                            <h3 class="service-card__title">
+                                                <?= $page_data->show_service_13 ?>
+                                            </h3>
+                                            <p class="service-card__description">
+                                                <?= $page_data->show_service_13 ?>
+                                            </p>
+                                            <a href="<?= base_url("servicos/truck-center") ?>" class="service-card__button">
+                                                Saiba mais
+                                            </a>
+                                        </div>
+                                    </article>
+                                <?php } ?>
+
                                 <?php if(isset($page_data->show_service_02) && $page_data->show_service_02 == 1) { ?>
                                     <article class="service__item service-card">
                                         <div class="service-card__header">
