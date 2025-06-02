@@ -790,12 +790,12 @@
                                         <?php } ?>
                                     </div>
                                     <div class="col-sm-8 d-flex flex-column justify-content-end">
-                                        <?php echo form_label('Título', 'service_13_picture', ['class' => 'col-form-label']);?>
+                                        <?php echo form_label('Título', 'service_13_title', ['class' => 'col-form-label']);?>
                                         <?php echo form_input([
-                                                'name' => 'service_13_picture',
-                                                'id'   => 'service_13_picture',
+                                                'name' => 'service_13_title',
+                                                'id'   => 'service_13_title',
                                                 'type' => 'text'
-                                            ], isset($page_data) && isset($page_data->service_13_picture) ? $page_data->service_13_picture : '', ['class' => 'form-control']);?>
+                                            ], isset($page_data) && isset($page_data->service_13_title) ? $page_data->service_13_title : '', ['class' => 'form-control']);?>
                                     </div>
                                     <div class="col-12">
                                         <?php echo form_label('Descrição', 'service_13_description', ['class' => 'col-form-label']);?>
