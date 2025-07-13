@@ -2698,6 +2698,28 @@ body {
   }
 }
 
+.unit.unit--vertical {
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.unit.unit--vertical .unit__picture {
+  border-radius: 20px;
+}
+
+.unit.unit--vertical .unit__info {
+  padding: 15px;
+}
+
+.unit.unit--vertical .unit__info p {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.unit.unit--vertical .button {
+  margin: 0 auto;
+}
+
 .page-socials-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

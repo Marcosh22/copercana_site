@@ -280,7 +280,7 @@ class Home extends BaseController
         echo view('includes/footer', $data);
     }
 
-        public function truckcenter()
+    public function truckcenter()
     {
         $pageModel = model('App\Models\PageModel', false);
         $page = $pageModel->get_by_id(31);
@@ -315,8 +315,8 @@ class Home extends BaseController
         $unitModel = model('App\Models\UnitModel', false);
         $units = $unitModel->get_all_by_type('truckcenter');
 
-         $servicesModel = model('App\Models\TruckcenterServiceModel', false);
-            $services = $servicesModel->get_all_active();
+        $servicesModel = model('App\Models\TruckcenterServiceModel', false);
+        $services = $servicesModel->get_all_active();
 
         $data = array(
             'page' => 'truckcenter',
@@ -456,12 +456,16 @@ class Home extends BaseController
         $unitModel = model('App\Models\UnitModel', false);
         $units = $unitModel->get_all_by_type('magazine');
 
+        $offerModel = model('App\Models\OfferModel', false);
+        $offers = $offerModel->get_all_active();
+
         $data = array(
             'page' => 'ferragem-magazine',
             'parent_page' => 'servicos',
             'seo' => $seo,
             'page_data' => $page_data,
             'units' => $units,
+            'offers' => $offers,
             'general' => $this->general
         );
 
@@ -1570,7 +1574,7 @@ class Home extends BaseController
                 $galleryDigital = $galleryModel->get_pictures_by_gallery_id(4);
                 $galleryMagazine = $galleryModel->get_pictures_by_gallery_id(5);
                 $galleryMiscellaneous = $galleryModel->get_pictures_by_gallery_id(6);
-                
+
 
                 $videoModel = model('App\Models\VideoModel', false);
                 $videos = $videoModel->get_all();
