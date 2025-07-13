@@ -104,13 +104,13 @@ if (isset($socials) && !empty($socials)) {
                                     <?= $page_data->units_section_title ?>
                                 </h2>
                             </div>
-                            <div class="col-12 mt-3">
+                            <div class="col-12 mt-3 mb-5">
                                 <?= $page_data->units_section_description ?>
                             </div>
                         </div>
                         <div class="row">
                             <?php foreach ($units as $unit) { ?>
-                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                                     <article class="unit unit--vertical">
                                         <div class="unit__picture-wrapper">
                                             <img src="<?= base_url($unit->picture) ?>" alt="" class="unit__picture img-fluid">
