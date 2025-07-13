@@ -30,42 +30,42 @@
                             </symbol>
                         </svg>
 
-                        <?php 
-                            $response = $session->getFlashdata('response');
-                            
-                            if(isset($response) && !empty($response)) { ?>
+                        <?php
+                        $response = $session->getFlashdata('response');
 
-                        <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
-                            role="alert" style="margin-bottom: 20px">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
-                                <use
-                                    xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
-                            </svg>
-                            <div>
-                                <?= $response['message'] ?>
+                        if (isset($response) && !empty($response)) { ?>
+
+                            <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
+                                role="alert" style="margin-bottom: 20px">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                                    <use
+                                        xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
+                                </svg>
+                                <div>
+                                    <?= $response['message'] ?>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
 
                         <?php }
                         ?>
 
-                        <?php echo form_open_multipart('admin/pages/update_page/9', ['class' => 'my-5']);?>
+                        <?php echo form_open_multipart('admin/pages/update_page/9', ['class' => 'my-5']); ?>
 
                         <h3 class="card-title">Carrossel de cotações</h3>
 
                         <div class="row mb-3">
-                            <?php echo form_label('Exibir?', 'show_quotation_carousel', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Exibir?', 'show_quotation_carousel', ['class' => 'col-sm-2 col-form-label']); ?>
 
                             <div class="col-sm-10">
 
                                 <div class="switch__container">
                                     <?php echo form_checkbox([
-                                            'name' => 'show_quotation_carousel',
-                                            'id'   => 'show_quotation_carousel',
-                                            'value'   => '1',
-                                            'checked' => isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1,
-                                        ], '1', isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1, ['class' => 'switch switch--shadow']);?>
+                                        'name' => 'show_quotation_carousel',
+                                        'id' => 'show_quotation_carousel',
+                                        'value' => '1',
+                                        'checked' => isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1,
+                                    ], '1', isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1, ['class' => 'switch switch--shadow']); ?>
 
                                     <label for="show_quotation_carousel"></label>
                                 </div>
@@ -73,103 +73,143 @@
                         </div>
                         <h3 class="card-title">Ferragem e Magazine</h3>
                         <div class="row mb-3">
-                            <?php echo form_label('Banner</br><small>(Recomendado: 1110x300)</small>', 'magazine_section_banner', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Banner</br><small>(Recomendado: 1110x300)</small>', 'magazine_section_banner', ['class' => 'col-sm-2 col-form-label']); ?>
                             <div class="col-sm-10">
-                                <?php if(isset($page_data) && isset($page_data->magazine_section_banner) && !empty($page_data->magazine_section_banner)) { ?>
-                                <div class="banner-preview">
-                                    <input type="hidden" name="magazine_section_banner"
-                                        value="<?= $page_data->magazine_section_banner; ?>">
-                                    <img src="<?= base_url($page_data->magazine_section_banner) ?>" alt="">
-                                    <a class="delete-btn"
-                                        href="<?= base_url("admin/pages/delete_file/9/magazine_section_banner") ?>"><i
-                                            class="bi bi-x-circle-fill"></i></a>
-                                </div>
+                                <?php if (isset($page_data) && isset($page_data->magazine_section_banner) && !empty($page_data->magazine_section_banner)) { ?>
+                                    <div class="banner-preview">
+                                        <input type="hidden" name="magazine_section_banner"
+                                            value="<?= $page_data->magazine_section_banner; ?>">
+                                        <img src="<?= base_url($page_data->magazine_section_banner) ?>" alt="">
+                                        <a class="delete-btn"
+                                            href="<?= base_url("admin/pages/delete_file/9/magazine_section_banner") ?>"><i
+                                                class="bi bi-x-circle-fill"></i></a>
+                                    </div>
                                 <?php } else { ?>
-                                <?php echo form_upload([
-                                            'name' => 'magazine_section_banner',
-                                            'id'   => 'magazine_section_banner'
-                                        ], '', ['class' => 'form-control']);?>
+                                    <?php echo form_upload([
+                                        'name' => 'magazine_section_banner',
+                                        'id' => 'magazine_section_banner'
+                                    ], '', ['class' => 'form-control']); ?>
                                 <?php } ?>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <?php echo form_label('Banner Mobile</br><small>(Recomendado: 860x500)</small>', 'magazine_section_mobile_banner', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Banner Mobile</br><small>(Recomendado: 860x500)</small>', 'magazine_section_mobile_banner', ['class' => 'col-sm-2 col-form-label']); ?>
                             <div class="col-sm-10">
-                                <?php if(isset($page_data) && isset($page_data->magazine_section_mobile_banner) && !empty($page_data->magazine_section_mobile_banner)) { ?>
-                                <div class="banner-preview">
-                                    <input type="hidden" name="magazine_section_mobile_banner"
-                                        value="<?= $page_data->magazine_section_mobile_banner; ?>">
-                                    <img src="<?= base_url($page_data->magazine_section_mobile_banner) ?>" alt="">
-                                    <a class="delete-btn"
-                                        href="<?= base_url("admin/pages/delete_file/9/magazine_section_mobile_banner") ?>"><i
-                                            class="bi bi-x-circle-fill"></i></a>
-                                </div>
+                                <?php if (isset($page_data) && isset($page_data->magazine_section_mobile_banner) && !empty($page_data->magazine_section_mobile_banner)) { ?>
+                                    <div class="banner-preview">
+                                        <input type="hidden" name="magazine_section_mobile_banner"
+                                            value="<?= $page_data->magazine_section_mobile_banner; ?>">
+                                        <img src="<?= base_url($page_data->magazine_section_mobile_banner) ?>" alt="">
+                                        <a class="delete-btn"
+                                            href="<?= base_url("admin/pages/delete_file/9/magazine_section_mobile_banner") ?>"><i
+                                                class="bi bi-x-circle-fill"></i></a>
+                                    </div>
                                 <?php } else { ?>
-                                <?php echo form_upload([
-                                            'name' => 'magazine_section_mobile_banner',
-                                            'id'   => 'magazine_section_mobile_banner'
-                                        ], '', ['class' => 'form-control']);?>
+                                    <?php echo form_upload([
+                                        'name' => 'magazine_section_mobile_banner',
+                                        'id' => 'magazine_section_mobile_banner'
+                                    ], '', ['class' => 'form-control']); ?>
                                 <?php } ?>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <?php echo form_label('Título', 'magazine_section_title', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Título', 'magazine_section_title', ['class' => 'col-sm-2 col-form-label']); ?>
                             <div class="col-sm-10">
                                 <?php echo form_input([
-                                                'name' => 'magazine_section_title',
-                                                'id'   => 'magazine_section_title',
-                                                'type' => 'text'
-                                            ], isset($page_data) && isset($page_data->magazine_section_title) ? $page_data->magazine_section_title : '', ['class' => 'form-control']);?>
+                                    'name' => 'magazine_section_title',
+                                    'id' => 'magazine_section_title',
+                                    'type' => 'text'
+                                ], isset($page_data) && isset($page_data->magazine_section_title) ? $page_data->magazine_section_title : '', ['class' => 'form-control']); ?>
 
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <?php echo form_label('Descrição', 'magazine_section_description', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Descrição', 'magazine_section_description', ['class' => 'col-sm-2 col-form-label']); ?>
                             <div class="col-sm-10">
                                 <?php echo form_textarea([
-                                            'name' => 'magazine_section_description',
-                                            'id'   => 'magazine_section_description',
-                                        ], isset($page_data) && isset($page_data->magazine_section_description) ? $page_data->magazine_section_description : '', ['class' => 'form-control editor', 'style' => 'height: 100px']);?>
+                                    'name' => 'magazine_section_description',
+                                    'id' => 'magazine_section_description',
+                                ], isset($page_data) && isset($page_data->magazine_section_description) ? $page_data->magazine_section_description : '', ['class' => 'form-control editor', 'style' => 'height: 100px']); ?>
 
                             </div>
                         </div>
                         <div class="row mb-5">
-                            <?php echo form_label('Exibir seção?', 'magazine_section_show', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Exibir seção?', 'magazine_section_show', ['class' => 'col-sm-2 col-form-label']); ?>
 
                             <div class="col-sm-10">
 
                                 <div class="switch__container">
                                     <?php echo form_checkbox([
-                                            'name' => 'magazine_section_show',
-                                            'id'   => 'magazine_section_show',
-                                            'value'   => '1',
-                                            'checked' => isset($page_data) && isset($page_data->magazine_section_show) && $page_data->magazine_section_show == 1,
-                                        ], '1', isset($page_data) && isset($page_data->magazine_section_show) && $page_data->magazine_section_show == 1, ['class' => 'switch switch--shadow']);?>
+                                        'name' => 'magazine_section_show',
+                                        'id' => 'magazine_section_show',
+                                        'value' => '1',
+                                        'checked' => isset($page_data) && isset($page_data->magazine_section_show) && $page_data->magazine_section_show == 1,
+                                    ], '1', isset($page_data) && isset($page_data->magazine_section_show) && $page_data->magazine_section_show == 1, ['class' => 'switch switch--shadow']); ?>
 
                                     <label for="magazine_section_show"></label>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="card-title">Lojas</h3>
+                        <h3 class="card-title">Ofertas</h3>
                         <div class="row mb-3">
-                            <?php echo form_label('Título', 'units_section_title', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Título', 'offers_section_title', ['class' => 'col-sm-2 col-form-label']); ?>
                             <div class="col-sm-10">
                                 <?php echo form_input([
-                                                'name' => 'units_section_title',
-                                                'id'   => 'units_section_title',
-                                                'type' => 'text'
-                                            ], isset($page_data) && isset($page_data->units_section_title) ? $page_data->units_section_title : '', ['class' => 'form-control']);?>
+                                    'name' => 'offers_section_title',
+                                    'id' => 'offers_section_title',
+                                    'type' => 'text'
+                                ], isset($page_data) && isset($page_data->offers_section_title) ? $page_data->offers_section_title : '', ['class' => 'form-control']); ?>
 
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <?php echo form_label('Descrição', 'units_section_description', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Descrição', 'offers_section_description', ['class' => 'col-sm-2 col-form-label']); ?>
                             <div class="col-sm-10">
                                 <?php echo form_textarea([
-                                            'name' => 'units_section_description',
-                                            'id'   => 'units_section_description',
-                                        ], isset($page_data) && isset($page_data->units_section_description) ? $page_data->units_section_description : '', ['class' => 'form-control editor', 'style' => 'height: 100px']);?>
+                                    'name' => 'offers_section_description',
+                                    'id' => 'offers_section_description',
+                                ], isset($page_data) && isset($page_data->offers_section_description) ? $page_data->offers_section_description : '', ['class' => 'form-control editor', 'style' => 'height: 100px']); ?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <?php echo form_label('Exibir seção?', 'offers_section_show', ['class' => 'col-sm-2 col-form-label']); ?>
+
+                            <div class="col-sm-10">
+
+                                <div class="switch__container">
+                                    <?php echo form_checkbox([
+                                        'name' => 'offers_section_show',
+                                        'id' => 'offers_section_show',
+                                        'value' => '1',
+                                        'checked' => isset($page_data) && isset($page_data->offers_section_show) && $page_data->offers_section_show == 1,
+                                    ], '1', isset($page_data) && isset($page_data->offers_section_show) && $page_data->offers_section_show == 1, ['class' => 'switch switch--shadow']); ?>
+
+                                    <label for="offers_section_show"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="card-title">Lojas</h3>
+                        <div class="row mb-3">
+                            <?php echo form_label('Título', 'units_section_title', ['class' => 'col-sm-2 col-form-label']); ?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                    'name' => 'units_section_title',
+                                    'id' => 'units_section_title',
+                                    'type' => 'text'
+                                ], isset($page_data) && isset($page_data->units_section_title) ? $page_data->units_section_title : '', ['class' => 'form-control']); ?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Descrição', 'units_section_description', ['class' => 'col-sm-2 col-form-label']); ?>
+                            <div class="col-sm-10">
+                                <?php echo form_textarea([
+                                    'name' => 'units_section_description',
+                                    'id' => 'units_section_description',
+                                ], isset($page_data) && isset($page_data->units_section_description) ? $page_data->units_section_description : '', ['class' => 'form-control editor', 'style' => 'height: 100px']); ?>
 
                             </div>
                         </div>
@@ -184,17 +224,17 @@
                             </div>
                         </div>
                         <div class="row mb-5">
-                            <?php echo form_label('Exibir seção?', 'units_section_show', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Exibir seção?', 'units_section_show', ['class' => 'col-sm-2 col-form-label']); ?>
 
                             <div class="col-sm-10">
 
                                 <div class="switch__container">
                                     <?php echo form_checkbox([
-                                            'name' => 'units_section_show',
-                                            'id'   => 'units_section_show',
-                                            'value'   => '1',
-                                            'checked' => isset($page_data) && isset($page_data->units_section_show) && $page_data->units_section_show == 1,
-                                        ], '1', isset($page_data) && isset($page_data->units_section_show) && $page_data->units_section_show == 1, ['class' => 'switch switch--shadow']);?>
+                                        'name' => 'units_section_show',
+                                        'id' => 'units_section_show',
+                                        'value' => '1',
+                                        'checked' => isset($page_data) && isset($page_data->units_section_show) && $page_data->units_section_show == 1,
+                                    ], '1', isset($page_data) && isset($page_data->units_section_show) && $page_data->units_section_show == 1, ['class' => 'switch switch--shadow']); ?>
 
                                     <label for="units_section_show"></label>
                                 </div>
@@ -202,10 +242,10 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col-12">
-                                <?php echo form_submit('submit', 'Salvar', ['class' => 'btn btn-primary w-100']);?>
+                                <?php echo form_submit('submit', 'Salvar', ['class' => 'btn btn-primary w-100']); ?>
                             </div>
                         </div>
-                        <?php echo form_close();?>
+                        <?php echo form_close(); ?>
 
                     </div>
                 </div>
