@@ -2703,6 +2703,8 @@ body {
   padding: 0;
   border-radius: 20px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .unit.unit--vertical .unit__picture {
@@ -2711,6 +2713,10 @@ body {
 
 .unit.unit--vertical .unit__info {
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .unit.unit--vertical .unit__info p {

@@ -238,7 +238,7 @@
                                             <p class="service-card__description">
                                                 <?= $page_data->service_08_description ?>
                                             </p>
-                                            <a href="<?= base_url("servicos/ferragem-magazine") ?>" class="service-card__button">
+                                            <a href="<?= base_url("servicos/lojas-copercana") ?>" class="service-card__button">
                                                 Saiba mais
                                             </a>
                                         </div>

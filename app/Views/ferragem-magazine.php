@@ -94,28 +94,28 @@ if (isset($socials) && !empty($socials)) {
             <?php } ?>
         <?php } ?>
 
-        <?php if (isset($_GET['dev'])) { ?>
-            <?php if (isset($page_data->units_section_show) && $page_data->units_section_show == 1 && isset($units) && count($units) > 0) { ?>
-                <section class="page-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <h2 class="with-underline text-center" style="margin-bottom: 0;">
-                                    <?= $page_data->units_section_title ?>
-                                </h2>
-                            </div>
-                            <div class="col-12 mt-3 mb-5">
-                                <?= $page_data->units_section_description ?>
-                            </div>
+        <?php if (isset($page_data->units_section_show) && $page_data->units_section_show == 1 && isset($units) && count($units) > 0) { ?>
+            <section class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="with-underline text-center" style="margin-bottom: 0;">
+                                <?= $page_data->units_section_title ?>
+                            </h2>
                         </div>
-                        <div class="row">
-                            <?php foreach ($units as $unit) { ?>
-                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                                    <article class="unit unit--vertical">
-                                        <div class="unit__picture-wrapper">
-                                            <img src="<?= base_url($unit->picture) ?>" alt="" class="unit__picture img-fluid">
-                                        </div>
-                                        <div class="unit__info">
+                        <div class="col-12 mt-3 mb-5">
+                            <?= $page_data->units_section_description ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <?php foreach ($units as $unit) { ?>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                <article class="unit unit--vertical">
+                                    <div class="unit__picture-wrapper">
+                                        <img src="<?= base_url($unit->picture) ?>" alt="" class="unit__picture img-fluid">
+                                    </div>
+                                    <div class="unit__info">
+                                        <div>
                                             <h4 class="unit__title"><?= $unit->city ?>/<?= $unit->state ?></h4>
                                             <div class="unit__address">
                                                 <?= $unit->address ?>
@@ -123,52 +123,6 @@ if (isset($socials) && !empty($socials)) {
                                             <div class="unit__opening-hours">
                                                 <?= $unit->opening_hours ?>
                                             </div>
-                                            <?php if (isset($unit->address_link) && !empty($unit->address_link)) { ?>
-                                                <a href="<?= $unit->address_link ?>" class="button button--sm" target="_blank"
-                                                    rel="noopener noreferrer">
-                                                    Traçar Rota
-                                                </a>
-                                            <?php } ?>
-                                        </div>
-                                    </article>
-                                </div>
-                            <?php } ?>
-                        </div>
-                    </div>
-                </section>
-            <?php } ?>
-        <?php } else { ?>
-            <?php if (isset($page_data->units_section_show) && $page_data->units_section_show == 1 && isset($units) && count($units) > 0) { ?>
-                <section class="page-section bg-light-gray">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="d-md-flex align-items-end">
-                                    <h2 class="with-underline with-underline--flex mx-0" style="margin-bottom: 0;">
-                                        <?= $page_data->units_section_title ?>
-                                    </h2>
-                                    <?= $page_data->units_section_description ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <?php foreach ($units as $unit) { ?>
-                    <article class="unit">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12 col-md-6 col-lg-5">
-                                    <img src="<?= base_url($unit->picture) ?>" alt="" class="unit__picture img-fluid">
-                                </div>
-                                <div class="col-12 col-md-6 col-lg-7">
-                                    <h4 class="unit__title"><?= $unit->city ?>/<?= $unit->state ?></h4>
-                                    <div class="unit__address">
-                                        <?= $unit->address ?>
-                                    </div>
-                                    <div class="d-lg-flex justify-content-between align-items-center">
-                                        <div class="unit__opening-hours">
-                                            <?= $unit->opening_hours ?>
                                         </div>
                                         <?php if (isset($unit->address_link) && !empty($unit->address_link)) { ?>
                                             <a href="<?= $unit->address_link ?>" class="button button--sm" target="_blank"
@@ -177,12 +131,12 @@ if (isset($socials) && !empty($socials)) {
                                             </a>
                                         <?php } ?>
                                     </div>
-                                </div>
+                                </article>
                             </div>
-                        </div>
-                    </article>
-                <?php } ?>
-            <?php } ?>
+                        <?php } ?>
+                    </div>
+                </div>
+            </section>
         <?php } ?>
 
         <?php

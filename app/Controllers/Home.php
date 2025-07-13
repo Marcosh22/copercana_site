@@ -450,7 +450,17 @@ class Home extends BaseController
             'keywords' => '',
             'publisher' => 'https://suave.ppg.br',
             'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-            'canonical' => base_url("servicos/ferragem-magazine")
+            'canonical' => base_url("servicos/lojas-copercana")
+        );
+
+        $header_dependencies = array(
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick.css") . '">',
+            '<link rel="stylesheet" href="' . base_url("_assets/vendor/slick/slick-theme.css") . '">'
+        );
+
+        $footer_dependencies = array(
+            '<script src="' . base_url("_assets/vendor/slick/slick.js") . '" ></script>',
+            '<script src="' . base_url("_assets/js/home.js") . '?v=' . filemtime("_assets/js/home.js") . '" ></script>'
         );
 
         $unitModel = model('App\Models\UnitModel', false);
@@ -463,6 +473,8 @@ class Home extends BaseController
             'page' => 'ferragem-magazine',
             'parent_page' => 'servicos',
             'seo' => $seo,
+            'header_dependencies' => $header_dependencies,
+            'footer_dependencies' => $footer_dependencies,
             'page_data' => $page_data,
             'units' => $units,
             'offers' => $offers,

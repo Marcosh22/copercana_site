@@ -315,7 +315,7 @@
                                         </li>
                                         <li
                                             class="nav-submenu__item<?= $page == 'ferragem-magazine' || (isset($parent_page) && $parent_page == 'ferragem-magazine') ? ' active' : '' ?>">
-                                            <a href="<?= base_url("servicos/ferragem-magazine") ?>"
+                                            <a href="<?= base_url("servicos/lojas-copercana") ?>"
                                                 class="nav-submenu__link">FERRAGEM E MAGAZINE</a>
                                         </li>
                                         <li
@@ -646,7 +646,7 @@
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'ferragem-magazine' || (isset($parent_page) && $parent_page == 'ferragem-magazine') ? ' active' : '' ?>">
-                            <a href="<?= base_url("servicos/ferragem-magazine") ?>"
+                            <a href="<?= base_url("servicos/lojas-copercana") ?>"
                                 class="mobile-nav-submenu__link">Ferragem e
                                 Magazine</a>
                         </li>
