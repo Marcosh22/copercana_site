@@ -316,7 +316,7 @@
                                         <li
                                             class="nav-submenu__item<?= $page == 'ferragem-magazine' || (isset($parent_page) && $parent_page == 'ferragem-magazine') ? ' active' : '' ?>">
                                             <a href="<?= base_url("servicos/lojas-copercana") ?>"
-                                                class="nav-submenu__link">FERRAGEM E MAGAZINE</a>
+                                                class="nav-submenu__link">LOJAS COPERCANA</a>
                                         </li>
                                         <li
                                             class="nav-submenu__item nav-submenu__item--has-submenu<?= $page == 'laboratorio-de-solos' || (isset($parent_page) && $parent_page == 'laboratorio-de-solos') ? ' active' : '' ?>">
@@ -647,8 +647,7 @@
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'ferragem-magazine' || (isset($parent_page) && $parent_page == 'ferragem-magazine') ? ' active' : '' ?>">
                             <a href="<?= base_url("servicos/lojas-copercana") ?>"
-                                class="mobile-nav-submenu__link">Ferragem e
-                                Magazine</a>
+                                class="mobile-nav-submenu__link">Lojas Copercana</a>
                         </li>
                         <li
                             class="mobile-nav-submenu__item mobile-nav-menu__item--has-submenu<?= $page == 'laboratorio-de-solos' || (isset($parent_page) && $parent_page == 'laboratorio-de-solos') || $page == 'tecnologia-bioas' || (isset($parent_page) && $parent_page == 'tecnologia-bioas') ? ' active' : '' ?>">
