@@ -11,8 +11,8 @@
                         <img src="<?= base_url($page_data->intro_section_banner) ?>" alt="" class="img-fluid">
                     </picture> -->
                     <video class="img-fluid d-block w-100" autoplay loop muted playsinline>
-                                <source src="<?= base_url("_assets/videos/Laboratorio-Solos-Copercana.webm") ?>" type="video/webm">
-                                <source src="<?= base_url("_assets/videos/Laboratorio-Solos-Copercana.mp4") ?>" type="video/mp4">
+                                <source src="<?= base_url("_assets/videos/Lab-Solos-Copercana.webm") ?>" type="video/webm">
+                                <source src="<?= base_url("_assets/videos/Lab-Solos-Copercana.mp4") ?>" type="video/mp4">
                                 Sorry, your browser does not support video content.
                             </video>
                 </div>
