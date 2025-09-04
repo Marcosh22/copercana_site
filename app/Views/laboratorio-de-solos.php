@@ -3,16 +3,19 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <?php if(isset($page_data->intro_section_banner) && !empty($page_data->intro_section_banner)) { ?>
                 <div class="page_banner">
-                    <picture>
+                    <!-- <picture>
                         <source media="(max-width: 768px)"
                             srcset="<?= base_url($page_data->intro_section_mobile_banner) ?>">
                         <source media="(min-width: 768px)" srcset="<?= base_url($page_data->intro_section_banner) ?>">
                         <img src="<?= base_url($page_data->intro_section_banner) ?>" alt="" class="img-fluid">
-                    </picture>
+                    </picture> -->
+                    <video class="img-fluid d-block w-100" autoplay loop muted playsinline>
+                                <source src="<?= base_url("_assets/videos/Laboratorio-Solos-Copercana.webm") ?>" type="video/webm">
+                                <source src="<?= base_url("_assets/videos/Laboratorio-Solos-Copercana.mp4") ?>" type="video/mp4">
+                                Sorry, your browser does not support video content.
+                            </video>
                 </div>
-                <?php } ?>
             </div>
         </div>
     </div>
