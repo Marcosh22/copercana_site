@@ -37,7 +37,7 @@ if (isset($socials) && !empty($socials)) {
                             <?php if (isset($page_data->files_section_file_02) && !empty($page_data->files_section_file_02)) { ?>
                                     <a class="button mx-3" href="<?= base_url($page_data->files_section_file_02) ?>"
                                         target="_blank" rel="noopener noreferrer" style="width: 205px; font-size: 18px;">
-                                        Primeiro Semestre<br />
+                                        Segundo Semestre<br />
                                         2025
                                     </a>
                             <?php } ?>
