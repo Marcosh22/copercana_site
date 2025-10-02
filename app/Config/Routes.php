@@ -39,6 +39,7 @@ $routes->get('/ESG', 'Home::esg');
 $routes->get('/institucional/sustentabilidade', 'Home::sustentabilidade');
 $routes->get('/institucional/cooperativismo', 'Home::cooperativismo');
 $routes->get('/institucional/politica-de-privacidade', 'Home::politica_privacidade');
+$routes->get('/institucional/relatorio-de-transparencia', 'Home::relatorio_transparencia');
 
 $routes->get('/servicos/auto-center', 'Home::autocenter');
 $routes->get('/servicos/truck-center', 'Home::truckcenter');
@@ -94,17 +95,17 @@ $routes->post('/post/upload_image', 'Admin_Post::upload_image');
 $routes->get('/admin', 'Admin::index');
 
 $routes->group('auth', ['namespace' => 'App\Controllers'], function ($routes) {
-	$routes->add('login', 'Auth::login');
-	$routes->get('logout', 'Auth::logout');
-	$routes->add('forgot_password', 'Auth::forgot_password');
-	$routes->get('/', 'Auth::index');
-	$routes->get('reset_password/(:hash)', 'Auth::reset_password/$1');
-	$routes->post('reset_password/(:hash)', 'Auth::reset_password/$1');
+    $routes->add('login', 'Auth::login');
+    $routes->get('logout', 'Auth::logout');
+    $routes->add('forgot_password', 'Auth::forgot_password');
+    $routes->get('/', 'Auth::index');
+    $routes->get('reset_password/(:hash)', 'Auth::reset_password/$1');
+    $routes->post('reset_password/(:hash)', 'Auth::reset_password/$1');
 });
 
 $routes->group('admin', function ($routes) {
     $routes->get('/', 'Admin_Banners::index');
-    
+
     $routes->group('banners', function ($routes) {
         $routes->get('/', 'Admin_Banners::index');
         $routes->get('add_new', 'Admin_Banners::add_new');
@@ -314,6 +315,7 @@ $routes->group('admin', function ($routes) {
         $routes->get('contato', 'Admin_Pages::contato');
         $routes->get('soucooperado', 'Admin_Pages::soucooperado');
         $routes->get('copercana-60-anos', 'Admin_Pages::copercana_60_anos');
+        $routes->get('relatorio-de-transparencia', 'Admin_Pages::relatorio_transparencia');
 
         $routes->post('update_page/(:any)', 'Admin_Pages::update_page/$1');
         $routes->get('delete_file/(:any)/(:any)', 'Admin_Pages::delete_file/$1/$2');
@@ -327,7 +329,7 @@ $routes->group('admin', function ($routes) {
             $routes->get('edit/(:any)', 'Admin_Units::autocenter_edit/$1');
         });
 
-         $routes->group('truckcenter', function ($routes) {
+        $routes->group('truckcenter', function ($routes) {
             $routes->get('/', 'Admin_Units::truckcenter');
             $routes->get('add_new', 'Admin_Units::truckcenter_add_new');
             $routes->get('edit/(:any)', 'Admin_Units::truckcenter_edit/$1');

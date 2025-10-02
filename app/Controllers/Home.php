@@ -1671,6 +1671,42 @@ class Home extends BaseController
         echo view('includes/footer', $data);
     }
 
+    public function relatorio_transparencia()
+    {
+        $pageModel = model('App\Models\PageModel', false);
+        $page = $pageModel->get_by_id(32);
+        $page_data = null;
+
+        if (isset($page->definition) && !empty($page->definition)) {
+            $page_data = json_decode($page->definition);
+        }
+
+        $seo = array(
+            'title' => 'Relatório de Transparência Salarial - Copercana',
+            'description' => 'O Relatório de Transparência Salarial da Copercana apresenta informações detalhadas sobre a política de remuneração e benefícios oferecidos aos colaboradores.',
+            'keywords' => '',
+            'publisher' => 'https://suave.ppg.br',
+            'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+            'canonical' => base_url("institucional/relatorio-de-transparencia")
+        );
+
+        $data = array(
+            'page' => 'relatorio-de-transparencia',
+            'parent_page' => 'institucional',
+            'seo' => $seo,
+            'page_data' => $page_data,
+            'general' => $this->general
+        );
+
+        if (isset($page_data) && isset($page_data->show_quotation_carousel) && $page_data->show_quotation_carousel == 1) {
+            $data['quotation_list'] = true;
+        }
+
+        echo view('includes/header', $data);
+        echo view('relatorio-de-transparencia', $data);
+        echo view('includes/footer', $data);
+    }
+
     private function check_registration()
     {
 

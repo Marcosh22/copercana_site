@@ -1128,6 +1128,43 @@ class Admin_Pages extends BaseController
         echo view('admin/includes/footer', $data);
     }
 
+    public function relatorio_transparencia()
+    {
+        if (!$this->ionAuth->loggedIn()) {
+			return redirect()->to('/auth/login');
+		} else if (!$this->ionAuth->isAdmin()) {
+            return redirect()->to('/admin');
+        }
+
+        helper(['form']);
+
+        $session = \Config\Services::session();
+        
+        $pageModel = model('App\Models\PageModel', false);
+        $page = $pageModel->get_by_id(32);
+        $page_data = null;
+
+        if(isset($page->definition) && !empty($page->definition)) {
+            $page_data = json_decode($page->definition);
+        }
+
+        $footer_dependencies = array(
+            '<script src="'.base_url('_assets/admin/js/pages.js').'?v='.filemtime('_assets/admin/js/pages.js').'"></script>'
+        );
+
+        $data['page'] = 'pages-relatorio-de-transparencia';
+        $data['footer_dependencies'] = $footer_dependencies;
+        $data['page_data'] = $page_data;
+        $data['session'] = $session;
+        $data['logged_user'] = $this->ionAuth->user();
+         $data['ion_auth'] = $this->ionAuth;
+        
+        echo view('admin/includes/header', $data);
+        echo view('admin/pages/relatorio-de-transparencia', $data);
+        echo view('admin/includes/footer', $data);
+    }
+
+
     public function update_page($page_id) {
         if (!$this->ionAuth->loggedIn()) {
 			return redirect()->to('/auth/login');
