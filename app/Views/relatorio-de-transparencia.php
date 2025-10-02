@@ -28,14 +28,14 @@ if (isset($socials) && !empty($socials)) {
                         </h3>
                         <div class="d-flex align-items-center justify-content-center">
                             <?php if (isset($page_data->files_section_file_01) && !empty($page_data->files_section_file_01)) { ?>
-                                    <a class="button mx-3" href="<?= $page_data->files_section_file_01 ?>"
+                                    <a class="button mx-3" href="<?= base_url($page_data->files_section_file_01) ?>"
                                         target="_blank" rel="noopener noreferrer" style="width: 205px; font-size: 18px;">
                                         Primeiro Semestre<br />
                                         2025
                                     </a>
                             <?php } ?>
                             <?php if (isset($page_data->files_section_file_02) && !empty($page_data->files_section_file_02)) { ?>
-                                    <a class="button mx-3" href="<?= $page_data->files_section_file_02 ?>"
+                                    <a class="button mx-3" href="<?= base_url($page_data->files_section_file_02) ?>"
                                         target="_blank" rel="noopener noreferrer" style="width: 205px; font-size: 18px;">
                                         Primeiro Semestre<br />
                                         2025
