@@ -23,21 +23,21 @@ if (isset($socials) && !empty($socials)) {
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="h5 text-center mb-4">
+                        <h3 class="h5 text-center mb-4">
                             <strong><?= $page_data->files_section_title ?></strong>
-                        </h2>
+                        </h3>
                         <div class="d-flex align-items-center justify-content-center">
                             <?php if (isset($page_data->files_section_file_01) && !empty($page_data->files_section_file_01)) { ?>
                                     <a class="button mx-3" href="<?= $page_data->files_section_file_01 ?>"
                                         target="_blank" rel="noopener noreferrer" style="width: 205px; font-size: 18px;">
-                                        PRIMEIRO SEMESTRE<br />
+                                        Primeiro Semestre<br />
                                         2025
                                     </a>
                             <?php } ?>
                             <?php if (isset($page_data->files_section_file_02) && !empty($page_data->files_section_file_02)) { ?>
                                     <a class="button mx-3" href="<?= $page_data->files_section_file_02 ?>"
                                         target="_blank" rel="noopener noreferrer" style="width: 205px; font-size: 18px;">
-                                        SEGUNDO SEMESTRE<br />
+                                        Primeiro Semestre<br />
                                         2025
                                     </a>
                             <?php } ?>
