@@ -1,77 +1,76 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php if(isset($seo) && isset($seo['title'])) { ?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php if (isset($seo) && isset($seo['title'])) { ?>
         <title><?= $seo['title'] ?></title>
-        <?php } ?>
-        <?php if(isset($seo) && isset($seo['description'])) { ?>
+    <?php } ?>
+    <?php if (isset($seo) && isset($seo['description'])) { ?>
         <meta name="description" content="<?= $seo['description'] ?>">
-        <?php } ?>
-        <?php if(isset($seo) && isset($seo['keywords'])) { ?>
+    <?php } ?>
+    <?php if (isset($seo) && isset($seo['keywords'])) { ?>
         <meta name="keywords" content="<?= $seo['keywords'] ?>">
-        <?php } ?>
-        <?php if(isset($seo) && isset($seo['robots'])) { ?>
+    <?php } ?>
+    <?php if (isset($seo) && isset($seo['robots'])) { ?>
         <meta name="robots" content="<?= $seo['robots'] ?>">
-        <?php } ?>
-        <?php if(isset($seo) && isset($seo['canonical'])) { ?>
+    <?php } ?>
+    <?php if (isset($seo) && isset($seo['canonical'])) { ?>
         <link rel="canonical" href="<?= $seo['canonical'] ?>">
-        <?php } ?>
-        <meta property="og:locale" content="pt_BR">
-        <?php if(isset($seo) && isset($seo['type'])) { ?>
+    <?php } ?>
+    <meta property="og:locale" content="pt_BR">
+    <?php if (isset($seo) && isset($seo['type'])) { ?>
         <meta property="og:type" content="<?= $seo['type'] ?>">
-        <?php } ?>
-        <?php if(isset($seo) && isset($seo['title'])) { ?>
+    <?php } ?>
+    <?php if (isset($seo) && isset($seo['title'])) { ?>
         <meta property="og:title" content="<?= $seo['title'] ?>">
-        <?php } ?>
-        <?php if(isset($seo) && isset($seo['description'])) { ?>
+    <?php } ?>
+    <?php if (isset($seo) && isset($seo['description'])) { ?>
         <meta property="og:description" content="<?= $seo['description'] ?>">
-        <?php } ?>
-        <?php if(isset($seo) && isset($seo['canonical'])) { ?>
+    <?php } ?>
+    <?php if (isset($seo) && isset($seo['canonical'])) { ?>
         <meta property="og:url" content="<?= $seo['canonical'] ?>">
-        <?php } ?>
-        <meta property="og:site_name" content="Agronegócios Copercana">
-        <meta property="og:locale" content="pt_BR">
-        <?php if(isset($seo) && isset($seo['share_thumb'])) { ?>
+    <?php } ?>
+    <meta property="og:site_name" content="Agronegócios Copercana">
+    <meta property="og:locale" content="pt_BR">
+    <?php if (isset($seo) && isset($seo['share_thumb'])) { ?>
         <meta property="og:image" content="<?= $seo['share_thumb'] ?>">
-        <?php } ?>
-        <?php if(isset($seo) && isset($seo['publisher'])) { ?>
+    <?php } ?>
+    <?php if (isset($seo) && isset($seo['publisher'])) { ?>
         <meta property="article:publisher" content="<?= $seo['publisher'] ?>">
-        <?php } ?>
+    <?php } ?>
 
-        <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url('icons/apple-icon-57x57.png'); ?>">
-        <link rel="apple-touch-icon" sizes="60x60" href="<?= base_url('icons/apple-icon-60x60.png'); ?>">
-        <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url('icons/apple-icon-72x72.png'); ?>">
-        <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('icons/apple-icon-76x76.png'); ?>">
-        <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url('icons/apple-icon-114x114.png'); ?>">
-        <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url('icons/apple-icon-120x120.png'); ?>">
-        <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url('icons/apple-icon-144x144.png'); ?>">
-        <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url('icons/apple-icon-152x152.png'); ?>">
-        <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('icons/apple-icon-180x180.png'); ?>">
-        <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url('icons/android-icon-192x192.png'); ?>">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('icons/favicon-32x32.png'); ?>">
-        <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url('icons/favicon-96x96.png'); ?>">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('icons/favicon-16x16.png'); ?>">
-        <link rel="manifest" href="<?= base_url('icons/manifest.json'); ?>">
-        <meta name="msapplication-TileColor" content="#005422">
-        <meta name="msapplication-TileImage" content="<?= base_url('icons/ms-icon-144x144.png'); ?>">
-        <meta name="theme-color" content="#005422">
-        <link rel="stylesheet" href="<?= base_url("_assets/css/bootstrap.min.css") ?>">
-        <link rel="stylesheet"
-            href="<?= base_url("_assets/css/styles.css") ?>?v=<?=filemtime("_assets/css/styles.css")?>">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url('icons/apple-icon-57x57.png'); ?>">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?= base_url('icons/apple-icon-60x60.png'); ?>">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url('icons/apple-icon-72x72.png'); ?>">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('icons/apple-icon-76x76.png'); ?>">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url('icons/apple-icon-114x114.png'); ?>">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url('icons/apple-icon-120x120.png'); ?>">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url('icons/apple-icon-144x144.png'); ?>">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url('icons/apple-icon-152x152.png'); ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('icons/apple-icon-180x180.png'); ?>">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url('icons/android-icon-192x192.png'); ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('icons/favicon-32x32.png'); ?>">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url('icons/favicon-96x96.png'); ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('icons/favicon-16x16.png'); ?>">
+    <link rel="manifest" href="<?= base_url('icons/manifest.json'); ?>">
+    <meta name="msapplication-TileColor" content="#005422">
+    <meta name="msapplication-TileImage" content="<?= base_url('icons/ms-icon-144x144.png'); ?>">
+    <meta name="theme-color" content="#005422">
+    <link rel="stylesheet" href="<?= base_url("_assets/css/bootstrap.min.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("_assets/css/styles.css") ?>?v=<?= filemtime("_assets/css/styles.css") ?>">
 
-        <?php if(isset($header_dependencies)) {
-        foreach($header_dependencies as $dependency) {
+    <?php if (isset($header_dependencies)) {
+        foreach ($header_dependencies as $dependency) {
             echo $dependency;
         }
-    }  ?>
+    } ?>
 
-        <!-- Google Tag Manager -->
-        <script>
-        (function(w, d, s, l, i) {
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start': new Date().getTime(),
@@ -85,24 +84,24 @@
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-TBZCNXX9');
-        </script>
-        <!-- End Google Tag Manager -->
+    </script>
+    <!-- End Google Tag Manager -->
 
-        <?php if(isset($general) && isset($general->head_html) && !empty($general->head_html)) { ?>
+    <?php if (isset($general) && isset($general->head_html) && !empty($general->head_html)) { ?>
         <?= $general->head_html; ?>
-        <?php } ?>
-    </head>
+    <?php } ?>
+</head>
 
-    <body id="page-<?= $page ?>">
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBZCNXX9" height="0" width="0"
-                style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <?php if(isset($general) && isset($general->body_html) && !empty($general->body_html)) { ?>
+<body id="page-<?= $page ?>">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBZCNXX9" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <?php if (isset($general) && isset($general->body_html) && !empty($general->body_html)) { ?>
         <?= $general->body_html; ?>
-        <?php } ?>
+    <?php } ?>
 
-        <?php if(!isset($hide_header) || $hide_header === false) { ?>
+    <?php if (!isset($hide_header) || $hide_header === false) { ?>
 
         <div class="acessibility-bar">
             <div class="container">
@@ -214,23 +213,23 @@
                 <div class="row">
                     <div class="col-6 col-lg-3">
                         <a class="site-header__logo" href="<?= base_url() ?>">
-                            <?php if($page === "copercana-60-anos") { ?>
-                            <picture>
-                                <source media="(max-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/selo-copercana-60-anos-2023@0,75x.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos-2023@1,5x.png") ?> 2x">
-                                <source media="(min-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/selo-copercana-60-anos-2023.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos-2023@2x.png") ?> 2x">
-                                <img src="<?= base_url("_assets/images/selo-copercana-60-anos-2023.png") ?>"
-                                    alt="Copercana">
-                            </picture>
+                            <?php if ($page === "copercana-60-anos") { ?>
+                                <picture>
+                                    <source media="(max-width: 768px)"
+                                        srcset="<?= base_url("_assets/images/selo-copercana-60-anos-2023@0,75x.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos-2023@1,5x.png") ?> 2x">
+                                    <source media="(min-width: 768px)"
+                                        srcset="<?= base_url("_assets/images/selo-copercana-60-anos-2023.png") ?> 1x, <?= base_url("_assets/images/selo-copercana-60-anos-2023@2x.png") ?> 2x">
+                                    <img src="<?= base_url("_assets/images/selo-copercana-60-anos-2023.png") ?>"
+                                        alt="Copercana">
+                                </picture>
                             <?php } else { ?>
-                            <picture>
-                                <source media="(max-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/copercana@0,75x.png") ?> 1x, <?= base_url("_assets/images/copercana@1,5x.png") ?> 2x">
-                                <source media="(min-width: 768px)"
-                                    srcset="<?= base_url("_assets/images/copercana.png") ?> 1x, <?= base_url("_assets/images/copercana@2x.png") ?> 2x">
-                                <img src="<?= base_url("_assets/images/copercana.png") ?>" alt="Copercana">
-                            </picture>
+                                <picture>
+                                    <source media="(max-width: 768px)"
+                                        srcset="<?= base_url("_assets/images/copercana@0,75x.png") ?> 1x, <?= base_url("_assets/images/copercana@1,5x.png") ?> 2x">
+                                    <source media="(min-width: 768px)"
+                                        srcset="<?= base_url("_assets/images/copercana.png") ?> 1x, <?= base_url("_assets/images/copercana@2x.png") ?> 2x">
+                                    <img src="<?= base_url("_assets/images/copercana.png") ?>" alt="Copercana">
+                                </picture>
                             <?php } ?>
                         </a>
                     </div>
@@ -266,12 +265,18 @@
                                             <a href="<?= base_url("institucional/sustentabilidade") ?>"
                                                 class="nav-submenu__link">SUSTENTABILIDADE</a>
                                         </li>
+                                        <li
+                                            class="nav-submenu__item<?= $page == 'relatorio-de-transparencia' || (isset($parent_page) && $parent_page == 'relatorio-de-transparencia') ? ' active' : '' ?>">
+                                            <a href="<?= base_url("institucional/relatorio-de-transparencia") ?>"
+                                                class="nav-submenu__link">RELATÓRIO DE TRANSPARÊNCIA</a>
+                                        </li>
                                         <li class="nav-submenu__item">
                                             <a href="<?= base_url("files/Codigo_de_conduta_Copercana.pdf") ?>"
                                                 class="nav-submenu__link" target="_blank" rel="noopener noreferrer">
                                                 CÓDIGO DE CONDUTA
                                             </a>
                                         </li>
+
                                     </ul>
                                 </li>
                                 <li
@@ -280,8 +285,8 @@
                                     <ul class="nav-menu__submenu nav-submenu">
                                         <li
                                             class="nav-submenu__item<?= $page == 'autocenter' || (isset($parent_page) && $parent_page == 'autocenter') ? ' active' : '' ?>">
-                                            <a href="<?= base_url("servicos/auto-center") ?>"
-                                                class="nav-submenu__link">AUTO CENTER E AUTOMOTIVO</a>
+                                            <a href="<?= base_url("servicos/auto-center") ?>" class="nav-submenu__link">AUTO
+                                                CENTER E AUTOMOTIVO</a>
                                         </li>
                                         <li
                                             class="nav-submenu__item<?= $page == 'truckcenter' || (isset($parent_page) && $parent_page == 'truckcenter') ? ' active' : '' ?>">
@@ -424,18 +429,18 @@
                                 </label>
                             </form>
                             <div class="header-socials">
-                                <?php if(isset($general) && isset($general->instagram) && !empty($general->instagram)) { ?>
-                                <a href="<?= $general->instagram ?>" target="_blank" class="socials__item"
-                                    aria-label="Instagram">
-                                    <svg width="26" height="26"
-                                        style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff"  ?>;"
-                                        version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600"
-                                        xml:space="preserve">
-                                        <title>Instagram</title>
-                                        <g>
-                                            <circle cx="300" cy="300" r="297.5"></circle>
-                                            <path class="stinsta" d="M300,123.5c-47.9,0-54,0.2-72.8,1.1c-18.8,0.9-31.6,3.8-42.8,8.2c-11.6,4.5-21.5,10.5-31.3,20.4
+                                <?php if (isset($general) && isset($general->instagram) && !empty($general->instagram)) { ?>
+                                    <a href="<?= $general->instagram ?>" target="_blank" class="socials__item"
+                                        aria-label="Instagram">
+                                        <svg width="26" height="26"
+                                            style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff" ?>;"
+                                            version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600"
+                                            xml:space="preserve">
+                                            <title>Instagram</title>
+                                            <g>
+                                                <circle cx="300" cy="300" r="297.5"></circle>
+                                                <path class="stinsta" d="M300,123.5c-47.9,0-54,0.2-72.8,1.1c-18.8,0.9-31.6,3.8-42.8,8.2c-11.6,4.5-21.5,10.5-31.3,20.4
                                                 c-9.8,9.8-15.8,19.7-20.4,31.3c-4.4,11.2-7.4,24.1-8.2,42.8c-0.8,18.8-1.1,24.8-1.1,72.8c0,47.9,0.2,53.9,1.1,72.8
                                                 c0.9,18.8,3.8,31.6,8.2,42.8c4.5,11.6,10.5,21.5,20.4,31.3c9.8,9.8,19.7,15.9,31.3,20.4c11.2,4.4,24.1,7.3,42.8,8.2
                                                 c18.8,0.9,24.8,1.1,72.8,1.1c47.9,0,53.9-0.2,72.8-1.1c18.8-0.9,31.6-3.8,42.9-8.2c11.6-4.5,21.4-10.6,31.2-20.4
@@ -452,101 +457,96 @@
                                                 c-50.1,0-90.6,40.6-90.6,90.6c0,50.1,40.6,90.6,90.6,90.6c50.1,0,90.6-40.6,90.6-90.6C390.6,249.9,350.1,209.4,300,209.4L300,209.4
                                                 z M300,241.2c32.5,0,58.8,26.3,58.8,58.8c0,32.5-26.3,58.8-58.8,58.8c-32.5,0-58.8-26.3-58.8-58.8
                                                 C241.2,267.5,267.5,241.2,300,241.2z"></path>
-                                        </g>
-                                    </svg>
-                                </a>
+                                            </g>
+                                        </svg>
+                                    </a>
                                 <?php } ?>
-                                <?php if(isset($general) && isset($general->facebook) && !empty($general->facebook)) { ?>
-                                <a href="<?= $general->facebook ?>" target="_blank" class="socials__item"
-                                    aria-label="Facebook">
-                                    <svg width="28" height="28"
-                                        style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff"  ?>;"
-                                        version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                        xml:space="preserve">
-                                        <title>Facebook</title>
-                                        <path d="M481,258.1c0-124.3-100.8-225-225-225c-124.3,0-225,100.7-225,225c0,112.3,82.3,205.4,189.8,222.2V323.1h-57.1v-65h57.1
+                                <?php if (isset($general) && isset($general->facebook) && !empty($general->facebook)) { ?>
+                                    <a href="<?= $general->facebook ?>" target="_blank" class="socials__item"
+                                        aria-label="Facebook">
+                                        <svg width="28" height="28"
+                                            style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff" ?>;"
+                                            version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                            xml:space="preserve">
+                                            <title>Facebook</title>
+                                            <path d="M481,258.1c0-124.3-100.8-225-225-225c-124.3,0-225,100.7-225,225c0,112.3,82.3,205.4,189.8,222.2V323.1h-57.1v-65h57.1
                                                             v-49.6c0-56.4,33.5-87.5,85-87.5c24.6,0,50.4,4.4,50.4,4.4v55.4h-28.4c-27.9,0-36.6,17.4-36.6,35.2v42.2h62.4l-10,65h-52.4v157.2
                                                             C398.7,463.4,481,370.3,481,258.1L481,258.1z"></path>
-                                    </svg>
-                                </a>
+                                        </svg>
+                                    </a>
                                 <?php } ?>
 
 
 
-                                <?php if(isset($general) && isset($general->youtube) && !empty($general->youtube)) { ?>
-                                <a href="<?= $general->youtube ?>" class="socials__item" target="_blank"
-                                    rel="noopener noreferrer" aria-label="Youtube">
-                                    <svg width="26" height="26" id="" x="0px" y="0px" viewBox="0 0 300 300"
-                                        enable-background="new 0 0 400 400" xml:space="preserve" width="300"
-                                        height="300">
-                                        <title>Youtube</title>
-                                        <defs id="defs15">
-                                            <pattern y="0" x="0" height="6" width="6" patternUnits="userSpaceOnUse"
-                                                id="EMFhbasepattern" />
-                                        </defs>
-                                        <g id="g4189" transform="scale(0.75,0.75)">
-                                            <rect width="400" height="400" id="rect4"
-                                                style="fill:<?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff"  ?>;fill-opacity:1"
-                                                x="0" y="0" ry="200" />
-                                            <g transform="matrix(7.8701756,0,0,7.8701756,695.19553,-948.4235)"
-                                                id="g4167">
-                                                <path
-                                                    style="fill:<?= $page === "copercana-60-anos" ? "#031401" : "#005422"  ?>;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                                    d="M 149.9375 79.222656 C 149.9375 79.222656 86.718651 79.222715 70.851562 83.345703 C 62.355775 85.719505 55.360154 92.715203 52.986328 101.33594 C 48.863375 117.20304 48.863281 150.0625 48.863281 150.0625 C 48.863281 150.0625 48.863375 183.0467 52.986328 198.66406 C 55.360154 207.28468 62.230834 214.15544 70.851562 216.5293 C 86.843592 220.77718 149.9375 220.77734 149.9375 220.77734 C 149.9375 220.77734 213.28168 220.77729 229.14844 216.6543 C 237.76923 214.28049 244.63977 207.53464 246.88867 198.78906 C 251.1366 183.04674 251.13672 150.1875 251.13672 150.1875 C 251.13672 150.1875 251.26156 117.20304 246.88867 101.33594 C 244.63977 92.715203 237.76923 85.844606 229.14844 83.595703 C 213.28168 79.222856 149.9375 79.222656 149.9375 79.222656 z M 129.82227 119.70312 L 182.42188 150.0625 L 129.82227 180.29688 L 129.82227 119.70312 z "
-                                                    transform="matrix(0.16941596,0,0,0.16941596,-88.332912,120.50856)"
-                                                    id="path4156" />
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </a>
-                                <?php } ?>
-
-                                <?php if(isset($general) && isset($general->linkedin) && !empty($general->linkedin)) { ?>
-                                <a href="<?= $general->linkedin ?>" target="_blank" class="socials__item"
-                                    rel="noopener noreferrer" aria-label="LinkedIn">
-                                    <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
-                                        viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
-                                        xml:space="preserve">
-                                        <title>LinkedIn</title>
-                                        <g>
-                                            <path
-                                                style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff"  ?>;"
-                                                d="M500,10C229.4,10,10,229.4,10,500s219.4,490,490,490s490-219.4,490-490C990,229.3,770.6,10,500,10z M377.5,737.3H255V308.6h122.5V737.3z M320,282.3c-31.7,0-57.4-25.7-57.4-57.5c0-31.7,25.7-57.5,57.4-57.5c31.7,0.1,57.5,25.8,57.5,57.5C377.5,256.6,351.8,282.3,320,282.3z M806.3,737.3H683.8V472.3c0-31.1-8.9-52.8-47-52.8c-63.3,0-75.5,52.8-75.5,52.8v265.1H438.8V308.6h122.5v41c17.5-13.4,61.3-40.9,122.5-40.9c39.8,0,122.5,23.8,122.5,167.3V737.3z" />
-                                        </g>
-                                    </svg>
-                                </a>
-                                <?php } ?>
-
-                                <?php if(isset($general) && isset($general->radio) && !empty($general->radio)) { ?>
-                                <a href="<?= $general->radio ?>" target="_blank" class="socials__item"
-                                    rel="noopener noreferrer" aria-label="LinkedIn">
-                                    <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82 82">
-                                        <defs>
-                                            <clipPath id="clip-path">
-                                                <rect class="radio-1" width="82" height="82" />
-                                            </clipPath>
-                                        </defs>
-                                        <title>Ativo 1</title>
-                                        <g id="Camada_2" data-name="Camada 2">
-                                            <g id="Camada_1-2" data-name="Camada 1">
-                                                <g class="radio-2">
-                                                    <path class="radio-3"
-                                                        d="M82,41A41,41,0,1,1,41,0,41,41,0,0,1,82,41" />
-                                                    <path class="radio-4"
-                                                        d="M31.46,59.16c0,3-2.95,6.1-6.59,6.87S18.28,65,18.28,62s2.95-6.09,6.59-6.87S31.46,56.14,31.46,59.16Z" />
-                                                    <path class="radio-4"
-                                                        d="M57.81,49.75c0,3-3,6.1-6.59,6.87s-6.59-1-6.59-4.07,2.95-6.09,6.59-6.87S57.81,46.73,57.81,49.75Z" />
-                                                    <polyline class="radio-4"
-                                                        points="57.81 49.27 57.81 13.5 31.45 22.91 31.45 58.68" />
-                                                    <line class="radio-4" x1="57.81" y1="22.91" x2="31.46" y2="32.33" />
+                                <?php if (isset($general) && isset($general->youtube) && !empty($general->youtube)) { ?>
+                                    <a href="<?= $general->youtube ?>" class="socials__item" target="_blank"
+                                        rel="noopener noreferrer" aria-label="Youtube">
+                                        <svg width="26" height="26" id="" x="0px" y="0px" viewBox="0 0 300 300"
+                                            enable-background="new 0 0 400 400" xml:space="preserve" width="300" height="300">
+                                            <title>Youtube</title>
+                                            <defs id="defs15">
+                                                <pattern y="0" x="0" height="6" width="6" patternUnits="userSpaceOnUse"
+                                                    id="EMFhbasepattern" />
+                                            </defs>
+                                            <g id="g4189" transform="scale(0.75,0.75)">
+                                                <rect width="400" height="400" id="rect4"
+                                                    style="fill:<?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff" ?>;fill-opacity:1"
+                                                    x="0" y="0" ry="200" />
+                                                <g transform="matrix(7.8701756,0,0,7.8701756,695.19553,-948.4235)" id="g4167">
+                                                    <path
+                                                        style="fill:<?= $page === "copercana-60-anos" ? "#031401" : "#005422" ?>;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                                                        d="M 149.9375 79.222656 C 149.9375 79.222656 86.718651 79.222715 70.851562 83.345703 C 62.355775 85.719505 55.360154 92.715203 52.986328 101.33594 C 48.863375 117.20304 48.863281 150.0625 48.863281 150.0625 C 48.863281 150.0625 48.863375 183.0467 52.986328 198.66406 C 55.360154 207.28468 62.230834 214.15544 70.851562 216.5293 C 86.843592 220.77718 149.9375 220.77734 149.9375 220.77734 C 149.9375 220.77734 213.28168 220.77729 229.14844 216.6543 C 237.76923 214.28049 244.63977 207.53464 246.88867 198.78906 C 251.1366 183.04674 251.13672 150.1875 251.13672 150.1875 C 251.13672 150.1875 251.26156 117.20304 246.88867 101.33594 C 244.63977 92.715203 237.76923 85.844606 229.14844 83.595703 C 213.28168 79.222856 149.9375 79.222656 149.9375 79.222656 z M 129.82227 119.70312 L 182.42188 150.0625 L 129.82227 180.29688 L 129.82227 119.70312 z "
+                                                        transform="matrix(0.16941596,0,0,0.16941596,-88.332912,120.50856)"
+                                                        id="path4156" />
                                                 </g>
                                             </g>
-                                        </g>
-                                    </svg>
-                                </a>
+                                        </svg>
+                                    </a>
+                                <?php } ?>
+
+                                <?php if (isset($general) && isset($general->linkedin) && !empty($general->linkedin)) { ?>
+                                    <a href="<?= $general->linkedin ?>" target="_blank" class="socials__item"
+                                        rel="noopener noreferrer" aria-label="LinkedIn">
+                                        <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                            viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                                            <title>LinkedIn</title>
+                                            <g>
+                                                <path style="fill: <?= $page === "copercana-60-anos" ? "#CE7B01" : "#fff" ?>;"
+                                                    d="M500,10C229.4,10,10,229.4,10,500s219.4,490,490,490s490-219.4,490-490C990,229.3,770.6,10,500,10z M377.5,737.3H255V308.6h122.5V737.3z M320,282.3c-31.7,0-57.4-25.7-57.4-57.5c0-31.7,25.7-57.5,57.4-57.5c31.7,0.1,57.5,25.8,57.5,57.5C377.5,256.6,351.8,282.3,320,282.3z M806.3,737.3H683.8V472.3c0-31.1-8.9-52.8-47-52.8c-63.3,0-75.5,52.8-75.5,52.8v265.1H438.8V308.6h122.5v41c17.5-13.4,61.3-40.9,122.5-40.9c39.8,0,122.5,23.8,122.5,167.3V737.3z" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                <?php } ?>
+
+                                <?php if (isset($general) && isset($general->radio) && !empty($general->radio)) { ?>
+                                    <a href="<?= $general->radio ?>" target="_blank" class="socials__item"
+                                        rel="noopener noreferrer" aria-label="LinkedIn">
+                                        <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82 82">
+                                            <defs>
+                                                <clipPath id="clip-path">
+                                                    <rect class="radio-1" width="82" height="82" />
+                                                </clipPath>
+                                            </defs>
+                                            <title>Ativo 1</title>
+                                            <g id="Camada_2" data-name="Camada 2">
+                                                <g id="Camada_1-2" data-name="Camada 1">
+                                                    <g class="radio-2">
+                                                        <path class="radio-3" d="M82,41A41,41,0,1,1,41,0,41,41,0,0,1,82,41" />
+                                                        <path class="radio-4"
+                                                            d="M31.46,59.16c0,3-2.95,6.1-6.59,6.87S18.28,65,18.28,62s2.95-6.09,6.59-6.87S31.46,56.14,31.46,59.16Z" />
+                                                        <path class="radio-4"
+                                                            d="M57.81,49.75c0,3-3,6.1-6.59,6.87s-6.59-1-6.59-4.07,2.95-6.09,6.59-6.87S57.81,46.73,57.81,49.75Z" />
+                                                        <polyline class="radio-4"
+                                                            points="57.81 49.27 57.81 13.5 31.45 22.91 31.45 58.68" />
+                                                        <line class="radio-4" x1="57.81" y1="22.91" x2="31.46" y2="32.33" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
                                 <?php } ?>
 
                             </div>
@@ -590,6 +590,12 @@
                         </li>
 
                         <li
+                            class="mobile-nav-submenu__item<?= $page == 'relatorio-de-transparencia' || (isset($parent_page) && $parent_page == 'relatorio-de-transparencia') ? ' active' : '' ?>">
+                            <a href="<?= base_url("institucional/relatorio-de-transparencia") ?>"
+                                class="mobile-nav-submenu__link">Relatório de Transparência</a>
+                        </li>
+
+                        <li
                             class="mobile-nav-submenu__item<?= $page == 'sustentabilidade' || (isset($parent_page) && $parent_page == 'sustentabilidade') ? ' active' : '' ?>">
                             <a href="<?= base_url("institucional/sustentabilidade") ?>"
                                 class="mobile-nav-submenu__link">Sustentabilidade</a>
@@ -616,11 +622,11 @@
                             class="mobile-nav-submenu__item<?= $page == 'truckcenter' || (isset($parent_page) && $parent_page == 'truckcenter') ? ' active' : '' ?>">
                             <a href="<?= base_url("servicos/auto-center") ?>" class="mobile-nav-submenu__link">Truck
                                 Center Veículos Pesados</a>
-                    </li>
+                        </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'centro-de-eventos' || (isset($parent_page) && $parent_page == 'centro-de-eventos') ? ' active' : '' ?>">
-                            <a href="<?= base_url("servicos/centro-de-eventos") ?>"
-                                class="mobile-nav-submenu__link">Centro de
+                            <a href="<?= base_url("servicos/centro-de-eventos") ?>" class="mobile-nav-submenu__link">Centro
+                                de
                                 Eventos</a>
                         </li>
                         <li
@@ -630,8 +636,8 @@
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'copercana-solar' || (isset($parent_page) && $parent_page == 'copercana-solar') ? ' active' : '' ?>">
-                            <a href="<?= base_url("servicos/copercana-solar") ?>"
-                                class="mobile-nav-submenu__link">Copercana Solar</a>
+                            <a href="<?= base_url("servicos/copercana-solar") ?>" class="mobile-nav-submenu__link">Copercana
+                                Solar</a>
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'departamento-agronomico' || (isset($parent_page) && $parent_page == 'departamento-agronomico') ? ' active' : '' ?>">
@@ -646,8 +652,8 @@
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'ferragem-magazine' || (isset($parent_page) && $parent_page == 'ferragem-magazine') ? ' active' : '' ?>">
-                            <a href="<?= base_url("servicos/lojas-copercana") ?>"
-                                class="mobile-nav-submenu__link">Lojas Copercana</a>
+                            <a href="<?= base_url("servicos/lojas-copercana") ?>" class="mobile-nav-submenu__link">Lojas
+                                Copercana</a>
                         </li>
                         <li
                             class="mobile-nav-submenu__item mobile-nav-menu__item--has-submenu<?= $page == 'laboratorio-de-solos' || (isset($parent_page) && $parent_page == 'laboratorio-de-solos') || $page == 'tecnologia-bioas' || (isset($parent_page) && $parent_page == 'tecnologia-bioas') ? ' active' : '' ?>">
@@ -655,11 +661,12 @@
                                 class="mobile-nav-submenu__link">Laboratório de
                                 Solos</a>
                             <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
-                                    <li
-                                        class="mobile-nav-submenu__item<?= $page == 'tecnologia-bioas' || (isset($parent_page) && $parent_page == 'tecnologia-bioas') ? ' active' : '' ?>">
-                                        <a href="<?= base_url("servicos/laboratorio-de-solos/tecnologia-bioas") ?>" class="mobile-nav-submenu__link">Tecnologia BioAS</a>
-                                    </li>
-                                </ul>
+                                <li
+                                    class="mobile-nav-submenu__item<?= $page == 'tecnologia-bioas' || (isset($parent_page) && $parent_page == 'tecnologia-bioas') ? ' active' : '' ?>">
+                                    <a href="<?= base_url("servicos/laboratorio-de-solos/tecnologia-bioas") ?>"
+                                        class="mobile-nav-submenu__link">Tecnologia BioAS</a>
+                                </li>
+                            </ul>
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'postos-de-combustiveis' || (isset($parent_page) && $parent_page == 'postos-de-combustiveis') ? ' active' : '' ?>">
@@ -674,8 +681,8 @@
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'unidade-de-graos' || (isset($parent_page) && $parent_page == 'unidade-de-graos') ? ' active' : '' ?>">
-                            <a href="<?= base_url("servicos/unidade-de-graos") ?>"
-                                class="mobile-nav-submenu__link">Unidade de
+                            <a href="<?= base_url("servicos/unidade-de-graos") ?>" class="mobile-nav-submenu__link">Unidade
+                                de
                                 Grãos</a>
                         </li>
                     </ul>
@@ -697,14 +704,13 @@
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'radio-copercana' || (isset($parent_page) && $parent_page == 'radio-copercana') ? ' active' : '' ?>">
-                            <a href="<?= base_url("comunicacao/radio-copercana") ?>"
-                                class="mobile-nav-submenu__link">Rádio
+                            <a href="<?= base_url("comunicacao/radio-copercana") ?>" class="mobile-nav-submenu__link">Rádio
                                 Copercana</a>
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'redes-sociais' || (isset($parent_page) && $parent_page == 'redes-sociais') ? ' active' : '' ?>">
-                            <a href="<?= base_url("comunicacao/redes-sociais") ?>"
-                                class="mobile-nav-submenu__link">Redes Sociais</a>
+                            <a href="<?= base_url("comunicacao/redes-sociais") ?>" class="mobile-nav-submenu__link">Redes
+                                Sociais</a>
                         </li>
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'revista-canavieiros' || (isset($parent_page) && $parent_page == 'revista-canavieiros') ? ' active' : '' ?>">
@@ -724,8 +730,8 @@
                     <ul class="mobile-nav-menu__submenu mobile-nav-submenu">
                         <li
                             class="mobile-nav-submenu__item<?= $page == 'cadastro' || (isset($parent_page) && $parent_page == 'cadastro') ? ' active' : '' ?>">
-                            <a href="<?= base_url("trabalhe-conosco/cadastro") ?>"
-                                class="mobile-nav-submenu__link">Cadastro e/ou
+                            <a href="<?= base_url("trabalhe-conosco/cadastro") ?>" class="mobile-nav-submenu__link">Cadastro
+                                e/ou
                                 Atualização</a>
                         </li>
                         <li
@@ -754,9 +760,9 @@
                 <span></span>
             </div>
         </nav>
-        <?php } ?>
+    <?php } ?>
 
-        <?php if(isset($quotation_list) && $quotation_list === true) { ?>
+    <?php if (isset($quotation_list) && $quotation_list === true) { ?>
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -765,4 +771,4 @@
                 </div>
             </div>
         </div>
-        <?php } ?>
+    <?php } ?>

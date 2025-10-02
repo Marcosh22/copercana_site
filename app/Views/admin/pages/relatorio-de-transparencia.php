@@ -30,54 +30,107 @@
                             </symbol>
                         </svg>
 
-                        <?php 
-                            $response = $session->getFlashdata('response');
-                            
-                            if(isset($response) && !empty($response)) { ?>
+                        <?php
+                        $response = $session->getFlashdata('response');
 
-                        <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
-                            role="alert" style="margin-bottom: 20px">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
-                                <use
-                                    xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
-                            </svg>
-                            <div>
-                                <?= $response['message'] ?>
+                        if (isset($response) && !empty($response)) { ?>
+
+                            <div class="alert alert-<?= $response['success'] ? 'success' : 'danger' ?> d-flex align-items-center alert-dismissible fade show my-3"
+                                role="alert" style="margin-bottom: 20px">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                                    <use
+                                        xlink:href="<?= $response['success'] ? '#check-circle-fill' : '#exclamation-triangle-fill' ?>" />
+                                </svg>
+                                <div>
+                                    <?= $response['message'] ?>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
 
                         <?php }
                         ?>
 
-                        <?php echo form_open_multipart('admin/pages/update_page/32', ['class' => 'my-5']);?>
+                        <?php echo form_open_multipart('admin/pages/update_page/32', ['class' => 'my-5']); ?>
+                        <h3 class="card-title">Relatório de Transparência</h3>
                         <div class="row mb-3">
-                            <?php echo form_label('Título da página', 'page_title', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Título da página', 'page_title', ['class' => 'col-sm-2 col-form-label']); ?>
                             <div class="col-sm-10">
                                 <?php echo form_input([
-                                            'name' => 'page_title',
-                                            'id'   => 'page_title',
-                                            'type' => 'text'
-                                        ], $page_data && $page_data->page_title ? $page_data->page_title : '', ['class' => 'form-control']);?>
+                                    'name' => 'page_title',
+                                    'id' => 'page_title',
+                                    'type' => 'text'
+                                ], $page_data && $page_data->page_title ? $page_data->page_title : '', ['class' => 'form-control']); ?>
 
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <?php echo form_label('Conteúdo', 'page_content', ['class' => 'col-sm-2 col-form-label']);?>
+                            <?php echo form_label('Conteúdo', 'page_content', ['class' => 'col-sm-2 col-form-label']); ?>
                             <div class="col-sm-10">
                                 <?php echo form_textarea([
-                                            'name' => 'page_content',
-                                            'id'   => 'page_content',
-                                        ], $page_data && $page_data->page_content ? $page_data->page_content : '', ['class' => 'form-control editor']);?>
+                                    'name' => 'page_content',
+                                    'id' => 'page_content',
+                                ], $page_data && $page_data->page_content ? $page_data->page_content : '', ['class' => 'form-control editor']); ?>
 
+                            </div>
+                        </div>
+                        <h3 class="card-title">Arquivos</h3>
+                        <div class="row mb-3">
+                            <?php echo form_label('Título', 'files_section_title', ['class' => 'col-sm-2 col-form-label']); ?>
+                            <div class="col-sm-10">
+                                <?php echo form_input([
+                                    'name' => 'files_section_title',
+                                    'id' => 'files_section_title',
+                                    'type' => 'text'
+                                ], $page_data && $page_data->files_section_title ? $page_data->files_section_title : '', ['class' => 'form-control']); ?>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <?php echo form_label('Relatório 1º Semestre', 'files_section_file_01', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php if(isset($page_data) && isset($page_data->files_section_file_01) && !empty($page_data->files_section_file_01)) { ?>
+                                <div class="banner-preview">
+                                    <input type="hidden" name="files_section_file_01"
+                                        value="<?= $page_data->files_section_file_01; ?>">
+                                    <img src="<?= base_url("admin/pages/make_cover/".$page_data->files_section_file_01) ?>" alt="">
+                                    <a class="delete-btn"
+                                        href="<?= base_url("admin/pages/delete_file/32/files_section_file_01") ?>"><i
+                                            class="bi bi-x-circle-fill"></i></a>
+                                </div>
+                                <?php } else { ?>
+                                <?php echo form_upload([
+                                            'name' => 'files_section_file_01',
+                                            'id'   => 'files_section_file_01'
+                                        ], '', ['class' => 'form-control']);?>
+                                <?php } ?>
+                            </div>
+                        </div>
+                         <div class="row mb-5">
+                            <?php echo form_label('Relatório 2º Semestre', 'files_section_file_02', ['class' => 'col-sm-2 col-form-label']);?>
+                            <div class="col-sm-10">
+                                <?php if(isset($page_data) && isset($page_data->files_section_file_02) && !empty($page_data->files_section_file_02)) { ?>
+                                <div class="banner-preview">
+                                    <input type="hidden" name="files_section_file_02"
+                                        value="<?= $page_data->files_section_file_02; ?>">
+                                    <img src="<?= base_url("admin/pages/make_cover/".$page_data->files_section_file_02) ?>" alt="">
+                                    <a class="delete-btn"
+                                        href="<?= base_url("admin/pages/delete_file/32/files_section_file_02") ?>"><i
+                                            class="bi bi-x-circle-fill"></i></a>
+                                </div>
+                                <?php } else { ?>
+                                <?php echo form_upload([
+                                            'name' => 'files_section_file_02',
+                                            'id'   => 'files_section_file_02'
+                                        ], '', ['class' => 'form-control']);?>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-12">
-                                <?php echo form_submit('submit', 'Salvar', ['class' => 'btn btn-primary w-100']);?>
+                                <?php echo form_submit('submit', 'Salvar', ['class' => 'btn btn-primary w-100']); ?>
                             </div>
                         </div>
-                        <?php echo form_close();?>
+                        <?php echo form_close(); ?>
 
                     </div>
                 </div>
