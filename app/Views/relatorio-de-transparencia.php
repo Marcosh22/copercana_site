@@ -1,10 +1,3 @@
-<?php
-$socials = $general->socials;
-
-if (isset($socials) && !empty($socials)) {
-    $socials = json_decode($socials);
-}
-?>
 <?php if (isset($page_data)) { ?>
     <main id="politics">
         <div class="page-section">
@@ -50,13 +43,12 @@ if (isset($socials) && !empty($socials)) {
 
     <?php
     if (
-        isset($socials) &&
-        isset($socials->magazine) &&
+        isset($general) &&
         (
-            (isset($socials->magazine->facebook) && !empty($socials->magazine->facebook)) ||
-            (isset($socials->magazine->instagram) && !empty($socials->magazine->instagram)) ||
-            (isset($socials->magazine->youtube) && !empty($socials->magazine->youtube)) ||
-            (isset($socials->magazine->linkedin) && !empty($socials->magazine->linkedin))
+            (isset($general->facebook) && !empty($general->facebook)) ||
+            (isset($general->instagram) && !empty($general->instagram)) ||
+            (isset($general->youtube) && !empty($general->youtube)) ||
+            (isset($general->linkedin) && !empty($general->linkedin))
         )
     ) { ?>
         <section class="page-section bg-dark-green">
@@ -66,14 +58,14 @@ if (isset($socials) && !empty($socials)) {
                         <div class="page-socials-wrapper">
                             <p class="text-white">
                                 <strong>
-                                    Acesse as redes sociais
+                                    Acesse as nossas
                                 </strong>
                                 <br />
-                                da Ferragem e Magazine
+                                redes sociais
                             </p>
                             <div class="page-socials">
-                                <?php if (isset($socials->magazine->facebook) && !empty($socials->magazine->facebook)) { ?>
-                                    <a href="<?= $socials->magazine->facebook ?>" target="_blank" class="socials__item"
+                                <?php if (isset($general->facebook) && !empty($general->facebook)) { ?>
+                                    <a href="<?= $general->facebook ?>" target="_blank" class="socials__item"
                                         aria-label="Facebook">
                                         <svg width="44" height="44" style="fill: #fff;" version="1.1" id="Layer_1"
                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -86,8 +78,8 @@ if (isset($socials) && !empty($socials)) {
                                         </svg>
                                     </a>
                                 <?php } ?>
-                                <?php if (isset($socials->magazine->instagram) && !empty($socials->magazine->instagram)) { ?>
-                                    <a href="<?= $socials->magazine->instagram ?>" target="_blank" class="socials__item"
+                                <?php if (isset($general->instagram) && !empty($general->instagram)) { ?>
+                                    <a href="<?= $general->instagram ?>" target="_blank" class="socials__item"
                                         aria-label="Instagram">
                                         <svg width="40" height="40" style="fill: #fff;" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -121,8 +113,8 @@ if (isset($socials) && !empty($socials)) {
                                         </svg>
                                     </a>
                                 <?php } ?>
-                                <?php if (isset($socials->magazine->youtube) && !empty($socials->magazine->youtube)) { ?>
-                                    <a href="<?= $socials->magazine->youtube ?>" class="socials__item" target="_blank"
+                                <?php if (isset($general->youtube) && !empty($general->youtube)) { ?>
+                                    <a href="<?= $general->youtube ?>" class="socials__item" target="_blank"
                                         rel="noopener noreferrer" aria-label="Youtube">
                                         <svg width="40" height="40" id="Слой_1" x="0px" y="0px" viewBox="0 0 300 300"
                                             enable-background="new 0 0 400 400" xml:space="preserve" width="300" height="300">
@@ -144,8 +136,8 @@ if (isset($socials) && !empty($socials)) {
                                         </svg>
                                     </a>
                                 <?php } ?>
-                                <?php if (isset($socials->magazine->linkedin) && !empty($socials->magazine->linkedin)) { ?>
-                                    <a href="<?= $socials->magazine->linkedin ?>" target="_blank" class="socials__item"
+                                <?php if (isset($general->linkedin) && !empty($general->linkedin)) { ?>
+                                    <a href="<?= $general->linkedin ?>" target="_blank" class="socials__item"
                                         rel="noopener noreferrer" aria-label="LinkedIn">
                                         <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"

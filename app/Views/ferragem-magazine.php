@@ -160,7 +160,7 @@ if (isset($socials) && !empty($socials)) {
                                         Acesse as redes sociais
                                     </strong>
                                     <br />
-                                    da Ferragem e Magazine
+                                    das Lojas Copercana
                                 </p>
                                 <div class="page-socials">
                                     <?php if (isset($socials->magazine->facebook) && !empty($socials->magazine->facebook)) { ?>
